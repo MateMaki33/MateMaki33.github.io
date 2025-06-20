@@ -215,6 +215,10 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
   .calc-buttons{
     display: flex;
     gap: 1rem;
+    
+    @media(max-width: 768px){
+      flex-direction: column;
+    }
   }
 </style>
 
