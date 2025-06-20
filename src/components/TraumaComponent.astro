@@ -1,6 +1,7 @@
 ---
 import traumaData from "../collections/trauma.json";
 import IndiceShocKComponent from "./calculators/IndiceShocKComponent.vue";
+import TraumaScoreComponent from "./calculators/TraumaScoreComponent.vue";
 const activacion = traumaData.codigo_trauma.criterios_activacion;
 const hospitales = traumaData.codigo_trauma.hospitales_activacion;
 const valoracion = traumaData.valoracion_primaria;
@@ -27,8 +28,12 @@ const valoracion = traumaData.valoracion_primaria;
     <button onclick="modal_farmacos.showModal()" class="btn">Fármacos y Vías</button>
     <button onclick="modal_protocolos.showModal()" class="btn">Protocolos / Escalas</button>
   </div>
+   
+  <div class="calc-buttons">
+    <IndiceShocKComponent client:load></IndiceShocKComponent>
+    <TraumaScoreComponent client:load></TraumaScoreComponent>
+  </div>
 
-  <IndiceShocKComponent client:load></IndiceShocKComponent>
 </div>
 
 <!-- Modales -->
