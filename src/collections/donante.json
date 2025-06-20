@@ -1,0 +1,38 @@
+{
+  "codigo_donante": {
+    "criterios_inclusion": [
+        "PCR presenciada",
+        "Edad entre 18-50 años",
+        "Paciente en Asistolia",
+        "SVA interviene en menos de 15 min",
+        "RCP al menos 20 min",
+        "Traslado <120 min"
+
+    ],
+    "criterios_exclusion":[
+        "Lesiones exanguinantes",
+        "Lesiones en torax o abdomen",
+        "Neoplasias, Infeccionnes o ADPV",
+        "Perímetro del torax no compatible con cardiocompresor"
+
+    ],
+    "evaluacion_inicial": {
+      "items": [
+        "Filiación, edad",
+        "Antecedentes personales (AP)",
+        "Inicio de RCP si o no",
+        "Hora de la llamada",
+        "Hora aproximada de la PCR",
+        "Hora de inicio RCP",
+        "Duración RCP",
+        "Perimetro abdominal"
+      ]
+    },
+    "traslado": [
+        "Cardiocompresor",
+        "Ventilación mecánica",
+        "No farmacoterapia"
+    ]
+    
+  }
+}

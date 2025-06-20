@@ -1,0 +1,209 @@
+---
+import NavMenuComponent from "../components/NavMenuComponent.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Codigos112</title>
+  </head>
+  <body>
+    <NavMenuComponent></NavMenuComponent>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Color palette */
+    --color-bg-start: #1a002b;
+    --color-bg-end: #0c0015;
+    --color-scroll-track: #1a1a1a;
+    --color-scroll-thumb: #9333ea;
+    --color-scroll-thumb-hover: #c084fc;
+    --color-card-bg: #2a003f;
+    --color-card-border: #9333ea;
+    --color-btn-border: #a855f7;
+    --color-btn-text: #e9d5ff;
+    --color-btn-hover-bg: #a855f7;
+    --color-btn-hover-text: #0c0015;
+    --color-headline-gradient-start: #c084fc;
+    --color-headline-gradient-end: #a855f7;
+    --color-text: #ffffff;
+    --color-subtitle: #c084fc;
+     --neon-orange: #ff9900;
+    --neon-glow: #ffaa33;
+    --bg-dark: #1a1a1a;
+    --text-light: #fff8f0;
+
+    /* Typography */
+    --font-size-base: 16px;
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 2.25rem;
+    --font-size-li: 1.5rem;
+    --font-weight-bold: bold;
+
+    /* Radius & Spacing */
+    --radius-default: 12px;
+    --radius-card: 16px;
+    --padding-container: 2rem;
+    --padding-card: 1rem;
+    --padding-btn: 1rem;
+    --gap-grid: 1rem;
+
+    /* Shadows */
+    --shadow-card: 0 0 15px rgba(147, 51, 234, 0.3);
+    --shadow-btn: 0 0 8px rgba(168, 85, 247, 0.3);
+    --shadow-btn-hover: 0 0 20px #c084fc;
+    --shadow-dialog: 0 0 20px rgba(147, 51, 234, 0.5);
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: var(--font-size-base);
+    background: radial-gradient(circle at center, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-scroll-track);
+    border-radius: var(--radius-default);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-scroll-thumb);
+    border-radius: var(--radius-default);
+    border: 2px solid var(--color-scroll-track);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scroll-thumb-hover);
+  }
+
+  .container {
+    max-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: var(--padding-container);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+    gap: 3rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--color-headline-gradient-start), var(--color-headline-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: var(--font-size-h1);
+  }
+
+  .grid {
+    flex: 1;
+    width: 100%;
+    max-height: fit-content;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--gap-grid);
+  }
+
+  .card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    padding: var(--padding-card);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    height: 290px;
+  }
+
+  h2 {
+    color: var(--color-text);
+    font-size: var(--font-size-h2);
+    margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    color: var(--color-subtitle);
+    margin: 0.5rem 0;
+  }
+
+  ul {
+    list-style: square;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  ul li {
+    margin-top: 5px;
+    font-size: var(--font-size-li);
+  }
+
+  .subsection {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, var(--color-card-bg), #1f0033);
+    border: 2px solid var(--color-btn-border);
+    color: var(--color-btn-text);
+    padding: var(--padding-btn);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-default);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-btn);
+    font-size: 1.5rem;
+  }
+
+  .btn:hover {
+    background: var(--color-btn-hover-bg);
+    color: var(--color-btn-hover-text);
+    box-shadow: var(--shadow-btn-hover);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  dialog {
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    border: 2px solid var(--color-card-border);
+    border-radius: var(--radius-default);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--shadow-dialog);
+    max-height: 70vh;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  dialog h2 {
+    margin-top: 0;
+  }
+
+  dialog ul {
+    padding-left: 1.2rem;
+  }
+</style>
+

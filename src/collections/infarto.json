@@ -1,0 +1,26 @@
+{
+  "codigo_infarto": {
+    "criterios_inclusion": [
+        "Elevación ST >1mm en 2 o mas derivaciones contiguas excepto V2-V3",
+        "En V2-V3 ST mayor o igual a 2.5mm varon MENOR de 40 años",
+        "En V2-V3 ST mayor o igual a 2mm varon MAYOR de 40 años",
+        "En V2-V3 ST mayor o igual a 1.5mm MUJER",
+        "BCRIHH",
+        "Ritmo marcapasos u otra que impida interpretar ECG",
+        "DEPRESIÓN ST generalizada mayor o igual a 1mm en 8 derivacionnes con ELEVACIÓN en AVR y/o V1 sugiere tronco común o isquemia grave de 3 vasos",
+        "DEPRESIÓN ST aislada mayor o igual a 0.5mm en V1-V3 con ELEVACIÓN en posteriores V7-V9"
+        
+    ],
+    "evaluacion_inicial": {
+      "items": [
+        "Antecedentes personales (AP)",
+        "Inicio y tipo de dolor, EVA",
+        "ECG",
+        "Situación actual",
+        "Dolor actual",
+        "Clase Killip",
+        "Medicación administrada"
+      ]
+    }
+  }
+}

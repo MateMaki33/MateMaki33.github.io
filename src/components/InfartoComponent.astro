@@ -1,0 +1,33 @@
+---
+import infartoData from "../collections/infarto.json";
+const data = infartoData;
+---
+
+<div class="container">
+  <h1>Código Infarto</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_criterios.showModal()">Criterios de Inclusión</button>
+    <button class="btn" onclick="modal_evaluacion.showModal()">Evaluación Inicial</button>
+  </div>
+</div>
+
+<dialog id="modal_criterios">
+  <h2>Criterios de Inclusión</h2>
+  <ul>
+    {data.codigo_infarto.criterios_inclusion.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_evaluacion">
+  <h2>Evaluación Inicial</h2>
+  <ul>
+    {data.codigo_infarto.evaluacion_inicial.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>

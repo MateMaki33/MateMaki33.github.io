@@ -1,0 +1,132 @@
+---
+import traumaData from "../collections/trauma.json";
+import IndiceShocKComponent from "./calculators/IndiceShocKComponent.vue";
+const activacion = traumaData.codigo_trauma.criterios_activacion;
+const hospitales = traumaData.codigo_trauma.hospitales_activacion;
+const valoracion = traumaData.valoracion_primaria;
+---
+
+<div class="container">
+  <h1>Código Trauma</h1>
+  
+  <div class="grid">
+    <!-- Grupo 1: Información general -->
+    <button onclick="modal_activacion.showModal()" class="btn">Criterios de Activación</button>
+    <button onclick="modal_hospitales.showModal()" class="btn">Hospitales</button>
+    <button onclick="modal_paciente.showModal()" class="btn">Paciente / Incidente</button>
+  </div>
+
+  <h2>Valoración</h2>
+
+  <div class="grid">
+    <!-- Grupo 2: Estado del paciente -->
+    <button onclick="modal_respiratorio.showModal()" class="btn">Respiratorio</button>
+    <button onclick="modal_circulatorio.showModal()" class="btn">Circulatorio</button>
+    <button onclick="modal_neuro.showModal()" class="btn">Neurológico</button>
+    <button onclick="modal_lesiones.showModal()" class="btn">Lesiones</button>
+    <button onclick="modal_farmacos.showModal()" class="btn">Fármacos y Vías</button>
+    <button onclick="modal_protocolos.showModal()" class="btn">Protocolos / Escalas</button>
+  </div>
+
+  <IndiceShocKComponent client:load></IndiceShocKComponent>
+</div>
+
+<!-- Modales -->
+<dialog id="modal_activacion">
+  <h2>Criterios de Activación</h2>
+  <div class="subsection">
+    <h3>Signos Vitales</h3>
+    <ul>
+      {activacion.signos_vitales.map(s => <li><strong>{s.parametro}:</strong> {s.valor}</li>)}
+    </ul>
+  </div>
+  <div class="subsection">
+    <h3>Lesiones</h3>
+    <ul>
+      {activacion.lesiones.map(l => <li>{l}</li>)}
+    </ul>
+  </div>
+  <div class="subsection">
+    <h3>Mecanismos de Lesión</h3>
+    <ul>
+      {activacion.mecanismos_lesion.map(m => <li>{m}</li>)}
+    </ul>
+  </div>
+  <div class="subsection">
+    <h3>Factores de Riesgo</h3>
+    <ul>
+      {activacion.factores_riesgo.map(f => <li>{f}</li>)}
+    </ul>
+  </div>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_hospitales">
+  <h2>Hospitales</h2>
+  <ul>{hospitales.map(h => <li>{h}</li>)}</ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_paciente">
+  <h2>Paciente / Incidente</h2>
+  <ul>
+    <li>{valoracion.paciente_incidente.edad}</li>
+    <li>{valoracion.paciente_incidente.sexo}</li>
+    {valoracion.paciente_incidente.tipo_incidente.map(t => <li>{t}</li>)}
+  </ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_respiratorio">
+  <h2>Respiratorio</h2>
+  <h3>Vía aérea</h3>
+  <ul>{valoracion.via_aerea.map(v => <li>{v}</li>)}</ul>
+  <h3>Ventilación</h3>
+  <ul>{valoracion.ventilación.map(v => <li>{v}</li>)}</ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_circulatorio">
+  <h2>Circulatorio</h2>
+  <ul>
+    <li>{valoracion.circulatorio.constantes}</li>
+    {valoracion.circulatorio.signos.map(s => <li>{s}</li>)}
+  </ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_neuro">
+  <h2>Neurológico</h2>
+  <ul>{valoracion.neurologico.map(n => <li>{n}</li>)}</ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_lesiones">
+  <h2>Lesiones</h2>
+  <ul>
+    <li>{valoracion.lesiones.localizacion}</li>
+    {valoracion.lesiones.tipo_lesion.map(t => <li>{t}</li>)}
+  </ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_farmacos">
+  <h2>Fármacos y Vías</h2>
+  <h3>Dispositivos</h3>
+  <ul>{valoracion.farmacos_vias.dispositivos.map(d => <li>{d}</li>)}</ul>
+  <h3>Vías</h3>
+  <ul>{valoracion.farmacos_vias.vias.map(v => <li>{v}</li>)}</ul>
+  <h3>Fármacos</h3>
+  <ul>{valoracion.farmacos_vias.Farmacos.map(f => <li>{f}</li>)}</ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_protocolos">
+  <h2>Protocolos / Escalas</h2>
+  <ul>
+    {valoracion.protocolos_especificos.map(p => <li>{p}</li>)}
+    <li>{valoracion.trauma_score}</li>
+    <li>{valoracion.indice_shock}</li>
+  </ul>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>

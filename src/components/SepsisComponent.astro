@@ -1,0 +1,40 @@
+---
+import sepsisData from "../collections/sepsis.json";
+import QsofaComponent from "./calculators/QsofaComponent.vue";
+const data = sepsisData;
+---
+
+
+<div class="container">
+  <h1>Código Sepsis</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_criterios.showModal()">Criterios de Inclusión (qSOFA)</button>
+    <button class="btn" onclick="modal_evaluacion.showModal()">Evaluación Inicial</button>
+  </div>
+
+  <div class="scale-btn">
+    <QsofaComponent client:load></QsofaComponent>
+  </div>
+</div>
+
+<dialog id="modal_criterios">
+  <h2>Criterios de Inclusión (qSOFA)</h2>
+  <h3>Umbral: {data.codigo_infarto.criterios_inclusion.qSOFA.umbral}</h3>
+  <ul>
+    {data.codigo_infarto.criterios_inclusion.qSOFA.criterios.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_evaluacion">
+  <h2>Evaluación Inicial</h2>
+  <ul>
+    {data.codigo_infarto.evaluacion_inicial.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>

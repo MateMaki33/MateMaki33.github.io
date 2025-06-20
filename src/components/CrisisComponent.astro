@@ -1,0 +1,45 @@
+---
+import crisisData from "../collections/crisis.json";
+const data = crisisData;
+---
+
+
+<div class="container">
+  <h1>Código Crisis</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_inclusion.showModal()">Criterios de Inclusión</button>
+    <button class="btn" onclick="modal_hosp_ped.showModal()">Hospitales Pediátricos</button>
+    <button class="btn" onclick="modal_hosp_gen.showModal()">Hospitales Generales</button>
+  </div>
+</div>
+
+<dialog id="modal_inclusion">
+  <h2>Criterios de Inclusión</h2>
+  <ul>
+    {data.codigo_donante.criterios_inclusion.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_hosp_ped">
+  <h2>Hospitales Pediátricos</h2>
+  <ul>
+    {data.codigo_donante.traslado.hospitales_pediatricos.map(h => (
+      <li>{h}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_hosp_gen">
+  <h2>Hospitales Generales</h2>
+  <ul>
+    {data.codigo_donante.traslado.hospitales.map(h => (
+      <li>{h}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>

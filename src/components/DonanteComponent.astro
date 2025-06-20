@@ -1,0 +1,56 @@
+---
+import donanteData from "../collections/donante.json";
+const data = donanteData.codigo_donante;
+---
+
+
+<div class="container">
+  <h1>Código Donante</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_inclusion.showModal()">Criterios de Inclusión</button>
+    <button class="btn" onclick="modal_exclusion.showModal()">Criterios de Exclusión</button>
+    <button class="btn" onclick="modal_evaluacion.showModal()">Evaluación Inicial</button>
+    <button class="btn" onclick="modal_traslado.showModal()">Traslado</button>
+  </div>
+</div>
+
+<dialog id="modal_inclusion">
+  <h2>Criterios de Inclusión</h2>
+  <ul>
+    {data.criterios_inclusion.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_exclusion">
+  <h2>Criterios de Exclusión</h2>
+  <ul>
+    {data.criterios_exclusion.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_evaluacion">
+  <h2>Evaluación Inicial</h2>
+  <ul>
+    {data.evaluacion_inicial.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_traslado">
+  <h2>Traslado</h2>
+  <ul>
+    {data.traslado.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>

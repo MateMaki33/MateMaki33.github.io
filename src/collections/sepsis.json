@@ -1,0 +1,27 @@
+{
+  "codigo_infarto": {
+    "criterios_inclusion": {
+      "qSOFA": {
+        "umbral": "Mayor o igual a 2 puntos",
+        "criterios": [
+          "FR mayor o igual a 22 rpm",
+          "Alteración glasgow",
+          "TA sistólica menor o igual a 100 mmHg"
+        ]
+      }
+    },
+    "evaluacion_inicial": {
+      "items": [
+        "Filiación",
+        "Antecedentes personales (AP)",
+        "Situación basal",
+        "Inicio de síntomas",
+        "Constantes",
+        "Sospecha del foco",
+        "Escala qSOFA",
+        "Tratamiento aplicado",
+        "Necesidad de IOT"
+      ]
+    }
+  }
+}

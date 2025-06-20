@@ -1,0 +1,129 @@
+{
+  "codigo_ictus": {
+    "criterios_exclusion": [
+      "Tiempo evolución >24h",
+      "Enfermedad grave",
+      "Gran dependiente",
+      "Demencia moderada o superior"
+    ],
+    "evaluacion_inicial": {
+      "items": [
+        "Filiación",
+        "Antecedentes personales (AP)",
+        "Situación basal",
+        "Inicio de síntomas",
+        "Síntomas, focalidad",
+        "Antiagregación, Anticoagulación",
+        "Madrid Direct"
+      ],
+      "escala_madrid_direct": {
+        "items": [
+          {
+            "nombre": "Sistema motor - Brazo",
+            "puntos": [
+              {
+                "valor": 0,
+                "descripcion": "Vence gravedad sin ayuda"
+              },
+              {
+                "valor": 1,
+                "descripcion": "No vence gravedad"
+              }
+            ]
+          },
+          {
+            "nombre": "Sistema motor - Pierna",
+            "puntos": [
+              {
+                "valor": 0,
+                "descripcion": "Vence gravedad sin ayuda"
+              },
+              {
+                "valor": 1,
+                "descripcion": "No vence gravedad"
+              }
+            ]
+          },
+          {
+            "nombre": "Desviación mirada",
+            "puntos": [
+              {
+                "valor": 0,
+                "descripcion": "No desviación"
+              },
+              {
+                "valor": 1,
+                "descripcion": "Desviación de la mirada"
+              }
+            ]
+          },
+          {
+            "nombre": "Respuesta a órdenes",
+            "puntos": [
+              {
+                "valor": 0,
+                "descripcion": "Obedece órdenes"
+              },
+              {
+                "valor": 1,
+                "descripcion": "No obedece órdenes"
+              }
+            ]
+          },
+          {
+            "nombre": "Reconocimiento déficit",
+            "puntos": [
+              {
+                "valor": 0,
+                "descripcion": "Lo reconoce sin problemas"
+              },
+              {
+                "valor": 1,
+                "descripcion": "No reconoce déficit o no reconoce extremidad parética"
+              }
+            ]
+          },
+          {
+            "nombre": "Presión Arterial Sistólica",
+            "puntos": [
+              {
+                "rango": "180-189",
+                "accion": "restar 1 punto"
+              },
+              {
+                "rango": "190-199",
+                "accion": "restar 2 puntos"
+              },
+              {
+                "rango": "200-209",
+                "accion": "restar 3 puntos"
+              },
+              {
+                "rango": ">209",
+                "accion": "restar 4 puntos"
+              }
+            ]
+          },
+          {
+            "nombre": "Edad",
+            "puntos": [
+              {
+                "criterio": "Sin límite. Se resta un punto por cada año a partir de los 85"
+              }
+            ]
+          }
+        ],
+        "interpretacion_puntuacion": [
+          {
+            "rango": "0-1",
+            "accion": "Traslado a unidad de ictus más cercana"
+          },
+          {
+            "rango": "2-5",
+            "accion": "Traslado directo a hospital de guardia para TM"
+          }
+        ]
+      }
+    }
+  }
+}

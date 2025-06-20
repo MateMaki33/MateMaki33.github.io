@@ -1,0 +1,77 @@
+{
+  "codigo_trauma": {
+    "criterios_activacion": {
+      "signos_vitales": [
+        {
+          "parametro": "Tensión arterial sistólica",
+          "valor": "≤90mmHg"
+        },
+        {
+          "parametro": "Frecuencia respiratoria",
+          "valor": "≥29 ó <10 rpm"
+        },
+        {
+          "parametro": "Escala de Coma de Glasgow",
+          "valor": "≤13"
+        }
+      ],
+      "lesiones": [
+        "Lesión penetrante en cabeza, cuello, tórax, abdomen, ingles, axilas y torso",
+        "Fractura de 2 o más huesos largos",
+        "Amputación traumática",
+        "Ausencia de pulso o parálisis de alguna extremidad",
+        "Quemaduras eléctricas"
+      ],
+      "mecanismos_lesion": [
+        "Precipitación de más de 2 metros",
+        "Atropello",
+        "Accidente de automóvil a alta velocidad (vuelco, expulsión del automóvil, muertos en el mismo accidente)",
+        "Deformidad del techo: ≥45cm",
+        "Accidente de motocicleta o bicicleta",
+        "Tiempo de extracción prolongado (mayor de 20 minutos)"
+      ],
+      "factores_riesgo": [
+        "Anticoagulantes",
+        "Edades extremas",
+        "Embarazo",
+        "Violencia de género",
+        "Terrorismo",
+        "Derrumbe",
+        "Explosiones"
+      ]
+    },
+    "hospitales_activacion": ["Gregorio Marañon", "Doce de Octubre", "La Paz", "Clínico San Carlos", "Puerta de Hierro", "La Princesa", "Ramón y Cajal"]
+    
+  },
+
+  "valoracion_primaria":{
+    "paciente_incidente":
+        {
+            "edad": "Edad",
+            "sexo": "Sexo",
+            "tipo_incidente": ["Colisión", "Vuelco", "Caída", "Atropello", "Agresión", "Explosión", "Derrumbe", "Armas", "Terrorismo"]
+        },
+    "via_aerea": ["Via difícil", "IOT", "Dispositivo supraglótico", "VentiMask", "Gafas Nasales"],
+    "ventilación": ["Taquipnea","Espontanea", "Asistida"],
+    "circulatorio": 
+        {
+            "constantes": "FC y TA",
+            "signos":["Ingurgitación", "Pulsos periféricos", "Relleno capilar", "Frio", "Sudor", "Color"]
+        },
+    "neurologico": ["Glasgow", "Pupilas"],
+    "lesiones":{
+        "localizacion": "Localización",
+        "tipo_lesion": ["Amputación", "Herida", "Fractura", "Contusion"]
+    },
+    "farmacos_vias":{
+        "dispositivos": ["Faja pélvica", "Torniquetes", "Tablero", "Collarín", "Colchón de vacío", "Férulas"],
+        "vias": ["Periférica", "Intraosea"],
+        "Farmacos": ["Analgesia", "Sedación", "Relajantes", "Vasoactivos", "Hemostáticos"]
+
+    },
+    "protocolos_especificos": ["Cirugía", "Vía aerea difícil", "Hemorragia masiva"],
+    "trauma_score": "Escala Trauma Score",
+    "indice_shock": "FC/TAS > 0.9 Transfundir"
+
+  }
+}

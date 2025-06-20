@@ -1,0 +1,93 @@
+---
+import ictusData from "../collections/ictus.json";
+import MadridDirectComponent from "./calculators/MadridDirectComponent.vue";
+import QsofaComponent from "./calculators/QsofaComponent.vue";
+const data = ictusData;
+---
+
+<style scoped>
+  
+  .card-madrid-direct{
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+  }
+  .scale{
+    min-width: 70%;
+  }
+  .scale-btn{
+    display: grid;
+    inset: 0;
+    place-content: center;
+    width: 30%;
+  }
+</style>
+
+<div class="container">
+  <h1>Código Ictus</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_exclusion.showModal()">Criterios de Exclusión</button>
+    <button class="btn" onclick="modal_evaluacion.showModal()">Evaluación Inicial</button>
+    <button class="btn" onclick="modal_interpretacion.showModal()">Interpretación Madrid Direct</button>
+    <button class="btn" onclick="modal_madrid.showModal()">Escala Madrid Direct</button>
+  </div>
+
+  <div class="scale-btn">
+    <MadridDirectComponent client:load></MadridDirectComponent>
+  </div>
+</div>
+</div>
+
+<dialog id="modal_exclusion">
+  <h2>Criterios de Exclusión</h2>
+  <ul>
+    {data.codigo_ictus.criterios_exclusion.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_evaluacion">
+  <h2>Evaluación Inicial</h2>
+  <ul>
+    {data.codigo_ictus.evaluacion_inicial.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_interpretacion">
+  <h2>Interpretación de Puntuación</h2>
+  <ul>
+    {data.codigo_ictus.evaluacion_inicial.escala_madrid_direct.interpretacion_puntuacion.map(p => (
+      <li>{p.rango}: {p.accion}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_madrid">
+  <h2>Escala Madrid Direct</h2>
+  {data.codigo_ictus.evaluacion_inicial.escala_madrid_direct.items.map(item => (
+    <div class="subsection">
+      <h3>{item.nombre}</h3>
+      <ul>
+        {item.puntos.map(p => (
+          <li>
+            {'valor' in p && `${p.valor}: ${p.descripcion}`}
+            {'rango' in p && `${p.rango}: ${p.accion}`}
+            {'criterio' in p && `${p.criterio}`}
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+
+</div>

@@ -1,0 +1,158 @@
+---
+---
+
+<style>
+ 
+
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-dark);
+    border-bottom: 2px solid var(--neon-orange);
+    box-shadow: 0 0 15px var(--neon-orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    z-index: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--neon-orange);
+    text-shadow: 0 0 10px var(--neon-orange);
+    user-select: none;
+  }
+
+  /* Menú enlaces */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--neon-orange);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+    color: var(--neon-orange);
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Hamburger para móvil */
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 28px;
+    height: 22px;
+    justify-content: space-between;
+  }
+
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background: var(--neon-orange);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--neon-glow);
+    transition: all 0.3s ease;
+  }
+
+  /* Responsive */
+
+  @media (max-width: 768px) {
+    nav ul {
+      position: fixed;
+      top: 56px;
+      right: 0;
+      background: var(--bg-dark);
+      height: calc(100vh - 56px);
+      width: 220px;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      gap: 1.5rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 10px rgba(255, 153, 0, 0.6);
+      border-left: 2px solid var(--neon-orange);
+      z-index: 99;
+    }
+
+    nav ul li a {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+    }
+
+    #menu-toggle:checked + .menu-btn + ul {
+      transform: translateX(0);
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+  }
+
+  /* Animaciones de icono hamburguesa cuando activo */
+
+  #menu-toggle:checked + .menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
+
+<nav>
+  <div class="logo" tabindex="0">Códigos112 by Jose Luis Diaz</div>
+
+  <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
+
+  <label class="menu-btn" for="menu-toggle" tabindex="0" aria-haspopup="true" aria-controls="main-menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <ul id="main-menu" role="menu">
+    <li role="none"><a href="/" role="menuitem" tabindex="0">Inicio</a></li>
+    <li role="none"><a href="/codigos" role="menuitem" tabindex="0">Códigos</a></li>
+    <li role="none"><a href="/escalas" role="menuitem" tabindex="0">Escalas</a></li>
+    <li role="none"><a href="/farmacos" role="menuitem" tabindex="0">Fármacos</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,74 @@
+---
+
+---
+
+<style>
+
+  .container {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #c084fc, #a855f7, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseText 3s infinite;
+  }
+
+  @keyframes pulseText {
+    0%, 100% {
+      text-shadow: 0 0 12px #a855f7;
+    }
+    50% {
+      text-shadow: 0 0 25px #c084fc;
+    }
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 50vw;
+  }
+
+
+
+
+  @media (max-height: 768px) {
+    .links {
+    max-width: 100vw;
+  }
+    h1 {
+      font-size: 2rem;
+    }
+
+    .btn {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+  }
+</style>
+
+<div class="container">
+  <h1>Códigos 112</h1>
+  <div class="links">
+    <a class="btn" href="/ictus">Ictus</a>
+    <a class="btn" href="/infarto">Infarto</a>
+    <a class="btn" href="/crisis">Crisis</a>
+    <a class="btn" href="/donante">Donante</a>
+    <a class="btn" href="/trauma">Trauma</a>
+    <a class="btn" href="/sepsis">Sepsis</a>
+  </div>
+</div>

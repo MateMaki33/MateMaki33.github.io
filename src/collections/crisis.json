@@ -1,0 +1,40 @@
+{
+  "codigo_donante": {
+    "criterios_inclusion": [
+        "Estatus con afectación del nivel de consciencia",
+        "Estatus en < 16 años",
+        "Estatus no convulsivo",
+        "Crisis en acúmulo",
+        "Déficit neurológico post ictal",
+        "Primera crisis en < 1 mes de vida"
+
+    ],
+    "traslado": {
+        "hospitales_pediatricos":[
+            "Gregorio Marañón",
+            "La Paz",
+            "Niño Jesus",
+            "Ramón y Cajal",
+            "Clínico San Carlos",
+            "12 de Octubre"
+
+        ],
+        "hospitales":[
+
+            "Gregorio Marañón",
+            "La Paz",
+            "Niño Jesus",
+            "Ramón y Cajal",
+            "Clínico San Carlos",
+            "12 de Octubre",
+            "Puerta de Hierro",
+            "La Princesa",
+            "Universitario de Getafe",
+            "Fundación Jiménez Díaz",
+            "Rey Juan Carlos"
+
+        ]
+    }
+    
+  }
+}
