@@ -134,9 +134,7 @@ label {
   border-radius: 10px;
   z-index: -1;
 }
-.grid {
-  max-width: 90vw !important;
-}
+
 
 @keyframes spin {
   0% {
