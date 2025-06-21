@@ -1,0 +1,41 @@
+{
+  "QUEMADOS": {
+    "Hospitales": [
+      "Getafe",
+      "La Paz"
+    ],
+    "Anamnesis": {
+      "Aspectos_a_evaluar": [
+        "Profundidad",
+        "Superficie"
+      ],
+      "Agente_causal": [
+        "Química",
+        "Térmica",
+        "Eléctrica",
+        "Radiación"
+      ]
+    },
+    "Criterios_de_ingreso_unidad_de_QUEMADOS": [
+      "SCQ > 20% con quemaduras grado II o III",
+      "SCQ > 10% con quemaduras grado II o III en <10 años o >50 años",
+      "Quemaduras químicas o eléctricas",
+      "Zonas críticas: Cabeza, manos o genitales",
+      "Lesiones asociadas articulares"
+    ],
+    "Otros_criterios_de_ingreso": [
+      "Comorbilidad de riesgo: Inmunodepresión, Diabetes, EPOC",
+      "Quemaduras de tercer grado de cualquier tamaño",
+      "Lesión por inhalación (sospecha o confirmada)",
+      "Quemaduras asociadas a traumatismos importantes",
+      "Quemaduras en pacientes con sospecha de maltrato"
+    ],
+    "Formula_de_Parkland": {
+      "Formula": "4ml x % SCQ x Kg del paciente",
+      "Administracion": [
+        "El 50% del volumen total calculado se administra en las primeras 8 horas desde el momento de la quemadura",
+        "El 50% restante se administra en las siguientes 16 horas"
+      ]
+    }
+  }
+}

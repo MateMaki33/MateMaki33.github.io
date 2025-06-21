@@ -93,6 +93,14 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
     background: var(--color-scroll-thumb-hover);
   }
 
+  a{
+    color: white;
+
+    &:hover{
+      color: var(--neon-orange);
+    }
+  }
+
   .container {
     max-height: 80vh;
     max-width: 100vw;
@@ -156,7 +164,7 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
   }
 
   ul li {
-    margin-top: 5px;
+    margin-top: 1rem;
     font-size: var(--font-size-li);
   }
 

@@ -1,0 +1,116 @@
+---
+import quemadosData from "../collections/quemados.json";
+import WallaceComponent from "./canvas/WallaceComponent.vue";
+import { Image } from "astro:assets";
+import myImage from "../assets/wallace.png";
+import ParcklandComponent from "./calculators/ParcklandComponent.vue";
+
+const data = quemadosData;
+---
+
+<div class="container">
+  <h1>Quemados</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_hospitales.showModal()"
+      >Hospitales</button
+    >
+    <button class="btn" onclick="modal_anamnesis.showModal()">Anamnesis</button>
+    <button class="btn" onclick="modal_criterios.showModal()"
+      >Criterios de ingreso UGQ</button
+    >
+    <button class="btn" onclick="modal_otros_criterios.showModal()"
+      >Otros criterios ingreso</button
+    >
+    <button class="btn" onclick="modal_formula.showModal()"
+      >Fórmula de Parkland</button
+    >
+  </div>
+
+  <div class="calc-buttons">
+    <div>
+      <Image
+        src={myImage}
+        alt="regla de los 9 de Wallace"
+        width="300"
+        height="400"
+      />
+    </div>
+    <ParcklandComponent client:load></ParcklandComponent>
+  </div>
+</div>
+
+<dialog id="modal_hospitales">
+  <h2>Hospitales</h2>
+  <ul>
+    {data.QUEMADOS.Hospitales.map((hospital) => <li>{hospital}</li>)}
+  </ul>
+  <form method="dialog">
+    <button class="btn btn-close">Cerrar</button>
+  </form>
+</dialog>
+
+<dialog id="modal_anamnesis">
+  <h2>Anamnesis</h2>
+  <h3>Aspectos a evaluar</h3>
+  <ul>
+    {
+      data.QUEMADOS.Anamnesis.Aspectos_a_evaluar.map((aspecto) => (
+        <li>{aspecto}</li>
+      ))
+    }
+  </ul>
+  <h3>Agente causal</h3>
+  <ul>
+    {data.QUEMADOS.Anamnesis.Agente_causal.map((agente) => <li>{agente}</li>)}
+  </ul>
+  <form method="dialog">
+    <button class="btn btn-close">Cerrar</button>
+  </form>
+</dialog>
+
+<dialog id="modal_criterios">
+  <h2>Criterios de ingreso unidad de QUEMADOS</h2>
+  <ul>
+    {
+      data.QUEMADOS.Criterios_de_ingreso_unidad_de_QUEMADOS.map((criterio) => (
+        <li>{criterio}</li>
+      ))
+    }
+  </ul>
+  <form method="dialog">
+    <button class="btn btn-close">Cerrar</button>
+  </form>
+</dialog>
+
+<dialog id="modal_otros_criterios">
+  <h2>Otros criterios de ingreso</h2>
+  <ul>
+    {
+      data.QUEMADOS.Otros_criterios_de_ingreso.map((criterio) => (
+        <li>{criterio}</li>
+      ))
+    }
+  </ul>
+  <form method="dialog">
+    <button class="btn btn-close">Cerrar</button>
+  </form>
+</dialog>
+
+<dialog id="modal_formula">
+  <h2>Fórmula de Parkland</h2>
+  <p style="color: var(--neon-glow);">
+    {data.QUEMADOS.Formula_de_Parkland.Formula}
+  </p>
+  <h3>Administración</h3>
+  <ul>
+    {
+      data.QUEMADOS.Formula_de_Parkland.Administracion.map((item) => (
+        <li>{item}</li>
+      ))
+    }
+  </ul>
+  <form method="dialog">
+    <button class="btn btn-close">Cerrar</button>
+  </form>
+</dialog>

@@ -22,7 +22,6 @@
 
         <div class="score">
           <p>RTS: <strong>{{ tsr.rts }}</strong></p>
-          <p>Supervivencia: <strong>{{ tsr.ps }}</strong></p>
           <p>Interpretación: <strong>{{ rtsInterpretacion }}</strong></p>
         </div>
 
@@ -42,13 +41,11 @@ const tas = ref(0)
 const glasgow = ref(15)
 
 const tsr = computed(() => {
-  // Valores base
   const frScore = (() => {
     if (fr.value > 29) return 4;
-    if (fr.value >= 10 && fr.value <= 29) return 4;
-    if (fr.value >= 6 && fr.value <= 9) return 3;
-    if (fr.value >= 1 && fr.value <= 5) return 2;
-    if (fr.value === 0) return 0;
+    if (fr.value >= 10) return 4;
+    if (fr.value >= 6) return 3;
+    if (fr.value >= 1) return 2;
     return 0;
   })();
 
@@ -57,7 +54,6 @@ const tsr = computed(() => {
     if (tas.value >= 76) return 3;
     if (tas.value >= 50) return 2;
     if (tas.value >= 1) return 1;
-    if (tas.value === 0) return 0;
     return 0;
   })();
 
@@ -66,36 +62,29 @@ const tsr = computed(() => {
     if (glasgow.value >= 13) return 3;
     if (glasgow.value >= 9) return 2;
     if (glasgow.value >= 6) return 1;
-    if (glasgow.value < 6) return 0;
     return 0;
   })();
 
-  // RTS ponderado (0 a 7.8408)
   const rts =
-    (0.9368 * glasgowScore) +
-    (0.7326 * tasScore) +
-    (0.2908 * frScore);
-
-  // Probabilidad de supervivencia (Ps)
-  const b = -0.4499 + 0.8085 * rts;
-  const ps = 1 / (1 + Math.exp(-b));
+    0.9368 * glasgowScore +
+    0.7326 * tasScore +
+    0.2908 * frScore;
 
   return {
-    rts: rts.toFixed(2),
-    ps: (ps * 100).toFixed(1) + '%'
+    rts: rts.toFixed(4),
   };
 });
 
-const rtsInterpretacion = computed(()=>{
-    const score = tsr.value.rts;
-    if (score >= 7.84) return "Trauma leve. Alta probabilidad de supervivencia.";
-    if (score >= 6) return "Trauma moderado. Vigilancia estrecha recomendada.";
-    if (score >= 4) return "Trauma grave. Riesgo vital. Requiere atención urgente.";
-    return "Trauma muy grave. Estado crítico.";
+const rtsInterpretacion = computed(() => {
+  const score = parseFloat(tsr.value.rts);
+  if (score >= 7.84) return "Trauma leve. Alta probabilidad de supervivencia.";
+  if (score >= 6) return "Trauma moderado. Pronóstico favorable.";
+  if (score >= 4) return "Trauma grave. Riesgo elevado.";
+  return "Trauma muy grave. Pronóstico reservado.";
 });
 
-const openModal = () => modal.value?.showModal()
-const closeModal = () => modal.value?.close()
+const openModal = () => modal.value?.showModal();
+const closeModal = () => modal.value?.close();
 </script>
 
 <style scoped>

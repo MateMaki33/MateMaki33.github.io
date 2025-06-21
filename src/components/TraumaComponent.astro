@@ -110,6 +110,7 @@ const valoracion = traumaData.valoracion_primaria;
   <h2>Lesiones</h2>
   <ul>
     <li>{valoracion.lesiones.localizacion}</li>
+    <li><a href="/quemados">{valoracion.lesiones.quemados}</a></li>
     {valoracion.lesiones.tipo_lesion.map(t => <li>{t}</li>)}
   </ul>
   <form method="dialog"><button class="btn">Cerrar</button></form>
