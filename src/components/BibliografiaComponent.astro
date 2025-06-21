@@ -1,0 +1,21 @@
+---
+import bibliografiaData from "../collections/bibliografia.json";
+const referencias = bibliografiaData.Bibliografia;
+---
+
+<div class="container">
+  <h2>Bibliografía</h2>
+  <div class="grid" style="gap: 1rem;">
+    {referencias.map((ref, index) => {
+      const urlMatch = ref.match(/https?:\/\/[^\s\]]+/);
+      const url = urlMatch ? urlMatch[0] : null;
+      const textoLimpio = url ? ref.replace(url, "").trim() : ref;
+
+      return (
+        <div class="card" style="padding: 1rem; font-size: 0.95rem;">
+          <p><strong>[{index + 1}]</strong> {url ? <a href={url} target="_blank" rel="noopener noreferrer">{textoLimpio}</a> : textoLimpio}</p>
+        </div>
+      );
+    })}
+  </div>
+</div>
