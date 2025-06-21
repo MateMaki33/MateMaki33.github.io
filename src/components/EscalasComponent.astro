@@ -1,4 +1,5 @@
 ---
+import GlasgowComponent from "./calculators/GlasgowComponent.vue";
 import IndiceShocKComponent from "./calculators/IndiceShocKComponent.vue";
 import MadridDirectComponent from "./calculators/MadridDirectComponent.vue";
 import ParcklandComponent from "./calculators/ParcklandComponent.vue";
@@ -41,6 +42,7 @@ import TraumaScoreComponent from "./calculators/TraumaScoreComponent.vue";
 <div class="container">
   <h1>Escalas</h1>
   <div class="links">
+    <GlasgowComponent client:load></GlasgowComponent>
     <IndiceShocKComponent client:load></IndiceShocKComponent>
     <MadridDirectComponent client:load></MadridDirectComponent>
     <ParcklandComponent client:load></ParcklandComponent>

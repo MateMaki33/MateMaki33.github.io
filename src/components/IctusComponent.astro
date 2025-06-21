@@ -1,5 +1,6 @@
 ---
 import ictusData from "../collections/ictus.json";
+import GlasgowComponent from "./calculators/GlasgowComponent.vue";
 import MadridDirectComponent from "./calculators/MadridDirectComponent.vue";
 import QsofaComponent from "./calculators/QsofaComponent.vue";
 const data = ictusData;
@@ -33,8 +34,9 @@ const data = ictusData;
     <button class="btn" onclick="modal_madrid.showModal()">Escala Madrid Direct</button>
   </div>
 
-  <div class="scale-btn">
+  <div class="calc-buttons">
     <MadridDirectComponent client:load></MadridDirectComponent>
+    <GlasgowComponent client:load></GlasgowComponent>
   </div>
 </div>
 </div>
