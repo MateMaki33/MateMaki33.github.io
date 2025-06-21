@@ -23,6 +23,11 @@ const referencias = bibliografiaData.Bibliografia;
 <style scoped>
   .grid{
     grid-template-columns: repeat(3, 1fr);
+    
+    @media(max-width: 768px){
+      display: flex;
+      flex-direction: column;
+    }
   }
   .card{
     height: 120px;
