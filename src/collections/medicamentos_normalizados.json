@@ -1,0 +1,2602 @@
+[
+  {
+    "nombre": "ACETILCISTEINA",
+    "marcas": ["Flumil antídoto", "Hidonac antídoto"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "2 g",
+        "volumen": "10 ml"
+      },
+      {
+        "forma": "ampolla",
+        "cantidad": "300 mg",
+        "volumen": "3 ml"
+      }
+    ],
+    "indicaciones": [
+      "Intoxicación por paracetamol",
+      "Intoxicación por tetracloruro de carbono"
+    ],
+    "contraindicaciones": [
+      "Náuseas",
+      "Vómitos",
+      "Broncoespasmo en asmáticos",
+      "Reacciones anafilácticas",
+      "Hiponatremia"
+    ],
+    "precauciones": [
+      "Asma bronquial",
+      "No administrar conjuntamente con carbón activado"
+    ],
+    "interacciones": ["Nitroglicerina: hipotensión, cefalea"],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "inicial: 150 mg/kg iv en 200 ml SG5% en 15-60 minutos",
+      "segunda: 50 mg/kg en 500 ml SG5% en 4 horas (125 ml/h)",
+      "tercera: 100 mg/kg en 1000 ml SG5% en 16 horas (62 ml/h)"
+    ]
+  },
+  {
+    "nombre": "ACETILSALICILATO DE LISINA",
+    "marcas": ["Inyesprín"],
+    "presentaciones": [
+      {
+        "forma": "vial",
+        "cantidad": "900 mg",
+        "diluyente": "5 ml"
+      }
+    ],
+    "indicaciones": [
+      "Tratamiento del síndrome coronario agudo",
+      "Pericarditis",
+      "Pleuritis",
+      "Analgesia antiinflamatoria"
+    ],
+    "contraindicaciones": [
+      "Efectos gastrointestinales (hemorragia, irritación)",
+      "Vértigo",
+      "Tinnitus",
+      "Trombopenia",
+      "Reacción alérgica"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "Antidiabéticos orales",
+      "Anticoagulantes orales",
+      "Valproato sódico",
+      "Nitroglicerina"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "D",
+    "dosis": ["iv: 450 mg (½ ampolla) en 100 ml SSF, infundir en 15 minutos"]
+  },
+  {
+    "nombre": "ÁCIDO TRANEXÁMICO",
+    "marcas": ["Amchafibrin"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "500 mg"
+      }
+    ],
+    "indicaciones": [
+      "Hemorragias por aumento de fibrinólisis",
+      "Edema angioneurótico hereditario"
+    ],
+    "contraindicaciones": [
+      "Alergia",
+      "Antecedentes de trombosis (arterial o venosa)",
+      "Fallo renal severo",
+      "Epilepsia"
+    ],
+    "precauciones": [],
+    "interacciones": ["Anticonceptivos orales"],
+    "efectos_secundarios": [
+      "Náuseas",
+      "Vómitos",
+      "Hipotensión",
+      "Trombosis",
+      "Convulsiones",
+      "Reacciones alérgicas"
+    ],
+    "embarazo": "B",
+    "dosis": ["iv: 1 g cada 8 h a 1 ml/min", "oral: 1-1.5 g cada 8-12 h"]
+  },
+  {
+    "nombre": "ÁCIDO VALPROICO",
+    "marcas": ["Depakine"],
+    "presentaciones": [
+      {
+        "forma": "vial",
+        "cantidad": "400 mg",
+        "diluyente": "4 ml (100 mg/ml)"
+      }
+    ],
+    "indicaciones": [
+      "Epilepsias generalizadas o parciales",
+      "Situaciones urgentes donde la administración oral no es posible"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a valproato sódico",
+      "Embarazo, a menos que no haya tratamiento alternativo",
+      "Hepatitis aguda o crónica",
+      "Porfiria hepática"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [
+      "Somnolencia",
+      "Astenia",
+      "Irritabilidad",
+      "Alteraciones gastrointestinales",
+      "Trombocitopenia",
+      "Disminución de función hepática"
+    ],
+    "embarazo": "",
+    "dosis": [
+      "bolo_iv: 15-20 mg/kg",
+      "mantenimiento_iv: 0.5-1 mg/kg/h, diluido a 4 mg/ml"
+    ]
+  },
+  {
+    "nombre": "ACTRAPID",
+    "marcas": ["Actraid", "Actrapid innolet sol"],
+    "presentaciones": [
+      {
+        "forma": "vial",
+        "volumen": "10 ml",
+        "concentracion": "100 UI/ml"
+      }
+    ],
+    "indicaciones": [
+      "Hiperglucemia",
+      "Diabetes mellitus (descompensación hiperosmolar y cetósica)",
+      "Hiperpotasemia grave"
+    ],
+    "contraindicaciones": ["Hipersensibilidad"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [
+      "Hipoglucemia",
+      "Reacciones locales",
+      "Hipopotasemia"
+    ],
+    "embarazo": "B",
+    "dosis": [
+      "cetoacidosis (bolo): 0.15 UI/kg iv",
+      "cetoacidosis (perfusión): 0.1 UI/kg/h",
+      "hiperglucemia_hiperosmolar (bolo): igual que cetoacidosis",
+      "hiperglucemia_hiperosmolar (perfusión): 0.05 UI/kg/h tras tercera hora"
+    ]
+  },
+  {
+    "nombre": "ADENOSINA",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 6mg (2ml)"],
+    "indicaciones": [
+      "Antiarrítmico de clase IV",
+      "Taquicardia supraventricular paroxística incluyendo Wolf-Parkinson-White"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Bloqueo AV de alto grado",
+      "Síndrome del seno enfermo (salvo que porte marcapasos)",
+      "Taquicardia/fibrilación ventricular",
+      "Hipertensión pulmonar",
+      "Asma/EPOC",
+      "Fase aguda de IAM"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "Dipiridamol (potencia)",
+      "Digoxina",
+      "Xantinas (disminuye efecto)"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "No hay estudios",
+    "dosis": [
+      "Primera: 6mg en bolo (2ml) más bolo de fisiológicos de 20ml",
+      "Siguientes: 12mg más bolo de suero fisiológico de 20ml"
+    ]
+  },
+  {
+    "nombre": "ALBÚMINA",
+    "marcas": [],
+    "presentaciones": ["Vial al 20% (50ml)"],
+    "indicaciones": [
+      "Hiponatremia",
+      "Virrosis (paracentesis con ascitis refractaria en extracciones de más de 5 litros)",
+      "Sd. nefrótico (en casos refactarios)",
+      "Enteropatías",
+      "Shock (hipovolémico tras cristaloides)",
+      "Edema cerebral",
+      "Quemados (no en fase inicial)"
+    ],
+    "contraindicaciones": ["Hipersensibilidad"],
+    "precauciones": [
+      "En insuficiencia renal (con HNF)",
+      "Insuficiencia hepática moderada",
+      "Riesgo de hemorragia (biopsia reciente, litotricia en las dos últimas semanas, cirugía mayor o traumatismo grave de más de 6 semanas, úlcera activa en los últimos 3 meses, hipertensión no controlada, hematuria, coagulopatía previa)"
+    ],
+    "interacciones": "No se han descrito",
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "Sin reconstituir, se administra directamente de la presentación de 50ml lenta",
+      "No mezclar con otros fármacos, sangre, concentrados de hematíes",
+      "6-8g por cada litro extraído",
+      "Pasar cada frasco en no menos de 30 minutos"
+    ]
+  },
+  {
+    "nombre": "ALTEPLASA",
+    "marcas": [],
+    "presentaciones": ["Viales de 20mg (en 20ml)", "Viales de 50mg (en 50ml)"],
+    "indicaciones": [
+      "Trombolítico (hidroliza la fibrina)",
+      "IAM",
+      "TEP masivo inestable hemodinámicamente",
+      "Ictus isquémico agudo (código ictus)"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Hemorragia significativa en los últimos 6 meses",
+      "Diátesis hemorrágica",
+      "Antecedente de hemorragia intracraneal",
+      "Ictus isquémico en los últimos 6 meses",
+      "Ictus actual evolucionado",
+      "Convulsiones en este episodio de ictus"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "Aumento del riesgo de sangrado con anticoagulantes orales",
+      "Inhibidores de la agregación",
+      "Heparina tanto fraccionada como HBPM",
+      "Aumento de riesgo de anafilaxia con IECA"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "{'IAM': {'Pauta de 90 minutos (primeras 6 horas)': ['15mg en bolo ev', 'Seguir con perfusión de 50mg en 30 minutos', 'Posteriormente 35mg en 60 minutos (máximo 100mg)'], 'Pauta de 3 horas (6-12 horas tras IAM)': ['10 mg en bolo ev', '50 mg perfundidos en 1 hora', 'Perfusiones de 10mg en 30 minutos (máximo 100mg)']}, 'TEP masivo': ['10 mg en bolo en 1-2 minutos', '90 mg en perfusión en 2 horas'], 'Ictus isquémico': ['Calcular dosis total: 0.9mg/Kg (máximo 90)', 'Poner en bolo un 10% de esa dosis', 'Posteriormente perfundir el calculado en 60 minutos']}"
+    ]
+  },
+  {
+    "nombre": "AMIODARONA",
+    "marcas": [],
+    "presentaciones": ["Ampollas: 150mg en 3ml"],
+    "indicaciones": [
+      "Taquiarritmias: FA, flúter auricular, síndrome de preexcitación, TPSV, TV, tras FV recuperada o refractarias"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al Yodo",
+      "Ritmos que cursan con bradiarritmias (bloqueo sinoauricular, enfermedad del seno...)",
+      "Disfunciones tiroideas",
+      "Hipotensión grave",
+      "Insuficiencia hepática",
+      "Embarazo (categoría FDA D)"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "Anticoagulantes orales (mayor riesgo de sangrado)",
+      "Fármacos que aumentan el intervalo QT",
+      "Antiarrítmicos clase I: quinidina, disopiramida, sotalol, bepridil",
+      "Otros: vincamina, clorpromazina, haloperidol, eritromicina endovenosa, etc.",
+      "Riesgo de hipocaliemia y prolongación del QT con laxantes, diuréticos, corticoides",
+      "Aumenta los niveles plasmáticos de: diltiazem, digoxina, fenitoína, ciclosporina"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "D",
+    "dosis": [
+      "Dosis máxima 2.2gr/día. Diluir con fisiológico o glucosado",
+      "1 mg/min durante 6 horas, luego 0.5 mg/min en 18 horas",
+      "FV o TV sin pulso: 300mg en 20ml SF en no menos de 3 minutos, repetir 150mg cada 10 minutos",
+      "TV estable: 150mg en 10 minutos, repetir cada 10-15 minutos"
+    ]
+  },
+  {
+    "nombre": "ATENOLOL",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 5mg (10 ml)", "Comprimidos: 50 y 100mg"],
+    "indicaciones": [
+      "Síndrome coronario agudo",
+      "Angor",
+      "Hipertensión arterial",
+      "Arritmias (TSVP, FA)",
+      "Extrasistolia ventricular"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "ICC descompensada",
+      "Bradicardia",
+      "Bloqueo AV de 2º o 3er grado",
+      "Asma moderado/severo",
+      "EPOC",
+      "Acidosis metabólica"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "IMAO, alcohol",
+      "Calcioantagonistas",
+      "Diuréticos tiazídicos",
+      "Amiodarona",
+      "Anticoagulantes"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "D",
+    "dosis": [
+      "IAM/angor inestable: 5 mg ev lento en 5 minutos, repetir en 10 minutos, luego 50mg vía oral",
+      "Extrasistolia ventricular: 50 mg/12 horas durante 7 días",
+      "Cardiopatía isquémica: 50 mg/8-12 horas vía oral"
+    ]
+  },
+  {
+    "nombre": "ATRACURIO BESILATO",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 10mg/ml (2.5ml y 5ml)"],
+    "indicaciones": [
+      "Relajante muscular no despolarizante",
+      "Inductor de parálisis neuromuscular"
+    ],
+    "contraindicaciones": [
+      "Alergia a cisatracurio, atracurio o ácido bencenosulfónico"
+    ],
+    "precauciones": [],
+    "interacciones": [
+      "Efecto aumentado por aminoglucósidos, anestésicos locales, antiarrítmicos",
+      "Disminución del efecto con fenitoína y carbamazepina"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "Inducción: 0.5 mg/kg ev",
+      "Mantenimiento: 0.5 mg/kg/hora, diluir en SF o SG5%"
+    ]
+  },
+  {
+    "nombre": "ATROPINA",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 1 ml con 1mg"],
+    "indicaciones": [
+      "Premedicación anestésica",
+      "Bradicardia",
+      "Intoxicación por organofosforados",
+      "Síndrome colinérgico"
+    ],
+    "contraindicaciones": [
+      "Alergia",
+      "Estenosis pilórica",
+      "Glaucoma",
+      "Miastenia",
+      "Hipertermia"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "Bradicardia: 0.5-1 mg cada 5 minutos (máximo 0.04mg/kg)",
+      "Intoxicación por organofosforados: 2mg cada 15 minutos hasta atropinización"
+    ]
+  },
+  {
+    "nombre": "AZUL DE METILENO",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 10ml con 100mg (10mg/ml)"],
+    "indicaciones": [
+      "Metahemoglobinemia inducida por fármacos",
+      "Intoxicaciones por nitritos, nitroprusiato, etc."
+    ],
+    "contraindicaciones": ["Alergia", "Insuficiencia renal"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "No hay estudios",
+    "dosis": [
+      "Bolo lento: 1-2 mg/kg ev en 5 minutos, repetir a los 30 minutos",
+      "Perfusión: 1-2 mg/kg diluido en 100ml de suero a pasar en 10 minutos"
+    ]
+  },
+  {
+    "nombre": "BEMIPARINA",
+    "marcas": [],
+    "presentaciones": ["Jeringas de 2,500-12,500 UI"],
+    "indicaciones": [
+      "Profilaxis de TEP",
+      "Tratamiento de TVP con o sin TEP",
+      "Prevención de coagulación en hemodiálisis"
+    ],
+    "contraindicaciones": [
+      "Alergia",
+      "Trombopenia inducida por heparina",
+      "Hemorragias activas"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "No se sabe",
+    "dosis": [
+      "Profilaxis: 3,500 UI antes o después de cirugía",
+      "TVP: 5,000-10,000 UI según peso"
+    ]
+  },
+  {
+    "nombre": "BICARBONATO",
+    "marcas": [],
+    "presentaciones": ["1molar: 1ml=1mEq", "1/6molar: 6ml=1mEq"],
+    "indicaciones": [
+      "Acidosis metabólica (pH<7.2)",
+      "Hiperpotasemia",
+      "Intoxicaciones (salicilatos, fenobarbital, antidepresivos tricíclicos, barbitúricos)",
+      "Rabdomiolisis",
+      "Síndrome de lisis tumoral",
+      "Prevención de nefropatía inducida por contraste"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Alcalosis",
+      "Hipocalcemia",
+      "Hipocloremia",
+      "ICC o edema severo"
+    ],
+    "precauciones": [
+      "Retención hidrosalina",
+      "No administrar rápido (alcalosis, arritmias)",
+      "Evitar extravasación",
+      "Repetir gasometrías (vigilar Hipopotasemia, pH, bicarbonato)"
+    ],
+    "interacciones": [
+      "Tratamientos crónicos con corticoides",
+      "Aumenta excreción de litio, salicilatos y barbitúricos",
+      "Disminuye excreción de simpaticomiméticos y estimulantes (anfetaminas)"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "No hay problema",
+    "dosis": [
+      "Acidosis metabólica: 0.4 x déficit de base x peso (50% en la primera hora, 50% en 12 horas siguientes)",
+      "Rabdomiolisis: 15mEq/hora para mantener pH urinario >6.5",
+      "Hiperpotasemia (>6.5): 50-100mEq en 15-30 minutos",
+      "Prevención de nefropatía por contraste: 3ml/Kg/h en 1 hora, 1ml/Kg/h en 6 horas"
+    ]
+  },
+
+  {
+    "nombre": "CALCIO CLORURO",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 10ml (100mg/ml)"],
+    "indicaciones": [
+      "Tratamiento de la hipocalcemia",
+      "Reanimación cardiaca",
+      "Depresión del sistema nervioso central por hipermagnesemia",
+      "Hiperpotasemia"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al cloruro de calcio",
+      "Hipercalcemia o hipercalciuria",
+      "Toxicidad digitálica",
+      "Prematuros o menores de un mes"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Hipocalcemia severa: 100ml SF o GS en 10-15 min",
+      "Reanimación cardiaca: 2-4ml iv rápido",
+      "Hiperpotasemia: 2-5ml iv lento, repetir cada 5 min"
+    ]
+  },
+  {
+    "nombre": "CISATRACURIO",
+    "marcas": [],
+    "presentaciones": [
+      "Viales de 10ml con 20mg",
+      "Viales de 10ng/5ml",
+      "Viales de 5mg en 30ml",
+      "Viales de 150mg/30ml"
+    ],
+    "indicaciones": [
+      "Bloqueo neuromuscular no despolarizante",
+      "Ventilación mecánica"
+    ],
+    "contraindicaciones": ["Hipersensibilidad a cisatracurio"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["Inducción: 0.15mg/kg", "Mantenimiento: 2μg/Kg/min"]
+  },
+  {
+    "nombre": "CLOPIDOGREL",
+    "marcas": [],
+    "presentaciones": ["Comprimidos de 75mg y 30mg"],
+    "indicaciones": [
+      "Prevención de aterotrombosis en IAM",
+      "Angor inestable",
+      "ACV",
+      "Stent"
+    ],
+    "contraindicaciones": [
+      "Hemorragias",
+      "Insuficiencia hepática severa",
+      "Anticoagulantes orales"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "SCASEST y angor: 300mg inicial vo, luego 75mg/24h",
+      "SCACEST: igual que SCASEST"
+    ]
+  },
+  {
+    "nombre": "CLORAZEPATO DIPOTÁSICO",
+    "marcas": [],
+    "presentaciones": [
+      "Cápsulas: 5mg, 10mg, 15mg, 50mg",
+      "Inyectables: 20mg, 50mg"
+    ],
+    "indicaciones": [
+      "Ansiedad",
+      "Delirium tremens",
+      "Deprivación alcohólica",
+      "Tétanos"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a benzodiazepinas",
+      "Insuficiencia hepática grave",
+      "Apnea del sueño"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Delirium tremens: 50-100 mg cada 3-4 horas",
+      "Tétanos sin respiración mecánica: 120-150 mg/día",
+      "Agitación: 20-200 mg/día im o ev"
+    ]
+  },
+  {
+    "nombre": "CLORPROMAZINA",
+    "marcas": [],
+    "presentaciones": [
+      "Ampollas 5mg/ml (25mg)",
+      "Comprimidos: 25mg, 100mg",
+      "Gotas: 1mg/gota"
+    ],
+    "indicaciones": [
+      "Estados de agitación psicomotriz",
+      "Psicosis agudas",
+      "Hipo incoercible"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a fenotiazinas",
+      "Niños menores de un año",
+      "Coma barbitúrico o etílico"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Agitación: 25-50mg im profundo, máx 150mg/día",
+      "Hipo: 25-50mg cada 8 horas"
+    ]
+  },
+  {
+    "nombre": "CLORURO MÓRFICO",
+    "marcas": [],
+    "presentaciones": ["Ampollas 10mg/ml (1%)", "Ampollas 40mg/2ml (2%)"],
+    "indicaciones": [
+      "Dolor severo",
+      "IAM",
+      "Edema agudo de pulmón",
+      "Sedación"
+    ],
+    "contraindicaciones": [
+      "Alergia a opiáceos",
+      "Depresión respiratoria severa",
+      "EPOC grave"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "IV: 2-10mg bolo, repetido cada 5-30 min",
+      "Perfusión: 1-4 mg/hora, diluir en 500ml SSF"
+    ]
+  },
+  {
+    "nombre": "DEXAMETASONA",
+    "marcas": [],
+    "presentaciones": ["Ampollas 4mg/ml"],
+    "indicaciones": [
+      "Edema cerebral asociado a TCE",
+      "Antiinflamatorio",
+      "Antialérgico"
+    ],
+    "contraindicaciones": [
+      "Infecciones activas no tratadas",
+      "Alergia a componentes"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["Bolo inicial: 10-20mg iv", "Mantenimiento: 4mg cada 6 horas"]
+  },
+  {
+    "nombre": "DEXCLOFENIRAMINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 5mg/ml"],
+    "indicaciones": [
+      "Tratamiento sintomático de urticaria aguda",
+      "Antihistamínico"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo u otros antihistamínicos de estructura similar",
+      "Niños menores de 30 meses de edad",
+      "Pacientes en tratamiento con IMAO o dentro de las dos semanas siguientes a la interrupción",
+      "Glaucoma de ángulo cerrado",
+      "Riesgo de retención urinaria aguda"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["5mg iv lento o im cada 4-6 horas", "Dosis máxima diaria: 40mg"]
+  },
+  {
+    "nombre": "DIAZEPAM",
+    "marcas": [],
+    "presentaciones": ["Ampollas 10mg/2ml"],
+    "indicaciones": [
+      "Ansiedad: Casos moderados o graves de agitación, ansiedad y tensión psíquica",
+      "Deprivación alcohólica: Alivio de excitación, pánico, temblor y delirium tremens",
+      "Anticonvulsivante: Tratamiento agudo del status epiléptico, convulsiones graves, tétanos",
+      "Espasmo muscular: Tratamiento de los espasmos musculares reflejos por traumatismos locales",
+      "Premedicación anestésica"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a las benzodiazepinas",
+      "Miastenia gravis",
+      "Insuficiencia respiratoria severa",
+      "Síndrome de apnea del sueño",
+      "Insuficiencia hepática severa"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Ansiedad: 2-10mg im o iv cada 4 horas",
+      "Deprivación alcohólica: 10mg im o iv, si es necesario repetir cada 3-4 horas",
+      "Status epiléptico: 0,15-0,25mg/kg iv cada 10 min o en perfusión continua",
+      "Preclampsia/Eclampsia: 10-20mg iv o perfusión continua, máx. 100mg/día",
+      "Espasmos musculares: 5-10mg im o iv"
+    ]
+  },
+  {
+    "nombre": "DIFENILHIDANTOINA",
+    "marcas": [],
+    "presentaciones": ["Ampollas 100mg/2ml", "Ampollas 250mg/5ml"],
+    "indicaciones": [
+      "Tratamiento del status epiléptico tónico-clónico",
+      "Crisis tónico clónicas generalizadas y crisis simples o complejas",
+      "Tratamiento y prevención de convulsiones en neurocirugía",
+      "Arritmias auriculares y ventriculares (especialmente por intoxicación digitálica)"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Bradicardia sinusal",
+      "Bloqueo sinoauricular",
+      "Bloqueo AV de 2º o 3º grado",
+      "Síndrome de Stokes-Adams"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Status epiléptico: Dosis de carga 20mg/kg iv a velocidad no superior a 50mg/min",
+      "Mantenimiento: 2mg/kg cada 6-8 horas 24 horas después",
+      "Arritmias: 50-100mg iv en 10 min, repetir cada 5-10 min, máx. 1000mg"
+    ]
+  },
+  {
+    "nombre": "DIGOXINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla de 2ml con 0,25mg/ml"],
+    "indicaciones": [
+      "Insuficiencia cardíaca, sobre todo sistólica",
+      "Control de frecuencia cardíaca en fibrilación/flúter auricular (excepto asociado a WPW)"
+    ],
+    "contraindicaciones": [
+      "Bloqueo cardíaco intermitente o de 2º grado",
+      "Arritmias originadas por intoxicación con glucósidos cardíacos",
+      "Wolf-Parkinson-White",
+      "Taquicardia ventricular o fibrilación ventricular",
+      "Cardiomiopatía hipertrófica obstructiva"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Dosis de carga: 500-1000mcg administrando mitad de la dosis inicialmente, repetir cada 6 horas",
+      "Mantenimiento: Dosis según respuesta clínica, máx. 1,5mg/24h"
+    ]
+  },
+  {
+    "nombre": "ADRENALINA",
+    "marcas": [],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "1 mg",
+        "volumen": "1 ml",
+        "concentracion": "1:1000"
+      }
+    ],
+    "indicaciones": [
+      "Parada cardiorrespiratoria",
+      "Anafilaxia severa",
+      "Asma grave con broncoespasmo",
+      "Shock"
+    ],
+    "contraindicaciones": [
+      "Feocromocitoma",
+      "Glaucoma de ángulo cerrado",
+      "Arritmias cardíacas graves (en ciertos contextos)",
+      "Cardiopatía isquémica severa (precaución)"
+    ],
+    "precauciones": [
+      "Pacientes con enfermedad cardiovascular",
+      "Hipertensión",
+      "Hipertiroidismo",
+      "Diabetes mellitus",
+      "Insuficiencia renal",
+      "Embarazo (categoría C)"
+    ],
+    "interacciones": [
+      "Betabloqueantes (riesgo de hipertensión y bradicardia)",
+      "Antidepresivos tricíclicos (potencian efectos vasopresores)",
+      "Anestésicos halogenados (riesgo de arritmias)"
+    ],
+    "efectos_secundarios": [
+      "Taquicardia",
+      "Palpitaciones",
+      "Arritmias",
+      "Hipertensión",
+      "Ansiedad",
+      "Temblores",
+      "Cefalea",
+      "Náuseas",
+      "Vómitos",
+      "Palidez"
+    ],
+    "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo potencial para el feto.",
+    "dosis": [
+      "Parada cardiorrespiratoria: 1 mg IV/IO cada 3-5 minutos. (Bolo)",
+      "Anafilaxia: 0.3-0.5 mg IM. Si es necesario IV: 0.1 mg IV lento, diluido en 10 ml de SSF (intermitente en 100 SSF, se refiere a una dilución para infusión, no bolo directo).",
+      "Perfusión (Shock/hipotensión): 2-10 mcg/min IV (en 250 SSF o SG5% para perfusión).",
+      "Vías: IV, IM, SC (SC para reacciones alérgicas leves, no anafilaxia grave)."
+    ]
+  },
+  {
+    "nombre": "BIPERIDENO",
+    "marcas": ["Akineton"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "5 mg",
+        "volumen": "1 ml"
+      },
+      "Comprimidos 2 mg"
+    ],
+    "indicaciones": [
+      "Síndromes parkinsonianos (principalmente inducidos por fármacos antipsicóticos)",
+      "Temblor idiopático",
+      "Síndrome extrapiramidal"
+    ],
+    "contraindicaciones": [
+      "Glaucoma de ángulo cerrado no tratado",
+      "Estenosis mecánica del tracto gastrointestinal",
+      "Megacolon",
+      "Retención urinaria",
+      "Hipersensibilidad al biperideno"
+    ],
+    "precauciones": [
+      "Glaucoma de ángulo abierto",
+      "Trastornos cardíacos",
+      "Hipertrofia prostática",
+      "Pacientes de edad avanzada",
+      "Niños"
+    ],
+    "interacciones": [
+      "Potencia efectos de otros anticolinérgicos",
+      "Disminuye efectos de metoclopramida",
+      "Aumenta la absorción de digoxina",
+      "Alcohol (potencia sedación)"
+    ],
+    "efectos_secundarios": [
+      "Sequedad de boca",
+      "Visión borrosa",
+      "Midriasis",
+      "Estreñimiento",
+      "Retención urinaria",
+      "Somnolencia",
+      "Mareos",
+      "Confusión",
+      "Alucinaciones (especialmente en ancianos)"
+    ],
+    "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo potencial.",
+    "dosis": [
+      "Síntomas extrapiramidales inducidos por fármacos: 2.5-5 mg IV/IM. Repetir si es necesario hasta un máximo de 10-20 mg/día.",
+      "Administración IV: 5mg + 4ml SSF (para administración lenta)."
+    ]
+  },
+  {
+    "nombre": "DEXQUETOPROFENO",
+    "marcas": ["Enantyum"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "50 mg",
+        "volumen": "2 ml"
+      },
+      "Comprimidos 25 mg",
+      "Granulado 25 mg"
+    ],
+    "indicaciones": [
+      "Dolor agudo moderado a grave (postoperatorio, cólico renal, lumbalgia)",
+      "Dismenorrea",
+      "Dolor musculoesquelético"
+    ],
+    "contraindicaciones": [
+      "Úlcera péptica activa/hemorragia gastrointestinal",
+      "Antecedentes de asma, rinitis, urticaria o angioedema tras AINEs",
+      "Insuficiencia cardíaca grave",
+      "Insuficiencia renal moderada a grave",
+      "Insuficiencia hepática grave",
+      "Embarazo (tercer trimestre)",
+      "Lactancia"
+    ],
+    "precauciones": [
+      "Antecedentes de enfermedad gastrointestinal",
+      "Asma",
+      "Insuficiencia cardíaca leve a moderada",
+      "Hipertensión",
+      "Insuficiencia renal o hepática leve",
+      "Pacientes de edad avanzada",
+      "Deshidratación"
+    ],
+    "interacciones": [
+      "Anticoagulantes (aumento de riesgo de hemorragia)",
+      "Diuréticos",
+      "IECAs, ARA II (riesgo de insuficiencia renal)",
+      "Litio (aumento de niveles)",
+      "Metotrexato (aumento de toxicidad)",
+      "Otros AINEs y corticoides (aumento de riesgo GI)"
+    ],
+    "efectos_secundarios": [
+      "Náuseas",
+      "Vómitos",
+      "Dolor abdominal",
+      "Diarrea",
+      "Mareos",
+      "Cefalea",
+      "Dispepsia",
+      "Flatulencia"
+    ],
+    "embarazo": "Contraindicado en el tercer trimestre; precaución en el primero y segundo.",
+    "dosis": [
+      "50 mg cada 8-12 horas, máximo 150 mg/día.",
+      "Administración: IM o IV lento en 50 ml SSF (infusión lenta)."
+    ]
+  },
+  {
+    "nombre": "FENOBARBITAL",
+    "marcas": ["Luminal"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "200 mg",
+        "volumen": "2 ml"
+      },
+      "Comprimidos 100 mg"
+    ],
+    "indicaciones": [
+      "Crisis convulsivas tónico-clónicas generalizadas",
+      "Crisis parciales",
+      "Estado epiléptico (cuando otras opciones no son efectivas)",
+      "Sedación",
+      "Insomnio (raramente)"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a barbitúricos",
+      "Porfiria aguda intermitente",
+      "Insuficiencia respiratoria grave",
+      "Insuficiencia hepática o renal grave",
+      "Intoxicación aguda por alcohol, sedantes o hipnóticos"
+    ],
+    "precauciones": [
+      "Insuficiencia hepática o renal leve a moderada",
+      "Enfermedades respiratorias crónicas",
+      "Dolor agudo (puede causar excitación paradójica)",
+      "Pacientes de edad avanzada",
+      "Depresión respiratoria",
+      "Abuso de sustancias"
+    ],
+    "interacciones": [
+      "Depresores del SNC (alcohol, otros sedantes, opioides) - potencia sedación y depresión respiratoria",
+      "Anticonceptivos orales (disminuye eficacia)",
+      "Anticoagulantes orales (disminuye eficacia)",
+      "Fenitoína, Ácido Valproico (interacciones complejas con niveles plasmáticos)"
+    ],
+    "efectos_secundarios": [
+      "Somnolencia",
+      "Sedación",
+      "Ataxia",
+      "Vértigo",
+      "Cefalea",
+      "Depresión respiratoria",
+      "Hipotensión (IV rápida)",
+      "Reacciones de hipersensibilidad",
+      "Excitación paradójica (niños, ancianos)"
+    ],
+    "embarazo": "Categoría D: Riesgo fetal comprobado. Usar solo si el beneficio es mayor que el riesgo.",
+    "dosis": [
+      "Estado epiléptico: Carga: 15-20 mg/kg IV lento (no más de 100 mg/min). Mantenimiento: 1-3 mg/kg/día oral/IV.",
+      "Administración: 1 ampolla = 200mg. 200mg hasta 20ml con SSF (diluir para evitar precipitación y reducir efectos adversos locales)."
+    ]
+  },
+  {
+    "nombre": "KETAMINA",
+    "marcas": ["Ketolar"],
+    "presentaciones": [
+      {
+        "forma": "vial",
+        "cantidad": "50 mg",
+        "volumen": "5 ml",
+        "concentracion": "10 mg/ml"
+      },
+      {
+        "forma": "vial",
+        "cantidad": "250 mg",
+        "volumen": "5 ml",
+        "concentracion": "50 mg/ml"
+      }
+    ],
+    "indicaciones": [
+      "Anestesia general (disociativa)",
+      "Sedación y analgesia en procedimientos dolorosos",
+      "Manejo del dolor agudo y crónico (dosis bajas)",
+      "Estado asmático refractario (broncodilatador)"
+    ],
+    "contraindicaciones": [
+      "Hipertensión severa no controlada",
+      "Antecedentes de accidente cerebrovascular",
+      "Angina de pecho inestable",
+      "Insuficiencia cardíaca descompensada",
+      "Pre-eclampsia/eclampsia",
+      "Traumatismo ocular penetrante"
+    ],
+    "precauciones": [
+      "Hipertensión, taquicardia",
+      "Cardiopatía isquémica",
+      "Hipertensión intracraneal (controvertido, precaución)",
+      "Psicosis, esquizofrenia",
+      "Alcoholismo crónico o intoxicación aguda",
+      "Cirugía faríngea (aumento de secreciones)"
+    ],
+    "interacciones": [
+      "Benzodiazepinas (prolongan recuperación, menos efectos psicomiméticos)",
+      "Opioides (potencian analgesia y depresión respiratoria)",
+      "Barbitúricos (prolongan recuperación)",
+      "Anestésicos halogenados (pueden potenciar efectos cardíacos)"
+    ],
+    "efectos_secundarios": [
+      "Aumento de la frecuencia cardíaca y presión arterial",
+      "Aumento de secreciones salivales y bronquiales",
+      "Náuseas, vómitos",
+      "Emergencia alucinatoria/pesadillas",
+      "Nistagmo",
+      "Rigidez muscular (a veces)"
+    ],
+    "embarazo": "Categoría B: No se han demostrado riesgos en estudios animales. Usar con precaución.",
+    "dosis": [
+      "Anestesia (IV): 1-4.5 mg/kg. Anestesia (IM): 6.5-13 mg/kg.",
+      "Sedación/Analgesia (bolo IV): 0.5-2 mg/kg. Perfusión: 0.5-2 mg/kg/hora.",
+      "Administración: En bolo IV o IM."
+    ]
+  },
+  {
+    "nombre": "METAMIZOL",
+    "marcas": ["Nolotil"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "2 g",
+        "volumen": "5 ml"
+      },
+      "Comprimidos 575 mg",
+      "Supositorios 1 g"
+    ],
+    "indicaciones": [
+      "Dolor agudo moderado o severo",
+      "Dolor postoperatorio",
+      "Cólico",
+      "Fiebre alta que no responde a otros antipiréticos"
+    ],
+    "contraindicaciones": [
+      "Alergia a pirazolonas o AINEs",
+      "Antecedentes de agranulocitosis",
+      "Insuficiencia de médula ósea",
+      "Deficiencia congénita de G6PD",
+      "Embarazo (último trimestre)",
+      "Lactancia",
+      "Porfiria hepática aguda"
+    ],
+    "precauciones": [
+      "Hipotensión (administración IV rápida)",
+      "Asma bronquial, urticaria, rinitis (mayor riesgo de reacciones anafilactoides)",
+      "Insuficiencia renal o hepática (ajustar dosis)",
+      "Pacientes con antecedentes de hipotensión"
+    ],
+    "interacciones": [
+      "Ciclosporina (disminuye niveles)",
+      "Clorpromazina (riesgo de hipotermia grave)",
+      "Metotrexato (aumento de toxicidad)",
+      "Alcohol (potencia efectos)"
+    ],
+    "efectos_secundarios": [
+      "Hipotensión (especialmente con administración IV rápida)",
+      "Reacciones de hipersensibilidad (rash, urticaria, anafilaxia)",
+      "Agranulocitosis (efecto adverso raro pero grave)",
+      "Leucopenia, trombocitopenia",
+      "Náuseas, vómitos"
+    ],
+    "embarazo": "Contraindicado en el último trimestre. Evitar en el primero y segundo si es posible.",
+    "dosis": [
+      "Adultos: 1-2 g IV/IM cada 6-8 horas, máximo 6 g/día.",
+      "Administración: En 50ml SSF (para evitar hipotensión, infusión lenta de al menos 5-10 minutos)."
+    ]
+  },
+  {
+    "nombre": "METOPROLOL",
+    "marcas": ["Beloc", "Lopresor"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "5 mg",
+        "volumen": "5 ml"
+      },
+      "Comprimidos 50 mg, 100 mg"
+    ],
+    "indicaciones": [
+      "Crisis hipertensivas",
+      "Taquiarritmias supraventriculares",
+      "Angina de pecho",
+      "Infarto agudo de miocardio (en fases tempranas)",
+      "Manejo de la taquicardia y ansiedad"
+    ],
+    "contraindicaciones": [
+      "Bradicardia sinusal severa",
+      "Bloqueo AV de segundo o tercer grado",
+      "Shock cardiogénico",
+      "Insuficiencia cardíaca descompensada",
+      "Síndrome del seno enfermo (excepto con marcapasos)",
+      "Asma bronquial grave o EPOC"
+    ],
+    "precauciones": [
+      "Asma leve a moderada, EPOC",
+      "Diabetes mellitus (puede enmascarar hipoglucemia)",
+      "Insuficiencia cardíaca compensada",
+      "Feocromocitoma",
+      "Insuficiencia hepática o renal",
+      "Fenómeno de Raynaud"
+    ],
+    "interacciones": [
+      "Calcioantagonistas (verapamilo, diltiazem - riesgo de bradicardia/bloqueo AV grave)",
+      "Digoxina (riesgo de bradicardia)",
+      "Otros antihipertensivos (efecto aditivo)",
+      "AINEs (pueden reducir efecto hipotensor)"
+    ],
+    "efectos_secundarios": [
+      "Bradicardia",
+      "Hipotensión",
+      "Mareos",
+      "Fatiga",
+      "Depresión",
+      "Náuseas",
+      "Broncoespasmo (raro)",
+      "Empeoramiento de insuficiencia cardíaca"
+    ],
+    "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo. Evitar en tercer trimestre por riesgo de bradicardia/hipoglucemia fetal.",
+    "dosis": [
+      "Taquicardia/HTA: Bolo de 5 mg IV lento (durante al menos 1-2 minutos). Repetir cada 5 minutos hasta un máximo de 15 mg.",
+      "IAM: 5 mg IV cada 2 minutos hasta 3 dosis (total 15 mg)."
+    ]
+  },
+  {
+    "nombre": "OLANZAPINA",
+    "marcas": ["Zyprexa"],
+    "presentaciones": [
+      "Comprimidos 5 mg, 10 mg, 15 mg, 20 mg",
+      {
+        "forma": "vial",
+        "cantidad": "10 mg",
+        "volumen": "2 ml"
+      }
+    ],
+    "indicaciones": [
+      "Esquizofrenia",
+      "Trastorno bipolar (episodios maníacos o mixtos y prevención de recaídas)",
+      "Agitación aguda en esquizofrenia o trastorno bipolar (IM)"
+    ],
+    "contraindicaciones": [
+      "Glaucoma de ángulo cerrado (riesgo de exacerbación)",
+      "Hipersensibilidad a la olanzapina"
+    ],
+    "precauciones": [
+      "Diabetes mellitus (riesgo de hiperglucemia y cetoacidosis)",
+      "Enfermedad cardiovascular",
+      "Hipertensión",
+      "Hipotensión ortostática",
+      "Convulsiones",
+      "Disfunción hepática",
+      "Pacientes de edad avanzada con demencia (mayor riesgo de eventos adversos)"
+    ],
+    "interacciones": [
+      "Depresores del SNC (alcohol, benzodiazepinas - potencian sedación)",
+      "Fármacos que prolongan el intervalo QT",
+      "Carbamazepina, Fenitoína (disminuyen niveles de olanzapina)",
+      "Fluvoxamina (aumenta niveles de olanzapina)"
+    ],
+    "efectos_secundarios": [
+      "Somnolencia",
+      "Aumento de peso",
+      "Sequedad de boca",
+      "Mareos",
+      "Hipotensión ortostática",
+      "Aumento de prolactina",
+      "Hiperglucemia, dislipidemia",
+      "Sintomas extrapiramidales (menos que antipsicóticos típicos)"
+    ],
+    "embarazo": "Categoría C: Usar solo si el beneficio potencial justifica el riesgo.",
+    "dosis": [
+      "Oral: 5-20 mg/día (dosis inicial variable según indicación).",
+      "IM (agitación): 5-10 mg IM, se puede repetir en 2 horas si es necesario, máximo 20 mg/día."
+    ]
+  },
+  {
+    "nombre": "SULPIRIDA",
+    "marcas": ["Dogmatil"],
+    "presentaciones": [
+      {
+        "forma": "ampolla",
+        "cantidad": "100 mg",
+        "volumen": "2 ml"
+      },
+      "Cápsulas 50 mg",
+      "Comprimidos 200 mg"
+    ],
+    "indicaciones": [
+      "Esquizofrenia",
+      "Trastornos psicóticos",
+      "Síndromes vertiginosos (en dosis bajas)",
+      "Trastornos de la conducta en la tercera edad"
+    ],
+    "contraindicaciones": [
+      "Feocromocitoma",
+      "Tumores prolactino-dependientes",
+      "Enfermedad de Parkinson (puede empeorar síntomas)",
+      "Prolongación del intervalo QT conocida",
+      "Bradicardia clínicamente relevante",
+      "Hipopotasemia",
+      "Combinación con fármacos que prolongan el QT o causan bradicardia"
+    ],
+    "precauciones": [
+      "Insuficiencia renal (ajustar dosis)",
+      "Cardiopatía",
+      "Epilepsia",
+      "Pacientes de edad avanzada (mayor sensibilidad)",
+      "Antecedentes de convulsiones",
+      "Riesgo de tromboembolismo venoso"
+    ],
+    "interacciones": [
+      "Fármacos que prolongan el intervalo QT (riesgo de arritmias graves)",
+      "Levodopa (antagonismo mutuo)",
+      "Alcohol (potencia sedación)",
+      "Antiácidos (disminuyen absorción)",
+      "Litio (riesgo de síndrome neuroléptico maligno)"
+    ],
+    "efectos_secundarios": [
+      "Somnolencia",
+      "Sedación",
+      "Hiperprolactinemia (galactorrea, amenorrea, ginecomastia)",
+      "Disquinesia tardía",
+      "Sintomas extrapiramidales",
+      "Hipotensión ortostática",
+      "Aumento de peso",
+      "Prolongación del intervalo QT"
+    ],
+    "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo. Evitar en el tercer trimestre.",
+    "dosis": [
+      "Psicosis: 400-800 mg/día IM o VO (en varias dosis).",
+      "Vértigo: 50-150 mg/día VO.",
+      "Agitación: 100-200 mg IM (se puede repetir)."
+    ]
+  },
+  {
+    "nombre": "DOBUTAMINA",
+    "marcas": [],
+    "presentaciones": ["Ampollas iv 250mg/20ml"],
+    "indicaciones": [
+      "Inotrópico con efecto agonista B1",
+      "Shock cardiogénico o séptico con PAM >70",
+      "Cuadros de bajo gasto relacionados con soporte ventilatorio con PEEP"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad conocida a clorhidrato de dobutamina",
+      "Descompensación asociada a cardiomiopatía hipertrófica",
+      "Obstrucción mecánica en eyección o llenado del ventrículo izquierdo"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "2,5-10mcg/kg/min hasta 20mcg/kg/min",
+      "Dosis máxima: 40mcg/kg/min"
+    ]
+  },
+  {
+    "nombre": "DOPAMINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 200mg/5ml"],
+    "indicaciones": [
+      "Corrección de desequilibrio hemodinámico en shock debido a IAM, traumatismos, septicemia, cirugía cardíaca mayor",
+      "Insuficiencia renal e insuficiencia cardíaca congestiva"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Feocromocitoma",
+      "Taquiarritmias",
+      "Fibrilación auricular",
+      "Taquicardia ventricular",
+      "Fibrilación ventricular"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "Efecto dopaminérgico: 1-4mcg/kg/min",
+      "Efecto Beta-1 cardíaco: >5mcg/kg/min",
+      "Efecto Alfa-1: >8mcg/kg/min"
+    ]
+  },
+  {
+    "nombre": "ENOXAPARINA",
+    "marcas": [],
+    "presentaciones": ["Jeringas precargadas de 20mg a 150mg"],
+    "indicaciones": [
+      "Profilaxis de TEP, TVP en pacientes sometidos a cirugía, enfermedades agudas y movilidad reducida",
+      "Prevención de coagulación de circuito extracorpóreo en diálisis",
+      "Angina inestable, IAM (IAMSEST, IAMCEST conjuntamente con AAS)"
+    ],
+    "contraindicaciones": [
+      "Alergia",
+      "Trombopenia inducida por heparinas",
+      "Hemorragia activa o alto riesgo de sangrado",
+      "Endocarditis séptica"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Profilaxis quirúrgica: 2000-4000UI dependiendo del riesgo",
+      "Tratamiento de TVP: 150UI/kg/24h o 100UI/kg/12h",
+      "Angina inestable/IAMSEST: 100UI/kg junto con AAS",
+      "IAMCEST: 3000UI en bolo EV seguido de 100UI SC cada 12 horas"
+    ]
+  },
+  {
+    "nombre": "ETOMIDATO",
+    "marcas": [],
+    "presentaciones": ["Ampolla 20mg/10ml"],
+    "indicaciones": [
+      "Hipnótico sin acción analgésica",
+      "Sedación de corta duración en inestabilidad hemodinámica",
+      "Pacientes en shock"
+    ],
+    "contraindicaciones": ["Hipersensibilidad a Etomidato, soja o cacahuate"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "0,15-0,3mg/kg (70kg = 20mg = 10ml; sedación durante 4-5 min)",
+      "Dosis adicionales: 0,1-0,2mg/kg sin exceder 3 ampollas (60mg)"
+    ]
+  },
+  {
+    "nombre": "FACTOR IX, COMPLEJO II-VII-IX-X",
+    "marcas": [],
+    "presentaciones": [
+      "Vial polvo 1000UI + disolvente 40ml",
+      "Vial polvo 500UI + disolvente 20ml",
+      "Vial polvo 600UI + disolvente 20ml"
+    ],
+    "indicaciones": [
+      "Profilaxis y tratamiento de hemorragias en hemofilia B",
+      "Deficiencia adquirida de factores dependientes de vitamina K",
+      "Reversión del efecto de anticoagulantes orales en situaciones graves"
+    ],
+    "contraindicaciones": [],
+    "precauciones": [
+      "No asociar antifibrinolíticos",
+      "Precaución en enfermedad hepática y neonatos"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "Hemofilia B: Igual a factor IX recombinante",
+      "Sobredosis de anticoagulantes orales: Dosis suficiente para normalizar INR (15-40UI/kg)"
+    ]
+  },
+  {
+    "nombre": "FENTANILO",
+    "marcas": ["Sublimaze", "Duragesic", "Actiq"],
+    "presentaciones": [
+      "Solución inyectable 50‑100 µg/mL (IV/IM)",
+      "Parches transdérmicos (varios µg/h)",
+      "Pastillas/spray transmucosal"
+    ],
+    "indicaciones": [
+      "Analgésico potente en anestesia (presedación e inducción)",
+      "Alivio del dolor superior a 7-8 en EVA"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al fentanilo u opioides",
+      "Depresión respiratoria no controlada",
+      "Obstrucción de las vías respiratorias",
+      "Pacientes no tolerantes a opioides"
+    ],
+    "precauciones": [
+      "Monitorizar signos vitales y ventilación; disponer naloxona",
+      "Riesgo aumentado en ancianos, insuficiencia pulmonar o concomitancia con sedantes",
+      "Usar parches sólo en pacientes tolerantes"
+    ],
+    "interacciones": [
+      "Potencia depresión respiratoria con benzodiacepinas y otros depresores del SNC",
+      "Inhibidores de CYP3A4 pueden aumentar niveles plasmáticos"
+    ],
+    "efectos_secundarios": [
+      "Depresión respiratoria",
+      "Sedación",
+      "Bradicardia",
+      "Rigidez muscular (síndrome de tórax rígido)",
+      "Náuseas, vómitos",
+      "Constipación",
+      "Hipotensión"
+    ],
+    "embarazo": "C",
+    "dosis": [
+      "IV: 1-2 µg/kg lento en 2-5 minutos, repetir si es necesario",
+      "Diluido 3ml (150mcg) en 12ml de SSF = 10mcg/ml",
+      "Diluido 2ml (100mcg) en 8ml de SSF = 10mcg/ml"
+    ]
+  },
+
+  {
+    "nombre": "FLECAINIDA",
+    "marcas": [],
+    "presentaciones": [
+      "Ampollas de 15ml con 150mg (10mg/ml)",
+      "Comprimidos de 100mg"
+    ],
+    "indicaciones": [
+      "Fibrilación y flutter auriculares sintomáticos siempre sin cardiopatía estructural",
+      "Taquicardia por reentrada nodal",
+      "Taquicardia paroxística supraventricular (segunda línea)"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad (precaución con anestésicos locales tipo amida)",
+      "Embarazo",
+      "Insuficiencia cardíaca",
+      "Cardiopatías estructurales",
+      "Bloqueos auriculoventriculares",
+      "Síndrome de Brugada"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": []
+  },
+  {
+    "nombre": "FLUMAZENILO",
+    "marcas": [],
+    "presentaciones": ["0.5mg (5ml)", "1mg (10ml)"],
+    "indicaciones": [
+      "Antagonista de las benzodiazepinas (inhibe sus efectos a nivel de SNC)",
+      "En urgencias/emergencias: antagonizar benzodiacepinas solo si depresión respiratoria"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Intoxicación por antidepresivos tricíclicos",
+      "Tratamiento con benzodiazepinas como anticonvulsivante",
+      "Pacientes que reciben benzodiazepinas para control de enfermedad base"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": []
+  },
+  {
+    "nombre": "FUROSEMIDA",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 250mg/25ml", "Ampollas de 20mg/2ml"],
+    "indicaciones": [
+      "Edema y/o ascitis por enfermedades cardíacas o hepáticas",
+      "Insuficiencia renal, edema pulmonar agudo (EAP)",
+      "Crisis hipertensivas"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Fallo renal con oligoanuria no respondedor a fármacos",
+      "HipoKaliemia severa, hiponatremia severa"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": []
+  },
+  {
+    "nombre": "GLUCAGÓN",
+    "marcas": [],
+    "presentaciones": ["1mg=1ml (reconstituir con agua de preparación)"],
+    "indicaciones": ["Hipoglucemias graves", "Sobredosis por betabloqueantes"],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Feocromocitoma"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": []
+  },
+  {
+    "nombre": "GLUCONATO CÁLCICO",
+    "marcas": [],
+    "presentaciones": [
+      "1 amp=10ml=4,6mEq de Calcio=1g de Ca elemento=93mg Ca iónico"
+    ],
+    "indicaciones": [
+      "Tratamiento de hipocalcemia aguda (tetania hipocalcémica)",
+      "Hiperpotasemia",
+      "Sobredosis de antagonistas del calcio",
+      "Antídoto del Sulfato de Mg",
+      "Coadyuvante en reacciones alérgicas agudas y anafilácticas"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Hipercalcemia",
+      "Hipercalciuria",
+      "Nefrocalcinosis",
+      "Insuficiencia renal severa",
+      "Sobredosis de digoxina"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "hiperpotasemiaGrave: 2 amp (20ml) en 5 min iv, repetir cada 5 min si es necesario",
+      "hipocalcemiaGrave: 10ml en 50ml SG5% o SSF en 10-20 min, monitorizar cardiaca. Perfusión: 0,5-1,5mg/kg/h de Ca con controles cada 6h",
+      "intoxicacionAntagonistasCalcio: 30-60ml iv en 10 min, repetir cada 20 min o mantener perfusión de 0,6-1,2ml/Kg/h"
+    ]
+  },
+  {
+    "nombre": "GLUCOSMÓN",
+    "marcas": [],
+    "presentaciones": ["1 amp=10g glucosa"],
+    "indicaciones": ["Hipoglucemia"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["hipoglucemia: Equivalente a 25ml de SG40% o 20ml de SG50%"]
+  },
+  {
+    "nombre": "HALOPERIDOL",
+    "marcas": [],
+    "presentaciones": ["1 amp=5mg=1ml"],
+    "indicaciones": [
+      "Agitación psicomotora aguda grave asociada a trastornos psicóticos o episodios maníacos del trastorno bipolar I",
+      "Síndrome confusional",
+      "Corea de Huntington leve o moderada",
+      "Profilaxis de náuseas y vómitos postoperatorios"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al principio activo",
+      "Coma",
+      "Depresión del SNC",
+      "Parkinson",
+      "Demencia con cuerpos de Lewy",
+      "Síndrome QT largo",
+      "IAM reciente",
+      "Insuficiencia cardiaca descompensada"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "FDA: C",
+    "dosis": [
+      "agitaciónPsicomotora: 5mg im, repetir cada hora (máx 20mg/día)",
+      "sdConfusional: 1-10mg im (máx 10mg/día)",
+      "coreaHuntington: 2-5mg im, repetir según necesidad (máx 10mg/día)",
+      "profilaxisNVPostoperatorios: 1-2mg im"
+    ]
+  },
+  {
+    "nombre": "HEPARINA SÓDICA",
+    "marcas": [],
+    "presentaciones": [
+      "Heparina 1% = 1000UI (1 amp=5ml=5000UI=50mg, 10mg/ml)",
+      "Heparina 5% = 5000UI (1 amp=5ml=25000UI=250mg, 50mg/ml)"
+    ],
+    "indicaciones": [
+      "Tratamiento y prevención de TVP y TEP",
+      "Angina inestable",
+      "IAM",
+      "Coagulación intravascular diseminada (CID)",
+      "Prevención de trombosis en cirugía cardíaca y vascular, y en hemodiálisis"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad a heparina o sustancias porcinas",
+      "Trombocitopenia inducida por heparina",
+      "Hemorragia activa",
+      "Alteraciones graves de hemostasia",
+      "Daños o cirugías en SNC, ojos, oídos"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "tratamientoTVPTEP: Bolo inicial 80UI/Kg o 5000UI, continuar con perfusión 18UI/Kg/h (o 1300UI/h). Ajustar según TTPA",
+      "anginaInestableIAM: Bolo inicial de 5000UI, seguido de 32000UI/24h en perfusión continua"
+    ]
+  },
+  {
+    "nombre": "HIDROCORTISONA",
+    "marcas": [],
+    "presentaciones": [
+      "Vial de 100mg (disolvente 1ml)",
+      "Vial de 500 mg (disolvente de 5ml)"
+    ],
+    "indicaciones": [
+      "Exacerbación de asma/EPOC",
+      "Shock anafiláctico",
+      "Angioedema, edema laríngeo (hipersensibilidad inmediata)",
+      "Insuficiencia suprarrenal aguda",
+      "Rechazo agudo de trasplante",
+      "Coma hipotiroideo",
+      "Vasculitis necrotizante"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Tuberculosis activa",
+      "Herpes",
+      "Úlcera péptica",
+      "Herpes zoster",
+      "Herpes simple ocular",
+      "Micosis sistémicas",
+      "Tendencias psicóticas",
+      "Glaucoma",
+      "Amebiasis",
+      "Poliomielitis"
+    ],
+    "precauciones": [
+      "HTA",
+      "Epilepsia",
+      "Diabetes mellitus",
+      "Edad pediátrica",
+      "Infecciones",
+      "Insuficiencia cardiaca congestiva",
+      "Precaución parenteral en insuficiencia renal y hepática"
+    ],
+    "interacciones": [
+      "Rifampicina",
+      "Rifabutina",
+      "Carbamazepina",
+      "Fenobarbital",
+      "Fenitoína",
+      "Efedrina",
+      "Aminoglutetimida",
+      "Hipoglucemiantes orales",
+      "Diuréticos de asa",
+      "Acetazolamida",
+      "Carbenoxolona",
+      "Dicumarínicos",
+      "Relajantes musculares no despolarizantes",
+      "AINES",
+      "Estrógenos",
+      "Digitálicos"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "Puede afectar a suprarrenales fetales y causar microcefalia y hepatomegalia. FDA: C",
+    "dosis": [
+      "bolo: Entre 3 y 5 minutos",
+      "perfusión (continua): Diluir en 500ml de suero compatible, 25mg/min con bomba de infusión",
+      "perfusión (intermitente): Diluir en 100ml de suero compatible, 25mg/min"
+    ]
+  },
+  {
+    "nombre": "HIDROXICOBALAMINA",
+    "marcas": [],
+    "presentaciones": ["Vial de 2,5gr"],
+    "indicaciones": [
+      "Intoxicación por cianuro (incluida intoxicación por humo con sospecha de cianuro)"
+    ],
+    "contraindicaciones": ["Hipersensibilidad"],
+    "precauciones": ["No mezclar con otros fármacos durante la infusión"],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "perfusión: Disolver 2,5 gramos en 100 ml de SF, SG5%, o Ringer Lactato, administrar en 15 minutos. Puede repetirse"
+    ]
+  },
+  {
+    "nombre": "ISOPROTERENOL",
+    "marcas": [],
+    "presentaciones": ["Ampollas de 1ml (0,2mg/ml)"],
+    "indicaciones": [
+      "Síndrome de Morgagni-Stokes-Adams",
+      "Bradicardia y bloqueos cardiacos con inestabilidad hemodinámica",
+      "Shock cardiogénico",
+      "Otras situaciones con gasto cardiaco insuficiente"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al fármaco o componentes",
+      "Hipertiroidismo",
+      "Angor",
+      "Arritmias taquicardizantes",
+      "Cardiopatía descompensada",
+      "Estenosis Ao",
+      "IAM reciente",
+      "Taquicardia o bloqueo por digitálicos"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "general: 2 - 10mcg/min. Diluir 2 ampollas (0,4mg) en 100ml de SF o SG5%",
+      "infusiónVelocidad (2mcg/min): 30ml/h",
+      "infusiónVelocidad (4mcg/min): 60ml/h",
+      "infusiónVelocidad (6mcg/min): 90ml/h",
+      "infusiónVelocidad (8mcg/min): 120ml/h",
+      "infusiónVelocidad (10mcg/min): 150ml/h"
+    ]
+  },
+  {
+    "nombre": "KETOROLACO",
+    "marcas": [],
+    "presentaciones": ["Ampolla 30mgr/ml"],
+    "indicaciones": [
+      "Dolor moderado o severo postquirúrgico",
+      "Cólico nefrítico"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad al fármaco u otros AINEs",
+      "Úlcera péptica activa",
+      "Hemorragia",
+      "Insuficiencia cardiaca grave",
+      "Insuficiencia renal moderada a severa",
+      "Alteraciones de la coagulación",
+      "Hemorragia cerebral",
+      "Parto, lactancia y tercer trimestre de gestación"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "general: 10 - 30mg cada 4-6h, máximo 2 días. Máximo diario: 90mg/día (ancianos 60mg/día)"
+    ]
+  },
+  {
+    "nombre": "LABETALOL",
+    "marcas": [],
+    "presentaciones": ["1 vial/20 ml/100mg (5mg/ml)"],
+    "indicaciones": [
+      "Emergencias hipertensivas, incluyendo la toxemia gravídica (eclampsia)",
+      "Hipertensión del periodo postoperatorio inmediato",
+      "Disección aórtica",
+      "Feocromocitoma"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Insuficiencia cardiaca",
+        "Shock cardiogénico",
+        "Trastornos de la conducción AV",
+        "Asma bronquial",
+        "EPOC"
+      ]
+    },
+    "precauciones": [
+      "El paciente debe permanecer en posición de decúbito supino o lateral izquierdo",
+      "No incorporarse en las 3 horas siguientes a la administración",
+      "Monitorizar constantes vitales y ECG",
+      "Vigilar hipotensión y/o bradicardia",
+      "Fotosensible",
+      "No administrar con bicarbonato sódico",
+      "No administrar simultáneamente con agentes antiarrítmicos clase I y antagonistas del calcio (verapamilo)"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "carga (inicial): 20mg (4ml) IV lento en 2 minutos",
+      "carga (posterior): 20-40mg (4-8ml) IV lento cada 10 minutos, máximo 300mg",
+      "perfusión (dosis): 2-4 mg/min",
+      "perfusión (preparación): Diluir 200mg (2 ampollas/40ml) en 160ml de SG5% o SF0.9% (1mg/ml)",
+      "perfusión (velocidad): Infundir entre 30-120ml/h"
+    ]
+  },
+  {
+    "nombre": "LEVETIRACETAM",
+    "marcas": [],
+    "presentaciones": ["1 vial/5ml/500mg (100mg/ml)"],
+    "indicaciones": [
+      "Crisis epilépticas parciales con o sin generalización secundaria",
+      "FAES de 1ª elección en inicio de tratamiento del status epiléptico",
+      "Crisis mioclónicas en adultos y adolescentes mayores de 12 años",
+      "Crisis tónico-clónicas generalizadas primarias en adultos y niños mayores de 6 años con epilepsia idiopática generalizada"
+    ],
+    "contraindicaciones": ["Hipersensibilidad o alergia"],
+    "precauciones": [
+      "Ajustar dosis en insuficiencia renal",
+      "Cuidado en pacientes con hipernatremia"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "Categoría C",
+    "dosis": [
+      "general: No usar IM ni IV en bolus",
+      "perfusión: Diluido en 50 a 100 ml de SF o SG5%, administrar en 15 minutos",
+      "carga (rápida): 1500mg en 5 min",
+      "carga (lenta): 500mg en 15 min",
+      "mantenimiento: 500mg/12h en monoterapia",
+      "mantenimiento: 250-500mg/12h en terapia coadyuvante"
+    ]
+  },
+  {
+    "nombre": "LIDOCAÍNA",
+    "marcas": [],
+    "presentaciones": [
+      "Lidocaína 5%: Ampolla 500mg/10ml (50mg/ml)",
+      "Lidocaína 2%: Ampolla 200mg/10ml (20mg/ml)"
+    ],
+    "indicaciones": [
+      "FV/TV sin pulso que no responde a desfibrilación",
+      "TV sostenida",
+      "Extrasistolia ventricular de riesgo en pacientes con IAM",
+      "Anticonvulsivante en crisis refractarias",
+      "Premedicación en IOT en TCE severo (uso no claro actualmente)"
+    ],
+    "contraindicaciones": ["Hipersensibilidad o alergia"],
+    "precauciones": [
+      "Monitorizar signos de hipotensión, bradicardia y posible paro cardíaco",
+      "Precaución en pacientes con epilepsia, hipovolemia, bradicardia o función respiratoria deteriorada"
+    ],
+    "interacciones": [
+      "No mezclar con otros fármacos",
+      "Evitar uso simultáneo con Propanolol, Metoprolol o Cimetidina"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "Categoría B",
+    "dosis": [
+      "antiarrítmico (fibrilaciónVent/taquicardiaSinPulso): 1-1.5mg/kg IV, repetir cada 5-10min, máximo 3mg/kg",
+      "antiarrítmico (taquicardiaSostenida): 0.5-0.75mg/kg IV en 2 minutos, repetir cada 5 minutos, máximo 200mg",
+      "anticonvulsivante (dosisCarga): 100mg IV lento, repetir si necesario hasta 200mg",
+      "perfusión (dosis): 1-4 mg/min",
+      "perfusión (preparación): Diluir 1g (20ml de solución al 5%) en 230ml de SG5% (4mg/ml)",
+      "perfusión (velocidad): 15-60ml/h"
+    ]
+  },
+  {
+    "nombre": "MANITOL",
+    "marcas": [],
+    "presentaciones": [
+      "MANITOL 10%: Frasco 250ml/25g (1ml/100mg)",
+      "MANITOL 10%: Frasco 500ml/50g (1ml/100mg)",
+      "MANITOL 20%: Frasco 250ml/50g (1ml/200mg)",
+      "MANITOL 20%: Frasco 500ml/100g (1ml/200mg)"
+    ],
+    "indicaciones": [
+      "Hipertensión intracraneal asociada a edema cerebral",
+      "Hipertensión intraocular (glaucoma) en urgencias",
+      "Prevención/tratamiento de oliguria en fallo renal asociado a rabdomiolisis"
+    ],
+    "contraindicaciones": [
+      "Hipersensibilidad o alergia",
+      "Edema pulmonar",
+      "Hipovolemia",
+      "Hipotensión severa",
+      "Hemorragia cerebral activa",
+      "Shock cardiogénico"
+    ],
+    "precauciones": [
+      "Evitar en hematoma intracerebral, aneurisma o malformación arteriovenosa",
+      "Monitorizar constantes vitales, diuresis y signos de insuficiencia cardiaca",
+      "Puede cristalizar a bajas temperaturas",
+      "Incompatible con sangre (seudoaglutinación)"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "Categoría C",
+    "dosis": [
+      "hipertensiónIntracraneal (inicio): 0.5-2g/kg en solución al 20% en 20-30 min",
+      "hipertensiónIntracraneal (mantenimiento): 0.25-0.5g/kg cada 4-6h",
+      "fracasoRenal (inicio): 0.25-1g/kg en solución al 10-20%",
+      "diuresisForzada (inicio): 0.25-1g/kg en solución al 20%"
+    ]
+  },
+  {
+    "nombre": "METAMIZOL",
+    "marcas": [],
+    "presentaciones": ["1 amp/5ml/2g (1ml/400mg)"],
+    "indicaciones": [
+      "Dolor leve-moderado, especialmente musculoesquelético e inflamatorio",
+      "Dolor de tipo cólico",
+      "Fiebre resistente a otros antitérmicos"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Neutropenia, agranulocitosis, anemia aplásica",
+        "Porfiria aguda",
+        "Niños menores de 1 año"
+      ]
+    },
+    "precauciones": [
+      "Precaución en pacientes hipotensos o inestabilidad hemodinámica en infusión IV rápida",
+      "Evitar vía subcutánea",
+      "Las ampollas pueden administrarse vía oral disueltas en agua"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "analgésico_antipirético (dosisInicial): 1-2g IM/IV, repetir cada 6-8h",
+      "analgésico_antipirético (diluciónIV): ½-1 amp en 100ml de SF0.9% e infundir en 5-10 min",
+      "analgésico_antipirético (dosisMáxima): 8g/día",
+      "perfusión (preparación): 3 amp/15ml (6g) + 235ml SSF o SG5% (1ml/24mg)",
+      "perfusión (velocidad): 10ml/h"
+    ]
+  },
+  {
+    "nombre": "METIL-PREDNISOLONA",
+    "marcas": [],
+    "presentaciones": [
+      "URBASON®: 8mg/2ml, 20mg/2ml, 40mg/2ml, 250mg/5ml",
+      "SOLUMODERIN®: 125mg/2ml, 500mg/8ml, 1000mg/16ml"
+    ],
+    "indicaciones": [
+      "Insuficiencia respiratoria por hiperactividad bronquial (asma y EPOC)",
+      "Reacciones alérgicas como urticaria, angioedema, anafilaxia",
+      "Lesión medular traumática completa o incompleta",
+      "Crisis tirotóxica y de Addison"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": ["No existen si es uso urgente y compromiso vital"]
+    },
+    "precauciones": [
+      "Aumenta riesgo de lesión gastrointestinal al combinar con AINES",
+      "Debilidad muscular con anticolinesterásicos",
+      "Mayor riesgo de arritmias con digital por hipokaliemia"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "administración (posibilidades): SC, IM, IV",
+      "administración (dilución): Reconstituir con su disolvente. Estable 48h a temperatura ambiente",
+      "administración (compatibles): ['SF', 'SG5%', 'Ringer lactato']",
+      "antiinflamatorio_antialérgico (dosisInicial): 1-2mg/kg IV lento en 1 minuto",
+      "antiinflamatorio_antialérgico (dosisMantenimiento): 0.5-1mg/kg cada 4-6h"
+    ]
+  },
+  {
+    "nombre": "METOCLOPRAMIDA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 10mg/2ml (5mg/ml)"],
+    "indicaciones": [
+      "Antiemético",
+      "Estimulante del vaciamiento gástrico (procinético)",
+      "Coadyuvante en tratamiento de cefaleas (migraña)"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Patologías donde aumentar el peristaltismo intestinal sea perjudicial (hemorragia digestiva, estenosis pilórica, obstrucción, perforación, isquemia intestinal)",
+        "Feocromocitoma",
+        "Epilepsia",
+        "Tratamiento con IMAOs"
+      ]
+    },
+    "precauciones": [
+      "Pacientes con HTA (puede liberar catecolaminas)",
+      "Pacientes tratados con antipsicóticos (efectos extrapiramidales)",
+      "No administrar vía subcutánea"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "general (necesidadDilución): No",
+      "general (administración): ['IV', 'IM profundo']",
+      "general (compatibles): ['SF', 'SG5%', 'Ringer lactato']",
+      "dosisInicial: 10mg IM/IV lento en 1-2 min",
+      "dosisMantenimiento: 10mg IM/IV lento cada 4-6h",
+      "perfusión (intermitente): Diluir 10mg en 50-100ml de SF o SG5%, administrar en 15-30 min",
+      "perfusión (continua): Diluir 10mg en 250-500ml de SF o SG5%, administrar en 6-8h"
+    ]
+  },
+  {
+    "nombre": "MIDAZOLAM",
+    "marcas": [],
+    "presentaciones": [
+      "1 amp/3ml/15mg (1ml/5mg)",
+      "1 amp/5ml/5mg (1ml/1mg)",
+      "1 amp/10ml/50mg (1ml/5mg)"
+    ],
+    "indicaciones": [
+      "Efecto ansiolítico, sedante, hipnótico, anticonvulsivante y disminución de PIC",
+      "Sedación en agitación psicomotriz y procedimientos diagnósticos o terapéuticos",
+      "Inducción y mantenimiento de anestesia (IOT)",
+      "Anticonvulsivante en crisis y status epiléptico"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Enfermedades musculares tipo miastenia gravis",
+        "Coma de cualquier etiología",
+        "Insuficiencia respiratoria aguda",
+        "Shock",
+        "Glaucoma de ángulo estrecho",
+        "Intoxicación alcohólica aguda con signos vitales alterados"
+      ]
+    },
+    "precauciones": [
+      "Antídoto Flumazenilo (Anexate) revierte efectos hipnóticos pero no hemodinámicos",
+      "Efectos prolongados en ancianos, pacientes debilitados o con insuficiencia hepática (reducir dosis un 25%)",
+      "Monitorización hemodinámica estricta"
+    ],
+    "interacciones": ["No mezclar con otros fármacos"],
+    "efectos_secundarios": [],
+    "embarazo": "D",
+    "dosis": [
+      "sedación (IM): 0.05-0.2mg/kg",
+      "sedación (IN): 0.2-0.3mg/kg",
+      "sedación (IV): 0.05-0.15mg/kg lento (2 min)",
+      "sedación (mantenimiento): 0.05-0.2mg/kg/h",
+      "inducción_mantenimiento_anestesia (inducción): 0.15-0.4mg/kg IV en 20-30 seg",
+      "inducción_mantenimiento_anestesia (mantenimiento): 0.15-0.4mg/kg/h",
+      "convulsiones (inicial): 0.1-0.2mg/kg IV lento",
+      "convulsiones (mantenimiento): 0.1-0.2mg/kg/h",
+      "perfusión (sedación): 0.05-0.2mg/kg/h",
+      "perfusión (anestesia): 0.15-0.4mg/kg/h",
+      "perfusión (convulsiones): 0.1-0.2mg/kg/h"
+    ]
+  },
+  {
+    "nombre": "NALOXONA",
+    "marcas": [],
+    "presentaciones": ["1 amp 1ml/0.4mg"],
+    "indicaciones": [
+      "Revertir efectos tóxicos de opiáceos (depresión respiratoria, neurológica, hipotensión)",
+      "Antídoto en coma tóxico",
+      "Fines diagnósticos en sospecha de intoxicación aguda por opioides",
+      "Coadyuvante en tratamiento de shock séptico"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"]
+    },
+    "precauciones": [
+      "Pacientes con historial de cardiopatía o fármacos cardiotóxicos",
+      "Riesgo de síndrome de abstinencia agudo en pacientes con abuso de opiáceos",
+      "Reversión rápida puede causar excitación, hipertensión y taquicardia",
+      "La vida media de naloxona es menor que la de los opiáceos, pudiendo requerir dosis repetidas"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "intoxicación_desconocida_coma_tóxico (inicial): 0.4-2mg cada 2-3 min hasta respuesta o máximo 10mg",
+      "intoxicación_opiáceos (heroína_morfina): {'inicial': '0.01-0.03mg/kg cada 2-3 min, máximo 10mg', 'mantenimiento': '5-15mcg/kg/h'}",
+      "intoxicación_opiáceos (otros_opiáceos): {'inicial': '0.1mg/kg cada 2-3 min, máximo 10mg', 'mantenimiento': '5-15mcg/kg/h'}",
+      "shock_septico (inicial): 30mcg/kg IV",
+      "shock_septico (mantenimiento): 30-200mcg/kg/h"
+    ]
+  },
+  {
+    "nombre": "NITROGLICERINA",
+    "marcas": [],
+    "presentaciones": [
+      "Solinitrina: amp 5ml/5mg (1ml/1mg)",
+      "Solinitrina Forte: amp 10ml/50mg (1ml/5mg)",
+      "Trinispray: pulsación/0.4mg"
+    ],
+    "indicaciones": [
+      "Cardiopatía isquémica: angor estable, angor inestable, IAM",
+      "Emergencia hipertensiva",
+      "Insuficiencia cardiaca congestiva (ICC) y edema agudo de pulmón (EAP) con TA normal o elevada"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Anemia grave",
+        "Hemorragia cerebral, TCE, hipertensión intracraneal",
+        "Hipovolemia no corregida, hipotensión (TAS <90 mmHg, TAD <50 mmHg)",
+        "Pericarditis constrictiva, taponamiento cardiaco, IAM de ventrículo derecho"
+      ]
+    },
+    "precauciones": [
+      "Utilizar envases de vidrio",
+      "Diluir con SG5% y cambiar la perfusión cada 12 horas",
+      "Monitorización estricta de TA cada 10 minutos"
+    ],
+    "interacciones": [
+      "Alcohol (hipotensión aditiva)",
+      "Calcioantagonistas (potencian efectos hipotensores)",
+      "Inhibidores de la fosfodiesterasa tipo 5 (e.g., sildenafil)"
+    ],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "inicial: 10 mcg/min, aumentar cada 3-5 min hasta controlar el dolor o descender TAS en un 10%",
+      "máxima: 200 mcg/min"
+    ]
+  },
+  {
+    "nombre": "NITROPRUSIATO SÓDICO",
+    "marcas": [],
+    "presentaciones": ["1 amp/5ml/50mg (1ml/10mg)"],
+    "indicaciones": [
+      "Emergencias hipertensivas, especialmente con HTA + bajo gasto cardiaco",
+      "Hipertensión pulmonar",
+      "Shock cardiogénico",
+      "ICC refractaria",
+      "Edema agudo de pulmón sin hipotensión",
+      "Aneurisma disecante de aorta"
+    ],
+    "contraindicaciones": {
+      "absolutas": ["Hipersensibilidad o alergia"],
+      "relativas": [
+        "Hipertensión arterial compensadora (e.g., coartación aórtica)",
+        "Hipertensión intracraneal",
+        "Insuficiencia renal y hepática"
+      ]
+    },
+    "precauciones": [
+      "Fotosensible, proteger de la luz",
+      "No suspender bruscamente para evitar HTA de rebote",
+      "Preparar nueva dilución cada 4 horas",
+      "No prolongar tratamiento más de 2-3 días",
+      "Diluir solo con SG5%"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "inicial: 0.5 mcg/kg/min IV, aumentar cada 3-5 min",
+      "rango_terapéutico: 0.5-10 mcg/kg/min",
+      "máxima: 10 mcg/kg/min"
+    ]
+  },
+  {
+    "nombre": "NORADRENALINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 10mg/10ml"],
+    "indicaciones": [
+      "Hipotensión aguda grave",
+      "Parada cardíaca",
+      "Shock refractario"
+    ],
+    "contraindicaciones": {
+      "absolutas": [],
+      "relativas": [
+        "Arritmias",
+        "Hipertiroidismo",
+        "HTA grave",
+        "Feocromocitoma",
+        "Glaucoma de ángulo cerrado"
+      ]
+    },
+    "precauciones": [
+      "Administrar por vía central con catéter largo y fino",
+      "No suspender bruscamente la infusión"
+    ],
+    "interacciones": [],
+    "efectos_secundarios": [
+      "Necrosis y/o gangrena por extravasación",
+      "Palpitaciones, HTA severa",
+      "Dolor retroesternal, fotofobia",
+      "Bradicardia refleja"
+    ],
+    "embarazo": "C",
+    "dosis": [
+      "dilución: 2 mg en 50 ml de SG5%",
+      "ajuste: Ajustar según respuesta clínica"
+    ]
+  },
+  {
+    "nombre": "OMEPRAZOL",
+    "marcas": [],
+    "presentaciones": ["Cápsulas 20mg", "Cápsulas 40mg", "Vial 40mg/10ml"],
+    "indicaciones": [
+      "Úlcera gástrica benigna",
+      "Úlcera duodenal (incluida la producida por AINES)",
+      "Síndrome de Zollinger-Ellison",
+      "Esofagitis de reflujo",
+      "Úlcera asociada a Helicobacter pylori (con antibioterapia)",
+      "Gastropatía por AINES"
+    ],
+    "contraindicaciones": ["Alergia al fármaco"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "úlceraDuodenal: 20mg/24h durante un mes (mantenimiento 20mg/24h por un año)",
+      "úlceraAsociadaPylori: 20mg/12h por 1-2 semanas con antibioterapia",
+      "úlceraGástrica: 20mg/24h (cicatrización en 4 semanas)",
+      "profilaxisAINE: 20mg/24h",
+      "hemorragiaDigestivaAlta (bolo): 80mg (2 amp.)",
+      "hemorragiaDigestivaAlta (perfusión): 8mg/h (2.5 amp. en 250ml SSF a 21ml/h)"
+    ]
+  },
+  {
+    "nombre": "ONDANSETRÓN",
+    "marcas": [],
+    "presentaciones": ["Vial 8mg/4ml", "Vial 4mg/2ml", "Comprimidos 8mg"],
+    "indicaciones": [
+      "Profilaxis de náuseas y vómitos inducidos por quimioterapia/radioterapia",
+      "Profilaxis de náuseas y vómitos postoperatorios"
+    ],
+    "contraindicaciones": [
+      "Alergia al fármaco o a antagonistas de receptores 5-HT3",
+      "Uso conjunto con apomorfina"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "quimioterapia: 8mg VO 1-2h antes del tratamiento, luego 8mg/12h VO o IV lenta",
+      "náuseasPostoperatorias: 4mg IV lenta al inducir anestesia"
+    ]
+  },
+  {
+    "nombre": "PARACETAMOL",
+    "marcas": [],
+    "presentaciones": [
+      "Comprimidos 500mg, 650mg, 1g",
+      "Gotas 100mg/ml",
+      "Supositorios 150mg, 250mg, 600mg",
+      "Vial 1000mg/100ml"
+    ],
+    "indicaciones": [
+      "Dolor leve a moderado",
+      "Antitérmico",
+      "Dolor postquirúrgico moderado por IV"
+    ],
+    "contraindicaciones": [
+      "Alergia al paracetamol o excipientes",
+      "Insuficiencia hepatocelular grave (IV)"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "oral: 0.5-1g/4-6h (máximo 4g/día)",
+      "rectal: 50kg: 600mg/4-6h, máx 3g/día",
+      "IV (mayor50kg): 1g/4 veces al día, máx 4g/día",
+      "IV (menor50kg): 15mg/kg 4 veces al día, máx 60mg/kg/día",
+      "antídoto: N-acetil-cisteína"
+    ]
+  },
+  {
+    "nombre": "PRASUGREL",
+    "marcas": [],
+    "presentaciones": ["Comprimidos de 5mg", "Comprimidos de 10mg"],
+    "indicaciones": [
+      "Prevención de acontecimientos aterotrombóticos en combinación con AAS",
+      "SCA con o sin elevación de ST sometidos a ICP"
+    ],
+    "contraindicaciones": [
+      "Alergia al compuesto",
+      "Hemorragia activa",
+      "Historia de ictus o AIT",
+      "Insuficiencia hepática grave"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "mayor60kg: Dosis inicial 60mg, luego 10mg/día",
+      "menor60kg: Dosis inicial 60mg, luego 5mg/día",
+      "ancianos: Uso no recomendado (excepto balance riesgo-beneficio)"
+    ]
+  },
+  {
+    "nombre": "PROCAINAMIDA",
+    "marcas": [],
+    "presentaciones": ["Solución inyectable 1g/10ml"],
+    "indicaciones": [
+      "Profilaxis y tratamiento de arritmias supraventriculares y ventriculares",
+      "Tratamiento de extrasístoles ventriculares y arritmias asociadas a anestesia y cirugía"
+    ],
+    "contraindicaciones": [
+      "Bloqueo A-V de 2º y 3º grado",
+      "Miastenia gravis",
+      "Hipersensibilidad al fármaco"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "oral: 50mg/kg/día en 4-6 tomas",
+      "intramuscular: 50mg/kg en 4-8 dosis",
+      "intravenoso (carga): 50-100mg/5min (máx. 1-1.5g)",
+      "intravenoso (mantenimiento): 1-4mg/min, diluir 2g en 500ml de SSF o SG5%"
+    ]
+  },
+  {
+    "nombre": "PROPAFENONA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 70mg/20ml", "Comprimidos 150mg, 300mg"],
+    "indicaciones": [
+      "Arritmias supraventriculares",
+      "Arritmias ventriculares de riesgo vital",
+      "Síndrome de WPW"
+    ],
+    "contraindicaciones": [
+      "Alergia al medicamento",
+      "Bloqueo A-V de 2º y 3º grado",
+      "Insuficiencia cardíaca severa",
+      "Shock cardiogénico",
+      "Miastenia gravis",
+      "Broncoespasmo",
+      "Embarazo y lactancia"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "oral: 150mg cada 8h, hasta máx. 300mg cada 8h",
+      "intravenoso (lenta): 1-2mg/kg (máx. 140mg)",
+      "intravenoso (infusión): 0.5-1mg/min por 1-3h (máx. 560mg/24h)"
+    ]
+  },
+  {
+    "nombre": "PROPOFOL",
+    "marcas": [],
+    "presentaciones": [
+      "Emulsión para inyección 10mg/ml",
+      "Emulsión para inyección 20mg/ml"
+    ],
+    "indicaciones": [
+      "Inducción y mantenimiento de anestesia para procedimientos quirúrgicos",
+      "Sedación prolongada en UCI",
+      "Sedación para técnicas diagnósticas o quirúrgicas"
+    ],
+    "contraindicaciones": [
+      "Alergia a componentes",
+      "Uso en niños menores de 1 mes para inducción/mantenimiento de anestesia"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "inducción: 2-4mg/kg IV",
+      "mantenimiento: 3-12mg/kg/h en infusión continua"
+    ]
+  },
+  {
+    "nombre": "PROTAMINA",
+    "marcas": [],
+    "presentaciones": ["Vial 50mg/5ml"],
+    "indicaciones": ["Neutralización del efecto anticoagulante de la heparina"],
+    "contraindicaciones": [
+      "Alergia a la protamina (riesgo aumentado en diabéticos con insulina-protamina)",
+      "Pacientes con anticuerpos antiprotamina"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "intravenoso: 1mg neutraliza 100UI de heparina",
+      "administración: 10mg cada 2-3 minutos (máx. 50mg en 10 minutos)"
+    ]
+  },
+  {
+    "nombre": "RANITIDINA",
+    "marcas": [],
+    "presentaciones": [
+      "Comprimidos 150mg, 300mg",
+      "Solución inyectable 50mg/5ml"
+    ],
+    "indicaciones": [
+      "Esofagitis por reflujo",
+      "Úlcera gástrica y duodenal",
+      "Profilaxis del síndrome de Mendelson"
+    ],
+    "contraindicaciones": ["Alergia al fármaco", "Porfiria aguda"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "B",
+    "dosis": [
+      "oral: 150mg cada 12h (o 300mg cada 24h) por 4-6 semanas",
+      "profilaxisMendelson: 150mg 90-120min antes de anestesia o 50mg IV lenta",
+      "intravenoso (intermitente): 50mg cada 6-8h en 15-20min",
+      "intravenoso (continua): 6.25-12.5mg/h"
+    ]
+  },
+  {
+    "nombre": "ROCURONIO",
+    "marcas": [],
+    "presentaciones": ["Solución inyectable 10mg/ml"],
+    "indicaciones": ["Inducción y mantenimiento de parálisis neuromuscular"],
+    "contraindicaciones": ["Alergia al fármaco o excipientes"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "boloIV: 0.45-0.6mg/kg",
+      "mantenimientoIV: 0.1-0.2mg/kg o 0.3-0.6mg/kg/h",
+      "perfusión: Diluir 100mg en 90ml SSF"
+    ]
+  },
+  {
+    "nombre": "SALBUTAMOL",
+    "marcas": [],
+    "presentaciones": [
+      "Jarabe 2mg/5ml",
+      "Comprimidos 4mg",
+      "Solución inyectable 0.5mg/ml"
+    ],
+    "indicaciones": ["Asma", "Crisis de broncoespasmo", "EPOC"],
+    "contraindicaciones": ["Alergia al fármaco"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": [
+      "inhalador: 100-200mcg cada 4-6h (máx 1.6mg/día)",
+      "nebulización: 2.5-5mg en 2-5ml SSF cada 4-6h",
+      "IV: 5mcg/min, ajustar a respuesta"
+    ]
+  },
+  {
+    "nombre": "SOMATOSTATINA",
+    "marcas": [],
+    "presentaciones": ["Vial 250mcg", "Vial 3mg"],
+    "indicaciones": [
+      "Hemorragias digestivas por varices esofágicas",
+      "Fístulas pancreáticas"
+    ],
+    "contraindicaciones": ["Hipersensibilidad", "Embarazo y puerperio"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "No recomendado",
+    "dosis": [
+      "varicesEsofágicas: 250mcg en bolo lento, seguido de 3mg en 500ml a 40ml/h",
+      "fístulasPancreáticas: 250mcg/h tras curación"
+    ]
+  },
+  {
+    "nombre": "SUCCINILCOLINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 100mg/2ml", "Ampolla 300mg/10ml"],
+    "indicaciones": ["Parálisis rápida para intubación", "Tétanos"],
+    "contraindicaciones": [
+      "Hipersensibilidad",
+      "Hipertermia maligna",
+      "Miopatías"
+    ],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "C",
+    "dosis": ["inicio: 1-1.5mg/kg IV", "mantenimiento: 0.04-0.07mg/kg/h"]
+  },
+  {
+    "nombre": "SULFATO DE MAGNESIO",
+    "marcas": [],
+    "presentaciones": ["Solución inyectable 1.5g/10ml"],
+    "indicaciones": [
+      "Hipomagnesemia severa",
+      "Eclampsia",
+      "Torsade de Pointes"
+    ],
+    "contraindicaciones": ["Insuficiencia renal", "Embarazo cerca del parto"],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "D",
+    "dosis": [
+      "hipomagnesemia: 1 amp en 100ml SG5% a pasar en 15 min",
+      "eclampsia: 1-4g cada 4h IM"
+    ]
+  },
+  {
+    "nombre": "TIAMINA",
+    "marcas": [],
+    "presentaciones": ["Ampolla 100mg/ml", "Comprimidos 300mg"],
+    "indicaciones": ["Déficit de tiamina", "Encefalopatía de Wernicke"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "A",
+    "dosis": ["déficit: 100mg/día IM", "encefalopatía: 100mg/día IV"]
+  },
+  {
+    "nombre": "TIAPRIZAL",
+    "marcas": [],
+    "presentaciones": ["Ampolla 100mg/2ml", "Comprimidos 100mg"],
+    "indicaciones": ["Deprivación alcohólica", "Discinesias"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "deprivación: 300-400mg/día durante 1-2 meses",
+      "discinesias: 600mg/día"
+    ]
+  },
+  {
+    "nombre": "TICAGRELOL",
+    "marcas": [],
+    "presentaciones": ["Comprimidos 90mg"],
+    "indicaciones": ["Antiagregante para SCA e IAM previo"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "inicial: 180mg (2 comprimidos) luego 90mg cada 12h durante un año"
+    ]
+  },
+  {
+    "nombre": "TIROFIBAN",
+    "marcas": [],
+    "presentaciones": ["Bolsa 12.5mg en 250ml"],
+    "indicaciones": ["Prevención de IAM precoz en SCASEST"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["perfusión: 12.5mg en 30min, seguido de 0.05-0.1mcg/kg/min"]
+  },
+  {
+    "nombre": "TRAMADOL",
+    "marcas": [],
+    "presentaciones": ["Ampolla 100mg/2ml"],
+    "indicaciones": ["Dolor moderado a severo"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": [
+      "IM_SC: No más de 400mg/día",
+      "perfusión: Diluir en 500ml SSF a pasar en 24h"
+    ]
+  },
+  {
+    "nombre": "URAPIDILO",
+    "marcas": [],
+    "presentaciones": ["Ampolla 50mg/10ml"],
+    "indicaciones": ["Urgencias hipertensivas"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["bolo: 25mg rápido", "perfusión: 10-40mg/h"]
+  },
+  {
+    "nombre": "UROKINASA",
+    "marcas": [],
+    "presentaciones": ["Vial 100000UI", "Vial 250000UI"],
+    "indicaciones": ["TEP/TVP", "Derrames pleurales metaneumónicos"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["TEP_TVP: 4400UI/kg en 10min"]
+  },
+  {
+    "nombre": "VERAPAMILO",
+    "marcas": [],
+    "presentaciones": ["Ampolla 5mg/2ml"],
+    "indicaciones": ["TSPV", "Frenar frecuencia cardiaca en FA"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["IV: 5-10mg lento en 5min, repetir en 30min si necesario"]
+  },
+  {
+    "nombre": "LACOSAMIDA",
+    "marcas": [],
+    "presentaciones": ["Vial 10mg/ml"],
+    "indicaciones": ["Terapia de crisis epilépticas"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["IV: 50mg/12h"]
+  },
+  {
+    "nombre": "VITAMINA B6",
+    "marcas": [],
+    "presentaciones": ["Ampolla 300mg/2ml", "Comprimidos 300mg"],
+    "indicaciones": ["Profilaxis de neuropatía", "Déficit de B6"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["déficit: 10-20mg/día VO", "neuropatía: 25-50mg/día"]
+  },
+  {
+    "nombre": "VITAMINA K",
+    "marcas": [],
+    "presentaciones": ["Ampolla 10mg/1ml"],
+    "indicaciones": ["Déficit de vitamina K", "Reversión de anticoagulantes"],
+    "contraindicaciones": [],
+    "precauciones": [],
+    "interacciones": [],
+    "efectos_secundarios": [],
+    "embarazo": "",
+    "dosis": ["IV: 10-20mg/día, diluir en 100ml SG5%"]
+  }
+]

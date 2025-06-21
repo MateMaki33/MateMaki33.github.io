@@ -84,23 +84,7 @@ const closeModal = () => modal.value?.close()
   gap: 1rem;
 }
 
-input, select {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ff9900;
-  background-color: #1a1a1a;
-  color: #fff7e6;
-  height: 3rem;
-  font-size: 1.25rem;
-  box-shadow: 0 0 5px #ff9900;
-  transition: all 0.3s ease;
-}
 
-input:focus, select:focus {
-  outline: none;
-  border-color: #ffae42;
-  box-shadow: 0 0 12px #ffaa33;
-}
 
 .score {
   margin: 1rem 0;

@@ -228,5 +228,22 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
       flex-direction: column;
     }
   }
+  input, select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--neon-glow);
+  background-color: #1a1a1a;
+  color: #fff7e6;
+  height: 3rem;
+  font-size: 1.25rem;
+  box-shadow: 0 0 5px var(--neon-glow);
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--neon-glow);
+  box-shadow: 0 0 12px var(--neon-glow);
+}
 </style>
 
