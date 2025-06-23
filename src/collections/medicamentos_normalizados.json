@@ -220,7 +220,7 @@
       "Insuficiencia hepática moderada",
       "Riesgo de hemorragia (biopsia reciente, litotricia en las dos últimas semanas, cirugía mayor o traumatismo grave de más de 6 semanas, úlcera activa en los últimos 3 meses, hipertensión no controlada, hematuria, coagulopatía previa)"
     ],
-    "interacciones": "No se han descrito",
+    "interacciones": ["No se han descrito"],
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
