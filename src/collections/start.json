@@ -1,0 +1,128 @@
+{
+  "nombre_metodo": "START (Simple Triage And Rapid Treatment)",
+  "objetivo": "Clasificación rápida de víctimas en incidentes con múltiples víctimas (IMV) para optimizar recursos y priorizar la atención.",
+  "desarrollo": "1983, Hospital Hoag y Departamento de Bomberos de Newport Beach, California, EE. UU.",
+  "categorias_triaje": [
+    {
+      "color": "Rojo",
+      "prioridad": "P1 - Inmediato",
+      "descripcion": "Lesiones críticas con riesgo vital inminente. Requieren atención y evacuación urgente."
+    },
+    {
+      "color": "Amarillo",
+      "prioridad": "P2 - Demorable",
+      "descripcion": "Lesiones graves pero estables. La atención puede demorarse por un tiempo limitado (horas) sin riesgo vital inmediato."
+    },
+    {
+      "color": "Verde",
+      "prioridad": "P3 - Leve/Herido Caminante",
+      "descripcion": "Lesiones leves sin riesgo vital. Pueden esperar un tiempo prolongado para recibir atención."
+    },
+    {
+      "color": "Negro",
+      "prioridad": "Fallecido/Irrecuperable",
+      "descripcion": "Pacientes fallecidos o con lesiones incompatibles con la vida o con muy baja probabilidad de supervivencia."
+    }
+  ],
+  "pasos_evaluacion": [
+    {
+      "orden": 1,
+      "parametro": "Ambulación (¿Puede caminar?)",
+      "evaluacion": "Instruir a las víctimas que puedan caminar a dirigirse a un área segura.",
+      "acciones_decision": [
+        {
+          "condicion": "Puede caminar",
+          "clasificacion": "Verde",
+          "siguiente_paso": "Fin de evaluación para esta víctima"
+        },
+        {
+          "condicion": "NO puede caminar",
+          "clasificacion": "Continuar con 'Respiración'"
+        }
+      ]
+    },
+    {
+      "orden": 2,
+      "parametro": "Respiración (A, B)",
+      "evaluacion": "Evaluar la presencia y frecuencia de la respiración.",
+      "acciones_decision": [
+        {
+          "condicion": "NO respira",
+          "acciones": [
+            "Abrir vía aérea (frente-mentón o tracción mandibular)"
+          ],
+          "sub_condiciones": [
+            {
+              "condicion": "Sigue sin respirar tras frente-mentón o tracción mandibular ",
+              "clasificacion": "Negro",
+              "siguiente_paso": "Fin de evaluación para esta víctima"
+            },
+            {
+              "condicion": "Comienza a respirar tras frente-mentón o tracción mandibular",
+              "clasificacion": "Rojo",
+              "siguiente_paso": "Fin de evaluación para esta víctima"
+            }
+          ]
+        },
+        {
+          "condicion": "SÍ respira",
+          "sub_condiciones": [
+            {
+              "condicion": "Frecuencia respiratoria > 30 rpm",
+              "clasificacion": "Rojo",
+              "siguiente_paso": "Fin de evaluación para esta víctima"
+            },
+            {
+              "condicion": "Frecuencia respiratoria <= 30 rpm",
+              "clasificacion": "Continuar con 'Perfusión'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orden": 3,
+      "parametro": "Perfusión (C)",
+      "evaluacion": "Evaluar pulso radial o relleno capilar.",
+      "acciones_decision": [
+        {
+          "condicion": "Ausencia de pulso radial O Relleno capilar > 2 segundos",
+          "clasificacion": "Rojo",
+          "siguiente_paso": "Fin de evaluación para esta víctima"
+        },
+        {
+          "condicion": "Pulso radial presente Y Relleno capilar <= 2 segundos",
+          "clasificacion": "Continuar con 'Estado Mental'"
+        }
+      ]
+    },
+    {
+      "orden": 4,
+      "parametro": "Estado Mental (D)",
+      "evaluacion": "Evaluar el estado de conciencia y capacidad para obedecer órdenes sencillas.",
+      "acciones_decision": [
+        {
+          "condicion": "NO responde O Confuso/Incapaz de seguir órdenes",
+          "clasificacion": "Rojo",
+          "siguiente_paso": "Fin de evaluación para esta víctima"
+        },
+        {
+          "condicion": "Responde Y Es capaz de seguir órdenes",
+          "clasificacion": "Amarillo",
+          "siguiente_paso": "Fin de evaluación para esta víctima"
+        }
+      ]
+    }
+  ],
+  "intervenciones_permitidas_en_escena": [
+    "Apertura de la vía aérea (frente-mentón o tracción mandibular)",
+    "Control de hemorragias externas graves mediante presión directa"
+  ],
+  "principios_clave": [
+    "Rapidez (menos de 60 segundos por víctima idealmente)",
+    "Simplicidad (fácil de aprender y aplicar)",
+    "Tiende al 'sobretriaje' para no omitir críticos",
+    "El triaje es dinámico y puede reevaluarse",
+    "No busca tratamiento definitivo, sino clasificación para evacuación y tratamiento posterior."
+  ]
+}
