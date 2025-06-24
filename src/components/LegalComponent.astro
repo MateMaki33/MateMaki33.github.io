@@ -4,36 +4,62 @@ const showModal = `(function(){
   if (modal) modal.showModal();
 })();`;
 ---
+<button class="btn" onclick={showModal}> Aviso legal / Uso </button>
 
-  <button class="btn" onclick={showModal}>
-    Aviso legal / Uso
-  </button>
+<dialog id="legal-modal">
+  <h2>Aviso importante</h2>
+  <p>
+    Esta aplicación web ha sido desarrollada con <span
+      >carácter personal y orientativo</span
+    > . Su contenido tiene como finalidad servir como recordatorio rápido o “cheatsheet”
+    para el autor, y se basa en guías clínicas, estudios científicos y procedimientos
+    publicados por organismos especializados. Siempre que ha sido posible, se han
+    incluido referencias bibliográficas para dar contexto a la información.
+  </p>
 
-  <dialog id="legal-modal">
-    <h2>Aviso importante</h2>
-    <p>
-      Esta aplicación web ha sido desarrollada con <span>carácter personal y orientativo</span> . Su contenido tiene como finalidad servir como recordatorio rápido o “cheatsheet” para el autor, y se basa en guías clínicas, estudios científicos y procedimientos publicados por organismos especializados. Siempre que ha sido posible, se han incluido referencias bibliográficas para dar contexto a la información.
-    </p>
+  <p>
+    No obstante, la información contenida en esta plataforma <span
+      >no pretende sustituir protocolos oficiales ni servir como fuente única
+      para la toma de decisiones clínicas</span
+    > . Puede no estar actualizada en todo momento y no contempla las particularidades
+    de cada centro, comunidad autónoma u organismo sanitario. Asimismo, algunos procedimientos,
+    códigos o criterios pueden variar según la región, la normativa vigente o los
+    protocolos internos de cada institución.
+  </p>
 
-    <p>
-      No obstante, la información contenida en esta plataforma <span>no pretende sustituir protocolos oficiales ni servir como fuente única para la toma de decisiones clínicas</span> . Puede no estar actualizada en todo momento y no contempla las particularidades de cada centro, comunidad autónoma u organismo sanitario. Asimismo, algunos procedimientos, códigos o criterios pueden variar según la región, la normativa vigente o los protocolos internos de cada institución.
-    </p>
+  <p>
+    Toda la información ha sido adaptada y estructurada según el criterio
+    personal del autor, con el fin de facilitar su comprensión y acceso rápido.
+    Aunque se ha procurado mantener la fidelidad a las fuentes originales, no se
+    garantiza la precisión absoluta, y el uso que se haga de esta herramienta
+    será siempre bajo la responsabilidad del usuario.
+  </p>
 
-    <p>
-      Toda la información ha sido adaptada y estructurada según el criterio personal del autor, con el fin de facilitar su comprensión y acceso rápido. Aunque se ha procurado mantener la fidelidad a las fuentes originales, no se garantiza la precisión absoluta, y el uso que se haga de esta herramienta será siempre bajo la responsabilidad del usuario.
-    </p>
+  <p>
+    En resumen, esta web es una herramienta no oficial, no profesional, y sin
+    garantías de validez universal, orientada al repaso y la autoformación. Se
+    ofrece con la intención de ser útil a otros profesionales o estudiantes,
+    pero debe utilizarse con sentido crítico y en combinación con otras fuentes
+    autorizadas.
+  </p>
 
-    <p>
-      En resumen, esta web es una herramienta no oficial, no profesional, y sin garantías de validez universal, orientada al repaso y la autoformación. Se ofrece con la intención de ser útil a otros profesionales o estudiantes, pero debe utilizarse con sentido crítico y en combinación con otras fuentes autorizadas.
-    </p>
 
-    <form method="dialog" style="margin-top: 2rem; text-align: center;">
-      <button class="btn">Entendido</button>
-    </form>
-  </dialog>
 
-  <style scoped>
-    span{
-      color: var(--neon-orange);
-    }
-  </style>
+  <h3>Prohibición de Difusión y Derechos de Autor</h3>
+  <p>
+    Esta aplicación y su contenido son **propiedad intelectual del autor**. Se prohíbe expresamente su copia, distribución, reproducción, modificación o difusión pública, total o parcial, por cualquier medio o soporte, sin el consentimiento previo y por escrito del autor. Los derechos de autor sobre esta obra son reconocidos automáticamente desde su creación.
+  </p>
+  <p style="text-align: center; font-size: 1em; color: #daad26;">
+    © 2025 por José Luis Díaz García. Todos los derechos reservados.
+  </p>
+
+  <form method="dialog" style="margin-top: 2rem; text-align: center;">
+    <button class="btn">Entendido</button>
+  </form>
+</dialog>
+
+<style scoped>
+  span {
+    color: var(--neon-orange);
+  }
+</style>
