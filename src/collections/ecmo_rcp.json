@@ -1,0 +1,65 @@
+{
+  "titulo": "Guía de Procedimiento Asistencial ECMO-RCP SUMMA 112",
+  "secciones": [
+    {
+      "titulo": "Definición de PCR Refractaria y E-RCP",
+      "puntos": [
+        "La PCR refractaria se define como aquella situación en la que, a pesar de la reanimación cardiopulmonar (RCP) avanzada, no se logra recuperar la circulación espontánea más allá de 10-30 minutos.",
+        "En esta situación de refractariedad, se ha incorporado la resucitación cardiopulmonar extracorpórea (E-RCP) para recuperar la circulación espontánea, con el objetivo de mejorar la perfusión de los órganos diana mientras se diagnostica y/o trata la causa desencadenante de la PCR.",
+        "La E-RCP consiste en la instauración rápida y de forma precoz del sistema de oxigenación con membrana extracorpórea (ECMO) para mantener un soporte circulatorio inmediato en el paciente con PCR refractaria.",
+        "Su uso en pacientes con PCR intrahospitalaria podría aumentar la supervivencia con una situación neurológica no limitante en torno al 20% o incluso superior según la literatura científica actual.",
+        "En los últimos años, la evidencia científica apoya el uso de E-PCR en PCR extrahospitalaria presenciada de probable causa cardiológica, con diversa experiencia de Servicios de Emergencia Extrahospitalarios europeos."
+      ]
+    },
+    {
+      "titulo": "Criterios de Inclusión (Selección de Pacientes)",
+      "puntos": [
+        "Edad: 18-70 años (los menores de 18, si bien no están incluidos expresamente, se pueden incluir de forma excepcional, teniendo en cuenta que no todos los hospitales implicados pueden admitirlos y por tanto es necesario estimar adecuadamente el tiempo de llegada al hospital idóneo).",
+        "PCR presenciada.",
+        "RCP de calidad en <5 minutos de inicio de PCR, por testigos o primer equipo.",
+        "Ritmo inicial de PCR:",
+        "Ritmo desfibrilable: Fibrilación ventricular (FV)/Taquicardia ventricular sin pulso (TVSP), tras 3 desfibrilaciones.",
+        "Ritmo no desfibrilable: Si el ritmo inicial es actividad eléctrica sin pulso (AESP). Se individualizará el caso por el hospital receptor, sabiendo que son pocos los casos susceptibles de ser aceptados y que la solicitud debe de hacerse antes de los primeros 10 minutos de RCP avanzada.",
+        "Tiempo de llegada al hospital: Posibilidad de llegada al hospital < 50 minutos desde la hora de inicio de PCR.",
+        "Sospecha de causa reversible.",
+        "Ausencia de importantes comorbilidades y perímetro torácico compatible con cardiocompresor mecánico.",
+        "Se tendrá en cuenta: etiología sospechada y tratable; signos de vida; Et-CO2 (End tidal CO2)>10 mmHg."
+      ]
+    },
+    {
+      "titulo": "Contraindicaciones Absolutas",
+      "puntos": [
+        "PCR no presenciada.",
+        "Ritmo inicial asistolia.",
+        "Imposibilidad de RCP de calidad.",
+        "Imposibilidad de utilización de cardiocompresor mecánico por obesidad mórbida.",
+        "Tiempo mayor de 50 minutos de llegada al hospital desde inicio de PCR.",
+        "Origen traumático de la PCR."
+      ]
+    },
+    {
+      "titulo": "Activación del Procedimiento",
+      "puntos": [
+        "Tras la detección de la PCR, cumpliendo criterios estrictos de inclusión, el SVA contactará con la mesa de Coordinación, comprobando criterios de aceptación del procedimiento.",
+        "Mesa de Coordinación se comunicará con el Hospital idóneo (incluido en el procedimiento, con capacidad para recepcionar pacientes y con menor tiempo de llegada del recurso asistencial) e informará posteriormente al recurso asistencial de la aceptación o negativa de traslado, por parte del hospital receptor.",
+        "Una vez aceptado el posible candidato a ECMO, se iniciará el traslado, con la mayor rapidez posible, con el objetivo de realizar la transferencia hospitalaria en menos de 50 minutos desde que se produce la PCR, manteniendo las maniobras de RCP avanzada según los procedimientos actuales de SVA, hasta la llegada al hospital.",
+        "Si el procedimiento ha sido desestimado por el Hospital se continuará la RCP en el lugar de la PCR, siguiendo las recomendaciones de SVA actuales.",
+        "No se iniciará ningún traslado sin la previa aceptación del hospital, si bien se recomienda planificar la evacuación por si se aceptara, para optimizar el tiempo de movilización y traslado.",
+        "En los ritmos desfibrilable se procederá a activar el procedimiento a partir de la tercera desfibrilación sin respuesta, continuando con RCP avanzada y corrigiendo las posibles causas de refractariedad (4H, 4T)."
+      ]
+    },
+    {
+      "titulo": "Traslado",
+      "puntos": [
+        "El traslado se realizará lo más precoz posible, una vez aceptado el procedimiento por el hospital, continuando con las maniobras de RCP avanzada, utilizando cardiocompresor torácico mecánico, con cumplimiento de las medidas de seguridad para los intervinientes.",
+        "Si durante el traslado se lograra la recuperación espontánea de pulso, se procederá a continuar con los cuidados postresucitación, siendo el hospital de destino el mismo que aceptó el procedimiento e-RCP."
+      ]
+    },
+    {
+      "titulo": "Transferencia Hospitalaria",
+      "puntos": [
+        "La transferencia del paciente se realizará en el lugar designado a tal efecto por cada hospital, que será comunicada al equipo asistencial una vez aceptado el procedimiento."
+      ]
+    }
+  ]
+}

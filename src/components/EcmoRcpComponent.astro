@@ -1,0 +1,99 @@
+---
+import ecmoData from "../collections/ecmo_rcp.json";
+const data = ecmoData;
+---
+
+<style scoped>
+  
+  .card-madrid-direct{
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+  }
+  .scale{
+    min-width: 70%;
+  }
+  .scale-btn{
+    display: grid;
+    inset: 0;
+    place-content: center;
+    width: 30%;
+  }
+</style>
+
+<div class="container">
+  <h1>ECMO-RCP</h1>
+
+  <div class="grid">
+    <button class="btn" onclick="modal_definiciones.showModal()">Definiciones</button>
+    <button class="btn" onclick="modal_inclusion.showModal()">Criterios de inclusión</button>
+    <button class="btn" onclick="modal_contras.showModal()">Contraindicaciones absolutas</button>
+    <button class="btn" onclick="modal_activacion.showModal()">Activación del procedimiento</button>
+    <button class="btn" onclick="modal_traslado.showModal()">Traslado</button>
+    <button class="btn" onclick="modal_transferencia.showModal()">Transferencia</button>
+  </div>
+
+</div>
+</div>
+
+<dialog id="modal_definiciones">
+  <h2>Definiciones</h2>
+  <ul>
+    {data.secciones[0].puntos.map(c => (
+      <li>{c}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_inclusion">
+  <h2>Criterios de inclusión</h2>
+  <ul>
+    {data.secciones[1].puntos.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_contras">
+  <h2>Contraindicaciones absolutas</h2>
+  <ul>
+    {data.secciones[2].puntos.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_activacion">
+  <h2>Activación</h2>
+   {data.secciones[3].puntos.map(item => (
+      <li>{item}</li>
+    ))}
+  
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_traslado">
+  <h2>Traslado</h2>
+  <ul>
+    {data.secciones[4].puntos.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_transferencia">
+  <h2>Transferencia</h2>
+  <ul>
+    {data.secciones[5].puntos.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+
+</div>
