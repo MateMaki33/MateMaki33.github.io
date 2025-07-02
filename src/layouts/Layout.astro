@@ -1,4 +1,5 @@
 ---
+import {ClientRouter} from "astro:transitions"
 import NavMenuComponent from "../components/NavMenuComponent.astro";
 ---
 
@@ -11,6 +12,7 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>MadRescue112</title>
+    <ClientRouter/>
   </head>
   <body>
     <NavMenuComponent></NavMenuComponent>
