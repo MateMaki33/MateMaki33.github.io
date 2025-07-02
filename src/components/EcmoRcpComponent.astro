@@ -68,9 +68,11 @@ const data = ecmoData;
 
 <dialog id="modal_activacion">
   <h2>Activación</h2>
-   {data.secciones[3].puntos.map(item => (
+   <ul>
+  {data.secciones[3].puntos.map(item => (
       <li>{item}</li>
     ))}
+    </ul>
   
   <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
 </dialog>
