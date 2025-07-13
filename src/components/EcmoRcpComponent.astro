@@ -25,12 +25,12 @@ const data = ecmoData;
   <h1>ECMO-RCP</h1>
 
   <div class="grid">
-    <button class="btn" onclick="modal_definiciones.showModal()">Definiciones</button>
-    <button class="btn" onclick="modal_inclusion.showModal()">Criterios de inclusión</button>
-    <button class="btn" onclick="modal_contras.showModal()">Contraindicaciones absolutas</button>
-    <button class="btn" onclick="modal_activacion.showModal()">Activación del procedimiento</button>
-    <button class="btn" onclick="modal_traslado.showModal()">Traslado</button>
-    <button class="btn" onclick="modal_transferencia.showModal()">Transferencia</button>
+    <button class="btn" onclick="modal_definiciones.showModal(); modal_definiciones.scrollTop = 0;">Definiciones</button>
+    <button class="btn" onclick="modal_inclusion.showModal(); modal_inclusion.scrollTop = 0;">Criterios de inclusión</button>
+    <button class="btn" onclick="modal_contras.showModal(); modal_contras.scrollTop = 0;">Contraindicaciones absolutas</button>
+    <button class="btn" onclick="modal_activacion.showModal(); modal_activacion.scrollTop = 0;">Activación del procedimiento</button>
+    <button class="btn" onclick="modal_traslado.showModal(); modal_traslado.scrollTop = 0;">Traslado</button>
+    <button class="btn" onclick="modal_transferencia.showModal(); modal_transferencia.scrollTop = 0;">Transferencia</button>
   </div>
 
 </div>
@@ -95,7 +95,7 @@ const data = ecmoData;
     ))}
   </ul>
   <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
-</dialog>
+; modal_special.scrollTop = 0;</dialog>
 
 
 </div>

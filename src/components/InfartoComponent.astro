@@ -1,5 +1,6 @@
 ---
 import infartoData from "../collections/infarto.json";
+import SpecialButtonComponent from "./buttons/SpecialButtonComponent.astro";
 const data = infartoData;
 ---
 
@@ -7,8 +8,11 @@ const data = infartoData;
   <h1>Código Infarto</h1>
 
   <div class="grid">
-    <button class="btn" onclick="modal_criterios.showModal()">Criterios de Inclusión</button>
-    <button class="btn" onclick="modal_evaluacion.showModal()">Evaluación Inicial</button>
+    <button class="btn" onclick="modal_criterios.showModal(); modal_criterios.scrollTop = 0;">Criterios de Inclusión</button>
+    <button class="btn" onclick="modal_evaluacion.showModal(); modal_evaluacion.scrollTop = 0;">Evaluación Inicial</button>
+    <button class="btn" onclick="modal_estrategias.showModal(); modal_estrategias.scrollTop = 0;">Reperfusión</button>
+    <SpecialButtonComponent data={data.codigo_infarto.fibrinolisis} title="Fibrinolisis"></SpecialButtonComponent>
+    
   </div>
 </div>
 
@@ -26,6 +30,23 @@ const data = infartoData;
   <h2>Evaluación Inicial</h2>
   <ul>
     {data.codigo_infarto.evaluacion_inicial.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_estrategias">
+  <h2>Estrategias de reperfusión</h2>
+  <ul>
+    {data.codigo_infarto.estrategias_de_reperfusion_madrid.items.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <h2>Preparación</h2>
+
+   <ul>
+    {data.codigo_infarto.estrategias_de_reperfusion_madrid.preparacion.map(item => (
       <li>{item}</li>
     ))}
   </ul>

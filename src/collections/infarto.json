@@ -1,15 +1,14 @@
 {
   "codigo_infarto": {
     "criterios_inclusion": [
-        "Elevación ST >1mm en 2 o mas derivaciones contiguas excepto V2-V3",
-        "En V2-V3 ST mayor o igual a 2.5mm varon MENOR de 40 años",
-        "En V2-V3 ST mayor o igual a 2mm varon MAYOR de 40 años",
-        "En V2-V3 ST mayor o igual a 1.5mm MUJER",
-        "BCRIHH",
-        "Ritmo marcapasos u otra que impida interpretar ECG",
-        "DEPRESIÓN ST generalizada mayor o igual a 1mm en 8 derivacionnes con ELEVACIÓN en AVR y/o V1 sugiere tronco común o isquemia grave de 3 vasos",
-        "DEPRESIÓN ST aislada mayor o igual a 0.5mm en V1-V3 con ELEVACIÓN en posteriores V7-V9"
-        
+      "Elevación ST >1mm en 2 o mas derivaciones contiguas excepto V2-V3",
+      "En V2-V3 ST mayor o igual a 2.5mm varon MENOR de 40 años",
+      "En V2-V3 ST mayor o igual a 2mm varon MAYOR de 40 años",
+      "En V2-V3 ST mayor o igual a 1.5mm MUJER",
+      "BCRIHH",
+      "Ritmo marcapasos u otra que impida interpretar ECG",
+      "DEPRESIÓN ST generalizada mayor o igual a 1mm en 8 derivacionnes con ELEVACIÓN en AVR y/o V1 sugiere tronco común o isquemia grave de 3 vasos",
+      "DEPRESIÓN ST aislada mayor o igual a 0.5mm en V1-V3 con ELEVACIÓN en posteriores V7-V9"
     ],
     "evaluacion_inicial": {
       "items": [
@@ -21,6 +20,52 @@
         "Dolor actual",
         "Clase Killip",
         "Medicación administrada"
+      ]
+    },
+    "estrategias_de_reperfusion_madrid": {
+      "items": [
+        "Angioplastia primaria si tiempo estimado a paso de la guia < 120 min",
+        "Fibrinolisis"
+      ],
+      "preparacion": [
+        "Aspirina 300-500 mg masticado o IV",
+        "Ticagrelol 180mg o Prasugrel 60mg de elección",
+        "Clopidogrel 600mg si riesgo de sangrado o contraidiocación de anteriores",
+        "La anticoagulación la dejamos para el centro donde usarán su protocolo"
+      ]
+    },
+
+    "fibrinolisis": {
+      "contraindicaciones": [
+        "1. Hemorragia activa de cualquier localización",
+        "2. Antecedentes de hemorragia, cirugía u otra afectación crónica intracraneal",
+        "3. Accidente vascular cerebral hemorrágico y no hemorrágico previo",
+        "4. Cirugía mayor o traumatismo importante en las últimas 4 semanas",
+        "5. Punción reciente de un vaso no compresible",
+        "6. Sospecha de disección aórtica asociada",
+        "7. Ulcus activo sintomático",
+        "8. Embarazo o puerperio inmediato (<1 semana)",
+        "9. Hipertensión arterial no controlada con medicación iv (180/110 mm de Hg)",
+        "10. Maniobras de resucitación cardiopulmonar traumáticas o prolongadas, traumatismo craneoencefálico o inyección intramuscular en los últimos 7 días",
+        "11. Insuficiencia hepática o renal grave",
+        "12. Trastorno de la coagulación conocido o tratamiento con dicumarínicos",
+        "13. Retinopatía proliferativa grave conocida",
+        "14. Sospecha de consumo reciente de cocaína"
+      ],
+      "tratamiento": [
+        "Tratamiento fibrinolítico: tenecteplasa (TNK) bolo único intravenoso en 10 segundos según peso del paciente:",
+        "≤ 60 Kg -> 30 mg",
+        "61-69 Kg -> 35 mg",
+        "70-79 Kg -> 40 mg",
+        "80-89 Kg -> 45 mg",
+        "≥ 90 Kg -> 50 mg"
+      ],
+      "tratamiento_coadyuvante": [
+        "1. Aspirina 300-500 mg masticada o intravenosa",
+        "2. Clopidogrel 300 mg si < 75 años, 75 mg si ≥ 75 años",
+        "3. Enoxaparina:",
+        "   - 30 mg iv en bolo + 1 mg/Kg subcutáneo si < 75 años",
+        "   - No bolo + 0.75 mg/Kg subcutáneo si ≥ 75 años"
       ]
     }
   }

@@ -1,0 +1,103 @@
+---
+interface FibrinolisisData {
+  contraindicaciones: string[];
+  tratamiento: string[];
+  tratamiento_coadyuvante: string[];
+}
+interface Props {
+    title:string;
+    data: FibrinolisisData;
+}
+
+const{title, data} = Astro.props
+---
+
+<button class="btn-glow" onclick="modal_special.showModal(); modal_special.scrollTop = 0;">{title}</button>
+
+<dialog id="modal_special">
+  <h2>{title}</h2>
+
+  <section>
+    <h3>Contraindicaciones</h3>
+    <ul>
+      {data.contraindicaciones.map(item => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tratamiento</h3>
+    <ul>
+      {data.tratamiento.map(item => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tratamiento coadyuvante</h3>
+    <ul>
+      {data.tratamiento_coadyuvante.map(item => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<style scoped>
+
+    .btn-glow {
+  position: relative;
+  padding: 1rem 2rem;
+  color: #fff8f0;
+  background: #1a1a1a;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #ff9900, #ffaa33, #ff6600, #ff9900);
+  animation: spin 3s linear infinite;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.btn-glow::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
