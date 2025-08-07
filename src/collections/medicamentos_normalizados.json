@@ -2146,8 +2146,9 @@
     ],
     "embarazo": "C",
     "dosis": [
-      "dilución: 2 mg en 50 ml de SG5%",
-      "ajuste: Ajustar según respuesta clínica"
+      "dilución: 1 amp en 40 ml de SG5%",
+      "dilución 2: 2 amp + 80 ml SG5%"
+      "ajuste: 0,1-0,5mcg/kg/min"
     ]
   },
   {
