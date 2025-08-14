@@ -2074,6 +2074,7 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
+      "dilucion: 50mg en 250 mL s.glucosado", 
       "inicial: 10 mcg/min, aumentar cada 3-5 min hasta controlar el dolor o descender TAS en un 10%",
       "máxima: 200 mcg/min"
     ]
