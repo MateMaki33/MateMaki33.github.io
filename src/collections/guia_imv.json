@@ -1,0 +1,146 @@
+{
+  "definicion": "Un Incidente de Múltiples Víctimas (IMV) es cualquier suceso en el que el número y la gravedad de los pacientes compromete la capacidad de respuesta inicial y desborda los recursos sanitarios disponibles.",
+  "criterios_activacion": [
+    "Existencia real o potencial de diez o más víctimas",
+    "Derrumbes, explosiones o incendios con al menos diez víctimas confirmadas o presuntas",
+    "Atentados terroristas de cualquier tipo",
+    "Accidentes de tren, metro, avión, autobús o múltiples vehículos con diez o más víctimas",
+    "Solicitud de los recursos intervinientes por las características del siniestro"
+  ],
+  "canales_comunicacion": {
+    "SUMMACOOR_1": "Canal del incidente para todas las unidades que se dirigen o salen del IMV; comunicación con el Centro Coordinador de Urgencias (CCU)",
+    "SUMMACOOR_2": "Canal de mando y coordinación con el Equipo Gestor de Incidente (EGI) y el Jefe de Dispositivo Sanitario (JDS)",
+    "SUMMACOOR_3": "Canal reservado para las comunicaciones entre la enfermera del EGI y el JDS para la asignación de camas"
+  },
+  "niveles_respuesta": [
+    {
+      "nivel": 0,
+      "victimas_totales": "menos de 10",
+      "recursos": {"SVA": 1, "SVB": 2, "apoyo_logistico": 1, "Jefe_Guardia": 1}
+    },
+    {
+      "nivel": 1,
+      "victimas_totales": "entre 10 y 50",
+      "recursos": {"SVA": 2, "SVB": 4, "apoyo_logistico": 1, "Jefe_Guardia": 1}
+    },
+    {
+      "nivel": 2,
+      "victimas_totales": "entre 51 y 150",
+      "recursos": {"SVA": 4, "SVB": 8, "apoyo_logistico": 1, "Jefe_Guardia": 1}
+    },
+    {
+      "nivel": 3,
+      "victimas_totales": "más de 151",
+      "recursos": {"SVA": 6, "SVB": 12, "apoyo_logistico": 1, "Jefe_Guardia": 1}
+    }
+  ],
+  "roles": {
+    "JDS": {
+      "descripcion": "Jefe de Dispositivo Sanitario (generalmente el Jefe de Guardia); coordina la asistencia sanitaria y se integra en el Puesto de Mando Avanzado.",
+      "funciones": [
+        "Participar en la zonificación del incidente junto a otros servicios de emergencia",
+        "Designar la ubicación del Puesto Sanitario Avanzado (PSA) y nombrar a sus responsables",
+        "Asignar chalecos y roles: jefe de PSA, responsable de triaje, responsable de evacuación/carga y responsable de recursos",
+        "Ordenar el despliegue del PSA y dotarlo de personal",
+        "Indicar el inicio del triaje y la distribución de funciones",
+        "Coordinar la respuesta inicial y activar recursos adicionales (psicólogos, CMC, Puesto de Mando Avanzado)"
+      ]
+    },
+    "EGI": {
+      "descripcion": "Equipo Gestor del Incidente ubicado en el CCU que centraliza la información del IMV y coordina los recursos y las camas hospitalarias.",
+      "integrantes": {
+        "medico": [
+          "Mantener comunicación con el JDS para implantar el dispositivo de respuesta",
+          "Supervisar al locutor y a la enfermera del EGI y dar las órdenes oportunas",
+          "Recepcionar y registrar todas las llamadas relacionadas con el IMV"
+        ],
+        "enfermera": [
+          "Coordinar las camas hospitalarias y el registro de pacientes",
+          "Recoger filiación, datos clínicos y asignar cama de destino a cada víctima",
+          "Realizar la alerta hospitalaria cuando sea necesario"
+        ],
+        "tecnicos_locutores": [
+          "Movilizar recursos asistenciales y logísticos y registrar su estado",
+          "Organizar la rotación (noria) de ambulancias entre el foco y los hospitales"
+        ],
+        "operador": [
+          "Gestionar colas telefónicas y cumplimentar la aplicación informática",
+          "Realizar comunicaciones auxiliares según indique el resto del EGI"
+        ]
+      }
+    },
+    "Supervisora_de_Guardia": {
+      "descripcion": "Apoya al JDS en las labores organizativas al inicio del IMV.",
+      "funciones": [
+        "Colaborar en la zonificación (área de socorro, zona de heridos, PSA, zona de espera, zona de pacientes verdes)",
+        "Organizar el área de socorro y la concentración de heridos",
+        "Identificar zonas de despliegue del PSA y zonas de espera de recursos"
+      ]
+    },
+    "Primera_Unidad": {
+      "descripcion": "Primera unidad de SUMMA 112 que llega al incidente; puede ser SVA o SVB.",
+      "funciones": [
+        "Verificar el tipo de incidente y su ubicación exacta",
+        "Estimar el número de víctimas y el estado de las vías de acceso",
+        "Detectar riesgos y necesidad de otros servicios de emergencia",
+        "Informar al CCU y solicitar recursos adicionales",
+        "Participar en la zonificación y establecer área de socorro, zona de heridos y PSA",
+        "Evitar evacuaciones descontroladas y asignar funciones iniciales"
+      ]
+    },
+    "PSA": {
+      "responsables": {
+        "Jefe_PSA": [
+          "Dirigir y supervisar la asistencia y estabilización de las víctimas",
+          "Asegurar equipos y suministros en el área de tratamiento",
+          "Comunicar al JDS el orden de traslado y el hospital de destino"
+        ],
+        "Tecnico_Filiacion": [
+          "Registrar filiación y datos clínicos de cada víctima",
+          "Asignar número de tarjeta de triaje y cama de destino"
+        ],
+        "Enfermero_Evacuacion_Carga": [
+          "Ubicar a las víctimas dentro del PSA tras su filiación",
+          "Coordinar la evacuación y el embarque en ambulancias"
+        ]
+      }
+    },
+    "chalecos": {
+      "rojo": "Jefe de Dispositivo Sanitario (JDS)",
+      "azul_morado": "Enfermera responsable de triaje",
+      "naranja": "Técnico de emergencias encargado de la zona de espera de recursos",
+      "verde_jefe_PSA": "Médico designado por el JDS para dirigir el PSA",
+      "verde_filiacion": "Técnico encargado de registrar datos y tarjetas de triaje",
+      "verde_evacuacion": "Enfermero responsable de la evacuación y carga de pacientes",
+      "negro": "Personal de logística y comunicación",
+      "azul_negro": "Equipo de rescate sanitario autorizado"
+    }
+  },
+  "triage": {
+    "tipos": [
+      "Triaje dual (camina/no camina) en el área de intervención",
+      "Triaje sanitario básico con método START/JUMP START utilizando tarjetas TASSICA 2",
+      "Triaje avanzado en el PSA con el Trauma Score Revisado"
+    ],
+    "criterios_evacuacion_prioritaria": "Evacuar inmediatamente a los pacientes con riesgo vital no resoluble en el lugar (amenaza XABC)",
+    "observaciones": "La enfermera con chaleco de triaje coordina todas las áreas de triage y comunica la información al JDS"
+  },
+  "finalizacion": {
+    "condiciones": [
+      "Retirada de todas las unidades intervinientes",
+      "Registro completo de todas las víctimas atendidas por SUMMA 112"
+    ],
+    "registro_documentacion": [
+      "Listados de registro y matrices de tarjetas de triaje",
+      "Resguardos de tarjetas de triaje entregados por el responsable de evacuación"
+    ],
+    "informe_final": [
+      "Hora de activación y de finalización",
+      "Tipo de incidente y número total de afectados",
+      "Victimas por categorías de triaje y número de traslados",
+      "Recursos que intervinieron y hospitales de destino",
+      "Número de tarjetas de triaje utilizadas",
+      "Observaciones y dificultades encontradas"
+    ]
+  }
+}

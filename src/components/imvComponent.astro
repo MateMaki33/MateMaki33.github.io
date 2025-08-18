@@ -1,0 +1,203 @@
+---
+import imvData from "../collections/guia_imv.json";
+
+const data = imvData;
+---
+
+<div class="container">
+  <h1>Guía IMV</h1>
+
+  <div class="grid">
+    <!-- Botones para abrir cada sección -->
+    <button class="btn" onclick="modal_definicion.showModal(); modal_definicion.scrollTop = 0;">Definición</button>
+    <button class="btn" onclick="modal_criterios_imv.showModal(); modal_criterios_imv.scrollTop = 0;">Criterios de Activación</button>
+    <button class="btn" onclick="modal_canales.showModal(); modal_canales.scrollTop = 0;">Canales de Comunicación</button>
+    <button class="btn" onclick="modal_respuesta.showModal(); modal_respuesta.scrollTop = 0;">Respuesta Inicial</button>
+    <button class="btn" onclick="modal_roles.showModal(); modal_roles.scrollTop = 0;">Roles y Funciones</button>
+    <button class="btn" onclick="modal_triaje.showModal(); modal_triaje.scrollTop = 0;">Triaje</button>
+    <button class="btn" onclick="modal_finalizacion.showModal(); modal_finalizacion.scrollTop = 0;">Finalización</button>
+  </div>
+</div>
+
+<!-- Modal Definición -->
+<dialog id="modal_definicion">
+  <h2>Definición</h2>
+  <p>{data.definicion}</p>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Criterios de Activación -->
+<dialog id="modal_criterios_imv">
+  <h2>Criterios de Activación</h2>
+  <ul>
+    {data.criterios_activacion.map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Canales de Comunicación -->
+<dialog id="modal_canales">
+  <h2>Canales de Comunicación</h2>
+  <ul>
+    {Object.entries(data.canales_comunicacion).map(([canal, descripcion]) => (
+      <li><strong>{canal}:</strong> {descripcion}</li>
+    ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Respuesta Inicial -->
+<dialog id="modal_respuesta">
+  <h2>Respuesta Inicial</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nivel</th>
+        <th>Víctimas totales</th>
+        <th>Recursos</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.niveles_respuesta.map(nivel => (
+        <tr>
+          <td>{nivel.nivel}</td>
+          <td>{nivel.victimas_totales}</td>
+          <td>
+            {Object.entries(nivel.recursos).map(([recurso, cantidad], idx) => (
+              <span>{idx !== 0 ? ", " : ""}{cantidad} {recurso.toUpperCase()}</span>
+            ))}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Roles y Funciones -->
+<dialog id="modal_roles">
+  <h2>Roles y Funciones</h2>
+
+  <!-- JDS -->
+  {data.roles?.JDS && (
+    <section>
+      <h3>Jefe de Dispositivo Sanitario (JDS)</h3>
+      <p>{data.roles.JDS.descripcion}</p>
+      {Array.isArray(data.roles.JDS.funciones) && (
+        <ul>
+          {data.roles.JDS.funciones.map(fn => (<li>{fn}</li>))}
+        </ul>
+      )}
+    </section>
+  )}
+
+  <!-- EGI -->
+  {data.roles?.EGI && (
+    <section>
+      <h3>Equipo Gestor del Incidente (EGI)</h3>
+      <p>{data.roles.EGI.descripcion}</p>
+      {data.roles.EGI.integrantes && (
+        <ul>
+          {Object.entries(data.roles.EGI.integrantes).map(([integrante, tareas]) => (
+            <li>
+              <strong>{integrante}:</strong>
+              <ul>
+                {tareas.map(t => (<li>{t}</li>))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )}
+
+  <!-- Supervisora de Guardia -->
+  {data.roles?.Supervisora_de_Guardia && (
+    <section>
+      <h3>Supervisora de Guardia</h3>
+      <p>{data.roles.Supervisora_de_Guardia.descripcion}</p>
+      {Array.isArray(data.roles.Supervisora_de_Guardia.funciones) && (
+        <ul>
+          {data.roles.Supervisora_de_Guardia.funciones.map(fn => (<li>{fn}</li>))}
+        </ul>
+      )}
+    </section>
+  )}
+
+  <!-- Primera Unidad -->
+  {data.roles?.Primera_Unidad && (
+    <section>
+      <h3>Primera Unidad</h3>
+      <p>{data.roles.Primera_Unidad.descripcion}</p>
+      {Array.isArray(data.roles.Primera_Unidad.funciones) && (
+        <ul>
+          {data.roles.Primera_Unidad.funciones.map(fn => (<li>{fn}</li>))}
+        </ul>
+      )}
+    </section>
+  )}
+
+  <!-- PSA -->
+  {data.roles?.PSA && data.roles.PSA.responsables && (
+    <section>
+      <h3>Puesto Sanitario Avanzado (PSA)</h3>
+      <ul>
+        {Object.entries(data.roles.PSA.responsables).map(([responsable, tareas]) => (
+          <li>
+            <strong>{responsable}:</strong>
+            <ul>
+              {tareas.map(t => (<li>{t}</li>))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <!-- Chalecos -->
+  {data.roles?.chalecos && (
+    <section>
+      <h3>Chalecos de Identificación</h3>
+      <ul>
+        {Object.entries(data.roles.chalecos).map(([color, descripcion]) => (
+          <li><strong>{color}:</strong> {descripcion}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Triaje -->
+<dialog id="modal_triaje">
+  <h2>Triaje</h2>
+  <ul>
+    {data.triage.tipos.map(t => (
+      <li>{t}</li>
+    ))}
+  </ul>
+  <p><strong>Evacuación prioritaria:</strong> {data.triage.criterios_evacuacion_prioritaria}</p>
+  <p><strong>Observaciones:</strong> {data.triage.observaciones}</p>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<!-- Modal Finalización -->
+<dialog id="modal_finalizacion">
+  <h2>Finalización del IMV</h2>
+  <h3>Condiciones para finalizar</h3>
+  <ul>
+    {data.finalizacion.condiciones.map(cond => (<li>{cond}</li>))}
+  </ul>
+  <h3>Registro y documentación</h3>
+  <ul>
+    {data.finalizacion.registro_documentacion.map(item => (<li>{item}</li>))}
+  </ul>
+  <h3>Contenido del informe final</h3>
+  <ul>
+    {data.finalizacion.informe_final.map(item => (<li>{item}</li>))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
