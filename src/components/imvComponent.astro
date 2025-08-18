@@ -61,18 +61,19 @@ const data = imvData;
         </tr>
       </thead>
       <tbody>
-        {data.niveles_respuesta.map(nivel => (
-          <tr>
-            <td>{nivel.nivel}</td>
-            <td>{nivel.victimas_totales}</td>
-            <td>
-              {Object.entries(nivel.recursos).map(([recurso, cantidad], idx) => (
-                <span>{idx !== 0 ? ", " : ""}{cantidad} {recurso.toUpperCase()}</span>
-              ))}
-            </td>
-          </tr>
+  {data.niveles_respuesta.map(nivel => (
+    <tr>
+      <td data-label="Nivel">{nivel.nivel}</td>
+      <td data-label="Víctimas totales">{nivel.victimas_totales}</td>
+      <td data-label="Recursos">
+       
+        {Object.entries(nivel.recursos).map(([recurso, cantidad], idx) => (
+          <span>{cantidad} {recurso.toUpperCase()}</span>
         ))}
-      </tbody>
+      </td>
+    </tr>
+  ))}
+</tbody>
     </table>
   </div>
   <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
@@ -206,62 +207,94 @@ const data = imvData;
 
 <style>
   .table-wrapper {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+/* Tabla base */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;          /* Mejora el wrap de contenido */
+}
 
-  th,
-  td {
-    padding: 0.75rem;
+th, td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-card-border);
+  color: var(--color-text);
+  vertical-align: top;
+  word-break: break-word;       /* Evita desbordes en palabras largas */
+  overflow-wrap: anywhere;      /* Permite cortes más agresivos si es necesario */
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: var(--color-card-bg);
+  z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--color-card-bg);
+}
+
+/* Etiquetas de “chips” dentro de Recursos (sin tocar tu HTML) */
+td span {
+  display: inline-block;
+  margin-right: .5rem;
+  margin-bottom: .35rem;
+  line-height: 1.2;
+  /* En desktop mantenemos en una línea si es corto, en móvil forzamos wrap abajo */
+  white-space: normal;
+}
+
+/* Dialog responsive */
+dialog {
+  width: 100%;
+  max-width: min(900px, 100vw - 2rem);
+  margin: auto;
+  padding: 1rem;
+}
+dialog::backdrop { backdrop-filter: blur(2px); }
+
+/* ---- MÓVIL ---- */
+@media (max-width: 600px) {
+  thead { display: none; }
+
+  tbody tr {
+    display: block;
     border: 1px solid var(--color-card-border);
-    color: var(--color-text);
-  }
-
-  thead th {
-    position: sticky;
-    top: 0;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
     background: var(--color-card-bg);
   }
 
-  tbody tr:nth-child(even) {
-    background: var(--color-card-bg);
+  tbody td {
+    display: grid;                 
+    gap: 0.25rem 0.75rem;
+    border: 0;                     
+    padding: 0.5rem 0;
   }
 
-  @media (max-width: 600px) {
-    thead {
-      display: none;
-    }
-
-    tbody tr {
-      display: block;
-      margin-bottom: 1rem;
-    }
-
-    tbody td {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    tbody td::before {
-      font-weight: bold;
-      margin-right: 0.5rem;
-    }
-
-    tbody td:nth-of-type(1)::before {
-      content: "Nivel";
-    }
-
-    tbody td:nth-of-type(2)::before {
-      content: "Víctimas totales";
-    }
-
-    tbody td:nth-of-type(3)::before {
-      content: "Recursos";
-    }
+  tbody td + td {
+    border-top: 1px dashed var(--color-card-border);
+    padding-top: 0.75rem;
+    margin-top: 0.25rem;
   }
+
+
+  tbody td::before {
+    font-weight: 700;
+    content: attr(data-label);   
+    opacity: 0.85;
+  }
+
+ 
+  td span {
+    white-space: normal;
+  }
+}
+
 </style>
