@@ -30,6 +30,10 @@
 * **Recursos Gratuitos**: Iconos, fuentes y elementos gráficos obtenidos de librerías de acceso libre para embellecer la interfaz y mejorar la experiencia de usuario.
 
 ---
+## 🔧 Añadir nuevas secciones
+
+Para que un nuevo protocolo aparezca en la pantalla de inicio, agrega un objeto `{ path, label }` en el archivo `src/data/sections.ts`. Este archivo centraliza los enlaces mostrados en el componente de bienvenida.
+
 
 ## 👨‍💻 Autor
 
