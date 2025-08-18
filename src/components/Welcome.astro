@@ -1,5 +1,5 @@
 ---
-
+import sections from '../data/sections';
 ---
 
 <style>
@@ -36,15 +36,9 @@
 <div class="container">
   <h1>Procedimientos 112 CAM</h1>
   <div class="links">
-    <a class="btn" href="/ictus">Ictus</a>
-    <a class="btn" href="/infarto">Infarto</a>
-    <a class="btn" href="/crisis">Crisis</a>
-    <a class="btn" href="/donante">Donante</a>
-    <a class="btn" href="/trauma">Trauma</a>
-    <a class="btn" href="/sepsis">Sepsis</a>
-    <a class="btn" href="/quemados">Quemados</a>
-    <a class="btn" href="/imv">IMV</a>
-    <a class="btn" href="/ecmo-rcp">ECMO-RCP</a>
+    {sections.map(({ path, label }) => (
+      <a class="btn" href={path}>{label}</a>
+    ))}
   </div>
 </div>
 
