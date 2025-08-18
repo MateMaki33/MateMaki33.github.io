@@ -185,11 +185,10 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
     border-radius: var(--radius-default);
     transition: all 0.3s ease;
     box-shadow: var(--shadow-btn);
-    max-width: 100%;
-    width: 100%; 
     box-sizing: border-box;
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
     text-align: center;
+    max-width: 280px;
   }
 
   .btn:hover {
@@ -197,6 +196,13 @@ import NavMenuComponent from "../components/NavMenuComponent.astro";
     color: var(--color-btn-hover-text);
     box-shadow: var(--shadow-btn-hover);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .btn {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   dialog {
