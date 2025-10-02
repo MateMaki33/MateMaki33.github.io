@@ -45,7 +45,7 @@
       {
         "forma": "vial",
         "cantidad": "900 mg",
-        "diluyente": "5 ml"
+        "diluyente": "5 ml, SSF, SG"
       }
     ],
     "indicaciones": [
@@ -102,7 +102,7 @@
       "Reacciones alérgicas"
     ],
     "embarazo": "B",
-    "dosis": ["iv: 1 g cada 8 h a 1 ml/min", "oral: 1-1.5 g cada 8-12 h"]
+    "dosis": ["iv: 1 g en 100 de SSF o SG cada 8 h a 1 ml/min", "oral: 1-1.5 g cada 8-12 h"]
   },
   {
     "nombre": "ÁCIDO VALPROICO",
@@ -136,7 +136,7 @@
     ],
     "embarazo": "",
     "dosis": [
-      "bolo_iv: 15-20 mg/kg",
+      "bolo_iv: 15-20 mg/kg en 50-100 SSF",
       "mantenimiento_iv: 0.5-1 mg/kg/h, diluido a 4 mg/ml"
     ]
   },
@@ -198,7 +198,8 @@
     "embarazo": "No hay estudios",
     "dosis": [
       "Primera: 6mg en bolo (2ml) más bolo de fisiológicos de 20ml",
-      "Siguientes: 12mg más bolo de suero fisiológico de 20ml"
+      "Siguientes: 12mg más bolo de suero fisiológico de 20ml",
+      "Dilución: no procede"
     ]
   },
   {
@@ -291,8 +292,9 @@
     "dosis": [
       "Dosis máxima 2.2gr/día. Diluir con fisiológico o glucosado",
       "1 mg/min durante 6 horas, luego 0.5 mg/min en 18 horas",
-      "FV o TV sin pulso: 300mg en 20ml SF en no menos de 3 minutos, repetir 150mg cada 10 minutos",
-      "TV estable: 150mg en 10 minutos, repetir cada 10-15 minutos"
+      "FV o TV sin pulso: 300mg en 50ml SF en no menos de 3 minutos",
+      "TV estable: 150mg en 10 minutos",
+      "Dilución: 900mg en 250 ml SSF o SG a 11ml/h"
     ]
   },
   {
@@ -376,8 +378,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Bradicardia: 0.5-1 mg cada 5 minutos (máximo 0.04mg/kg)",
-      "Intoxicación por organofosforados: 2mg cada 15 minutos hasta atropinización"
+      "Bradicardia: 0.5-1 mg cada 5 minutos (máximo 3)",
+      "Intoxicación por organofosforados: 2mg cada 15 minutos hasta atropinización",
+      "Dilución: 1mg + 9ml SSF o SG"
     ]
   },
   {
@@ -728,7 +731,8 @@
     "embarazo": "",
     "dosis": [
       "Dosis de carga: 500-1000mcg administrando mitad de la dosis inicialmente, repetir cada 6 horas",
-      "Mantenimiento: Dosis según respuesta clínica, máx. 1,5mg/24h"
+      "Mantenimiento: Dosis según respuesta clínica, máx. 1,5mg/24h",
+      "Bolo: 0.5 mg + 8 ml de SSF o SG"
     ]
   },
   {
@@ -783,7 +787,7 @@
     "dosis": [
       "Parada cardiorrespiratoria: 1 mg IV/IO cada 3-5 minutos. (Bolo)",
       "Anafilaxia: 0.3-0.5 mg IM. Si es necesario IV: 0.1 mg IV lento, diluido en 10 ml de SSF (intermitente en 100 SSF, se refiere a una dilución para infusión, no bolo directo).",
-      "Perfusión (Shock/hipotensión): 2-10 mcg/min IV (en 250 SSF o SG5% para perfusión).",
+      "Perfusión (Shock/hipotensión): 6-63 ml/h IV ( 5 mg en 250 SSF o SG5% para perfusión).",
       "Vías: IV, IM, SC (SC para reacciones alérgicas leves, no anafilaxia grave)."
     ]
   },
@@ -1253,7 +1257,8 @@
     "embarazo": "",
     "dosis": [
       "2,5-10mcg/kg/min hasta 20mcg/kg/min",
-      "Dosis máxima: 40mcg/kg/min"
+      "Dosis máxima: 40mcg/kg/min",
+      "Dilución: 250 mg en 230 ml de SSF o SG"
     ]
   },
   {
@@ -1279,7 +1284,8 @@
     "dosis": [
       "Efecto dopaminérgico: 1-4mcg/kg/min",
       "Efecto Beta-1 cardíaco: >5mcg/kg/min",
-      "Efecto Alfa-1: >8mcg/kg/min"
+      "Efecto Alfa-1: >8mcg/kg/min",
+      "Dilución: 200 mg en 245 ml SSF o SG"
     ]
   },
   {
@@ -1421,7 +1427,10 @@
     "interacciones": [],
     "efectos_secundarios": [],
     "embarazo": "C",
-    "dosis": []
+    "dosis": [
+      "Bolo: 2mg/kg en 50 ml SG",
+      "Perfusión hora 1: 1.5mg/kg/h en 100 de SG a pasar en 1h (100ml/h)"
+    ]
   },
   {
     "nombre": "FLUMAZENILO",
@@ -1441,7 +1450,9 @@
     "interacciones": [],
     "efectos_secundarios": [],
     "embarazo": "",
-    "dosis": []
+    "dosis": [
+      "Bolo: 0.5mg sin dilución"
+    ]
   },
   {
     "nombre": "FUROSEMIDA",
@@ -1754,11 +1765,8 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "carga (inicial): 20mg (4ml) IV lento en 2 minutos",
-      "carga (posterior): 20-40mg (4-8ml) IV lento cada 10 minutos, máximo 300mg",
-      "perfusión (dosis): 2-4 mg/min",
-      "perfusión (preparación): Diluir 200mg (2 ampollas/40ml) en 160ml de SG5% o SF0.9% (1mg/ml)",
-      "perfusión (velocidad): Infundir entre 30-120ml/h"
+      "Bolo: 10-50mg c/5min hasta max 200mg sin diluir",
+      "perfusión (velocidad): 250mg en 250 ml de SSF o SG (1mg/ml)"
     ]
   },
   {
@@ -1996,17 +2004,9 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "sedación (IM): 0.05-0.2mg/kg",
-      "sedación (IN): 0.2-0.3mg/kg",
-      "sedación (IV): 0.05-0.15mg/kg lento (2 min)",
-      "sedación (mantenimiento): 0.05-0.2mg/kg/h",
-      "inducción_mantenimiento_anestesia (inducción): 0.15-0.4mg/kg IV en 20-30 seg",
-      "inducción_mantenimiento_anestesia (mantenimiento): 0.15-0.4mg/kg/h",
-      "convulsiones (inicial): 0.1-0.2mg/kg IV lento",
-      "convulsiones (mantenimiento): 0.1-0.2mg/kg/h",
-      "perfusión (sedación): 0.05-0.2mg/kg/h",
-      "perfusión (anestesia): 0.15-0.4mg/kg/h",
-      "perfusión (convulsiones): 0.1-0.2mg/kg/h"
+      "Perfusión: 50mg en 250 de SSF o SG (17-35 ml/h)",
+      "Bolo: 10mg  en 8 ml SSF o SG"
+      
     ]
   },
   {
@@ -2149,7 +2149,7 @@
     "dosis": [
       "dilución: 1 amp en 40 ml de SG5%",
       "dilución 2: 12ml + 88 ml SG5%", 
-      "ajuste: 0,1-0,5mcg/kg/min"
+      "dosis: 0,1-0,5mcg/kg/min"
     ]
   },
   {
