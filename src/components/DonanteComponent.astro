@@ -12,6 +12,7 @@ const data = donanteData.codigo_donante;
     <button class="btn" onclick="modal_exclusion.showModal(); modal_exclusion.scrollTop = 0;">Criterios de Exclusión</button>
     <button class="btn" onclick="modal_evaluacion.showModal(); modal_evaluacion.scrollTop = 0;">Evaluación Inicial</button>
     <button class="btn" onclick="modal_traslado.showModal(); modal_traslado.scrollTop = 0;">Traslado</button>
+    <button class="btn" onclick="modal_hospital.showModal(); modal_hosppital.scrollTop = 0;">Hospital</button>
   </div>
 </div>
 
@@ -51,6 +52,14 @@ const data = donanteData.codigo_donante;
     {data.traslado.map(item => (
       <li>{item}</li>
     ))}
+  </ul>
+  <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_hospital">
+  <h2>Hospital</h2>
+  <ul>
+      <li>{data.hospital_referencia}</li>
   </ul>
   <form method="dialog"><button class="btn btn-close">Cerrar</button></form>
 </dialog>
