@@ -1,38 +1,53 @@
 {
   "codigo_donante": {
     "criterios_inclusion": [
-        "PCR presenciada",
-        "Edad entre 18-50 años",
-        "Paciente en Asistolia",
-        "SVA interviene en menos de 15 min",
-        "RCP al menos 20 min",
-        "Traslado <120 min"
-
+      "PCR refractaria en asistolia tras al menos 20 minutos de SVA",
+      "Temperatura corporal superior a 32 °C",
+      "Edad entre 18 y 65 años",
+      "Hora de parada conocida",
+      "Inicio de SVA antes de 15 minutos desde la parada",
+      "Causa de muerte conocida o fácilmente diagnosticable",
+      "Ausencia de contraindicaciones médicas para donación (neoplasias, enfermedades transmisibles, sistémicas graves)",
+      "Aspecto externo sano y sin signos de conductas de riesgo (p. ej., UDVP)",
+      "Perímetro torácico compatible con dispositivo LUCAS",
+      "Tiempo desde la parada hasta el inicio de preservación torácica inferior a 180 minutos"
     ],
-    "criterios_exclusion":[
-        "Lesiones exanguinantes",
-        "Lesiones en torax o abdomen",
-        "Neoplasias, Infecciones o ADPV",
-        "Perímetro del torax no compatible con cardiocompresor"
-
+    "criterios_exclusion": [
+      "Broncoaspiración macroscópica visible",
+      "Lesiones exanguinantes o destructivas en tórax o abdomen",
+      "Gran traumatismo craneoencefálico con pérdida de masa encefálica",
+      "Obesidad mórbida (IMC > 40)",
+      "Causa de parada no conocida o indeterminada"
     ],
     "evaluacion_inicial": {
       "items": [
-        "Filiación, edad",
-        "Antecedentes personales (AP)",
-        "Inicio de RCP si o no",
-        "Hora de la llamada",
-        "Hora aproximada de la PCR",
-        "Hora de inicio RCP",
-        "Duración RCP",
-        "Perimetro abdominal"
+        "Filiación y edad",
+        "Antecedentes personales relevantes (AP)",
+        "Hora exacta de la parada",
+        "Hora de inicio de RCP",
+        "Duración de la RCP (mínimo 20 min)",
+        "Temperatura corporal (>32 °C)",
+        "Valoración de criterios de inclusión y exclusión",
+        "Aislamiento precoz de la vía aérea para evitar broncoaspiración",
+        "Confirmar compatibilidad con compresor torácico automático (LUCAS)",
+        "Confirmar ausencia de contraindicaciones médicas"
       ]
     },
-    "traslado": [
-        "Cardiocompresor",
-        "Ventilación mecánica",
-        "No farmacoterapia"
-    ]
-    
+    "procedimiento_operativo": [
+      "Confirmar asistolia y criterios de inclusión",
+      "Iniciar ventilación mecánica tras aislamiento definitivo de la vía aérea",
+      "Configurar ventilador con FiO2 100%, volumen tidal 6–8 ml/kg (peso ideal) y frecuencia 12–15 rpm",
+      "Si no hay ventilador, usar bolsa autoinflable 30:2 coordinado con el cardiocompresor",
+      "Usar compresor torácico automático (LUCAS) a 100 compresiones/minuto",
+      "Monitorizar ECG, capnografía, SpO2 y presión arterial si es posible",
+      "Evitar sobrecarga de volumen y uso de coloides",
+      "Establecer acceso venoso periférico",
+      "Contactar con Coordinadora SUMMA 112 por la vía habitual",
+      "No iniciar traslado hasta aceptación del donante por Coordinación de Trasplantes",
+      "Tras aceptación, trasladar al Hospital Universitario Doce de Octubre en el menor tiempo posible",
+      "Mantener RCP continua y condiciones óptimas para preservación torácica durante el traslado (tiempo total <180 min)"
+    ],
+    "hospital_referencia": "Hospital Universitario Doce de Octubre (HUDO)"
+   
   }
 }
