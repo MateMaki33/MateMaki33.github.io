@@ -3,15 +3,19 @@ import sections from '../data/sections';
 ---
 
 <style>
-  /* Solo para animación de entrada suave */
 
   .links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
     gap: 1rem;
     width: 100%;
     max-width: 100vw;
     overflow: hidden;
+
+    @media(max-width:786px){
+      grid-template-columns: 1fr 1fr;
+    }
+
   }
   dialog[open] {
     animation: fadeInScale 0.3s ease-out;
