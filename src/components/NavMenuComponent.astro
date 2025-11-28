@@ -1,5 +1,4 @@
 ---
-import LegalComponent from "./LegalComponent.astro";
 
 ---
 
@@ -7,8 +6,6 @@ import LegalComponent from "./LegalComponent.astro";
  
 
   nav {
-    position: sticky;
-    top: 0;
     background-color: var(--bg-dark);
     border-bottom: 2px solid var(--neon-orange);
     box-shadow: 0 0 15px var(--neon-orange);
@@ -144,7 +141,7 @@ import LegalComponent from "./LegalComponent.astro";
 <nav>
   <div class="logo" tabindex="0">
     <p style="font-size: var(--font-size-h3);">MadRescue112</p>
-    <p style="font-size: 1rem;"><a href="http://www.linkedin.com/in/jose-luis-diaz-garcia-aa0887229">By JOSE LUIS DIAZ GARCÍA</a></p>
+    <!-- <p style="font-size: 1rem;"><a href="http://www.linkedin.com/in/jose-luis-diaz-garcia-aa0887229">By JOSE LUIS DIAZ GARCÍA</a></p> -->
   </div>
   
   
@@ -164,6 +161,5 @@ import LegalComponent from "./LegalComponent.astro";
     <li role="none"><a href="/triaje" role="menuitem" tabindex="3">Triaje</a></li>
     <li role="none"><a href="/bibliografia" role="menuitem" tabindex="4">Bibliografía</a></li>
     
-    <LegalComponent></LegalComponent>
   </ul>
 </nav>

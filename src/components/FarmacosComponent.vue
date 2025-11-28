@@ -96,12 +96,11 @@ const openModal = (f) => {
 </script>
 
 <style scoped>
-/* Estilos generales para el contenedor */
-.container {
-overflow-y: scroll;
-}
-/* Estilos para el input de búsqueda */
 
+.scrollable{
+  position: relative;
+  display: block;
+}
 
 /* Estilos para el modal */
 .wide-modal {
