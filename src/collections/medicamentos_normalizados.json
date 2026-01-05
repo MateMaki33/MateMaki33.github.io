@@ -2457,8 +2457,9 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "hipomagnesemia: 1 amp en 100ml SG5% a pasar en 15 min",
-      "eclampsia: 1-4g cada 4h IM"
+      "hipomagnesemia: 1 amp en 50ml SG5% a pasar en 15 min",
+      "eclampsia: 1-4g cada 4h IM",
+      "arritmia: 1-2g bolo sin diluir en 2 min"
     ]
   },
   {
