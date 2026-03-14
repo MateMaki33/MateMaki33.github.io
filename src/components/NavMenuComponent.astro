@@ -1,77 +1,154 @@
 ---
-
+import codigos from '../data/codigos';
+import escalas from '../data/escalas';
 ---
 
 <style>
- 
-
   nav {
     background-color: var(--bg-dark);
     border-bottom: 2px solid var(--neon-orange);
-    box-shadow: 0 0 15px var(--neon-orange);
+    box-shadow: 0 2px 16px rgba(255, 153, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1.5rem;
-    z-index: 100;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 1.5rem;
+    height: var(--nav-height);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-nav);
   }
 
-  nav .logo {
+  .logo {
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--neon-orange);
     text-shadow: 0 0 10px var(--neon-orange);
+    text-decoration: none;
     user-select: none;
+    flex-shrink: 0;
   }
 
-  /* Menú enlaces */
-  nav ul {
+  /* ── Main list ── */
+  .nav-list {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
   }
 
-  nav ul li a {
+  /* Shared link / button style */
+  .nav-list > li > a,
+  .nav-btn {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     position: relative;
-    transition: color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    /* reset button defaults */
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    transition: color 0.25s ease;
   }
 
-  nav ul li a::after {
+  /* Underline animation */
+  .nav-list > li > a::after,
+  .nav-btn::after {
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
     background: var(--neon-orange);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
   }
 
-  nav ul li a:hover,
-  nav ul li a:focus {
+  .nav-list > li > a:hover,
+  .nav-btn:hover,
+  .dropdown.open > .nav-btn {
     color: var(--neon-orange);
   }
 
-  nav ul li a:hover::after,
-  nav ul li a:focus::after {
+  .nav-list > li > a:hover::after,
+  .nav-btn:hover::after,
+  .dropdown.open > .nav-btn::after {
     transform: scaleX(1);
     transform-origin: left;
   }
 
-  /* Hamburger para móvil */
-  #menu-toggle {
-    display: none;
+  /* ── Chevron ── */
+  .chevron {
+    font-style: normal;
+    font-size: 0.7em;
+    transition: transform 0.25s ease;
+    display: inline-block;
   }
 
+  .dropdown.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* ── Dropdown ── */
+  .dropdown {
+    position: relative;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    flex-direction: column;
+    /* padding-top creates invisible bridge so mouse can move from trigger to menu */
+    padding: 0.5rem 0 0.5rem 0;
+    margin: 0;
+    min-width: 160px;
+    background: var(--bg-dark);
+    border: 1px solid var(--neon-orange);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(255, 153, 0, 0.2);
+    z-index: var(--z-dropdown);
+  }
+
+  .dropdown.open .submenu {
+    display: flex;
+    animation: dropIn 0.15s ease-out;
+  }
+
+  @keyframes dropIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .submenu li a {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .submenu li a:hover {
+    color: var(--neon-orange);
+    background: rgba(255, 153, 0, 0.08);
+  }
+
+  /* ── Hamburger button ── */
   .menu-btn {
     display: none;
     flex-direction: column;
@@ -79,6 +156,10 @@
     width: 28px;
     height: 22px;
     justify-content: space-between;
+    border: none;
+    background: none;
+    padding: 0;
+    flex-shrink: 0;
   }
 
   .menu-btn span {
@@ -86,80 +167,227 @@
     width: 100%;
     background: var(--neon-orange);
     border-radius: 2px;
-    box-shadow: 0 0 8px var(--neon-glow);
+    box-shadow: 0 0 6px var(--neon-glow);
     transition: all 0.3s ease;
+    display: block;
   }
 
-  /* Responsive */
+  .menu-btn.is-open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-btn.is-open span:nth-child(2) { opacity: 0; }
+  .menu-btn.is-open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+  /* ── Mobile overlay ── */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: var(--z-overlay);
+    backdrop-filter: blur(2px);
+  }
+
+  .nav-overlay.is-open {
+    display: block;
+  }
+
+  /* ── Mobile ── */
   @media (max-width: 768px) {
-    nav ul {
-      position: fixed;
-      top: 150px;
-      right: 0;
-      background: var(--bg-dark);
-      height: calc(100vh - 56px);
-      width: 220px;
-      flex-direction: column;
-      padding-top: 1.5rem;
-      gap: 1.5rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      box-shadow: -4px 0 10px rgba(255, 153, 0, 0.6);
-      border-left: 2px solid var(--neon-orange);
-      z-index: 99;
-      border-radius: 20px;
-    }
-
-    nav ul li a {
-      font-size: 1.2rem;
-      padding-left: 1rem;
-    }
-
-    #menu-toggle:checked + .menu-btn + ul {
-      transform: translateX(0);
-    }
-
     .menu-btn {
       display: flex;
     }
-  }
 
-  /* Animaciones de icono hamburguesa cuando activo */
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: var(--bg-dark);
+      height: 100dvh;
+      width: min(260px, 80vw);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: calc(var(--nav-height) + 1.25rem) 0 2rem 1.5rem;
+      gap: 0.75rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 24px rgba(255, 153, 0, 0.25);
+      border-left: 2px solid var(--neon-orange);
+      z-index: var(--z-nav);
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
 
-  #menu-toggle:checked + .menu-btn span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  #menu-toggle:checked + .menu-btn span:nth-child(2) {
-    opacity: 0;
-  }
-  #menu-toggle:checked + .menu-btn span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    .nav-list.is-open {
+      transform: translateX(0);
+    }
+
+    /* Submenus always expanded in sidebar */
+    .submenu {
+      display: flex;
+      position: static;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      padding: 0.25rem 0 0.5rem 1rem;
+      min-width: unset;
+      animation: none;
+      gap: 0;
+    }
+
+    .submenu li a {
+      padding: 0.35rem 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-btn {
+      font-size: 1.1rem;
+    }
+
+    .nav-list > li > a {
+      font-size: 1.15rem;
+    }
+
+    /* Separator between nav items on mobile */
+    .nav-list > li + li {
+      border-top: 1px solid rgba(255, 153, 0, 0.12);
+      padding-top: 0.75rem;
+      width: calc(100% - 1.5rem);
+    }
   }
 </style>
 
 <nav>
-  <div class="logo" tabindex="0">
-    <p style="font-size: var(--font-size-h3);">MadRescue112</p>
-    <!-- <p style="font-size: 1rem;"><a href="http://www.linkedin.com/in/jose-luis-diaz-garcia-aa0887229">By JOSE LUIS DIAZ GARCÍA</a></p> -->
-  </div>
-  
-  
-  <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
-  
-  <label class="menu-btn" for="menu-toggle" tabindex="0" aria-haspopup="true" aria-controls="main-menu" aria-expanded="false">
+  <a href="/" class="logo">MadRescue112</a>
+
+  <button class="menu-btn" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
     <span></span>
     <span></span>
     <span></span>
-  </label>
-  
-  
-  <ul id="main-menu" role="menu">
-    <li role="none"><a href="/" role="menuitem" tabindex="0">Códigos</a></li>
-    <li role="none"><a href="/escalas" role="menuitem" tabindex="1">Escalas</a></li>
-    <li role="none"><a href="/farmacos" role="menuitem" tabindex="2">Fármacos</a></li>
-    <li role="none"><a href="/triaje" role="menuitem" tabindex="3">Triaje</a></li>
-    <li role="none"><a href="/bibliografia" role="menuitem" tabindex="4">Bibliografía</a></li>
-    
+  </button>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <ul class="nav-list" id="main-menu" role="menubar">
+    <li class="dropdown" role="none">
+      <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
+        Códigos <i class="chevron" aria-hidden="true">▾</i>
+      </button>
+      <ul class="submenu" role="menu">
+        {codigos.map(({ id, label }) => (
+          <li role="none"><a href={`/codigos/${id}`} role="menuitem">{label}</a></li>
+        ))}
+      </ul>
+    </li>
+
+    <li class="dropdown" role="none">
+      <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
+        Escalas <i class="chevron" aria-hidden="true">▾</i>
+      </button>
+      <ul class="submenu" role="menu">
+        {escalas.map(({ id, label }) => (
+          <li role="none"><a href={`/escalas/${id}`} role="menuitem">{label}</a></li>
+        ))}
+      </ul>
+    </li>
+
+    <li role="none"><a href="/farmacos" role="menuitem">Fármacos</a></li>
+    <li role="none"><a href="/ventilacion" role="menuitem">Ventilación</a></li>
+    <li role="none"><a href="/triaje" role="menuitem">Triaje</a></li>
+    <li role="none"><a href="/bibliografia" role="menuitem">Bibliografía</a></li>
   </ul>
 </nav>
+
+<script>
+  type CleanupFn = () => void;
+  let cleanups: CleanupFn[] = [];
+
+  function teardown() {
+    cleanups.forEach(fn => fn());
+    cleanups = [];
+  }
+
+  function initNav() {
+    teardown();
+
+    const dropdowns = Array.from(document.querySelectorAll<HTMLElement>('.dropdown'));
+    const hamburger = document.getElementById('hamburger');
+    const navList   = document.getElementById('main-menu');
+    const overlay   = document.getElementById('nav-overlay');
+
+    // ── Dropdown (desktop click-based) ──────────────────────────────
+    function closeAllDropdowns() {
+      dropdowns.forEach(d => {
+        d.classList.remove('open');
+        d.querySelector<HTMLElement>('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    dropdowns.forEach(dropdown => {
+      const btn = dropdown.querySelector<HTMLButtonElement>('.nav-btn');
+      if (!btn) return;
+
+      const handleBtnClick = (e: Event) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains('open');
+        closeAllDropdowns();
+        if (!isOpen) {
+          dropdown.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      btn.addEventListener('click', handleBtnClick);
+      cleanups.push(() => btn.removeEventListener('click', handleBtnClick));
+    });
+
+    // Close on outside click
+    const docClick = () => closeAllDropdowns();
+    document.addEventListener('click', docClick);
+    cleanups.push(() => document.removeEventListener('click', docClick));
+
+    // Close on Escape
+    const docKeydown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeAllDropdowns();
+        closeMobileMenu();
+      }
+    };
+    document.addEventListener('keydown', docKeydown);
+    cleanups.push(() => document.removeEventListener('keydown', docKeydown));
+
+    // ── Mobile menu ──────────────────────────────────────────────────
+    function openMobileMenu() {
+      navList?.classList.add('is-open');
+      overlay?.classList.add('is-open');
+      hamburger?.classList.add('is-open');
+      hamburger?.setAttribute('aria-expanded', 'true');
+      overlay?.removeAttribute('aria-hidden');
+    }
+
+    function closeMobileMenu() {
+      navList?.classList.remove('is-open');
+      overlay?.classList.remove('is-open');
+      hamburger?.classList.remove('is-open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      overlay?.setAttribute('aria-hidden', 'true');
+    }
+
+    const toggleMobile = () =>
+      navList?.classList.contains('is-open') ? closeMobileMenu() : openMobileMenu();
+
+    hamburger?.addEventListener('click', toggleMobile);
+    cleanups.push(() => hamburger?.removeEventListener('click', toggleMobile));
+
+    overlay?.addEventListener('click', closeMobileMenu);
+    cleanups.push(() => overlay?.removeEventListener('click', closeMobileMenu));
+
+    // Close sidebar when a nav link is clicked (mobile)
+    navList?.querySelectorAll('a').forEach(link => {
+      const handler = () => closeMobileMenu();
+      link.addEventListener('click', handler);
+      cleanups.push(() => link.removeEventListener('click', handler));
+    });
+  }
+
+  // Runs on initial load and after every Astro page transition
+  document.addEventListener('astro:page-load', initNav);
+</script>

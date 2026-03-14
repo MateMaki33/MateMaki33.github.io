@@ -1,0 +1,158 @@
+{
+  "titulo": "MANEJO DE VENTILACIÓN MECÁNICA (SUMMA 112)",
+  "vmi": {
+    "monitorizacion_oxigenacion_spo2": [
+      "1. FiO2: Método más rápido. Iniciar 100%. Intentar FiO2 <60% (<40% neonatos) para evitar toxicidad.",
+      "2. PEEP: Buscar PEEP óptimo.",
+      "3. Tiempo inspiratorio: En nuestro caso < FR.",
+      "4. P inspiratoria (en PC) o VT (en VC), sobre todo si hay hipercapnia asociada."
+    ],
+    "monitorizacion_ventilacion_etco2": {
+      "hipercapnia_por_hipoventilacion": {
+        "accion": "Aumentar VM (VT x FR)",
+        "pasos": [
+          "1. Aumentar FR (Cuidado AutoPEEP).",
+          "2. Aumentar VT (P inspiratoria en PC)."
+        ]
+      },
+      "hipocapnia_por_hiperventilacion": {
+        "accion": "Disminuir VM",
+        "pasos": [
+          "1. Disminuir FR.",
+          "2. Disminuir VT."
+        ]
+      },
+      "nota_patologia": "Normalmente, en patología obstructiva modificamos el VT y en restrictiva la FR."
+    },
+    "monitorizacion_vme": {
+      "disminucion_vme": [
+        "Desconexión del paciente.",
+        "Fuga aérea (TET, tubo torácico, presión del neumotaponamiento).",
+        "Aumento del espacio muerto artificial.",
+        "Sedación excesiva en soporte ventilatorio parcial."
+      ],
+      "aumento_vme": [
+        "Atrapamiento aéreo.",
+        "Aumento de la FR espontánea en modos asistidos.",
+        "Autodisparo del ventilador.",
+        "Espiración del volumen añadido en aerosoles."
+      ]
+    },
+    "curva_presion_tiempo": {
+      "aumento_pip": {
+        "significado": "Mide resistencia, riesgo daño vía aérea y parénquima.",
+        "causas": [
+          "Broncoespasmo.",
+          "Acodamiento tubo, tubo estrecho.",
+          "Secreciones.",
+          "Flujo inspiratorio elevado: Disminuir VT y/o FR (Aumentar T insp)."
+        ]
+      },
+      "aumento_pip_y_pplat": {
+        "significado": "Disminución de la compliance.",
+        "causas": [
+          "IOT selectiva, atelectasia, neumotórax.",
+          "Neumonía, SDRA, EAP.",
+          "Aumento de Presión intraabdominal.",
+          "AutoPEEP"
+        ]
+      }
+    },
+    "curva_flujo_tiempo": {
+      "atrapamiento_aereo": {
+        "signo": "Flujo en la espiración no llega a 0.",
+        "solucion_secuencial": [
+          "1. Bajar FR.",
+          "2. Bajar VT.",
+          "3. Cambiar I:E a 1:3."
+        ]
+      },
+      "asincronias": {
+        "signo": "Ondas de sierra en espiración (tos y mucosidad).",
+        "solucion": "Aspirar y/o aumentar sedoanalgesia o cambiar de modo ventilatorio."
+      }
+    }
+  },
+  "vni": {
+    "indicacion_y_tecnica": {
+      "criterios_seleccion": [
+        "Respiración espontánea y colaboración.",
+        "Disnea moderada-intensa.",
+        "Gran trabajo respiratorio.",
+        "Taquipnea: >25 rpm (EPOC) o >30 rpm (EAP).",
+        "SO2 <90 con FiO2 >50% o SaO2/FiO2 <320.",
+        "Ausencia de contraindicación."
+      ],
+      "pasos_inicio": [
+        "1. Selección máscara y colocar a 45º.",
+        "2. Premedicar (IV): Cloruro mórfico 3mg (máx 3 dosis), Midazolam 3mg (no retenedores) o Haloperidol 3mg (retenedores).",
+        "3. Explicar técnica, apuntar hora inicio, FR y TA.",
+        "4. Programar y verificar funcionamiento.",
+        "5. Rellenar inicio máscara a la mitad.",
+        "6. Calcular altura puente nasal y ajustar.",
+        "7. Separar cinchas del velcro.",
+        "8. Ajustar máscara manualmente 2-3 min.",
+        "9. Colocar gorro/cinchas (1 dedo de holgura).",
+        "10. Rellenar máscara hasta confortabilidad.",
+        "11. Vigilar ajuste: Curva flujo, Vme y VTe."
+      ]
+    },
+    "objetivos_monitorizacion_y_ajuste": [
+      "Menor Disnea-Cianosis.",
+      "Menor uso musculatura accesoria (ECM, abdominal).",
+      "Disminución FR, FC y TA.",
+      "Mejoría nivel de conciencia.",
+      "Mejoría de SO2 (SAFIO2) y ETCO2."
+    ],
+    "ajustes_finos_vni": {
+      "interface": "Evitar fugas excesivas, sobrepresión y escaras.",
+      "peep": "Corregir hipoxemia. Ver en curva de flujo que la espiración finaliza en 0 y evitar asincronías.",
+      "fio2": "Disminuir progresivamente. SpO2=90% aceptable en hipercápnicos hasta mejora de conciencia.",
+      "p_soporte": "Subir de 2 en 2 mbar hasta que ECM esté blando, conseguir VT objetivo o mejore nivel de conciencia.",
+      "rampa": "Iniciar en la más profunda e ir bajando solo si ECM está blando o el paciente no lo tolera.",
+      "trigger_inspiratorio": "Iniciar en 3. Verificar que en cada inspiración la curva de presión tiene la melladura y se sigue de la PS fijada.",
+      "trigger_espiratorio_insp_term_pif": "Controla el ciclado a espiración. Iniciar al 50% y ajustar según asincronías."
+    },
+    "problemas_y_soluciones": {
+      "cpap": {
+        "hipoxemia": ["1. Subir PEEP", "2. Subir FiO2", "3. Poner BiPAP"],
+        "alarma_fuga": ["1. Comprobar Modo NIV activado", "2. Ajustar interface"],
+        "v_tidal_bajo": ["1. Comprobar bala gas", "2. Ajustar interface", "3. Descartar EAP/Neumotórax", "4. Cambiar a BiPAP"],
+        "contraccion_abdominal": ["1. Subir PEEP", "2. Cambiar a BiPAP"]
+      },
+      "bipap": {
+        "hipercapnia_e_hipoxemia": ["1. Subir P Soporte", "2. Subir PEEP", "3. Subir FiO2", "4. Vigilar fugas", "5. Poner PC-BIPAP"],
+        "hipoxemia_sin_hipercapnia": ["1. Subir PEEP", "2. Subir FiO2", "3. Bajar trigger espiratorio (alargar T insp)"],
+        "hipercapnia_sin_hipoxemia": ["1. Subir P Soporte", "2. Bajar FiO2 (SpO2 90%)", "3. PEEP óptima", "4. Vigilar fugas (reinhalación)"],
+        "alarma_fuga": ["1. Mirar Modo NIV activado", "2. Ajustar interface"],
+        "v_tidal_bajo": ["1. Comprobar respiración/bala", "2. Ajustar interface", "3. Subir P Soporte", "4. Bajar trigger espiratorio", "5. Descartar complicaciones", "6. Ir a PC-BIPAP"]
+      }
+    },
+    "asincronias_bipap": {
+      "inspiracion": {
+        "autociclado": {
+          "descripcion": "Ciclos respiratorios que el paciente no demanda, pero el ventilador da.",
+          "solucion": ["1. Subir trigger inspiratorio (+duro)", "2. Disminuir fugas", "3. Comprobar NIV activado", "4. Eliminar condensación", "5. Cambiar interfase"]
+        },
+        "disparo_ineficaz": {
+          "descripcion": "El paciente intenta inspirar pero no dispara el trigger inspiratorio y no se entrega la PS.",
+          "solucion": ["1. Bajar Trigger insp (+blando)", "2. Bajar P. Soporte", "3. Subir trigger espiratorio (acortar T insp)", "4. Subir PEEP"]
+        }
+      },
+      "modo_flujo": {
+        "flujo_bajo": "Aumentar P soporte y rampa.",
+        "flujo_excesivo": "Disminuir P soporte y rampa."
+      },
+      "espiracion": {
+        "doble_disparo_ciclado_prematuro": {
+          "descripcion": "El ventilador cicla a espiración pero el paciente necesita seguir inspirando (doble trigger).",
+          "solucion": "Bajar trigger espiratorio."
+        },
+        "ciclado_retrasado": {
+          "descripcion": "El paciente necesita ciclar a espiración pero el ventilador sigue entregando la PS.",
+          "solucion": "Subir trigger espiratorio."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GlasgowComponent from '../../components/calculators/GlasgowComponent.vue';
+import QsofaComponent from '../../components/calculators/QsofaComponent.vue';
+import TraumaScoreComponent from '../../components/calculators/TraumaScoreComponent.vue';
+import IndiceShocKComponent from '../../components/calculators/IndiceShocKComponent.vue';
+import ParcklandComponent from '../../components/calculators/ParcklandComponent.vue';
+import MadridDirectComponent from '../../components/calculators/MadridDirectComponent.vue';
+import escalas from '../../data/escalas';
+
+export const getStaticPaths = () =>
+  escalas.map(({ id }) => ({ params: { id } }));
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  <div class="container">
+    {id === 'glasgow'       && <GlasgowComponent client:load />}
+    {id === 'qsofa'         && <QsofaComponent client:load />}
+    {id === 'trauma-score'  && <TraumaScoreComponent client:load />}
+    {id === 'indice-shock'  && <IndiceShocKComponent client:load />}
+    {id === 'parkland'      && <ParcklandComponent client:load />}
+    {id === 'madrid-direct' && <MadridDirectComponent client:load />}
+  </div>
+</Layout>

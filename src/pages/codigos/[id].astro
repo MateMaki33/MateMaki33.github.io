@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import IctusComponent from '../../components/IctusComponent.astro';
+import InfartoComponent from '../../components/InfartoComponent.astro';
+import DonanteComponent from '../../components/DonanteComponent.astro';
+import CrisisComponent from '../../components/CrisisComponent.astro';
+import TraumaComponent from '../../components/TraumaComponent.astro';
+import QuemadosComponent from '../../components/QuemadosComponent.astro';
+import ImvComponent from '../../components/imvComponent.astro';
+import SepsisComponent from '../../components/SepsisComponent.astro';
+import EcmoRcpComponent from '../../components/EcmoRcpComponent.astro';
+import codigos from '../../data/codigos';
+
+export const getStaticPaths = () =>
+  codigos.map(({ id }) => ({ params: { id } }));
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  {id === 'ictus'     && <IctusComponent />}
+  {id === 'infarto'   && <InfartoComponent />}
+  {id === 'donante'   && <DonanteComponent />}
+  {id === 'crisis'    && <CrisisComponent />}
+  {id === 'trauma'    && <TraumaComponent />}
+  {id === 'quemados'  && <QuemadosComponent />}
+  {id === 'imv'       && <ImvComponent />}
+  {id === 'sepsis'    && <SepsisComponent />}
+  {id === 'ecmo-rcp'  && <EcmoRcpComponent />}
+</Layout>

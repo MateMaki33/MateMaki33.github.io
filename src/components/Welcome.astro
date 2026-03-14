@@ -1,5 +1,5 @@
 ---
-import sections from '../data/sections';
+import codigos from '../data/codigos';
 ---
 
 <style>
@@ -12,10 +12,13 @@ import sections from '../data/sections';
     max-width: 100vw;
     overflow: hidden;
 
-    @media(max-width:786px){
+    @media (max-width: 786px) {
       grid-template-columns: 1fr 1fr;
     }
 
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
   dialog[open] {
     animation: fadeInScale 0.3s ease-out;
@@ -40,8 +43,8 @@ import sections from '../data/sections';
 <div class="container">
   <h1>Procedimientos 112 CAM</h1>
   <div class="links">
-    {sections.map(({ path, label }) => (
-      <a class="btn" href={path}>{label}</a>
+    {codigos.map(({ id, label }) => (
+      <a class="btn" href={`/codigos/${id}`}>{label}</a>
     ))}
   </div>
 </div>
