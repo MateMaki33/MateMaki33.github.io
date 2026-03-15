@@ -2,10 +2,10 @@
   "titulo": "MANEJO DE VENTILACIÓN MECÁNICA (SUMMA 112)",
   "vmi": {
     "monitorizacion_oxigenacion_spo2": [
-      "1. FiO2: Método más rápido. Iniciar 100%. Intentar FiO2 <60% (<40% neonatos) para evitar toxicidad.",
-      "2. PEEP: Buscar PEEP óptimo.",
-      "3. Tiempo inspiratorio: En nuestro caso < FR.",
-      "4. P inspiratoria (en PC) o VT (en VC), sobre todo si hay hipercapnia asociada."
+      "1. >FiO2: Método más rápido. Iniciar 100%. Intentar FiO2 <60% (<40% neonatos) para evitar toxicidad.",
+      "2. >PEEP: Buscar PEEP óptimo.",
+      "3. >Tiempo inspiratorio: En nuestro caso < FR.",
+      "4. >P inspiratoria (en PC) o VT (en VC), sobre todo si hay hipercapnia asociada."
     ],
     "monitorizacion_ventilacion_etco2": {
       "hipercapnia_por_hipoventilacion": {
