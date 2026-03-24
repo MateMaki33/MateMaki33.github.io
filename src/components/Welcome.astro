@@ -3,14 +3,53 @@ import codigos from '../data/codigos';
 ---
 
 <style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0 0.5rem;
+    width: 100%;
+  }
 
+  .hero-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--color-primary);
+    opacity: 0.5;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    margin: 0.25rem 0 1rem;
+    border-radius: 1px;
+  }
+
+  /* ── Code Grid ── */
   .links {
     display: grid;
     grid-template-columns: repeat(3, minmax(160px, 1fr));
-    gap: 1rem;
+    gap: 0.875rem;
     width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
+    max-width: 900px;
 
     @media (max-width: 786px) {
       grid-template-columns: 1fr 1fr;
@@ -20,32 +59,97 @@ import codigos from '../data/codigos';
       grid-template-columns: 1fr;
     }
   }
+
+  /* Enhanced code buttons */
+  .code-btn {
+    min-height: 64px;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    letter-spacing: 0.07em;
+    animation: fadeUp 0.4s ease-out both;
+  }
+
+  /* Staggered entrance animation */
+  .code-btn:nth-child(1) { animation-delay: 0.05s; }
+  .code-btn:nth-child(2) { animation-delay: 0.1s; }
+  .code-btn:nth-child(3) { animation-delay: 0.15s; }
+  .code-btn:nth-child(4) { animation-delay: 0.2s; }
+  .code-btn:nth-child(5) { animation-delay: 0.25s; }
+  .code-btn:nth-child(6) { animation-delay: 0.3s; }
+  .code-btn:nth-child(7) { animation-delay: 0.35s; }
+  .code-btn:nth-child(8) { animation-delay: 0.4s; }
+  .code-btn:nth-child(9) { animation-delay: 0.45s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Shimmer on hover */
+  .code-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(105deg, transparent 40%, rgba(86, 204, 242, 0.1) 50%, transparent 60%);
+    transition: left 0.5s ease;
+    pointer-events: none;
+  }
+
+  .code-btn:hover::before {
+    left: 130%;
+  }
+
+  /* Left accent bar */
+  .code-btn .btn-accent {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 2px;
+    background: var(--color-primary);
+    border-radius: 0 2px 2px 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+  }
+
+  .code-btn:hover .btn-accent {
+    opacity: 1;
+    top: 10%;
+    bottom: 10%;
+  }
+
   dialog[open] {
-    animation: fadeInScale 0.3s ease-out;
+    animation: dialogReveal 0.3s ease-out;
   }
 
-  strong{
-    color: var(--neon-orange);
-  }
-
-  @keyframes fadeInScale {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  @keyframes dialogReveal {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
   }
 </style>
 
 <div class="container">
-  <h1>Procedimientos 112 CAM</h1>
+  <div class="hero">
+    <div class="hero-eyebrow">MI CHULETA SVAE</div>
+    <h1>Procedimientos 112 CAM</h1>
+    <div class="hero-divider"></div>
+  </div>
+
   <div class="links">
     {codigos.map(({ id, label }) => (
-      <a class="btn" href={`/codigos/${id}`}>{label}</a>
+      <a class="btn code-btn" href={`/codigos/${id}`}>
+        <span class="btn-accent"></span>
+        {label}
+      </a>
     ))}
   </div>
 </div>
-

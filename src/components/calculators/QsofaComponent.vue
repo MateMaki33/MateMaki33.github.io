@@ -52,108 +52,56 @@ const closeModal = () => modal.value?.close()
 </script>
 
 <style scoped>
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  gap: 1rem;
-}
-
-input {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ff9900;
-  background-color: #1a1a1a;
-  color: #fff7e6;
-  height: 3rem;
-  font-size: 1.25rem;
-  box-shadow: 0 0 5px #ff9900;
-  transition: all 0.3s ease;
-}
-
-input:focus {
-  outline: none;
-  border-color: #ffae42;
-  box-shadow: 0 0 12px #ffaa33;
-}
-
-.score {
-  margin: 1rem 0;
-  font-size: 1.25rem;
-  color: #ffc266;
-}
-
-label {
-  font-size: var(--font-size-li);
-  color: #ffcc99;
-}
-
-/* Animación del botón */
 .btn-glow {
-  position: relative;
-  padding: 1rem 2rem;
-  color: #fff8f0;
-  background: #1a1a1a;
-  border: 2px solid transparent;
-  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 156, 219, 0.08);
+  border: 1px solid rgba(45, 156, 219, 0.38);
+  color: var(--color-btn-text);
+  padding: 0.75rem 1.35rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
-  transition: transform 0.3s ease;
+  min-height: 48px;
+  transition: all 0.2s ease;
 }
 
 .btn-glow:hover {
-  transform: scale(1.05);
+  background: rgba(45, 156, 219, 0.2);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 28px rgba(45, 156, 219, 0.4);
+  color: #ffffff;
 }
 
-.btn-glow::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    #ff9900,
-    #ffaa33,
-    #ff6600,
-    #ff9900
-  );
-  animation: spin 3s linear infinite;
-  z-index: -1;
-  border-radius: 50%;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
 }
 
-.btn-glow::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  z-index: -1;
+.score {
+  margin: 0.5rem 0 1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(45, 156, 219, 0.06);
+  border: 1px solid rgba(45, 156, 219, 0.2);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-subtitle);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+.score p { margin: 0.25rem 0; }
 
-/* Quitar flechas de inputs number */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
+input[type="number"] { -moz-appearance: textfield; }
 </style>

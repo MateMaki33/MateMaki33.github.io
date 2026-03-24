@@ -343,38 +343,44 @@ function formatKey(key) {
 <style scoped>
 /* ── Layout ─────────────────────────────── */
 .main-container {
-  min-width: 90dvw;
+  min-width: min(90dvw, 100%);
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem 1rem 3rem;
+  padding: 0.5rem 1rem 3rem;
   color: var(--color-text);
 }
 
 h1 {
-  font-size: clamp(1.6rem, 5vw, 2.4rem);
-  background: linear-gradient(90deg, var(--color-headline-gradient-start), var(--color-headline-gradient-end));
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  background: linear-gradient(135deg, var(--color-headline-gradient-start), var(--color-headline-gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .subtitle {
   text-align: center;
-  color: var(--color-subtitle);
-  font-size: 0.9rem;
+  color: rgba(228, 239, 248, 0.4);
+  font-size: 0.82rem;
   margin: 0 0 1.5rem;
-  opacity: 0.8;
+  letter-spacing: 0.06em;
+  font-style: italic;
 }
 
 /* ── Tab Bar ─────────────────────────────── */
 .tab-bar {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  background: rgba(0,0,0,0.3);
-  padding: 0.4rem;
-  border-radius: 14px;
-  border: 1px solid rgba(147, 51, 234, 0.3);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  background: rgba(5, 16, 30, 0.7);
+  padding: 0.35rem;
+  border-radius: 12px;
+  border: 1px solid rgba(45, 156, 219, 0.2);
 }
 
 .tab {
@@ -383,39 +389,42 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 0.1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  border-radius: 9px;
   border: none;
   background: transparent;
-  color: rgba(255,255,255,0.5);
+  color: rgba(228, 239, 248, 0.4);
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
-  transition: all 0.25s ease;
+  letter-spacing: 0.05em;
+  transition: all 0.22s ease;
   line-height: 1.1;
 }
 
 .tab-icon {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .tab-label {
-  font-size: 0.7rem;
-  font-weight: 400;
-  opacity: 0.7;
+  font-size: 0.68rem;
+  font-weight: 500;
+  opacity: 0.65;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .tab.active {
-  background: linear-gradient(135deg, var(--color-card-bg), #1f0033);
-  color: var(--color-text);
-  border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-card);
+  background: rgba(45, 156, 219, 0.12);
+  color: var(--color-subtitle);
+  border: 1px solid rgba(45, 156, 219, 0.35);
+  box-shadow: 0 0 16px rgba(45, 156, 219, 0.12);
 }
 
 .tab:not(.active):hover {
-  color: var(--color-subtitle);
-  background: rgba(147, 51, 234, 0.08);
+  color: rgba(228, 239, 248, 0.7);
+  background: rgba(45, 156, 219, 0.06);
 }
 
 /* ── Panel ─────────────────────────────── */
@@ -428,14 +437,14 @@ h1 {
 /* ── Accordion ─────────────────────────── */
 .accordion-item {
   background: var(--color-card-bg);
-  border: 1px solid rgba(147, 51, 234, 0.4);
+  border: 1px solid rgba(45, 156, 219, 0.2);
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .accordion-item.open {
-  border-color: var(--color-card-border);
+  border-color: rgba(45, 156, 219, 0.4);
   box-shadow: var(--shadow-card);
 }
 
@@ -448,26 +457,28 @@ h1 {
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-display);
   color: var(--color-text);
   text-align: left;
   transition: background 0.2s ease;
+  min-height: 52px;
 }
 
 .accordion-header:hover {
-  background: rgba(147, 51, 234, 0.1);
+  background: rgba(45, 156, 219, 0.07);
 }
 
 .acc-title {
   flex: 1;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
 }
 
 .chevron {
   font-style: normal;
-  font-size: 0.8rem;
-  color: var(--color-subtitle);
+  font-size: 0.75rem;
+  color: rgba(228, 239, 248, 0.4);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -499,11 +510,11 @@ h1 {
   flex-shrink: 0;
 }
 
-.badge-blue   { background: rgba(59,130,246,0.2);  color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
-.badge-yellow { background: rgba(234,179,8,0.2);   color: #fde68a; border: 1px solid rgba(234,179,8,0.4); }
-.badge-purple { background: rgba(147,51,234,0.25); color: #d8b4fe; border: 1px solid rgba(147,51,234,0.5); }
-.badge-red    { background: rgba(239,68,68,0.2);   color: #fca5a5; border: 1px solid rgba(239,68,68,0.4); }
-.badge-green  { background: rgba(34,197,94,0.2);   color: #86efac; border: 1px solid rgba(34,197,94,0.4); }
+.badge-blue   { background: rgba(45,156,219,0.15);  color: #7ed6f8; border: 1px solid rgba(45,156,219,0.35); }
+.badge-yellow { background: rgba(234,179,8,0.15);   color: #fde68a; border: 1px solid rgba(234,179,8,0.35); }
+.badge-purple { background: rgba(139,92,246,0.15);  color: #c4b5fd; border: 1px solid rgba(139,92,246,0.35); }
+.badge-red    { background: rgba(239,68,68,0.15);   color: #fca5a5; border: 1px solid rgba(239,68,68,0.35); }
+.badge-green  { background: rgba(16,185,129,0.15);  color: #6ee7b7; border: 1px solid rgba(16,185,129,0.35); }
 
 /* ── Two-column grid ─────────────────── */
 .two-col {
@@ -595,21 +606,28 @@ h1 {
 }
 
 .param-card {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(147,51,234,0.3);
+  background: rgba(5, 16, 30, 0.6);
+  border: 1px solid rgba(45, 156, 219, 0.2);
   border-radius: 10px;
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  transition: border-color 0.2s ease;
+}
+
+.param-card:hover {
+  border-color: rgba(45, 156, 219, 0.4);
 }
 
 .param-key {
-  font-size: 0.72rem;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
   font-weight: 700;
-  color: var(--color-subtitle);
+  color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
 }
 
 .param-val {
@@ -628,25 +646,27 @@ h1 {
 .sub-tab {
   padding: 0.4rem 1.1rem;
   border-radius: 8px;
-  border: 1px solid rgba(147,51,234,0.4);
+  border: 1px solid rgba(45, 156, 219, 0.25);
   background: transparent;
-  color: rgba(255,255,255,0.5);
-  font-family: inherit;
+  color: rgba(228, 239, 248, 0.45);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .sub-tab.active {
-  background: rgba(147,51,234,0.25);
-  color: #d8b4fe;
-  border-color: var(--color-card-border);
+  background: rgba(45, 156, 219, 0.15);
+  color: var(--color-subtitle);
+  border-color: rgba(45, 156, 219, 0.45);
 }
 
 .sub-tab:not(.active):hover {
-  color: var(--color-subtitle);
-  background: rgba(147,51,234,0.08);
+  color: rgba(228, 239, 248, 0.7);
+  background: rgba(45, 156, 219, 0.07);
 }
 
 /* ── Problems Grid ─────────────────── */
@@ -657,28 +677,37 @@ h1 {
 }
 
 .problem-card {
-  background: rgba(0,0,0,0.25);
-  border: 1px solid rgba(255,153,0,0.2);
+  background: rgba(5, 16, 30, 0.6);
+  border: 1px solid rgba(45, 156, 219, 0.18);
   border-radius: 10px;
   padding: 0.8rem;
+  transition: border-color 0.2s ease;
+}
+
+.problem-card:hover {
+  border-color: rgba(45, 156, 219, 0.35);
 }
 
 .problem-title {
   margin: 0 0 0.5rem;
-  font-size: 0.82rem;
-  color: var(--neon-glow);
+  font-size: 0.8rem;
+  color: var(--color-subtitle);
+  font-family: var(--font-display);
   font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* ── Section Subhead ─────────────── */
 .section-subhead {
   margin: 1rem 0 0.5rem;
-  font-size: 0.8rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-subtitle);
-  border-bottom: 1px solid rgba(147,51,234,0.2);
+  letter-spacing: 0.14em;
+  color: rgba(228, 239, 248, 0.4);
+  border-bottom: 1px solid rgba(45, 156, 219, 0.15);
   padding-bottom: 0.3rem;
 }
 </style>

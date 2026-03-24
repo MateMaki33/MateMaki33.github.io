@@ -1,12 +1,13 @@
 <template>
-  <div class="grid">
-    <button class="btn-glow" @click="openModal">Calcular Glasgow</button>
+  <div class="calc-wrapper">
+    <button class="btn-calc" @click="openModal">Calcular Glasgow</button>
 
     <dialog ref="modal">
       <h2>Escala de Glasgow</h2>
       <form method="dialog" @submit.prevent>
+
         <div class="form-group">
-          <label>Apertura ocular:</label>
+          <label>Apertura ocular</label>
           <select v-model.number="ocular">
             <option :value="4">Espontánea (4)</option>
             <option :value="3">Al habla (3)</option>
@@ -16,7 +17,7 @@
         </div>
 
         <div class="form-group">
-          <label>Respuesta verbal:</label>
+          <label>Respuesta verbal</label>
           <select v-model.number="verbal">
             <option :value="5">Orientado (5)</option>
             <option :value="4">Confuso (4)</option>
@@ -27,7 +28,7 @@
         </div>
 
         <div class="form-group">
-          <label>Respuesta motora:</label>
+          <label>Respuesta motora</label>
           <select v-model.number="motora">
             <option :value="6">Obedece órdenes (6)</option>
             <option :value="5">Localiza dolor (5)</option>
@@ -38,12 +39,15 @@
           </select>
         </div>
 
-        <div class="score">
-          <p>Puntuación total: <strong>{{ total }}</strong></p>
-          <p><strong>Interpretación:</strong> {{ interpretacion }}</p>
+        <div class="score-panel" :class="scoreClass">
+          <div class="score-value">{{ total }}</div>
+          <div class="score-details">
+            <div class="score-label">Glasgow</div>
+            <div class="score-interpretation">{{ interpretacion }}</div>
+          </div>
         </div>
 
-        <button class="btn-glow" @click="closeModal">Cerrar</button>
+        <button class="btn" type="button" @click="closeModal">Cerrar</button>
       </form>
     </dialog>
   </div>
@@ -62,135 +66,133 @@ const total = computed(() => ocular.value + verbal.value + motora.value);
 const interpretacion = computed(() => {
   const t = total.value;
   if (t >= 13) return 'Traumatismo leve';
-  if (t >= 9) return 'Traumatismo moderado';
+  if (t >= 9)  return 'Traumatismo moderado';
   return 'Traumatismo grave';
 });
 
-const openModal = () => modal.value?.showModal();
+const scoreClass = computed(() => {
+  const t = total.value;
+  if (t >= 13) return 'score-mild';
+  if (t >= 9)  return 'score-moderate';
+  return 'score-severe';
+});
+
+const openModal  = () => modal.value?.showModal();
 const closeModal = () => modal.value?.close();
 </script>
 
 <style scoped>
-.form-group {
+.calc-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
   gap: 0.5rem;
 }
 
-select {
-  padding: 0.75rem;
-  background: #1a1a1a;
-  border: 1px solid #ff9900;
-  color: #fff7e6;
-  font-size: 1.1rem;
+/* Trigger button inherits .btn from global but with override */
+.btn-calc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 156, 219, 0.08);
+  border: 1px solid rgba(45, 156, 219, 0.38);
+  color: var(--color-btn-text);
+  padding: 0.75rem 1.35rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 0 5px #ffaa33;
+  cursor: pointer;
+  min-height: 48px;
+  transition: all 0.2s ease;
 }
 
-.score {
-  margin-top: 1rem;
-  font-size: 1.25rem;
-  color: #ffc266;
+.btn-calc:hover {
+  background: rgba(45, 156, 219, 0.2);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 24px rgba(45, 156, 219, 0.4);
+  color: #ffffff;
 }
 
-.active {
-  display: block;
-  color: red;
-  font-size: var(--font-size-li);
-}
+/* Form groups */
 .form-group {
   display: flex;
   flex-direction: column;
+  gap: 0.4rem;
   margin-bottom: 1rem;
-  gap: 1rem;
 }
 
-input {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ff9900;
-  background-color: #1a1a1a;
-  color: #fff7e6;
-  height: 3rem;
-  font-size: 1.25rem;
-  box-shadow: 0 0 5px #ff9900;
+/* Score panel */
+.score-panel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin: 0.5rem 0 1.25rem;
+  border: 1px solid;
   transition: all 0.3s ease;
 }
 
-input:focus {
-  outline: none;
-  border-color: #ffae42;
-  box-shadow: 0 0 12px #ffaa33;
+.score-value {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1;
+  min-width: 3rem;
+  text-align: center;
 }
 
-
-label {
-  font-size: var(--font-size-li);
-  color: #ffcc99;
+.score-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-/* Animación del botón */
-.btn-glow {
-  position: relative;
-  padding: 1rem 2rem;
-  color: #fff8f0;
-  background: #1a1a1a;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
-  transition: transform 0.3s ease;
+.score-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.55;
 }
 
-.btn-glow:hover {
-  transform: scale(1.05);
+.score-interpretation {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-.btn-glow::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, #ff9900, #ffaa33, #ff6600, #ff9900);
-  animation: spin 3s linear infinite;
-  z-index: -1;
-  border-radius: 50%;
+/* Severity states */
+.score-mild {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
 }
+.score-mild .score-value        { color: #34d399; }
+.score-mild .score-interpretation { color: #6ee7b7; }
 
-.btn-glow::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  z-index: -1;
+.score-moderate {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
 }
+.score-moderate .score-value        { color: var(--neon-orange); }
+.score-moderate .score-interpretation { color: var(--neon-glow); }
 
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.score-severe {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
 }
+.score-severe .score-value        { color: #f87171; }
+.score-severe .score-interpretation { color: #fca5a5; }
 
-/* Quitar flechas de inputs number */
+/* Remove spin buttons from number inputs */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
+input[type="number"] { -moz-appearance: textfield; }
 </style>

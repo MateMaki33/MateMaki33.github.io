@@ -38,9 +38,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "inicial: 150 mg/kg iv en 200 ml SG5% en 15-60 minutos",
-      "segunda: 50 mg/kg en 500 ml SG5% en 4 horas (125 ml/h)",
-      "tercera: 100 mg/kg en 1000 ml SG5% en 16 horas (62 ml/h)"
+      "bolo: Intox. paracetamol: 150 mg/kg en 200 mL de suero (1 hora) Prevención nefropatía contrastes yodados: 600 mg c/12 h junto hidratació n",
+      "perfusión: Dosismantenimientointox . paracetamol: 2ª perfusión: 50 mg/kg en 500 mL de suero (4 horas) 3ª perfusión: de 100 mg/kg en 500 mL suero (16 horas)",
+      "sueros compatibles: Suero glucosa, Suero Salino"
     ]
   },
   {
@@ -78,7 +78,6 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "iv: 450 mg (½ ampolla) en 100 ml SSF, infundir en 15 minutos",
       "bolo: Antiagregación SCA: 450 mg Antiinflamatorio: 500 - 1000 mg c/4-6 h Dilución: reconstituir el vial con 5 mL de API y diluir en 100 - 250 mL suero. Administrar en un tiempo máximo de 2 horas",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -119,8 +118,6 @@
     ],
     "embarazo": "B",
     "dosis": [
-      "iv: 1 g en 100 de SSF o SG cada 8 h a 1 ml/min",
-      "oral: 1-1.5 g cada 8-12 h",
       "bolo: Bolus inicial: 500 - 1000 mg en 50 - 100 mL suero en 10 minutos",
       "perfusión: Dosis: 1 - 5 mg/kg/h Dilución: 1000 mg en 250 mL de suero (4mg/mL) (17 - 88 mL/h)*",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -160,8 +157,9 @@
     ],
     "embarazo": "",
     "dosis": [
-      "bolo_iv: 15-20 mg/kg en 50-100 SSF",
-      "mantenimiento_iv: 0.5-1 mg/kg/h, diluido a 4 mg/ml"
+      "bolo: 15-20 mg/kg IV lento (máx 6 mg/kg/min) sin diluir o diluido en SSF/SG5%",
+      "perfusión: 0,5-1 mg/kg/h. Dilución: diluir en SSF o SG5% a concentración ≤0,4 mg/mL",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -194,10 +192,9 @@
     ],
     "embarazo": "B",
     "dosis": [
-      "cetoacidosis (bolo): 0.15 UI/kg iv",
-      "cetoacidosis (perfusión): 0.1 UI/kg/h",
-      "hiperglucemia_hiperosmolar (bolo): igual que cetoacidosis",
-      "hiperglucemia_hiperosmolar (perfusión): 0.05 UI/kg/h tras tercera hora"
+      "bolo: Bolo intravenoso/subcutáneo: 0,15 UI/kg",
+      "perfusión: Dosis: 0,15 UI/Kg/h (1 mL/ kg/ h) Dilución: 50 UI / 500 mL (0,1 UI/mL) (1 mL/ kg/h )",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -228,9 +225,6 @@
     "efectos_secundarios": [],
     "embarazo": "No hay estudios",
     "dosis": [
-      "Primera: 6mg en bolo (2ml) más bolo de fisiológicos de 20ml",
-      "Siguientes: 12mg más bolo de suero fisiológico de 20ml",
-      "Dilución: no procede",
       "bolo: Primera dosis: 6 mg sin diluir rá pido seguido de 20 mL de suero en bolo rápido Segunda dosis: 12 mg sin diluir rápido seguido de 20 mL de suero en bolo rápido Tercera dosis: 12 mg sin diluir rá pido seguido de 20 mL de suero salino en bolo rápido Dilución: no es necesario diluir",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Sin diluir"
@@ -265,10 +259,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Sin reconstituir, se administra directamente de la presentación de 50ml lenta",
-      "No mezclar con otros fármacos, sangre, concentrados de hematíes",
-      "6-8g por cada litro extraído",
-      "Pasar cada frasco en no menos de 30 minutos"
+      "bolo: No administrar en bolo directo",
+      "perfusión: 6-8 g por litro extraído (paracentesis). Administrar cada frasco (50 mL) en no menos de 30 minutos. No mezclar con otros fármacos, sangre ni concentrado de hematíes",
+      "sueros compatibles: Sin diluir (solución lista para usar)"
     ]
   },
   {
@@ -303,7 +296,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "{'IAM': {'Pauta de 90 minutos (primeras 6 horas)': ['15mg en bolo ev', 'Seguir con perfusión de 50mg en 30 minutos', 'Posteriormente 35mg en 60 minutos (máximo 100mg)'], 'Pauta de 3 horas (6-12 horas tras IAM)': ['10 mg en bolo ev', '50 mg perfundidos en 1 hora', 'Perfusiones de 10mg en 30 minutos (máximo 100mg)']}, 'TEP masivo': ['10 mg en bolo en 1-2 minutos', '90 mg en perfusión en 2 horas'], 'Ictus isquémico': ['Calcular dosis total: 0.9mg/Kg (máximo 90)', 'Poner en bolo un 10% de esa dosis', 'Posteriormente perfundir el calculado en 60 minutos']}",
       "bolo: Ictus: 10 % de la dosis calculada en 1 - 2 min IAM: 15 mg en 1 - 2 min TEP: 10% de la dosis calculada en 1 - 2 min Cálculo dosis: 0,09 mg/kg (10% dosis total inicial) y 0,81 mg/kg (90% dosis total perfusión). Cálculo realizado a partir de la dosis total del fármaco (0,9 mg/kg)",
       "perfusión: Ictus: 90% de la dosis calculada en 1 hora IAM: Perfu 2ª (0,75 mg/kg Máx: 50 mg) Perfu 3ª (0,5 mg/kg Máx: 35 mg) TEP: 90% de la dosis calculada en 2 horas",
       "sueros compatibles: Suero Salino"
@@ -338,11 +330,9 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "Dosis máxima 2.2gr/día. Diluir con fisiológico o glucosado",
-      "1 mg/min durante 6 horas, luego 0.5 mg/min en 18 horas",
-      "FV o TV sin pulso: 300mg en 50ml SF en no menos de 3 minutos",
-      "TV estable: 150mg en 10 minutos",
-      "Dilución: 900mg en 250 ml SSF o SG a 11ml/h"
+      "bolo: FV/TV sin pulso: 300 mg en 20 mL SG5% en 3-5 min. TV estable: 150 mg en 10 min. Dosis máxima bolo: 150 mg",
+      "perfusión: Dosis de carga: 5 mg/kg (máx 1200 mg) en 250 mL SG5% en 20-120 min. Mantenimiento: 900 mg en 500 mL SG5% a 21 mL/h (1 mg/min las primeras 6 h, luego 0,5 mg/min). Dosis máxima: 2,2 g/24 h",
+      "sueros compatibles: Suero glucosa (exclusivamente; precipita con Suero Salino)"
     ]
   },
   {
@@ -379,9 +369,6 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "IAM/angor inestable: 5 mg ev lento en 5 minutos, repetir en 10 minutos, luego 50mg vía oral",
-      "Extrasistolia ventricular: 50 mg/12 horas durante 7 días",
-      "Cardiopatía isquémica: 50 mg/8-12 horas vía oral",
       "bolo: Bolus inicial: 1mg/min Máx: 10 mg en 10 s Dilución: Sin diluir (0,5 mg/mL) o diluir 5 mL (2,5 mg) + 5 mL suero = (1 mg/mL)",
       "perfusión: Dosis: 0,15 mg/kg en 20 min Dilución: 10 mg en 50 mL de suero (17 mL/h)*",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -408,8 +395,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Inducción: 0.5 mg/kg ev",
-      "Mantenimiento: 0.5 mg/kg/hora, diluir en SF o SG5%"
+      "bolo: Inducción IOT: 0,3-0,6 mg/kg en 30-60 segundos. Dilución: sin diluir o en SSF/SG5%",
+      "perfusión: Mantenimiento: 0,3-0,6 mg/kg/h. Dilución: 50 mg en 50 mL SSF o SG5% (1 mg/mL)",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -436,9 +424,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Bradicardia: 0.5-1 mg cada 5 minutos (máximo 3)",
-      "Intoxicación por organofosforados: 2mg cada 15 minutos hasta atropinización",
-      "Dilución: 1mg + 9ml SSF o SG",
       "bolo: Bradicardia/Bradiarritmias: 0,6 - 1 mg c/ 3 - 5 min (Máx: 3 mg) en 30 segundos Crisis colinérgica: 1 - 2 mg c/20 - 30 min hasta signos de atropinizació n (midriasis, taquicardia, etc) en 1 - 2 min Dilución: 1 mg + 9 mL suero (0,1 mg/mL)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa"
@@ -463,8 +448,9 @@
     "efectos_secundarios": [],
     "embarazo": "No hay estudios",
     "dosis": [
-      "Bolo lento: 1-2 mg/kg ev en 5 minutos, repetir a los 30 minutos",
-      "Perfusión: 1-2 mg/kg diluido en 100ml de suero a pasar en 10 minutos"
+      "bolo: 1-2 mg/kg IV lento en 5 minutos. Dilución: diluir en 50 mL de SG5%",
+      "perfusión: Repetir dosis bolo a los 30-60 minutos si es necesario. No está indicada la perfusión continua",
+      "sueros compatibles: Suero glucosa"
     ]
   },
   {
@@ -488,8 +474,9 @@
     "efectos_secundarios": [],
     "embarazo": "No se sabe",
     "dosis": [
-      "Profilaxis: 3,500 UI antes o después de cirugía",
-      "TVP: 5,000-10,000 UI según peso"
+      "bolo: No administrar IV (uso exclusivamente subcutáneo)",
+      "perfusión: No está indicada la perfusión IV",
+      "sueros compatibles: No aplica (administración SC)"
     ]
   },
   {
@@ -528,10 +515,6 @@
     "efectos_secundarios": [],
     "embarazo": "No hay problema",
     "dosis": [
-      "Acidosis metabólica: 0.4 x déficit de base x peso (50% en la primera hora, 50% en 12 horas siguientes)",
-      "Rabdomiolisis: 15mEq/hora para mantener pH urinario >6.5",
-      "Hiperpotasemia (>6.5): 50-100mEq en 15-30 minutos",
-      "Prevención de nefropatía por contraste: 3ml/Kg/h en 1 hora, 1ml/Kg/h en 6 horas",
       "bolo: No administrar en bolo. Utilizar sistema de microgoteo en soluciones 1 Molar",
       "perfusión: Acidosis metabólica severa (pH < 7,20): Déficit HCO3 = 0,6 x peso (kg) x (HCO3 deseado - HCO3 medido). Administrar la mitad en 30 min (1 M) y el resto en 24 h. HiperK: 1/6 M (250 mL) c/6-8 horas PCR: a partir de 10 min de la PCR, preferiblemente bajo control de pH, administrar 50 mEq y repetir si fuese necesario (Bicarbonato 1 M)",
       "sueros compatibles: Sin diluir"
@@ -560,9 +543,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Hipocalcemia severa: 100ml SF o GS en 10-15 min",
-      "Reanimación cardiaca: 2-4ml iv rápido",
-      "Hiperpotasemia: 2-5ml iv lento, repetir cada 5 min"
+      "bolo: Hipocalcemia severa/PCR: 2-4 mL (200-400 mg) IV lento en 5-10 min sin diluir o diluido en 50-100 mL. Hiperpotasemia: 2-5 mL en 10-15 min",
+      "perfusión: No está indicada la perfusión continua de rutina",
+      "sueros compatibles: Suero glucosa, Suero Salino (incompatible con bicarbonato y fosfatos)"
     ]
   },
   {
@@ -586,8 +569,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Inducción: 0.15mg/kg",
-      "Mantenimiento: 2μg/Kg/min"
+      "bolo: Inducción IOT: 0,15 mg/kg en 30-60 segundos sin diluir",
+      "perfusión: Mantenimiento: 1-3 µg/kg/min. Dilución: 10 mg en 90 mL SSF o SG5% (0,1 mg/mL)",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -612,8 +596,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "SCASEST y angor: 300mg inicial vo, luego 75mg/24h",
-      "SCACEST: igual que SCASEST"
+      "bolo: No existe formulación IV. Administración exclusivamente oral",
+      "perfusión: No está indicada la perfusión IV",
+      "sueros compatibles: No aplica (uso oral)"
     ]
   },
   {
@@ -639,9 +624,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Delirium tremens: 50-100 mg cada 3-4 horas",
-      "Tétanos sin respiración mecánica: 120-150 mg/día",
-      "Agitación: 20-200 mg/día im o ev",
       "bolo: Agitación/agresividad: 20 a 200 mg/ dıá Alcoholismo: 50 a 100 mg c/ 3 -4 horas Dilución: reconstituir 20 mg con 2 mL API o 50 mg con 2,5 mL API. Posteriormente diluir en 50 mL suero (10 - 15 min)",
       "perfusión: Dosis tratamiento tétanos Benigno: 120 - 500 mg/dia Maligno: 500 - 2000 mg/dia",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -670,8 +652,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Agitación: 25-50mg im profundo, máx 150mg/día",
-      "Hipo: 25-50mg cada 8 horas",
       "bolo: Dosis: 25 - 50 mg c/6 - 8 horas Dilución: 25 mg en 50 - 100 mL suero. Administrar en 25 - 50 min (1mg/min)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino"
@@ -700,8 +680,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "IV: 2-10mg bolo, repetido cada 5-30 min",
-      "Perfusión: 1-4 mg/hora, diluir en 500ml SSF"
+      "bolo: 2-10 mg IV lento diluido a 1 mg/mL (1 mL + 9 mL SSF). Repetir cada 5-30 min según respuesta",
+      "perfusión: 1-4 mg/h. Dilución: 50 mg en 500 mL SSF (0,1 mg/mL) o 50 mg en 50 mL SSF (1 mg/mL) en bomba de jeringa",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -724,8 +705,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Bolo inicial: 10-20mg iv",
-      "Mantenimiento: 4mg cada 6 horas",
       "bolo: Dosis inicial: 0,5 - 9 mg Edema cerebral: 8 mg seguido 4 mg c/6 h Neoplasias cerebrales: 2 mg c/ 6 - 8 h Dilución: en 100 mL (10 - 20 minutos)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -753,8 +732,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "5mg iv lento o im cada 4-6 horas",
-      "Dosis máxima diaria: 40mg",
       "bolo: Dosis: 5 mg c/8 h Máx: 20 mg/dia Dilución: 5 mg + 9 mL suero (2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -785,11 +762,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Ansiedad: 2-10mg im o iv cada 4 horas",
-      "Deprivación alcohólica: 10mg im o iv, si es necesario repetir cada 3-4 horas",
-      "Status epiléptico: 0,15-0,25mg/kg iv cada 10 min o en perfusión continua",
-      "Preclampsia/Eclampsia: 10-20mg iv o perfusión continua, máx. 100mg/día",
-      "Espasmos musculares: 5-10mg im o iv",
       "bolo: Dosis estándar: 5 - 10 mg c/4 - 6 h Máx: 60 mg/dıá . En ancianos reducir dosis Crisis comiciales: 0,15 - 0,20 mg/kg Dilución: 10 mg + 8 mL suero (1 mg/mL)",
       "perfusión: Dosis: 50 mg en 90 mL suero al ritmo segú n patologıá",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -820,9 +792,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Status epiléptico: Dosis de carga 20mg/kg iv a velocidad no superior a 50mg/min",
-      "Mantenimiento: 2mg/kg cada 6-8 horas 24 horas después",
-      "Arritmias: 50-100mg iv en 10 min, repetir cada 5-10 min, máx. 1000mg"
+      "bolo: No administrar en bolo",
+      "perfusión: Estado epiléptico: 15 mg/kg Dosis Má xima de inicio 1,5 gramos (monitorizació n) Dilución: 1 gramo en 500 mL de suero a pasar en 30 minutos *",
+      "sueros compatibles: Suero Salino"
     ]
   },
   {
@@ -847,9 +819,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Dosis de carga: 500-1000mcg administrando mitad de la dosis inicialmente, repetir cada 6 horas",
-      "Mantenimiento: Dosis según respuesta clínica, máx. 1,5mg/24h",
-      "Bolo: 0.5 mg + 8 ml de SSF o SG",
       "bolo: Dosis: 0,25 - 0,50 mg c/2 - 4 horas Máx: 1 - 1,5 mg / 24 horas Dilución: 0,5 mg + 8 mL suero (2 - 3 min)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -905,10 +874,6 @@
     ],
     "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo potencial para el feto.",
     "dosis": [
-      "Parada cardiorrespiratoria: 1 mg IV/IO cada 3-5 minutos. (Bolo)",
-      "Anafilaxia: 0.3-0.5 mg IM. Si es necesario IV: 0.1 mg IV lento, diluido en 10 ml de SSF (intermitente en 100 SSF, se refiere a una dilución para infusión, no bolo directo).",
-      "Perfusión (Shock/hipotensión): 6-63 ml/h IV ( 5 mg en 250 SSF o SG5% para perfusión).",
-      "Vías: IV, IM, SC (SC para reacciones alérgicas leves, no anafilaxia grave).",
       "bolo: PCR dosis: 1 mg sin diluir en 10 segundos cada 3 - 5 minutos Anafilaxia: 0,5 mg IM directo",
       "perfusión: Bradiarritmias dosis: 0,03 - 0,3 µg/kg/min Dilución: 5 mg en 250 mL de suero (6 - 63 mL /h)*",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -965,8 +930,6 @@
     ],
     "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo potencial.",
     "dosis": [
-      "Síntomas extrapiramidales inducidos por fármacos: 2.5-5 mg IV/IM. Repetir si es necesario hasta un máximo de 10-20 mg/día.",
-      "Administración IV: 5mg + 4ml SSF (para administración lenta).",
       "bolo: Sindrome Parkinsoniano: 10 - 20 mg repartido en varias dosis/dia Sd. Extrapiramidal por medicamentos: 2,5 - 5 mg. Repetir en 30 min si fuese necesario (Máx: 10 - 20 mg/dia) Dilución: 5 mg + 4 mL suero en 5 min",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino"
@@ -1029,8 +992,6 @@
     ],
     "embarazo": "Contraindicado en el tercer trimestre; precaución en el primero y segundo.",
     "dosis": [
-      "50 mg cada 8-12 horas, máximo 150 mg/día.",
-      "Administración: IM o IV lento en 50 ml SSF (infusión lenta).",
       "bolo: Dosis: 50 mg c/8 h Máx: 150 mg/dıá Dilución: 50 mL suero (10 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -1090,8 +1051,9 @@
     ],
     "embarazo": "Categoría D: Riesgo fetal comprobado. Usar solo si el beneficio es mayor que el riesgo.",
     "dosis": [
-      "Estado epiléptico: Carga: 15-20 mg/kg IV lento (no más de 100 mg/min). Mantenimiento: 1-3 mg/kg/día oral/IV.",
-      "Administración: 1 ampolla = 200mg. 200mg hasta 20ml con SSF (diluir para evitar precipitación y reducir efectos adversos locales)."
+      "bolo: Estado epiléptico: carga 15-20 mg/kg IV a no más de 100 mg/min. Dilución: 200 mg en 10-20 mL SSF",
+      "perfusión: Mantenimiento: 1-3 mg/kg/día IV. Dilución: diluir en 50-100 mL SSF",
+      "sueros compatibles: Suero Salino"
     ]
   },
   {
@@ -1151,9 +1113,6 @@
     ],
     "embarazo": "Categoría B: No se han demostrado riesgos en estudios animales. Usar con precaución.",
     "dosis": [
-      "Anestesia (IV): 1-4.5 mg/kg. Anestesia (IM): 6.5-13 mg/kg.",
-      "Sedación/Analgesia (bolo IV): 0.5-2 mg/kg. Perfusión: 0.5-2 mg/kg/hora.",
-      "Administración: En bolo IV o IM.",
       "bolo: Inducción: 1 - 2 mg /Kg Sedación disociativa: 0,5 - 1 mg /kg Dilución: 2 mL (100 mg) + 8 mL suero (10 mg/mL) en 1 minuto",
       "perfusión: Dosis mantenimiento: 1 - 4 mg/ minuto Dilución: 500 mg en 500 mL de suero (1mg /mL) (60 - 240 mL / hora)",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1209,8 +1168,6 @@
     ],
     "embarazo": "Contraindicado en el último trimestre. Evitar en el primero y segundo si es posible.",
     "dosis": [
-      "Adultos: 1-2 g IV/IM cada 6-8 horas, máximo 6 g/día.",
-      "Administración: En 50ml SSF (para evitar hipotensión, infusión lenta de al menos 5-10 minutos).",
       "bolo: Dosis: 2 gramos c/ 8 horas Dilución: en 50 mL suero en 20 - 30 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1271,8 +1228,6 @@
     ],
     "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo. Evitar en tercer trimestre por riesgo de bradicardia/hipoglucemia fetal.",
     "dosis": [
-      "Taquicardia/HTA: Bolo de 5 mg IV lento (durante al menos 1-2 minutos). Repetir cada 5 minutos hasta un máximo de 15 mg.",
-      "IAM: 5 mg IV cada 2 minutos hasta 3 dosis (total 15 mg).",
       "bolo: Dosis taquiarritmias: 5 mg (repetir a los 5 minutos hasta un máximo de 20 mg) Dilución: no precisa diluir (2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -1327,8 +1282,9 @@
     ],
     "embarazo": "Categoría C: Usar solo si el beneficio potencial justifica el riesgo.",
     "dosis": [
-      "Oral: 5-20 mg/día (dosis inicial variable según indicación).",
-      "IM (agitación): 5-10 mg IM, se puede repetir en 2 horas si es necesario, máximo 20 mg/día."
+      "bolo: No existe formulación IV aprobada en España. Uso IM para agitación: 10 mg IM (máx 20 mg/día, máx 3 dosis/día)",
+      "perfusión: No está indicada la perfusión IV",
+      "sueros compatibles: No aplica (uso IM/oral)"
     ]
   },
   {
@@ -1387,9 +1343,6 @@
     ],
     "embarazo": "Categoría C: Usar solo si el beneficio justifica el riesgo. Evitar en el tercer trimestre.",
     "dosis": [
-      "Psicosis: 400-800 mg/día IM o VO (en varias dosis).",
-      "Vértigo: 50-150 mg/día VO.",
-      "Agitación: 100-200 mg IM (se puede repetir).",
       "bolo: Vértigo: 50 - 100 mg c/ 8 h Dilución: 250 mL ( 1 - 2 horas) Nota: el fármaco no tiene indicado su uso IV",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1416,9 +1369,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "2,5-10mcg/kg/min hasta 20mcg/kg/min",
-      "Dosis máxima: 40mcg/kg/min",
-      "Dilución: 250 mg en 230 ml de SSF o SG"
+      "bolo: No administrar en bolo",
+      "perfusión: 2,5-20 µg/kg/min (máx 40 µg/kg/min). Dilución: 250 mg en 230 mL SSF o SG5% (1 mg/mL). Dosis inicial: 2,5-5 µg/kg/min ajustar según respuesta",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -1444,10 +1397,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Efecto dopaminérgico: 1-4mcg/kg/min",
-      "Efecto Beta-1 cardíaco: >5mcg/kg/min",
-      "Efecto Alfa-1: >8mcg/kg/min",
-      "Dilución: 200 mg en 245 ml SSF o SG"
+      "bolo: No administrar en bolo",
+      "perfusión: Dosis dopaminérgica: 1-4 µg/kg/min. Dosis beta-1: 5-10 µg/kg/min. Dosis alfa-1: >10 µg/kg/min. Dilución: 200 mg en 245 mL SSF o SG5% (0,8 mg/mL)",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -1472,10 +1424,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Profilaxis quirúrgica: 2000-4000UI dependiendo del riesgo",
-      "Tratamiento de TVP: 150UI/kg/24h o 100UI/kg/12h",
-      "Angina inestable/IAMSEST: 100UI/kg junto con AAS",
-      "IAMCEST: 3000UI en bolo EV seguido de 100UI SC cada 12 horas"
+      "bolo: IAMCEST: 3000 UI IV en bolo (30 mg), seguido inmediatamente de dosis SC",
+      "perfusión: No está indicada la perfusión continua IV",
+      "sueros compatibles: Suero Salino (solo para bolo IV en IAMCEST)"
     ]
   },
   {
@@ -1497,8 +1448,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "0,15-0,3mg/kg (70kg = 20mg = 10ml; sedación durante 4-5 min)",
-      "Dosis adicionales: 0,1-0,2mg/kg sin exceder 3 ampollas (60mg)",
       "bolo: Dosis: 0,15 - 0,30 mg/kg. En ancianos 0,1 - 0,2 mg/kg Dilución: Sin diluir o 5 mL (10 mg) + 5 mL suero (1 mg/mL)",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino"
@@ -1526,8 +1475,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Hemofilia B: Igual a factor IX recombinante",
-      "Sobredosis de anticoagulantes orales: Dosis suficiente para normalizar INR (15-40UI/kg)"
+      "bolo: INR 2.0 - 3.9: 25 UI/kg (1 mL/kg) INR 4.0 - 6.0: 35 UI/kg (1,4 mL/kg) INR > 6.0: 50 UI/kg (2 mL/kg)",
+      "perfusión: Dilución: colocar vial disolvente en supercicie plana y conectar con el terminal azul hacia abajo, ajustándolo al tapón del disolvente. Seguidamente colocar el vial de polvo sobre supercicie plana e invertir el disolvente hasta ajustar ambos viales a través del conector. Una vez disuelto, cargar con una jeringa y administrar en 2-3 minutos",
+      "sueros compatibles: Sin diluir"
     ]
   },
   {
@@ -1572,9 +1522,6 @@
     ],
     "embarazo": "C",
     "dosis": [
-      "IV: 1-2 µg/kg lento en 2-5 minutos, repetir si es necesario",
-      "Diluido 3ml (150mcg) en 12ml de SSF = 10mcg/ml",
-      "Diluido 2ml (100mcg) en 8ml de SSF = 10mcg/ml",
       "bolo: Dosis analgesia: 1 -2 µg/kg Dilución: 100 µg (2 mL) + 8 mL suero (10 µg / mL) en 30 - 60 segundos",
       "perfusión: Dosis: 0,5 - 2 µg/kg/h Dilución: 1500 µg en 220 mL (7 µg/mL) (5 - 20 mL/h)*",
       "sueros compatibles: Suero Salino"
@@ -1605,8 +1552,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "Bolo: 2mg/kg en 50 ml SG",
-      "Perfusión hora 1: 1.5mg/kg/h en 100 de SG a pasar en 1h (100ml/h)",
       "bolo: Dosis inicial: 2 mg/kg Dilución: en 50 mL suero (15 - 20 minutos)",
       "perfusión: 1ª hora: 1,5 mg/kg/h diluir en 100 mL (100 mL/h) 2ª hora y siguientes: 0,1 - 0,25 mg/kg/h disminuyendo dosis un 20% por hora y suspenderla a las 4 horas. Dosis máxima: 600 mg en 24 horas",
       "sueros compatibles: Suero glucosa"
@@ -1634,7 +1579,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Bolo: 0.5mg sin dilución"
+      "bolo: 0,2 mg en 15 segundos sin diluir. Repetir 0,1 mg cada 60 segundos hasta respuesta (máx 1 mg total)",
+      "perfusión: 0,1-0,4 mg/h si recidiva sedación. Dilución: 1 mg en 100 mL SSF",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -1714,9 +1661,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "hiperpotasemiaGrave: 2 amp (20ml) en 5 min iv, repetir cada 5 min si es necesario",
-      "hipocalcemiaGrave: 10ml en 50ml SG5% o SSF en 10-20 min, monitorizar cardiaca. Perfusión: 0,5-1,5mg/kg/h de Ca con controles cada 6h",
-      "intoxicacionAntagonistasCalcio: 30-60ml iv en 10 min, repetir cada 20 min o mantener perfusión de 0,6-1,2ml/Kg/h"
+      "bolo: Bolus inicial: 1 - 2 ampollas Dilución: 50 - 100 mL suero (10 - 15 min)",
+      "perfusión: Dilución: 6 ampollas en 500 mL suero . Administrar en 10 horas (50 mL/h)",
+      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino"
     ]
   },
   {
@@ -1734,7 +1681,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "hipoglucemia: Equivalente a 25ml de SG40% o 20ml de SG50%"
+      "bolo: Hipoglucemia: 25-50 mL de SG50% (o 40-80 mL de SG33%) IV lento en vena gruesa",
+      "perfusión: No está indicada la perfusión continua con SG50%. Continuar con SG5-10% de mantenimiento",
+      "sueros compatibles: Sin diluir (solución hipertónica lista para usar)"
     ]
   },
   {
@@ -1764,10 +1713,6 @@
     "efectos_secundarios": [],
     "embarazo": "FDA: C",
     "dosis": [
-      "agitaciónPsicomotora: 5mg im, repetir cada hora (máx 20mg/día)",
-      "sdConfusional: 1-10mg im (máx 10mg/día)",
-      "coreaHuntington: 2-5mg im, repetir según necesidad (máx 10mg/día)",
-      "profilaxisNVPostoperatorios: 1-2mg im",
       "bolo: Neuroléptico: 5 - 10 mg Agitación psicomotriz: 5 - 10 mg Antiemético: 2,5 - 5 mg Dilución: en 50 mL suero en 5 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1799,8 +1744,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "tratamientoTVPTEP: Bolo inicial 80UI/Kg o 5000UI, continuar con perfusión 18UI/Kg/h (o 1300UI/h). Ajustar según TTPA",
-      "anginaInestableIAM: Bolo inicial de 5000UI, seguido de 32000UI/24h en perfusión continua"
+      "bolo: Bolus inicial: 5.000 UI en 50 mL suero en 15 minutos Preparación heparinización catéter: 1 mL (1.000 UI) en 50 mL suero (administrar 3 cc)",
+      "perfusión: Dosis: 18 UI/kg/h. Ajustar segú n TTPa Dilución: 25.000 UI en 500 mL de suero (50 UI/mL) (21 mL /h)",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -1862,9 +1808,6 @@
     "efectos_secundarios": [],
     "embarazo": "Puede afectar a suprarrenales fetales y causar microcefalia y hepatomegalia. FDA: C",
     "dosis": [
-      "bolo: Entre 3 y 5 minutos",
-      "perfusión (continua): Diluir en 500ml de suero compatible, 25mg/min con bomba de infusión",
-      "perfusión (intermitente): Diluir en 100ml de suero compatible, 25mg/min",
       "bolo: Dosis: 100 - 200 mg/ dia en varias tomas Dilución: 50 mL en 10 minutos (evitar bolo directo)",
       "perfusión: Dilución: 200 mg en 100 mL de suero (2 - 4 mL/hora) sin sobrepasar los 6 gramos/dıá",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1889,7 +1832,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "perfusión: Disolver 2,5 gramos en 100 ml de SF, SG5%, o Ringer Lactato, administrar en 15 minutos. Puede repetirse",
       "bolo: Dosis: 5 gramos que puede repetirse en pacientes comprometidos Dilución: diluir en 200 mL de suero y administrar durante 15 minutos. La segunda dosis debe administrarse en un tiempo de entre 15 minutos y 2 horas (segú n estado del paciente)",
       "perfusión: No se recomienda infusió n continua",
       "sueros compatibles: Suero Salino"
@@ -1922,12 +1864,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "general: 2 - 10mcg/min. Diluir 2 ampollas (0,4mg) en 100ml de SF o SG5%",
-      "infusiónVelocidad (2mcg/min): 30ml/h",
-      "infusiónVelocidad (4mcg/min): 60ml/h",
-      "infusiónVelocidad (6mcg/min): 90ml/h",
-      "infusiónVelocidad (8mcg/min): 120ml/h",
-      "infusiónVelocidad (10mcg/min): 150ml/h"
+      "bolo: No administrar en bolo",
+      "perfusión: 2-10 µg/min. Dilución: 0,4 mg en 100 mL SSF o SG5% (4 µg/mL). Velocidad: 2 µg/min=30 mL/h, 4 µg/min=60 mL/h, 6 µg/min=90 mL/h",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -1955,7 +1894,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "general: 10 - 30mg cada 4-6h, máximo 2 días. Máximo diario: 90mg/día (ancianos 60mg/día)",
       "bolo: Dosis: 10 mg (30 si el dolor es muy intenso) c/4 - 6 h. (Máx: 90 mg/dıá ) Dilución: añ adir 2 mL de suero al mL de la ampolla (30 mg/ 3 mL). Diluir en 50 - 100 mL de suero. Administrar en 5 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -1998,8 +1936,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "Bolo: 10-50mg c/5min hasta max 200mg sin diluir",
-      "perfusión (velocidad): 250mg en 250 ml de SSF o SG (1mg/ml)",
       "bolo: Crisis HTA: 50 mg c/ 5 min (Máx: 200 mg) HTA tras IAM: 15 mg Disección Aórtica: 10 - 50 mg c/ 5 min Dilución: sin diluir en 1 - 2 minutos",
       "perfusión: HTA tras IAM: 15 mg/h (Máx: 160 mg/ h) (1 - 160 mL/h) Disección Aórtica: 10 mg/h aumentado 10 mg/hc/5 min un máximo de 200 mg/h Dilución: 250 mg en 250 mL de suero (1mg/mL)",
       "sueros compatibles: Suero glucosa, Suero Salino"
@@ -2028,12 +1964,6 @@
     "efectos_secundarios": [],
     "embarazo": "Categoría C",
     "dosis": [
-      "general: No usar IM ni IV en bolus",
-      "perfusión: Diluido en 50 a 100 ml de SF o SG5%, administrar en 15 minutos",
-      "carga (rápida): 1500mg en 5 min",
-      "carga (lenta): 500mg en 15 min",
-      "mantenimiento: 500mg/12h en monoterapia",
-      "mantenimiento: 250-500mg/12h en terapia coadyuvante",
       "bolo: Dosis Máxima: 1000 - 1500 mg c/ 12 horas Dilución: en 50 mL suero en 15 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -2067,12 +1997,6 @@
     "efectos_secundarios": [],
     "embarazo": "Categoría B",
     "dosis": [
-      "antiarrítmico (fibrilaciónVent/taquicardiaSinPulso): 1-1.5mg/kg IV, repetir cada 5-10min, máximo 3mg/kg",
-      "antiarrítmico (taquicardiaSostenida): 0.5-0.75mg/kg IV en 2 minutos, repetir cada 5 minutos, máximo 200mg",
-      "anticonvulsivante (dosisCarga): 100mg IV lento, repetir si necesario hasta 200mg",
-      "perfusión (dosis): 1-4 mg/min",
-      "perfusión (preparación): Diluir 1g (20ml de solución al 5%) en 230ml de SG5% (4mg/ml)",
-      "perfusión (velocidad): 15-60ml/h",
       "bolo: TV monomórfica: 1 - 1,5 mg/kg FV o TVSP: 1,5 mg/kg Dilución: sin diluir en 10 segundos",
       "perfusión: Dosis: 0,5 - 4 mg/kg/h Dilución: 1000 mg en 250 mL de suero (4 mg/mL) (8 - 70 mL/h)*",
       "sueros compatibles: Suero glucosa, Suero Salino"
@@ -2110,10 +2034,9 @@
     "efectos_secundarios": [],
     "embarazo": "Categoría C",
     "dosis": [
-      "hipertensiónIntracraneal (inicio): 0.5-2g/kg en solución al 20% en 20-30 min",
-      "hipertensiónIntracraneal (mantenimiento): 0.25-0.5g/kg cada 4-6h",
-      "fracasoRenal (inicio): 0.25-1g/kg en solución al 10-20%",
-      "diuresisForzada (inicio): 0.25-1g/kg en solución al 20%"
+      "bolo: Dosis presión intraocular: 200 mg/kg lento, seguido de 0,5 - 1 g/kg al 20% en 20 - 40 min. Dosis oliguria o IRA: 100 mL al 20% en 5 minutos, si no hay respuesta, repetir dosis Dilución: frasco preparado para administrar",
+      "perfusión: Dosis PIC elevada: 0,25 - 1,50 g/kg (87 - 525 mL/h al 20%)*",
+      "sueros compatibles: Sin diluir"
     ]
   },
   {
@@ -2146,11 +2069,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "analgésico_antipirético (dosisInicial): 1-2g IM/IV, repetir cada 6-8h",
-      "analgésico_antipirético (diluciónIV): ½-1 amp en 100ml de SF0.9% e infundir en 5-10 min",
-      "analgésico_antipirético (dosisMáxima): 8g/día",
-      "perfusión (preparación): 3 amp/15ml (6g) + 235ml SSF o SG5% (1ml/24mg)",
-      "perfusión (velocidad): 10ml/h",
       "bolo: Dosis: 2 gramos c/ 8 horas Dilución: en 50 mL suero en 20 - 30 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -2186,11 +2104,6 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "administración (posibilidades): SC, IM, IV",
-      "administración (dilución): Reconstituir con su disolvente. Estable 48h a temperatura ambiente",
-      "administración (compatibles): ['SF', 'SG5%', 'Ringer lactato']",
-      "antiinflamatorio_antialérgico (dosisInicial): 1-2mg/kg IV lento en 1 minuto",
-      "antiinflamatorio_antialérgico (dosisMantenimiento): 0.5-1mg/kg cada 4-6h",
       "bolo: Asma: 30 - 90 mg/dıá Status asmático: 250 - 500 mg Anafilaxia: 250 - 500 mg Dilución: reconstituir con 5 mL API y diluir al menos en 10 mL suero dosis menores de 100 mg (1 - 2 minutos) y en 100 - 250 mL las dosis de 250 mg o superior (30 - 60 minutos)",
       "perfusión: Crisis addisonianas: 16 - 32 mg seguidos de 16 mg durante 24 horas Esclerosis múltiple: 1 g/dıá Dilución: crisis addisoniana en 100 mL suero (50 mL/h). Esclerosis mú ltiple en 500 mL a 250 mL/h",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -2227,13 +2140,6 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "general (necesidadDilución): No",
-      "general (administración): ['IV', 'IM profundo']",
-      "general (compatibles): ['SF', 'SG5%', 'Ringer lactato']",
-      "dosisInicial: 10mg IM/IV lento en 1-2 min",
-      "dosisMantenimiento: 10mg IM/IV lento cada 4-6h",
-      "perfusión (intermitente): Diluir 10mg en 50-100ml de SF o SG5%, administrar en 15-30 min",
-      "perfusión (continua): Diluir 10mg en 250-500ml de SF o SG5%, administrar en 6-8h",
       "bolo: Dosis: 10 mg c/ 8 horas Dilución: sin diluir o 10 mg (2 mL) + 8 mL suero en 3 minutos",
       "perfusión: Vómitos por antineoplásicos: 0,5 mg/kg/hora durante 6 - 8 horas Dilución: 35 mg (7 mL) en 250 mL suero (31 - 41 mL/h)*",
       "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
@@ -2277,8 +2183,6 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "Perfusión: 50mg en 250 de SSF o SG (17-35 ml/h)",
-      "Bolo: 10mg  en 8 ml SSF o SG",
       "bolo: Sedación: 0,02 - 0,04 mg/Kg IOT: 0,1 - 0,3 mg/kg Anticonvulsivante: 2 - 5 mg Dilución: 2 mL (10 mg) + 8 mL de suero = 1mg/mL en 60 - 90 segundos",
       "perfusión: Ventilación Mecánica: 0,05 - 0,1 mg/kg/h (17 - 35 mL/h)* Anticonvulsivo: 0,001 - 0,015 mg/kg/min (21 - 315 mL/h)* Dilución: 50 mg / 250 mL de suero (0,2 mg/mL)",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -2311,11 +2215,6 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "intoxicación_desconocida_coma_tóxico (inicial): 0.4-2mg cada 2-3 min hasta respuesta o máximo 10mg",
-      "intoxicación_opiáceos (heroína_morfina): {'inicial': '0.01-0.03mg/kg cada 2-3 min, máximo 10mg', 'mantenimiento': '5-15mcg/kg/h'}",
-      "intoxicación_opiáceos (otros_opiáceos): {'inicial': '0.1mg/kg cada 2-3 min, máximo 10mg', 'mantenimiento': '5-15mcg/kg/h'}",
-      "shock_septico (inicial): 30mcg/kg IV",
-      "shock_septico (mantenimiento): 30-200mcg/kg/h",
       "bolo: Dosis: 0,4 - 2 mg c/2 min Máx: 10mg. En pacientes con toma de opioides cró nica, reducir la dosis a la mitad para evitar deprivació n/convulsiones Dilución: Sin diluir en 10 segundos",
       "perfusión: Dilución: 2 mg en 250 mL de suero Titular segú n respuesta",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -2358,9 +2257,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "dilucion: 50mg en 250 mL s.glucosado",
-      "inicial: 10 mcg/min, aumentar cada 3-5 min hasta controlar el dolor o descender TAS en un 10%",
-      "máxima: 200 mcg/min",
       "bolo: No administrar en bolo",
       "perfusión: IAM/Angina: 50 mg EAP: 50 mg HTA: 50 mg Dilución: 50 mg en 250 mL de suero Titular segú n respuesta al dolor y presió n arterial",
       "sueros compatibles: Suero glucosa, Suero Salino"
@@ -2401,9 +2297,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "inicial: 0.5 mcg/kg/min IV, aumentar cada 3-5 min",
-      "rango_terapéutico: 0.5-10 mcg/kg/min",
-      "máxima: 10 mcg/kg/min",
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 0,2 µg/kg/min ajustando segú n necesidad Dilución: 50 mg en 250 mL de suero (8 - 38 mL/h)*",
       "sueros compatibles: Suero glucosa"
@@ -2444,9 +2337,6 @@
     ],
     "embarazo": "C",
     "dosis": [
-      "dilución: 1 amp en 40 ml de SG5%",
-      "dilución 2: 12ml + 88 ml SG5%",
-      "dosis: 0,1-0,5mcg/kg/min",
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 0,01-2 µg/kg/min Dilución simple: 8 mg en 250 mL suero (32 µg/mL) (1,3 - 260 mL/h)* Dilución doble: 16 mg en 250 mL suero (64 µg/mL) (0,6 - 131 mL/h)*",
       "sueros compatibles: Suero glucosa"
@@ -2476,12 +2366,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "úlceraDuodenal: 20mg/24h durante un mes (mantenimiento 20mg/24h por un año)",
-      "úlceraAsociadaPylori: 20mg/12h por 1-2 semanas con antibioterapia",
-      "úlceraGástrica: 20mg/24h (cicatrización en 4 semanas)",
-      "profilaxisAINE: 20mg/24h",
-      "hemorragiaDigestivaAlta (bolo): 80mg (2 amp.)",
-      "hemorragiaDigestivaAlta (perfusión): 8mg/h (2.5 amp. en 250ml SSF a 21ml/h)"
+      "bolo: 40 mg IV en 100 mL SSF en 20-30 min. HDA: 80 mg IV en 15 min",
+      "perfusión: HDA: 8 mg/h (continuar tras bolo). Dilución: 160 mg en 250 mL SSF a 21 mL/h durante 72 h",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2505,8 +2392,9 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "quimioterapia: 8mg VO 1-2h antes del tratamiento, luego 8mg/12h VO o IV lenta",
-      "náuseasPostoperatorias: 4mg IV lenta al inducir anestesia"
+      "bolo: 4-8 mg IV lento en 30 segundos a 5 minutos. Dilución: 4-8 mg + 50 mL SSF",
+      "perfusión: No está indicada la perfusión continua de rutina",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2532,11 +2420,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "oral: 0.5-1g/4-6h (máximo 4g/día)",
-      "rectal: 50kg: 600mg/4-6h, máx 3g/día",
-      "IV (mayor50kg): 1g/4 veces al día, máx 4g/día",
-      "IV (menor50kg): 15mg/kg 4 veces al día, máx 60mg/kg/día",
-      "antídoto: N-acetil-cisteína",
       "bolo: Dosis: 1 gramo c/6 - 8 horas Dilución: frasco preparado para administrar en 15 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Sin diluir"
@@ -2564,9 +2447,9 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "mayor60kg: Dosis inicial 60mg, luego 10mg/día",
-      "menor60kg: Dosis inicial 60mg, luego 5mg/día",
-      "ancianos: Uso no recomendado (excepto balance riesgo-beneficio)"
+      "bolo: No existe formulación IV. Administración exclusivamente oral",
+      "perfusión: No está indicada la perfusión IV",
+      "sueros compatibles: No aplica (uso oral)"
     ]
   },
   {
@@ -2589,10 +2472,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "oral: 50mg/kg/día en 4-6 tomas",
-      "intramuscular: 50mg/kg en 4-8 dosis",
-      "intravenoso (carga): 50-100mg/5min (máx. 1-1.5g)",
-      "intravenoso (mantenimiento): 1-4mg/min, diluir 2g en 500ml de SSF o SG5%",
       "bolo: Bolus inicial: 50 - 100 mg c/5 min Dilución: diluir 1000 mg en 10 mL de suero (100 mg/mL). Dosis máx: 1 gramo",
       "perfusión: Dosis mantenimiento: 2 - 6 mg / min Dilución: 2 gr en 500 mL de suero (4 mg /mL) (120 - 360 mL / hora)",
       "sueros compatibles: Suero glucosa"
@@ -2624,9 +2503,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "oral: 150mg cada 8h, hasta máx. 300mg cada 8h",
-      "intravenoso (lenta): 1-2mg/kg (máx. 140mg)",
-      "intravenoso (infusión): 0.5-1mg/min por 1-3h (máx. 560mg/24h)",
       "bolo: Bolus directo: 1 - 2 mg /kg Dilución: sin diluir o en 50 mL (3 - 5 min)",
       "perfusión: Dosis mantenimiento: 0,5 - 1 mg /min (1 - 2 horas) Dilución: 210 mg en 150 mL de suero (1 mg /mL) (125 - 250 mL /h)",
       "sueros compatibles: Suero glucosa"
@@ -2653,8 +2529,6 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "inducción: 2-4mg/kg IV",
-      "mantenimiento: 3-12mg/kg/h en infusión continua",
       "bolo: Sedación superficial: 0,5 - 1 mg/kg durante 1 minuto (ancianos reducir dosis) Anestesia general: bolos 40 mg c/10 seg hasta signos de anestesia. Dilución: sin diluir. Vial 1% (1 mL = 10 mg) Vial 2% (1 mL = 20 mg)",
       "perfusión: Dosis: 1-8 mg/kg/h Dilución Vial 1%: ( 7 - 56 mL/h)* Dilución Vial 2%: (3,5 - 28 mL/h)* Sin diluir",
       "sueros compatibles: Sin diluir"
@@ -2678,8 +2552,9 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "intravenoso: 1mg neutraliza 100UI de heparina",
-      "administración: 10mg cada 2-3 minutos (máx. 50mg en 10 minutos)"
+      "bolo: Dosis por cada 100 UI Heparina: administrar 1 mg (0,1 mL) si el tiempo desde la administració n de la heparina es < 15 min. Administrar 5 mg (0,5 mL) si el tiempo desde la administració n de heparina es > 30 minutos. Dilución: diluir en 100 mL de suero. Administrar durante 10 minutos",
+      "perfusión: No está indicada la perfusión",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2703,10 +2578,9 @@
     "efectos_secundarios": [],
     "embarazo": "B",
     "dosis": [
-      "oral: 150mg cada 12h (o 300mg cada 24h) por 4-6 semanas",
-      "profilaxisMendelson: 150mg 90-120min antes de anestesia o 50mg IV lenta",
-      "intravenoso (intermitente): 50mg cada 6-8h en 15-20min",
-      "intravenoso (continua): 6.25-12.5mg/h"
+      "bolo: 50 mg IV lento diluido en 20 mL SSF en 5 min. Profilaxis Mendelson: 50 mg IV antes de anestesia",
+      "perfusión: 6,25-12,5 mg/h. Dilución: 150 mg en 250 mL SSF a 21 mL/h",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2726,9 +2600,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "boloIV: 0.45-0.6mg/kg",
-      "mantenimientoIV: 0.1-0.2mg/kg o 0.3-0.6mg/kg/h",
-      "perfusión: Diluir 100mg en 90ml SSF",
       "bolo: Dosis: 0,6 - 1,2 mg/kg Inducción IOT: Sin diluir en 60 segundos ISR: Sin diluir en 10 segundos",
       "perfusión: Dosis: 0,3-0,6 mg/kg/h Dilución: 100 mg en 100 mL de suero (1mg/mL) (21 - 63 mL/h)*",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -2755,9 +2626,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "inhalador: 100-200mcg cada 4-6h (máx 1.6mg/día)",
-      "nebulización: 2.5-5mg en 2-5ml SSF cada 4-6h",
-      "IV: 5mcg/min, ajustar a respuesta",
       "bolo: Dosis: 4 µg/kg (250 µg)* Dilución IV: 250 µg en 50 mL suero a pasar en 10 - 20 minutos c/4 h Bolus SC: 500 µg c/4 horas",
       "perfusión: Dosis: 4 - 8 µg/kg/h Dilución: 12,5 mg en 225 mL de suero (50 µg/mL) (6 - 12 mL/h)*",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -2783,10 +2651,8 @@
     "efectos_secundarios": [],
     "embarazo": "No recomendado",
     "dosis": [
-      "Varices esofágicas: 250mcg en bolo lento, seguido de 3mg en 500ml a 40ml/h",
-      "Fístulas pancreáticas: 250mcg/h tras curación",
       "bolo: Bolus inicial: 250 µg sin diluir en 3 minutos",
-      "perfusión: Perfusión: 6 mg / 24 horas (250 µg/hora) (durante 5 dias) Dilución: 6 mg en 500 mL (21 mL/h)",
+      "perfusión: Perfusión: 6 mg / 24 horas (250 µ g/hora ) (durante 5 dias) Dilución: 6 mg en 500 mL (21 mL/h)",
       "sueros compatibles: Suero Salino"
     ]
   },
@@ -2811,8 +2677,6 @@
     "efectos_secundarios": [],
     "embarazo": "C",
     "dosis": [
-      "inicio: 1-1.5mg/kg IV",
-      "mantenimiento: 0.04-0.07mg/kg/h",
       "bolo: Inducción anestésica: 1 - 2 mg/kg Dilución: diluir 100 mg + 8 mL suero (10 mg/mL) ( 10 - 30 segundos)",
       "perfusión: No se recomienda infusió n continua",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -2838,9 +2702,9 @@
     "efectos_secundarios": [],
     "embarazo": "D",
     "dosis": [
-      "hipomagnesemia: 1 amp en 50ml SG5% a pasar en 15 min",
-      "eclampsia: 1-4g cada 4h IM",
-      "arritmia: 1-2g bolo sin diluir en 2 min"
+      "bolo: Eclampsia/preeclampsia: 4-6 g IV en 15-20 min diluido en 100 mL SSF. Arritmia (TdP): 1-2 g IV en 1-2 min sin diluir o en 10 mL SSF",
+      "perfusión: Mantenimiento eclampsia: 1-2 g/h. Hipomagnesemia: 1 g en 50 mL SSF en 15 min. Dilución: 10 g en 250 mL SSF",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2860,8 +2724,6 @@
     "efectos_secundarios": [],
     "embarazo": "A",
     "dosis": [
-      "déficit: 100mg/día IM",
-      "encefalopatía: 100mg/día IV",
       "bolo: Deprivación alcohólica: 100 mg/dia Sd. Wernicke: 500 mg c/ 8 horas DéJicit vit. B1: 5 - 30 mg c/8 horas Suplemento nutrición parenteral: 6 mg/dıá Dilución: 100 mL suero 30 minutos Nota: el fármaco no tiene indicado su uso IV",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -2884,8 +2746,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "deprivación: 300-400mg/día durante 1-2 meses",
-      "discinesias: 600mg/día"
+      "bolo: Desintoxicación etílica: 100 mg c/ 8 h Corea Huntington grave: 400 mg c/ 8 h Delirium Tremens: 300 mg c/6 h Dosis: 50 - 100 mL en 30 minutos",
+      "perfusión: No está indicada la perfusión",
+      "sueros compatibles: Suero Salino"
     ]
   },
   {
@@ -2903,7 +2766,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "inicial: 180mg (2 comprimidos) luego 90mg cada 12h durante un año"
+      "bolo: No existe formulación IV. Administración exclusivamente oral",
+      "perfusión: No está indicada la perfusión IV",
+      "sueros compatibles: No aplica (uso oral)"
     ]
   },
   {
@@ -2921,7 +2786,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "perfusión: 12.5mg en 30min, seguido de 0.05-0.1mcg/kg/min"
+      "bolo: No administrar en bolo de alta dosis. Dosis de carga: 0,4 µg/kg/min durante 30 min",
+      "perfusión: Mantenimiento: 0,1 µg/kg/min durante 12-24 h. Dilución: 12,5 mg en 250 mL SSF (50 µg/mL)",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2939,8 +2806,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "IM_SC: No más de 400mg/día",
-      "perfusión: Diluir en 500ml SSF a pasar en 24h"
+      "bolo: Dosis: 50 - 100 mg c/ 8 horas Dilución: 50 mL suero en 5 - 10 minutos",
+      "perfusión: Dosis: 100 - 400 mg en 24 horas Dilución: 1 - 4 ampollas en 500 mL suero a 21 mL/h",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -2958,8 +2826,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "bolo: 25mg rápido",
-      "perfusión: 10-40mg/h",
       "bolo: Bolus: 25 mg pudiendo repetirse a los 5 min. Incrementar a 50 mg si no hay respuesta Sin diluir en 20 segundos",
       "perfusión: Dosis: 60 - 180 mg/h durante un máximo de 7 dias Dilución: 250 mg en 240 mL (1 mg/mL) 60 - 180 mL/h",
       "sueros compatibles: Suero Salino"
@@ -2982,7 +2848,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "TEP_TVP: 4400UI/kg en 10min"
+      "bolo: TEP masivo: 4400 UI/kg IV en 10 minutos. Dilución: diluir en 15 mL SSF",
+      "perfusión: TEP/TVP: 4400 UI/kg/h durante 12-24 horas. Dilución: diluir en 90 mL SSF",
+      "sueros compatibles: Suero Salino"
     ]
   },
   {
@@ -3001,7 +2869,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "IV: 5-10mg lento en 5min, repetir en 30min si necesario",
       "bolo: Dosis: 2,5 - 5 mg pudiendo repetir 5 - 10 mg (dosis máx: 20 mg) Dilución: 5 mg + 3 mL suero (1mg/mL) en 2 - 3 minutos",
       "perfusión: Dosis: 0,5 - 1 mg/kg/dı́a pudiéndose incrementar a 1,5 mg /kg/dıá Dilución: 7 ampollas en 500 mL de suero (11 mL/ h)*",
       "sueros compatibles: Suero Salino, Suero glucosa"
@@ -3022,7 +2889,6 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "IV: 50mg/12h",
       "bolo: Dosis: 200 - 300 mg c/ 12 horas Dilución: en 50 mL de suero en 15 minutos",
       "perfusión: No está indicada la perfusión",
       "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
@@ -3045,8 +2911,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "déficit: 10-20mg/día VO",
-      "neuropatía: 25-50mg/día"
+      "bolo: Dosis: Ver indicació n deseada Dilución: en 50 mL suero en 10 - 15 minutos",
+      "perfusión: No está indicada la perfusión",
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
     ]
   },
   {
@@ -3065,7 +2932,9 @@
     "efectos_secundarios": [],
     "embarazo": "",
     "dosis": [
-      "IV: 10-20mg/día, diluir en 100ml SG5%"
+      "bolo: Dosis: 5 - 10 mg Dilución: en 50 mL suero (15 - 30 minutos)",
+      "perfusión: No está indicada la perfusión",
+      "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },
   {
@@ -3904,7 +3773,7 @@
     "embarazo": "",
     "dosis": [
       "bolo: Bolo intravenoso/subcutáneo: 0,15 UI/kg",
-      "perfusión: Dosis: 0,15 UI/Kg/h (1 mL/ kg/ h) Dilución: 50 UI / 500 mL (0,1 UI/mL) (1 mL/ kg/h)",
+      "perfusión: Dosis: 0,15 UI/Kg/h (1 mL/ kg/ h) Dilución: 50 UI / 500 mL (0,1 UI/mL) (1 mL/ kg/h )",
       "sueros compatibles: Suero Salino, Suero glucosa"
     ]
   },

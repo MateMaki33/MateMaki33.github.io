@@ -21,15 +21,28 @@ const referencias = bibliografiaData.Bibliografia;
 </div>
 
 <style scoped>
-  .grid{
+  .grid {
     grid-template-columns: repeat(3, 1fr);
-    
-    @media(max-width: 768px){
-      display: flex;
-      flex-direction: column;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
     }
   }
-  .card{
-    height: 120px;
+
+  .card {
+    height: auto;
+    min-height: 80px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    transition: border-color 0.2s ease;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.88rem;
   }
 </style>
