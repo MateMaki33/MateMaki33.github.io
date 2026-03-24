@@ -279,6 +279,49 @@ import escalas from '../data/escalas';
       padding-top: 0.65rem;
       width: calc(100% - 1.5rem);
     }
+
+    /* Close button inside sidebar */
+    .mobile-close-item {
+      display: flex !important;
+      border-top: none !important;
+      padding-top: 0 !important;
+      width: 100% !important;
+      margin-bottom: 0.5rem;
+    }
+
+    .mobile-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 1px solid rgba(45, 156, 219, 0.25);
+      border-radius: 8px;
+      color: rgba(228, 239, 248, 0.65);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.55rem 1rem;
+      cursor: pointer;
+      width: calc(100% - 1.5rem);
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .mobile-close-btn:hover {
+      color: var(--color-subtitle);
+      border-color: rgba(45, 156, 219, 0.5);
+      background: rgba(45, 156, 219, 0.08);
+    }
+
+    .mobile-close-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+  }
+
+  .mobile-close-item {
+    display: none;
   }
 </style>
 
@@ -294,6 +337,12 @@ import escalas from '../data/escalas';
   <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
   <ul class="nav-list" id="main-menu" role="menubar">
+    <li class="mobile-close-item" role="none">
+      <button class="mobile-close-btn" id="mobile-close" aria-label="Cerrar menú">
+        <span class="mobile-close-icon">✕</span> Cerrar menú
+      </button>
+    </li>
+
     <li class="dropdown" role="none">
       <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
         Códigos <i class="chevron" aria-hidden="true">▾</i>
@@ -336,9 +385,10 @@ import escalas from '../data/escalas';
     teardown();
 
     const dropdowns = Array.from(document.querySelectorAll<HTMLElement>('.dropdown'));
-    const hamburger = document.getElementById('hamburger');
-    const navList   = document.getElementById('main-menu');
-    const overlay   = document.getElementById('nav-overlay');
+    const hamburger   = document.getElementById('hamburger');
+    const navList     = document.getElementById('main-menu');
+    const overlay     = document.getElementById('nav-overlay');
+    const mobileClose = document.getElementById('mobile-close');
 
     // ── Dropdown (desktop click-based) ──────────────────────────────
     function closeAllDropdowns() {
@@ -406,6 +456,9 @@ import escalas from '../data/escalas';
 
     overlay?.addEventListener('click', closeMobileMenu);
     cleanups.push(() => overlay?.removeEventListener('click', closeMobileMenu));
+
+    mobileClose?.addEventListener('click', closeMobileMenu);
+    cleanups.push(() => mobileClose?.removeEventListener('click', closeMobileMenu));
 
     // Close sidebar when a nav link is clicked (mobile)
     navList?.querySelectorAll('a').forEach(link => {
