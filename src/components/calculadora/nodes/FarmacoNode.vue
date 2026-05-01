@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
 import { Handle, Position } from '@vue-flow/core'
-import { useCalculadoraStore } from '../../../stores/calculadora'
+import { computed, ref } from 'vue'
+import { FARMACOS } from '../../../data/farmacos'
 import type { Farmaco } from '../../../stores/calculadora'
-import medicamentos from '../../../collections/medicamentos_normalizados.json'
-import { parseQuantityToMg, formatMg } from '../../../utils/unitConverter'
+import { useCalculadoraStore } from '../../../stores/calculadora'
+import { formatMg } from '../../../utils/unitConverter'
 
 const store = useCalculadoraStore()
-const allFarmacos = medicamentos as unknown as Farmaco[]
+const allFarmacos = Object.values(FARMACOS) as Farmaco[]
 
 const searchTerm = ref('')
 const showDropdown = ref(false)
+const showDosis = ref(false)
 
 const filteredFarmacos = computed(() => {
   const term = searchTerm.value.trim().toLowerCase()
@@ -24,6 +25,7 @@ function selectFarmaco(f: Farmaco) {
   store.seleccionarFarmaco(f)
   searchTerm.value = f.nombre
   showDropdown.value = false
+  showDosis.value = false
 }
 
 function onInput() {
@@ -38,19 +40,19 @@ function onBlur() {
   setTimeout(() => { showDropdown.value = false }, 200)
 }
 
-const mgPorUnidad = computed(() => {
-  if (!store.farmacoPresentacion?.cantidad) return null
-  return parseQuantityToMg(store.farmacoPresentacion.cantidad)
-})
-
-const mgPorUnidadLabel = computed(() => {
-  if (mgPorUnidad.value === null) return null
-  return formatMg(mgPorUnidad.value)
-})
+const mgPorUnidadLabel = computed(() =>
+  store.farmacoMgPorUnidad !== null ? formatMg(store.farmacoMgPorUnidad) : null
+)
 
 const totalLabel = computed(() =>
   store.farmacoTotalMg > 0 ? formatMg(store.farmacoTotalMg) : null
 )
+
+const tipoBadgeClass = (tipo: string) => {
+  if (tipo === 'bolo') return 'badge-bolo'
+  if (tipo === 'perfusion') return 'badge-perf'
+  return 'badge-otros'
+}
 </script>
 
 <template>
@@ -96,52 +98,74 @@ const totalLabel = computed(() =>
         <select v-model="store.farmacoPresentacion" class="field-select">
           <option
             v-for="p in store.farmacoSeleccionado.presentaciones"
-            :key="p.cantidad + p.forma"
+            :key="`${p.cantidad.valor}${p.cantidad.unidad}${p.forma}`"
             :value="p"
-          >{{ p.forma }} · {{ p.cantidad }}<template v-if="p.volumen"> / {{ p.volumen }}</template></option>
+          >{{ p.forma }} · {{ p.cantidad.valor }} {{ p.cantidad.unidad }}<template v-if="p.volumen"> / {{ p.volumen.valor }} {{ p.volumen.unidad }}</template></option>
         </select>
 
         <!-- Presentation info chip -->
         <div v-if="store.farmacoPresentacion" class="pres-chip">
-          <span class="pres-qty">{{ store.farmacoPresentacion.cantidad }}</span>
-          <span v-if="store.farmacoPresentacion.volumen" class="pres-vol">en {{ store.farmacoPresentacion.volumen }}</span>
+          <span class="pres-qty">{{ store.farmacoPresentacion.cantidad.valor }} {{ store.farmacoPresentacion.cantidad.unidad }}</span>
+          <span v-if="store.farmacoPresentacion.volumen" class="pres-vol">en {{ store.farmacoPresentacion.volumen.valor }} {{ store.farmacoPresentacion.volumen.unidad }}</span>
           <span v-if="mgPorUnidadLabel" class="pres-mg-tag">{{ mgPorUnidadLabel }}/ud</span>
-          <span v-else class="pres-warn-tag">mg no detectados</span>
         </div>
 
-        <!-- Units -->
-        <p class="field-label top-gap">Unidades / ampollas a añadir</p>
-        <div class="stepper">
-          <button class="step-btn" @click="store.farmacoCantidad = Math.max(0.5, store.farmacoCantidad - 1)">−</button>
+        <!-- Mass input -->
+        <p class="field-label top-gap">Cantidad de fármaco a añadir</p>
+        <div class="mass-row">
           <input
-            v-model.number="store.farmacoCantidad"
-            type="number"
-            min="0.5"
-            step="0.5"
-            class="step-val"
-            aria-label="Cantidad de unidades"
-          />
-          <button class="step-btn" @click="store.farmacoCantidad = store.farmacoCantidad + 1">+</button>
-        </div>
-
-        <!-- Manual mg input when parsing fails -->
-        <div v-if="mgPorUnidad === null" class="manual-block">
-          <p class="field-label" style="color:rgba(251,146,60,0.6)">⚠ Introduce mg totales manualmente</p>
-          <input
-            v-model.number="store.farmacoMgManual"
+            v-model.number="store.farmacoMasaValor"
             type="number"
             min="0"
-            step="0.1"
-            class="field-input"
-            placeholder="mg en bolsa"
+            step="any"
+            class="mass-val"
+            placeholder="0"
+            aria-label="Cantidad de fármaco"
+            @mousedown.stop
+            @wheel.stop
           />
+          <div class="unit-btns">
+            <button
+              v-for="u in (['mcg', 'mg', 'g', 'UI'] as const)"
+              :key="u"
+              :class="['unit-btn', store.farmacoMasaUnidad === u && 'active']"
+              @click="store.farmacoMasaUnidad = u"
+            >{{ u }}</button>
+          </div>
         </div>
+
+        <!-- Equivalent vials hint -->
+        <p v-if="store.farmacoEquivalenteUnidades !== null" class="equiv-hint">
+          ≈ {{ store.farmacoEquivalenteUnidades }} ud. de la presentación seleccionada
+        </p>
 
         <!-- Total -->
         <div v-if="totalLabel" class="total-row">
           <span class="total-label">Total en bolsa</span>
           <strong class="total-value">{{ totalLabel }}</strong>
         </div>
+
+        <!-- Dosis reference -->
+        <template v-if="store.farmacoSeleccionado.dosis?.length">
+          <button class="dosis-toggle" @click="showDosis = !showDosis">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" class="toggle-icon" :class="{ rotated: showDosis }">
+              <path d="M3 6l5 5 5-5"/>
+            </svg>
+            Dosis de referencia
+          </button>
+          <transition name="slide">
+            <div v-if="showDosis" class="dosis-list">
+              <div
+                v-for="d in store.farmacoSeleccionado.dosis"
+                :key="d.tipo + d.descripcion"
+                class="dosis-item"
+              >
+                <span :class="['dosis-badge', tipoBadgeClass(d.tipo)]">{{ d.tipo }}</span>
+                <p class="dosis-desc">{{ d.descripcion }}</p>
+              </div>
+            </div>
+          </transition>
+        </template>
       </template>
     </div>
 
@@ -244,7 +268,7 @@ const totalLabel = computed(() =>
   width: 100%;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(99, 102, 241, 0.22);
-  color: rgba(185, 195, 255, 0.9);
+  color: #6366f1;
   padding: 0.42rem 0.55rem;
   border-radius: 6px;
   font-size: 0.81rem;
@@ -279,64 +303,67 @@ const totalLabel = computed(() =>
   font-weight: 700;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
 }
-.pres-warn-tag {
-  margin-left: auto;
-  background: rgba(251, 146, 60, 0.12);
-  color: rgba(251, 146, 60, 0.7);
-  padding: 0.08rem 0.38rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
+
+/* Mass input */
+.mass-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
 }
 
-/* Stepper */
-.stepper {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-.step-btn {
-  width: 34px;
-  height: 34px;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
-  color: #a5b4fc;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.13s;
-  flex-shrink: 0;
-}
-.step-btn:hover { background: rgba(99, 102, 241, 0.22); border-color: #6366f1; }
-
-.step-val {
+.mass-val {
   flex: 1;
-  text-align: center;
+  min-width: 0;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(99, 102, 241, 0.22);
+  border: 1px solid rgba(99, 102, 241, 0.28);
   color: rgba(200, 210, 255, 0.95);
-  padding: 0.35rem 0.3rem;
+  padding: 0.42rem 0.55rem;
   border-radius: 6px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   outline: none;
-  min-width: 0;
+  transition: border-color 0.14s;
+  text-align: right;
 }
-.step-val:focus { border-color: #6366f1; }
+.mass-val:focus { border-color: #6366f1; }
+.mass-val::placeholder { color: rgba(165, 180, 252, 0.2); font-weight: 400; }
 
-/* Manual block */
-.manual-block {
-  background: rgba(251, 146, 60, 0.07);
-  border: 1px solid rgba(251, 146, 60, 0.18);
-  border-radius: 6px;
-  padding: 0.5rem 0.65rem;
+.unit-btns {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 0.2rem;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.unit-btn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: rgba(165, 180, 252, 0.45);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.66rem;
+  font-weight: 700;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  letter-spacing: 0.04em;
+  padding: 0 0.5rem;
+  flex: 1;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.unit-btn:hover { background: rgba(99, 102, 241, 0.14); color: #a5b4fc; border-color: rgba(99,102,241,0.4); }
+.unit-btn.active {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #6366f1;
+  color: #c7d2fe;
+}
+
+/* Equivalent hint */
+.equiv-hint {
+  font-size: 0.68rem;
+  color: rgba(165, 180, 252, 0.38);
+  margin: 0.1rem 0 0;
+  font-style: italic;
 }
 
 /* Total */
@@ -363,9 +390,79 @@ const totalLabel = computed(() =>
   color: #a5b4fc;
 }
 
-/* Transition */
+/* Dosis toggle */
+.dosis-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(165, 180, 252, 0.45);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-family, 'Barlow', sans-serif);
+  padding: 0;
+  transition: color 0.12s;
+}
+.dosis-toggle:hover { color: rgba(165, 180, 252, 0.75); }
+.toggle-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform 0.18s;
+}
+.toggle-icon.rotated { transform: rotate(180deg); }
+
+/* Dosis list */
+.dosis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.dosis-item {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+  padding: 0.4rem 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.dosis-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.05rem 0.32rem;
+  align-self: flex-start;
+}
+.badge-bolo  { background: rgba(251, 146, 60, 0.15); color: rgba(251, 146, 60, 0.85); }
+.badge-perf  { background: rgba(99, 102, 241, 0.18); color: #a5b4fc; }
+.badge-otros { background: rgba(148, 163, 184, 0.12); color: rgba(148, 163, 184, 0.6); }
+
+.dosis-desc {
+  font-size: 0.73rem;
+  color: rgba(185, 200, 255, 0.6);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Transitions */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.12s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+.slide-enter-active { transition: opacity 0.15s, transform 0.15s; }
+.slide-leave-active { transition: opacity 0.1s; }
+.slide-enter-from  { opacity: 0; transform: translateY(-4px); }
+.slide-leave-to    { opacity: 0; }
 
 :deep(.node-handle) {
   width: 10px !important;

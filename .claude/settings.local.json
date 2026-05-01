@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(grep -E \"\\\\.\\(json|js|ts\\)$\")",
+      "Bash(node normalize_medicamentos.js)",
+      "Bash(mv normalize_medicamentos.js normalize_medicamentos.cjs)",
+      "Bash(node normalize_medicamentos.cjs)",
+      "Bash(node -e ' *)",
+      "Bash(node normalize2.cjs)",
+      "Bash(git checkout *)",
+      "Bash(git show *)"
     ]
   }
 }
