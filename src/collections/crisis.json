@@ -1,5 +1,5 @@
 {
-  "codigo_donante": {
+  "codigo_crisis": {
     "criterios_inclusion": [
         "Estatus con afectación del nivel de consciencia",
         "Estatus en < 16 años",
@@ -8,6 +8,10 @@
         "Déficit neurológico post ictal",
         "Primera crisis en < 1 mes de vida"
 
+    ],
+    "criterios_exclusion":[
+        "Grán dependiente Rankin 3-4",
+        "En programa de cuidados paliativos"
     ],
     "traslado": {
         "hospitales_pediatricos":[
