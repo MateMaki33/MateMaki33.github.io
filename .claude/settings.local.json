@@ -9,7 +9,21 @@
       "Bash(node -e ' *)",
       "Bash(node normalize2.cjs)",
       "Bash(git checkout *)",
-      "Bash(git show *)"
+      "Bash(git show *)",
+      "PowerShell(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4321/codigos/trauma)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4321/codigos/quemados)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4321/)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/tmp/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,2200 --screenshot=/tmp/trauma.png --virtual-time-budget=4000 \"http://localhost:4321/codigos/trauma\")",
+      "Bash(ls -la /tmp/trauma.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1100,820 --force-device-scale-factor=1.4 --screenshot=/tmp/trauma2.png --virtual-time-budget=3500 \"http://localhost:4321/codigos/trauma\")",
+      "Bash(cp /tmp/trauma2.png \"C:/Users/User/Desktop/MateMaki33.github.io/.claude/trauma_preview2.png\")",
+      "Read(//c/Users/User/AppData/Local/Temp/claude/C--Users-User-Desktop-MateMaki33-github-io/849bf6b9-e366-4e6e-84d4-df5bef66464e/tasks/**)"
     ]
   }
 }

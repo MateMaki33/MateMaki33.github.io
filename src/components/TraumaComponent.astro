@@ -1,40 +1,257 @@
 ---
 import traumaData from "../collections/trauma.json";
+import pedData from "../collections/trauma_pediatrico.json";
 import IndiceShocKComponent from "./calculators/IndiceShocKComponent.vue";
 import TraumaScoreComponent from "./calculators/TraumaScoreComponent.vue";
+import IndiceTraumaPediatricoComponent from "./calculators/IndiceTraumaPediatricoComponent.vue";
+import SuperficieQuemadaPediatricaComponent from "./calculators/SuperficieQuemadaPediatricaComponent.vue";
+import CodigoPptComponent from "./calculators/CodigoPptComponent.vue";
+import PrealertaAtmisterComponent from "./calculators/PrealertaAtmisterComponent.vue";
+import CriteriosGravedadQuemadurasComponent from "./calculators/CriteriosGravedadQuemadurasComponent.vue";
 const activacion = traumaData.codigo_trauma.criterios_activacion;
 const hospitales = traumaData.codigo_trauma.hospitales_activacion;
 const valoracion = traumaData.valoracion_primaria;
+const ped = pedData.trauma_pediatrico;
 ---
 
 <div class="container">
-  <h1>Código Trauma</h1>
-  
-  <div class="grid">
-    <!-- Grupo 1: Información general -->
-    <button onclick="modal_activacion.showModal()" class="btn">Criterios de Activación</button>
-    <button onclick="modal_hospitales.showModal()" class="btn">Hospitales</button>
-    <button onclick="modal_paciente.showModal()" class="btn">Paciente / Incidente</button>
-  </div>
+  <header class="page-head">
+    <span class="eyebrow">Madrid 112 · CAM</span>
+    <h1>Código Trauma</h1>
+    <div class="page-divider"></div>
+  </header>
 
-  <h2>Valoración</h2>
+  <!-- ═══ ACTIVACIÓN Y DESTINO ═══ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Activación</span>
+      <h2>Código &amp; destino</h2>
+    </div>
+    <div class="btn-grid">
+      <button onclick="modal_activacion.showModal()" class="btn">Criterios de Activación</button>
+      <button onclick="modal_hospitales.showModal()" class="btn">Hospitales</button>
+      <button onclick="modal_paciente.showModal()" class="btn">Paciente / Incidente</button>
+    </div>
+  </section>
 
-  <div class="grid">
-    <!-- Grupo 2: Estado del paciente -->
-    <button onclick="modal_respiratorio.showModal()" class="btn">Respiratorio</button>
-    <button onclick="modal_circulatorio.showModal()" class="btn">Circulatorio</button>
-    <button onclick="modal_neuro.showModal()" class="btn">Neurológico</button>
-    <button onclick="modal_lesiones.showModal()" class="btn">Lesiones</button>
-    <button onclick="modal_farmacos.showModal()" class="btn">Fármacos y Vías</button>
-    <button onclick="modal_protocolos.showModal()" class="btn">Protocolos / Escalas</button>
-  </div>
-   
-  <div class="calc-buttons">
-    <IndiceShocKComponent client:load></IndiceShocKComponent>
-    <TraumaScoreComponent client:load></TraumaScoreComponent>
-  </div>
+  <!-- ═══ VALORACIÓN PRIMARIA ═══ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Valoración primaria</span>
+      <h2>Exploración ABCDE</h2>
+    </div>
+    <div class="btn-grid">
+      <button onclick="modal_respiratorio.showModal()" class="btn">Respiratorio</button>
+      <button onclick="modal_circulatorio.showModal()" class="btn">Circulatorio</button>
+      <button onclick="modal_neuro.showModal()" class="btn">Neurológico</button>
+      <button onclick="modal_lesiones.showModal()" class="btn">Lesiones</button>
+      <button onclick="modal_farmacos.showModal()" class="btn">Fármacos y Vías</button>
+      <button onclick="modal_protocolos.showModal()" class="btn">Protocolos / Escalas</button>
+    </div>
+  </section>
+
+  <!-- ═══ ESCALAS ═══ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">Escalas</span>
+      <h2>Calculadoras de gravedad</h2>
+    </div>
+    <div class="btn-grid">
+      <IndiceShocKComponent client:load></IndiceShocKComponent>
+      <TraumaScoreComponent client:load></TraumaScoreComponent>
+    </div>
+  </section>
+
+  <!-- ═══ TRAUMA PEDIÁTRICO ═══ -->
+  <section class="section panel ped-panel">
+    <div class="section-head">
+      <span class="eyebrow">
+        <span class="ped-badge">PED</span> Población pediátrica
+      </span>
+      <h2>Trauma pediátrico</h2>
+      <p class="section-note">{ped.intro}</p>
+    </div>
+
+    <div class="ped-block">
+      <h3 class="ped-block-title">Activación &amp; transferencia</h3>
+      <div class="btn-grid">
+        <CodigoPptComponent client:load />
+        <PrealertaAtmisterComponent client:load />
+        <button class="btn" onclick="modal_ped_constantes.showModal()">Constantes Vitales</button>
+        <button class="btn" onclick="modal_ped_sri.showModal()">SRI · Intubación</button>
+        <CriteriosGravedadQuemadurasComponent client:load label="Gravedad Quemaduras" />
+      </div>
+    </div>
+
+    <div class="ped-block">
+      <h3 class="ped-block-title">Escalas pediátricas</h3>
+      <div class="btn-grid">
+        <IndiceTraumaPediatricoComponent client:load />
+        <SuperficieQuemadaPediatricaComponent client:load />
+      </div>
+    </div>
+  </section>
 
 </div>
+
+<!-- ═══ Modales Trauma Pediátrico ═══ -->
+<dialog id="modal_ped_constantes">
+  <h2>{ped.constantes.titulo}</h2>
+  <div class="table-wrap">
+    <table class="ped-table">
+      <thead>
+        <tr>{ped.constantes.cabeceras.map((c) => <th>{c}</th>)}</tr>
+      </thead>
+      <tbody>
+        {ped.constantes.filas.map((fila) => (
+          <tr>
+            {fila.map((cell, i) => (
+              <td class={i === 0 ? "col-head" : ""}>{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">{ped.constantes.nota}</p>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_ped_sri">
+  <h2>{ped.sri.titulo}</h2>
+  <h3>Sedantes</h3>
+  <div class="table-wrap">
+    <table class="ped-table">
+      <thead>
+        <tr><th>Fármaco</th><th>Dosis</th><th>Observaciones</th></tr>
+      </thead>
+      <tbody>
+        {ped.sri.sedantes.map((s) => (
+          <tr>
+            <td class="col-head">{s.farmaco}</td>
+            <td class="col-dose">{s.dosis}</td>
+            <td>{s.obs}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <h3>Paralizantes musculares</h3>
+  <div class="table-wrap">
+    <table class="ped-table">
+      <thead>
+        <tr><th>Fármaco</th><th>Dosis</th><th>Observaciones</th></tr>
+      </thead>
+      <tbody>
+        {ped.sri.paralizantes.map((p) => (
+          <tr>
+            <td class="col-head">{p.farmaco}</td>
+            <td class="col-dose">{p.dosis}</td>
+            <td>{p.obs}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<style>
+  /* Pediatric module — distinct amber-accented panel */
+  .ped-panel {
+    --accent: var(--neon-orange);
+    gap: 1.5rem;
+    border-color: rgba(245, 158, 11, 0.28);
+    background:
+      linear-gradient(180deg, rgba(245, 158, 11, 0.05), transparent 55%),
+      var(--color-card-bg);
+  }
+  .ped-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #1a1206;
+    background: var(--neon-orange);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-right: 0.35rem;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+  }
+
+  .ped-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .ped-block-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(228, 239, 248, 0.5);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+  }
+
+  /* Tables */
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid rgba(45, 156, 219, 0.18);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+  .ped-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    min-width: 460px;
+  }
+  .ped-table th {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-subtitle);
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    background: rgba(45, 156, 219, 0.08);
+    border-bottom: 1px solid rgba(45, 156, 219, 0.25);
+    white-space: nowrap;
+  }
+  .ped-table td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid rgba(45, 156, 219, 0.08);
+    color: rgba(228, 239, 248, 0.82);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .ped-table tbody tr:last-child td { border-bottom: none; }
+  .ped-table tbody tr:nth-child(even) td { background: rgba(45, 156, 219, 0.03); }
+  .ped-table .col-head {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+  .ped-table .col-dose {
+    font-family: var(--font-mono);
+    color: var(--neon-glow);
+    white-space: nowrap;
+  }
+
+  .nota {
+    font-size: 0.82rem;
+    color: rgba(228, 239, 248, 0.5);
+    font-style: italic;
+    margin: 0.5rem 0 1rem;
+  }
+</style>
 
 <!-- Modales -->
 <dialog id="modal_activacion">

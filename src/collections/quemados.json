@@ -36,6 +36,44 @@
         "El 50% del volumen total calculado se administra en las primeras 8 horas desde el momento de la quemadura",
         "El 50% restante se administra en las siguientes 16 horas"
       ]
+    },
+    "Criterios_de_gravedad": {
+      "titulo": "Criterios de Gravedad de las Quemaduras (ABA)",
+      "categorias": [
+        {
+          "nombre": "Quemadura Menor",
+          "color": "success",
+          "criterios": [
+            "≤15% SCQ de 1.º o 2.º grado en adultos",
+            "≤10% SCQ de 1.º o 2.º grado en niños",
+            "≤2% SCQ de 3.er grado en niños o adultos (sin afectar ojos, orejas, cara o genitales)"
+          ]
+        },
+        {
+          "nombre": "Quemadura Moderada",
+          "color": "orange",
+          "criterios": [
+            "15-25% SCQ de 2.º grado en adultos",
+            "10-20% SCQ de 2.º grado en niños",
+            "2-10% SCQ de 3.er grado en niños o adultos (sin afectar ojos, orejas, cara o genitales)"
+          ]
+        },
+        {
+          "nombre": "Quemadura Mayor",
+          "color": "critical",
+          "criterios": [
+            ">25% SCQ de 3.er grado en adulto",
+            ">20% SCQ de 2.º grado en niños",
+            ">10% SCQ de 3.er grado en niños o adultos",
+            "2.º y 3.er grado en ojos, oídos, orejas, cara, manos, pies, articulaciones principales, periné y genitales",
+            "Todas las lesiones inhalatorias con o sin quemaduras",
+            "Quemaduras eléctricas",
+            "Quemaduras químicas en cara, párpados, orejas, manos, pies, articulaciones principales, periné y genitales",
+            "Quemaduras asociadas a traumatismos",
+            "Personas de alto riesgo: diabetes, desnutrición, enf. pulmonar/cardiovascular, alteraciones sanguíneas, inmunodepresión, cáncer"
+          ]
+        }
+      ]
     }
   }
 }

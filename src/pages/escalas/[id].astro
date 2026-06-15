@@ -6,6 +6,8 @@ import TraumaScoreComponent from '../../components/calculators/TraumaScoreCompon
 import IndiceShocKComponent from '../../components/calculators/IndiceShocKComponent.vue';
 import ParcklandComponent from '../../components/calculators/ParcklandComponent.vue';
 import MadridDirectComponent from '../../components/calculators/MadridDirectComponent.vue';
+import IndiceTraumaPediatricoComponent from '../../components/calculators/IndiceTraumaPediatricoComponent.vue';
+import SuperficieQuemadaPediatricaComponent from '../../components/calculators/SuperficieQuemadaPediatricaComponent.vue';
 import escalas from '../../data/escalas';
 
 export const getStaticPaths = () =>
@@ -22,5 +24,7 @@ const { id } = Astro.params;
     {id === 'indice-shock'  && <IndiceShocKComponent client:load />}
     {id === 'parkland'      && <ParcklandComponent client:load />}
     {id === 'madrid-direct' && <MadridDirectComponent client:load />}
+    {id === 'itp'             && <IndiceTraumaPediatricoComponent client:load />}
+    {id === 'scq-pediatrica'  && <SuperficieQuemadaPediatricaComponent client:load />}
   </div>
 </Layout>
