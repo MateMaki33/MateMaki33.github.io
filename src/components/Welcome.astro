@@ -1,155 +1,319 @@
 ---
 import codigos from '../data/codigos';
+import escalas from '../data/escalas';
+import CommandSearch from './CommandSearch.vue';
+
+// Inline line-icons (stroke = currentColor) keyed by codigo.icon
+const ICONS: Record<string, string> = {
+  brain:   '<path d="M12 5a3 3 0 0 0-3 3M12 5a3 3 0 0 1 3 3M9 8a3 3 0 0 0 0 6M15 8a3 3 0 0 1 0 6M9 14a3 3 0 0 0 3 3M15 14a3 3 0 0 1-3 3M12 5v12"/>',
+  heart:   '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',
+  pulse:   '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+  flame:   '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/>',
+  droplet: '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/>',
+  bolt:    '<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
+  head:    '<path d="M12 2a6 6 0 0 1 6 6c0 2-1 3-2 4v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-3c-1-1-2-2-2-4a6 6 0 0 1 6-6Z"/>',
+  users:   '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+  cross:   '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>',
+};
+
+const tools = [
+  { href: '/pcr',         label: 'Cronómetro PCR', tag: 'Reanimación', icon: 'M22 12h-4l-3 9L9 3l-3 9H2' },
+  { href: '/farmacos',    label: 'Fármacos',     tag: 'Vademécum', icon: 'M10 2v4M14 2v4M9 6h6a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2ZM7 12h10' },
+  { href: '/calculadora', label: 'Perfusiones',  tag: 'Calculadora', icon: 'M9 7h6M9 11h6M9 15h2M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z' },
+  { href: '/triaje',      label: 'Triaje START', tag: 'Clasificación', icon: 'M4 4h16M4 4v16M8 8h12M8 13h12M8 18h12' },
+  { href: '/ventilacion', label: 'Ventilación',  tag: 'Parámetros', icon: 'M3 12h4l2 6 4-14 2 8h6' },
+  { href: '/bibliografia',label: 'Bibliografía', tag: 'Fuentes', icon: 'M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h12' },
+];
 ---
 
+<div class="container dashboard">
+  <header class="dash-hero">
+    <div class="dash-eyebrow">MadRescue · 112 CAM</div>
+    <h1>Centro de Control</h1>
+    <p class="dash-tagline">Consulta rápida prehospitalaria — códigos, escalas y fármacos en un toque</p>
+  </header>
+
+  <CommandSearch client:load />
+
+  <!-- ═══ CÓDIGOS ═══ -->
+  <section class="section dash-section">
+    <div class="section-head">
+      <span class="eyebrow">Activación</span>
+      <h2>Códigos clínicos</h2>
+      <p class="section-note">Protocolos de activación 112 CAM. Cada código incluye sus escalas y fármacos asociados.</p>
+    </div>
+
+    <div class="codigo-grid">
+      {codigos.map(({ id, label, system, accent, icon, desc }, i) => (
+        <a class="codigo-card" href={`/codigos/${id}`} style={`--accent:${accent};--i:${i}`}>
+          <span class="codigo-ico" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[icon ?? 'pulse'] ?? ''}</svg>`} />
+          <span class="codigo-body">
+            <span class="codigo-sys">{system}</span>
+            <span class="codigo-label">{label}</span>
+            <span class="codigo-desc">{desc}</span>
+          </span>
+          <span class="codigo-arrow" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ═══ ESCALAS Y CALCULADORAS ═══ -->
+  <section class="section dash-section">
+    <div class="section-head" style="--accent:#a78bfa">
+      <span class="eyebrow">Cálculo</span>
+      <h2>Escalas y calculadoras</h2>
+      <p class="section-note">Puntuaciones de gravedad y fórmulas de uso frecuente.</p>
+    </div>
+
+    <div class="escala-grid">
+      {escalas.map(({ id, label }) => (
+        <a class="escala-chip" href={`/escalas/${id}`}>
+          <span class="escala-dot" aria-hidden="true"></span>
+          {label}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ═══ HERRAMIENTAS ═══ -->
+  <section class="section dash-section">
+    <div class="section-head" style="--accent:#34d399">
+      <span class="eyebrow">Herramientas</span>
+      <h2>Consulta y soporte</h2>
+    </div>
+
+    <div class="tool-grid">
+      {tools.map(({ href, label, tag, icon }) => (
+        <a class="tool-card" href={href}>
+          <span class="tool-ico" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="${icon}"/></svg>`} />
+          <span class="tool-text">
+            <span class="tool-tag">{tag}</span>
+            <span class="tool-label">{label}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+</div>
+
 <style>
-  .hero {
+  .dashboard {
+    gap: 2.25rem;
+    padding-top: 1.5rem;
+  }
+
+  /* ── Hero ── */
+  .dash-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 0 0.5rem;
-    width: 100%;
+    gap: 0.35rem;
+    text-align: center;
   }
-
-  .hero-eyebrow {
+  .dash-eyebrow {
     font-family: var(--font-display);
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--color-primary);
-    opacity: 0.7;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    opacity: 0.72;
+  }
+  .dash-hero h1 { margin: 0; }
+  .dash-tagline {
+    font-size: 0.92rem;
+    color: rgba(228, 239, 248, 0.55);
+    max-width: 52ch;
+    margin: 0;
   }
 
-  .hero-eyebrow::before,
-  .hero-eyebrow::after {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--color-primary);
-    opacity: 0.5;
-  }
+  .dash-section { gap: 1rem; }
 
-  .hero-divider {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-    margin: 0.25rem 0 1rem;
-    border-radius: 1px;
-  }
-
-  /* ── Code Grid ── */
-  .links {
+  /* ── Códigos grid ── */
+  .codigo-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    gap: 0.875rem;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 0.85rem;
     width: 100%;
-    max-width: 900px;
-
-    @media (max-width: 786px) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: 480px) {
-      grid-template-columns: 1fr;
-    }
   }
 
-  /* Enhanced code buttons */
-  .code-btn {
-    min-height: 64px;
-    padding: 1rem 1.25rem;
-    font-size: 0.95rem;
+  .codigo-card {
+    --accent: var(--color-primary);
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.85rem;
+    padding: 1rem 1.1rem;
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--accent) 9%, transparent), transparent 55%),
+      var(--color-card-bg);
+    border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-card);
+    text-decoration: none;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    letter-spacing: 0.07em;
-    animation: fadeUp 0.4s ease-out both;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.16s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    animation: cardUp 0.4s ease-out both;
+    animation-delay: calc(var(--i) * 0.04s);
   }
 
-  /* Staggered entrance animation */
-  .code-btn:nth-child(1) { animation-delay: 0.05s; }
-  .code-btn:nth-child(2) { animation-delay: 0.1s; }
-  .code-btn:nth-child(3) { animation-delay: 0.15s; }
-  .code-btn:nth-child(4) { animation-delay: 0.2s; }
-  .code-btn:nth-child(5) { animation-delay: 0.25s; }
-  .code-btn:nth-child(6) { animation-delay: 0.3s; }
-  .code-btn:nth-child(7) { animation-delay: 0.35s; }
-  .code-btn:nth-child(8) { animation-delay: 0.4s; }
-  .code-btn:nth-child(9) { animation-delay: 0.45s; }
-
-  @keyframes fadeUp {
+  @keyframes cardUp {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Shimmer on hover */
-  .code-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 80%;
-    height: 100%;
-    background: linear-gradient(105deg, transparent 40%, rgba(86, 204, 242, 0.1) 50%, transparent 60%);
-    transition: left 0.5s ease;
-    pointer-events: none;
+  .codigo-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 65%, transparent);
+    box-shadow: var(--shadow-card), 0 0 26px color-mix(in srgb, var(--accent) 22%, transparent);
   }
 
-  .code-btn:hover::before {
-    left: 130%;
+  .codigo-ico {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .codigo-ico :global(svg) { width: 22px; height: 22px; }
+
+  .codigo-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    min-width: 0;
+    flex: 1;
+  }
+  .codigo-sys {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.85;
+  }
+  .codigo-label {
+    font-family: var(--font-display);
+    font-size: 1.22rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    line-height: 1.1;
+  }
+  .codigo-desc {
+    font-size: 0.76rem;
+    color: rgba(228, 239, 248, 0.5);
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .codigo-arrow {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .codigo-card:hover .codigo-arrow { opacity: 0.9; transform: translateX(0); }
+
+  /* ── Escalas chips ── */
+  .escala-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 0.6rem;
+    width: 100%;
+  }
+  .escala-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.95rem;
+    background: var(--color-card-bg);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  }
+  .escala-chip:hover {
+    border-color: rgba(167, 139, 250, 0.6);
+    background: rgba(167, 139, 250, 0.08);
+    transform: translateY(-1px);
+    color: #fff;
+  }
+  .escala-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a78bfa;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.7);
+    flex-shrink: 0;
   }
 
-  /* Left accent bar */
-  .code-btn .btn-accent {
-    position: absolute;
-    left: 0;
-    top: 20%;
-    bottom: 20%;
-    width: 2px;
-    background: var(--color-primary);
-    border-radius: 0 2px 2px 0;
-    opacity: 0.6;
-    transition: opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+  /* ── Tools ── */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
   }
-
-  .code-btn:hover .btn-accent {
-    opacity: 1;
-    top: 10%;
-    bottom: 10%;
+  .tool-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.95rem 1rem;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   }
-
-  dialog[open] {
-    animation: dialogReveal 0.3s ease-out;
+  .tool-card:hover {
+    border-color: var(--color-card-border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px rgba(45, 156, 219, 0.12);
   }
-
-  @keyframes dialogReveal {
-    from { opacity: 0; transform: scale(0.95); }
-    to   { opacity: 1; transform: scale(1); }
+  .tool-ico {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--color-subtitle);
+    background: rgba(45, 156, 219, 0.1);
+    border: 1px solid rgba(45, 156, 219, 0.25);
+  }
+  .tool-ico :global(svg) { width: 20px; height: 20px; }
+  .tool-text { display: flex; flex-direction: column; gap: 0.05rem; }
+  .tool-tag {
+    font-family: var(--font-display);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0.75;
+  }
+  .tool-label {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
   }
 </style>
-
-<div class="container">
-  <div class="hero">
-    <div class="hero-eyebrow">MI CHULETA SVAE</div>
-    <h1>Procedimientos 112 CAM</h1>
-    <div class="hero-divider"></div>
-  </div>
-
-  <div class="links">
-    {codigos.map(({ id, label }) => (
-      <a class="btn code-btn" href={`/codigos/${id}`}>
-        <span class="btn-accent"></span>
-        {label}
-      </a>
-    ))}
-  </div>
-</div>

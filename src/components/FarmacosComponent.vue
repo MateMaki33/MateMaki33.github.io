@@ -97,11 +97,19 @@
           </ul>
         </div>
 
-        <div class="modal-section dosis-section" v-if="selected?.dosis?.length">
+        <div class="modal-section dosis-section" v-if="dosisRows.length">
           <div class="section-label section-label--cyan">Dosificación</div>
-          <ul>
-            <li v-for="d in selected.dosis" :key="d">{{ d }}</li>
-          </ul>
+          <div class="dose-rows">
+            <div
+              v-for="d in dosisRows"
+              :key="d.label + d.text"
+              class="dose-row"
+              :class="{ 'dose-row--ped': d.isPed }"
+            >
+              <span class="dose-tag" :class="{ 'dose-tag--ped': d.isPed }">{{ d.label }}</span>
+              <p class="dose-text" :class="{ 'dose-text--empty': d.empty }">{{ d.text }}</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -114,12 +122,21 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import medicamentos from '../collections/medicamentos_normalizados.json';
 
 const search = ref('')
 const modal = ref(null)
 const selected = ref(null)
+
+// Pre-fill from a global-search deep link: /farmacos?buscar=NOMBRE
+onMounted(() => {
+  const q = new URLSearchParams(window.location.search).get('buscar');
+  if (!q) return;
+  search.value = q;
+  const exact = medicamentos.find(f => f.nombre.toLowerCase() === q.toLowerCase());
+  if (exact) openModal(exact);
+});
 
 const sortedFarmacos = computed(() =>
   [...medicamentos].sort((a, b) => a.nombre.toLowerCase().localeCompare(b.nombre.toLowerCase()))
@@ -135,6 +152,31 @@ const openModal = (f) => {
   selected.value = f;
   modal.value?.showModal();
 }
+
+// Dosis llega como array de strings con prefijo ("bolo: …", "perfusión: …",
+// "sueros compatibles: …", "dosis pediátrica: …"). Lo parseamos en filas
+// etiquetadas y descartamos las entradas vacías/placeholder ("----").
+const PLACEHOLDER = /^[\s\-–—.]*$/;
+
+const dosisRows = computed(() => {
+  const arr = selected.value?.dosis;
+  if (!Array.isArray(arr)) return [];
+  return arr
+    .map((raw) => {
+      if (typeof raw !== 'string') return null;
+      const idx = raw.indexOf(':');
+      const label = idx >= 0 ? raw.slice(0, idx).trim() : '';
+      let text = (idx >= 0 ? raw.slice(idx + 1) : raw).trim();
+      const isPed = /pedi/i.test(label);
+      const empty = !text || PLACEHOLDER.test(text);
+      // La pediátrica se muestra siempre (es un campo estándar); el resto se
+      // oculta si viene vacío/placeholder.
+      if (empty && !isPed) return null;
+      if (empty) text = 'No especificada';
+      return { label: label || 'Dosis', text, isPed, empty };
+    })
+    .filter(Boolean);
+});
 </script>
 
 <style scoped>
@@ -403,6 +445,58 @@ const openModal = (f) => {
   border: 1px solid rgba(45, 156, 219, 0.18);
   border-radius: 8px;
   padding: 0.85rem 1rem;
+}
+
+.dose-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dose-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Pediatric dose highlighted in its own pink-accented block */
+.dose-row--ped {
+  background: rgba(244, 114, 182, 0.06);
+  border: 1px solid rgba(244, 114, 182, 0.25);
+  border-radius: 7px;
+  padding: 0.55rem 0.7rem;
+}
+
+.dose-tag {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-subtitle);
+  background: rgba(45, 156, 219, 0.12);
+  border: 1px solid rgba(45, 156, 219, 0.25);
+  border-radius: 4px;
+  padding: 0.14rem 0.45rem;
+}
+
+.dose-tag--ped {
+  color: #f9a8d4;
+  background: rgba(244, 114, 182, 0.14);
+  border-color: rgba(244, 114, 182, 0.38);
+}
+
+.dose-text {
+  font-size: 0.88rem;
+  color: rgba(228, 239, 248, 0.8);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.dose-text--empty {
+  color: rgba(228, 239, 248, 0.4);
+  font-style: italic;
 }
 
 .modal-footer {

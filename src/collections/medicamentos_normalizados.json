@@ -1,10 +1,7 @@
 [
   {
     "nombre": "ACETILCISTEINA",
-    "marcas": [
-      "Flumil antídoto",
-      "Hidonac antídoto"
-    ],
+    "marcas": ["Flumil antídoto", "Hidonac antídoto"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -34,9 +31,7 @@
       "Asma bronquial",
       "No administrar conjuntamente con carbón activado"
     ],
-    "interacciones": [
-      "Nitroglicerina: hipotensión, cefalea"
-    ],
+    "interacciones": ["Nitroglicerina: hipotensión, cefalea"],
     "efectos_secundarios": [
       "Reacciones de hipersensibilidad (urticaria, prurito)",
       "Broncoespasmo",
@@ -47,14 +42,13 @@
     "dosis": [
       "bolo: Intox. paracetamol: 150 mg/kg en 200 mL de suero (1 hora) Prevención nefropatía contrastes yodados: 600 mg c/12 h junto hidratació n",
       "perfusión: Dosismantenimientointox . paracetamol: 2ª perfusión: 50 mg/kg en 500 mL de suero (4 horas) 3ª perfusión: de 100 mg/kg en 500 mL suero (16 horas)",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ACETILSALICILATO DE LISINA",
-    "marcas": [
-      "Inyesprín"
-    ],
+    "marcas": ["Inyesprín"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -97,14 +91,13 @@
     "dosis": [
       "bolo: Antiagregación SCA: 450 mg Antiinflamatorio: 500 - 1000 mg c/4-6 h Dilución: reconstituir el vial con 5 mL de API y diluir en 100 - 250 mL suero. Administrar en un tiempo máximo de 2 horas",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ÁCIDO TRANEXÁMICO",
-    "marcas": [
-      "Amchafibrin"
-    ],
+    "marcas": ["Amchafibrin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -127,9 +120,7 @@
       "Ajuste de dosis en insuficiencia renal",
       "Monitorizar función visual en tratamientos prolongados"
     ],
-    "interacciones": [
-      "Anticonceptivos orales"
-    ],
+    "interacciones": ["Anticonceptivos orales"],
     "efectos_secundarios": [
       "Náuseas",
       "Vómitos",
@@ -142,14 +133,13 @@
     "dosis": [
       "bolo: Bolus inicial: 500 - 1000 mg en 50 - 100 mL suero en 10 minutos",
       "perfusión: Dosis: 1 - 5 mg/kg/h Dilución: 1000 mg en 250 mL de suero (4mg/mL) (17 - 88 mL/h)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica: 15 mg/kg (diluir en 50 mL SF, pasar en 15 min)"
     ]
   },
   {
     "nombre": "ÁCIDO VALPROICO",
-    "marcas": [
-      "Depakine"
-    ],
+    "marcas": ["Depakine"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -190,15 +180,13 @@
     "dosis": [
       "bolo: 15-20 mg/kg IV lento (máx 6 mg/kg/min) sin diluir o diluido en SSF/SG5%",
       "perfusión: 0,5-1 mg/kg/h. Dilución: diluir en SSF o SG5% a concentración  $≤0,4 mg/mL,$",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ACTRAPID",
-    "marcas": [
-      "Actraid",
-      "Actrapid innolet sol"
-    ],
+    "marcas": ["Actraid", "Actrapid innolet sol"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -212,9 +200,7 @@
       "Diabetes mellitus (descompensación hiperosmolar y cetósica)",
       "Hiperpotasemia grave"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
     "precauciones": [
       "Monitorizar niveles de potasio plasmático",
       "Ajuste en insuficiencia renal o hepática"
@@ -233,14 +219,13 @@
     "dosis": [
       "bolo: Bolo intravenoso/subcutáneo: 0,15 UI/kg",
       "perfusión: Dosis: 0,15 UI/Kg/h (1 mL/ kg/ h) Dilución: 50 UI / 500 mL (0,1 UI/mL) (1 mL/ kg/h )",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ADENOSINA",
-    "marcas": [
-      "Adenocor"
-    ],
+    "marcas": ["Adenocor"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -281,15 +266,13 @@
     "dosis": [
       "bolo: Primera dosis: 6 mg sin diluir rá pido seguido de 20 mL de suero en bolo rápido Segunda dosis: 12 mg sin diluir rápido seguido de 20 mL de suero en bolo rápido Tercera dosis: 12 mg sin diluir rá pido seguido de 20 mL de suero salino en bolo rápido Dilución: no es necesario diluir",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ALBÚMINA",
-    "marcas": [
-      "Albúmina Humana Grifols",
-      "Alburex"
-    ],
+    "marcas": ["Albúmina Humana Grifols", "Alburex"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -307,17 +290,13 @@
       "Edema cerebral",
       "Quemados (no en fase inicial)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
     "precauciones": [
       "En insuficiencia renal (con HNF)",
       "Insuficiencia hepática moderada",
       "Riesgo de hemorragia (biopsia reciente, litotricia en las dos últimas semanas, cirugía mayor o traumatismo grave de más de 6 semanas, úlcera activa en los últimos 3 meses, hipertensión no controlada, hematuria, coagulopatía previa)"
     ],
-    "interacciones": [
-      "No se han descrito"
-    ],
+    "interacciones": ["No se han descrito"],
     "efectos_secundarios": [
       "Escalofríos",
       "Fiebre",
@@ -328,14 +307,13 @@
     "dosis": [
       "bolo: No administrar en bolo directo",
       "perfusión: 6-8 g por litro extraído (paracentesis). Administrar cada frasco (50 mL) en no menos de 30 minutos. No mezclar con otros fármacos, sangre ni concentrado de hematíes",
-      "sueros compatibles: Sin diluir (solución lista para usar)"
+      "sueros compatibles: Sin diluir (solución lista para usar)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ALTEPLASA",
-    "marcas": [
-      "Actilyse"
-    ],
+    "marcas": ["Actilyse"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -384,14 +362,13 @@
     "dosis": [
       "bolo: Ictus: 10 % de la dosis calculada en 1 - 2 min IAM: 15 mg en 1 - 2 min TEP: 10% de la dosis calculada en 1 - 2 min Cálculo dosis: 0,09 mg/kg (10% dosis total inicial) y 0,81 mg/kg (90% dosis total perfusión). Cálculo realizado a partir de la dosis total del fármaco (0,9 mg/kg)",
       "perfusión: Ictus: 90% de la dosis calculada en 1 hora IAM: Perfu 2ª (0,75 mg/kg Máx: 50 mg) Perfu 3ª (0,5 mg/kg Máx: 35 mg) TEP: 90% de la dosis calculada en 2 horas",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AMIODARONA",
-    "marcas": [
-      "Trangorex"
-    ],
+    "marcas": ["Trangorex"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -434,14 +411,13 @@
     "dosis": [
       "bolo: FV/TV sin pulso: 300 mg en 20 mL SG5% en 3-5 min. TV estable: 150 mg en 10 min. Dosis máxima bolo: 150 mg",
       "perfusión: Dosis de carga: 5 mg/kg (máx 1200 mg) en 250 mL SG5% en 20-120 min. Mantenimiento: 900 mg en 500 mL SG5% a 21 mL/h (1 mg/min las primeras 6 h, luego 0,5 mg/min). Dosis máxima: 2,2 g/24 h",
-      "sueros compatibles: Suero glucosa (exclusivamente; precipita con Suero Salino)"
+      "sueros compatibles: Suero glucosa (exclusivamente; precipita con Suero Salino)",
+      "dosis pediátrica: 5 mg/kg = 0,1 mL/kg (máx 300 mg)"
     ]
   },
   {
     "nombre": "ATENOLOL",
-    "marcas": [
-      "Tenormin"
-    ],
+    "marcas": ["Tenormin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -487,14 +463,13 @@
     "dosis": [
       "bolo: Bolus inicial: 1mg/min Máx: 10 mg en 10 s Dilución: Sin diluir (0,5 mg/mL) o diluir 5 mL (2,5 mg) + 5 mL suero = (1 mg/mL)",
       "perfusión: Dosis: 0,15 mg/kg en 20 min Dilución: 10 mg en 50 mL de suero (17 mL/h)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ATRACURIO BESILATO",
-    "marcas": [
-      "Tracrium"
-    ],
+    "marcas": ["Tracrium"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -528,14 +503,13 @@
     "dosis": [
       "bolo: Inducción IOT: 0,3-0,6 mg/kg en 30-60 segundos. Dilución: sin diluir o en SSF/SG5%",
       "perfusión: Mantenimiento: 0,3-0,6 mg/kg/h. Dilución: 50 mg en 50 mL SSF o SG5% (1 mg/mL)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ATROPINA",
-    "marcas": [
-      "Atropina Braun"
-    ],
+    "marcas": ["Atropina Braun"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -572,14 +546,13 @@
     "dosis": [
       "bolo: Bradicardia/Bradiarritmias: 0,6 - 1 mg c/ 3 - 5 min (Máx: 3 mg) en 30 segundos Crisis colinérgica: 1 - 2 mg c/20 - 30 min hasta signos de atropinización (midriasis, taquicardia, etc) en 1 - 2 min Dilución: 1 mg + 9 mL suero (0,1 mg/mL)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AZUL DE METILENO",
-    "marcas": [
-      "Proveblue"
-    ],
+    "marcas": ["Proveblue"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -592,10 +565,7 @@
       "Metahemoglobinemia inducida por fármacos",
       "Intoxicaciones por nitritos, nitroprusiato, etc."
     ],
-    "contraindicaciones": [
-      "Alergia",
-      "Insuficiencia renal"
-    ],
+    "contraindicaciones": ["Alergia", "Insuficiencia renal"],
     "precauciones": [
       "Administración IV muy lenta para evitar formación de metahemoglobina",
       "No inyectar vía subcutánea o intratecal"
@@ -611,14 +581,13 @@
     "dosis": [
       "bolo: 1-2 mg/kg IV lento en 5 minutos. Dilución: diluir en 50 mL de SG5%",
       "perfusión: Repetir dosis bolo a los 30-60 minutos si es necesario. No está indicada la perfusión continua",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "BEMIPARINA",
-    "marcas": [
-      "Hibor"
-    ],
+    "marcas": ["Hibor"],
     "presentaciones": [
       {
         "forma": "jeringa",
@@ -651,14 +620,13 @@
     "dosis": [
       "bolo: No administrar IV (uso exclusivamente subcutáneo)",
       "perfusión: No está indicada la perfusión IV",
-      "sueros compatibles: No aplica (administración SC)"
+      "sueros compatibles: No aplica (administración SC)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "BICARBONATO",
-    "marcas": [
-      "Bicarbonato Sódico 1M / 1/6M"
-    ],
+    "marcas": ["Bicarbonato Sódico 1M / 1/6M"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -709,14 +677,13 @@
     "dosis": [
       "bolo: No administrar en bolo. Utilizar sistema de microgoteo en soluciones 1 Molar",
       "perfusión: Acidosis metabólica severa (pH < 7,20): Déficit HCO3 = 0,6 x peso (kg) x (HCO3 deseado - HCO3 medido). Administrar la mitad en 30 min (1 M) y el resto en 24 h. HiperK: 1/6 M (250 mL) c/6-8 horas PCR: a partir de 10 min de la PCR, preferiblemente bajo control de pH, administrar 50 mEq y repetir si fuese necesario (Bicarbonato 1 M)",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CALCIO CLORURO",
-    "marcas": [
-      "Cloruro de Calcio 10%"
-    ],
+    "marcas": ["Cloruro de Calcio 10%"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -752,14 +719,13 @@
     "dosis": [
       "bolo: Hipocalcemia severa/PCR: 2-4 mL (200-400 mg) IV lento en 5-10 min sin diluir o diluido en 50-100 mL. Hiperpotasemia: 2-5 mL en 10-15 min",
       "perfusión: No está indicada la perfusión continua de rutina",
-      "sueros compatibles: Suero glucosa, Suero Salino (incompatible con bicarbonato y fosfatos)"
+      "sueros compatibles: Suero glucosa, Suero Salino (incompatible con bicarbonato y fosfatos)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CISATRACURIO",
-    "marcas": [
-      "Nimbex"
-    ],
+    "marcas": ["Nimbex"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -790,32 +756,24 @@
       "Bloqueo neuromuscular no despolarizante",
       "Ventilación mecánica"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad a cisatracurio"
-    ],
+    "contraindicaciones": ["Hipersensibilidad a cisatracurio"],
     "precauciones": [
       "No tiene efectos analgésicos ni sedantes",
       "Monitorizar grado de bloqueo neuromuscular"
     ],
     "interacciones": [],
-    "efectos_secundarios": [
-      "Bradicardia",
-      "Hipotensión",
-      "Rash cutáneo"
-    ],
+    "efectos_secundarios": ["Bradicardia", "Hipotensión", "Rash cutáneo"],
     "embarazo": "B",
     "dosis": [
       "bolo: Inducción IOT: 0,15 mg/kg en 30-60 segundos sin diluir",
       "perfusión: Mantenimiento: 1-3 µg/kg/min. Dilución: 10 mg en 90 mL SSF o SG5% (0,1 mg/mL)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLOPIDOGREL",
-    "marcas": [
-      "Plavix",
-      "Iscover"
-    ],
+    "marcas": ["Plavix", "Iscover"],
     "presentaciones": [
       {
         "forma": "comprimido",
@@ -850,14 +808,13 @@
     "dosis": [
       "bolo: No existe formulación IV. Administración exclusivamente oral",
       "perfusión: No está indicada la perfusión IV",
-      "sueros compatibles: No aplica (uso oral)"
+      "sueros compatibles: No aplica (uso oral)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLORAZEPATO DIPOTÁSICO",
-    "marcas": [
-      "Tranxilium"
-    ],
+    "marcas": ["Tranxilium"],
     "presentaciones": [
       {
         "forma": "cápsula",
@@ -899,14 +856,13 @@
     "dosis": [
       "bolo: Agitación/agresividad: 20 a 200 mg/ dıá Alcoholismo: 50 a 100 mg c/ 3 -4 horas Dilución: reconstituir 20 mg con 2 mL API o 50 mg con 2,5 mL API. Posteriormente diluir en 50 mL suero (10 - 15 min)",
       "perfusión: Dosis tratamiento tétanos Benigno: 120 - 500 mg/dia Maligno: 500 - 2000 mg/dia",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLORPROMAZINA",
-    "marcas": [
-      "Largactil"
-    ],
+    "marcas": ["Largactil"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -952,16 +908,13 @@
     "dosis": [
       "bolo: Dosis: 25 - 50 mg c/6 - 8 horas Dilución: 25 mg en 50 - 100 mL suero. Administrar en 25 - 50 min (1mg/min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLORURO MÓRFICO",
-    "marcas": [
-      "Morfina Braun",
-      "Sevredol",
-      "MST Continus"
-    ],
+    "marcas": ["Morfina Braun", "Sevredol", "MST Continus"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1007,14 +960,13 @@
     "dosis": [
       "bolo: 2-10 mg IV lento diluido a 1 mg/mL (1 mL + 9 mL SSF). Repetir cada 5-30 min según respuesta",
       "perfusión: 1-4 mg/h. Dilución: 50 mg en 500 mL SSF (0,1 mg/mL) o 50 mg en 50 mL SSF (1 mg/mL) en bomba de jeringa",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DEXAMETASONA",
-    "marcas": [
-      "Fortecortín"
-    ],
+    "marcas": ["Fortecortín"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1058,14 +1010,13 @@
     "dosis": [
       "bolo: Dosis inicial: 0,5 - 9 mg Edema cerebral: 8 mg seguido 4 mg c/6 h Neoplasias cerebrales: 2 mg c/ 6 - 8 h Dilución: en 100 mL (10 - 20 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DEXCLOFENIRAMINA",
-    "marcas": [
-      "Polaramine"
-    ],
+    "marcas": ["Polaramine"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1104,15 +1055,13 @@
     "dosis": [
       "bolo: Dosis: 5 mg c/8 h Máx: 20 mg/dia Dilución: 5 mg + 9 mL suero (2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DIAZEPAM",
-    "marcas": [
-      "Valium",
-      "Stesolid"
-    ],
+    "marcas": ["Valium", "Stesolid"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1156,15 +1105,13 @@
     "dosis": [
       "bolo: Dosis estándar: 5 - 10 mg c/4 - 6 h Máx: 60 mg/dıá . En ancianos reducir dosis Crisis comiciales: 0,15 - 0,20 mg/kg Dilución: 10 mg + 8 mL suero (1 mg/mL)",
       "perfusión: Dosis: 50 mg en 90 mL suero al ritmo según patologıá",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DIFENILHIDANTOINA",
-    "marcas": [
-      "Sinergina",
-      "Fenitoína Kern Pharma"
-    ],
+    "marcas": ["Sinergina", "Fenitoína Kern Pharma"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1213,14 +1160,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Estado epiléptico: 15 mg/kg Dosis Má xima de inicio 1,5 gramos (monitorizació n) Dilución: 1 gramo en 500 mL de suero a pasar en 30 minutos *",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DIGOXINA",
-    "marcas": [
-      "Lanacordin"
-    ],
+    "marcas": ["Lanacordin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1261,16 +1207,13 @@
     "dosis": [
       "bolo: Dosis: 0,25 - 0,50 mg c/2 - 4 horas Máx: 1 - 1,5 mg / 24 horas Dilución: 0,5 mg + 8 mL suero (2 - 3 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ADRENALINA",
-    "marcas": [
-      "Adrenalina B. Braun",
-      "Jext",
-      "Epipen"
-    ],
+    "marcas": ["Adrenalina B. Braun", "Jext", "Epipen"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1320,14 +1263,13 @@
     "dosis": [
       "bolo: PCR dosis: 1 mg sin diluir en 10 segundos cada 3 - 5 minutos Anafilaxia: 0,5 mg IM directo",
       "perfusión: Bradiarritmias dosis: 0,03 - 0,3 µg/kg/min Dilución: 5 mg en 250 mL de suero (6 - 63 mL /h)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica: 10 mcg/kg (máx 1 mg) · perfusión 0,1 mcg/kg/min"
     ]
   },
   {
     "nombre": "BIPERIDENO",
-    "marcas": [
-      "Akineton"
-    ],
+    "marcas": ["Akineton"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1382,14 +1324,13 @@
     "dosis": [
       "bolo: Sindrome Parkinsoniano: 10 - 20 mg repartido en varias dosis/dia Sd. Extrapiramidal por medicamentos: 2,5 - 5 mg. Repetir en 30 min si fuese necesario (Máx: 10 - 20 mg/dia) Dilución: 5 mg + 4 mL suero en 5 min",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DEXQUETOPROFENO",
-    "marcas": [
-      "Enantyum"
-    ],
+    "marcas": ["Enantyum"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1455,14 +1396,13 @@
     "dosis": [
       "bolo: Dosis: 50 mg c/8 h Máx: 150 mg/dıá Dilución: 50 mL suero (10 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FENOBARBITAL",
-    "marcas": [
-      "Luminal"
-    ],
+    "marcas": ["Luminal"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1520,14 +1460,13 @@
     "dosis": [
       "bolo: Estado epiléptico: carga 15-20 mg/kg IV a no más de 100 mg/min. Dilución: 200 mg en 10-20 mL SSF",
       "perfusión: Mantenimiento: 1-3 mg/kg/día IV. Dilución: diluir en 50-100 mL SSF",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "KETAMINA",
-    "marcas": [
-      "Ketolar"
-    ],
+    "marcas": ["Ketolar"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -1582,14 +1521,13 @@
     "dosis": [
       "bolo: Inducción: 1 - 2 mg /Kg Sedación disociativa: 0,5 - 1 mg /kg Dilución: 2 mL (100 mg) + 8 mL suero (10 mg/mL) en 1 minuto",
       "perfusión: Dosis mantenimiento: 1 - 4 mg/ minuto Dilución: 500 mg en 500 mL de suero (1mg /mL) (60 - 240 mL / hora)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica: 1-2 mg/kg IV/IO (máx 50 mg); intranasal 0,5-1 mg/kg analgesia, 1-2 mg/kg sedación"
     ]
   },
   {
     "nombre": "METAMIZOL",
-    "marcas": [
-      "Nolotil"
-    ],
+    "marcas": ["Nolotil"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1648,15 +1586,13 @@
     "dosis": [
       "bolo: Dosis: 2 gramos c/ 8 horas Dilución: en 50 mL suero en 20 - 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "METOPROLOL",
-    "marcas": [
-      "Beloc",
-      "Lopresor"
-    ],
+    "marcas": ["Beloc", "Lopresor"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1714,14 +1650,13 @@
     "dosis": [
       "bolo: Dosis taquiarritmias: 5 mg (repetir a los 5 minutos hasta un máximo de 20 mg) Dilución: no precisa diluir (2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "OLANZAPINA",
-    "marcas": [
-      "Zyprexa"
-    ],
+    "marcas": ["Zyprexa"],
     "presentaciones": [
       {
         "forma": "comprimido",
@@ -1774,14 +1709,13 @@
     "dosis": [
       "bolo: No existe formulación IV aprobada en España. Uso IM para agitación: 10 mg IM (máx 20 mg/día, máx 3 dosis/día)",
       "perfusión: No está indicada la perfusión IV",
-      "sueros compatibles: No aplica (uso IM/oral)"
+      "sueros compatibles: No aplica (uso IM/oral)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "SULPIRIDA",
-    "marcas": [
-      "Dogmatil"
-    ],
+    "marcas": ["Dogmatil"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1846,15 +1780,13 @@
     "dosis": [
       "bolo: Vértigo: 50 - 100 mg c/ 8 h Dilución: 250 mL ( 1 - 2 horas) Nota: el fármaco no tiene indicado su uso IV",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DOBUTAMINA",
-    "marcas": [
-      "Dobutamina Accord",
-      "Dobutamina Hospira"
-    ],
+    "marcas": ["Dobutamina Accord", "Dobutamina Hospira"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1894,15 +1826,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: 2,5-20 µg/kg/min (máx 40 µg/kg/min). Dilución: 250 mg en 230 mL SSF o SG5% (1 mg/mL). Dosis inicial: 2,5-5 µg/kg/min ajustar según respuesta",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DOPAMINA",
-    "marcas": [
-      "Dopamina Abbot",
-      "Dopamina B. Braun"
-    ],
+    "marcas": ["Dopamina Abbot", "Dopamina B. Braun"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -1946,15 +1876,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis dopaminérgica: 1-4 µg/kg/min. Dosis beta-1: 5-10 µg/kg/min. Dosis alfa-1: >10 µg/kg/min. Dilución: 200 mg en 245 mL SSF o SG5% (0,8 mg/mL)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ENOXAPARINA",
-    "marcas": [
-      "Clexane",
-      "Inhixa"
-    ],
+    "marcas": ["Clexane", "Inhixa"],
     "presentaciones": [
       {
         "forma": "jeringa",
@@ -1997,14 +1925,13 @@
     "dosis": [
       "bolo: IAMCEST: 3000 UI IV en bolo (30 mg), seguido inmediatamente de dosis SC",
       "perfusión: No está indicada la perfusión continua IV",
-      "sueros compatibles: Suero Salino (solo para bolo IV en IAMCEST)"
+      "sueros compatibles: Suero Salino (solo para bolo IV en IAMCEST)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ETOMIDATO",
-    "marcas": [
-      "Etomidato Lipuro"
-    ],
+    "marcas": ["Etomidato Lipuro"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2018,16 +1945,12 @@
       "Sedación de corta duración en inestabilidad hemodinámica",
       "Pacientes en shock"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad a Etomidato, soja o cacahuate"
-    ],
+    "contraindicaciones": ["Hipersensibilidad a Etomidato, soja o cacahuate"],
     "precauciones": [
       "Supresión suprarrenal transitoria (no usar en perfusión continua)",
       "Movimientos mioclónicos"
     ],
-    "interacciones": [
-      "Potenciación con otros hipnóticos, opioides y alcohol"
-    ],
+    "interacciones": ["Potenciación con otros hipnóticos, opioides y alcohol"],
     "efectos_secundarios": [
       "Mioclonías",
       "Dolor en sitio de inyección",
@@ -2038,16 +1961,13 @@
     "dosis": [
       "bolo: Dosis: 0,15 - 0,30 mg/kg. En ancianos 0,1 - 0,2 mg/kg Dilución: Sin diluir o 5 mL (10 mg) + 5 mL suero (1 mg/mL)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica: 0,3 mg/kg"
     ]
   },
   {
     "nombre": "FACTOR IX, COMPLEJO II-VII-IX-X",
-    "marcas": [
-      "Beriplex",
-      "Octaplex",
-      "Prothromplex"
-    ],
+    "marcas": ["Beriplex", "Octaplex", "Prothromplex"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -2075,10 +1995,7 @@
       "No asociar antifibrinolíticos",
       "Precaución en enfermedad hepática y neonatos"
     ],
-    "interacciones": [
-      "Vitamina K",
-      "Antifibrinolíticos"
-    ],
+    "interacciones": ["Vitamina K", "Antifibrinolíticos"],
     "efectos_secundarios": [
       "Tromboembolismo",
       "Hipersensibilidad",
@@ -2089,17 +2006,13 @@
     "dosis": [
       "bolo: INR 2.0 - 3.9: 25 UI/kg (1 mL/kg) INR 4.0 - 6.0: 35 UI/kg (1,4 mL/kg) INR > 6.0: 50 UI/kg (2 mL/kg)",
       "perfusión: Dilución: colocar vial disolvente en supercicie plana y conectar con el terminal azul hacia abajo, ajustándolo al tapón del disolvente. Seguidamente colocar el vial de polvo sobre supercicie plana e invertir el disolvente hasta ajustar ambos viales a través del conector. Una vez disuelto, cargar con una jeringa y administrar en 2-3 minutos",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FENTANILO",
-    "marcas": [
-      "Sublimaze",
-      "Duragesic",
-      "Actiq",
-      "Fentanilo Matrix"
-    ],
+    "marcas": ["Sublimaze", "Duragesic", "Actiq", "Fentanilo Matrix"],
     "presentaciones": [
       {
         "forma": "solución inyectable",
@@ -2152,14 +2065,13 @@
     "dosis": [
       "bolo: Dosis analgesia: 1 -2 µg/kg Dilución: 100 µg (2 mL) + 8 mL suero (10 µg / mL) en 30 - 60 segundos",
       "perfusión: Dosis: 0,5 - 2 µg/kg/h Dilución: 1500 µg en 220 mL (7 µg/mL) (5 - 20 mL/h)*",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica: 1-2 mcg/kg (máx 50-100 mcg)"
     ]
   },
   {
     "nombre": "FLECAINIDA",
-    "marcas": [
-      "Apocard"
-    ],
+    "marcas": ["Apocard"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2207,14 +2119,13 @@
     "dosis": [
       "bolo: Dosis inicial: 2 mg/kg Dilución: en 50 mL suero (15 - 20 minutos)",
       "perfusión: 1ª hora: 1,5 mg/kg/h diluir en 100 mL (100 mL/h) 2ª hora y siguientes: 0,1 - 0,25 mg/kg/h disminuyendo dosis un 20% por hora y suspenderla a las 4 horas. Dosis máxima: 600 mg en 24 horas",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FLUMAZENILO",
-    "marcas": [
-      "Anexate"
-    ],
+    "marcas": ["Anexate"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2257,14 +2168,13 @@
     "dosis": [
       "bolo: 0,2 mg en 15 segundos sin diluir. Repetir 0,1 mg cada 60 segundos hasta respuesta (máx 1 mg total)",
       "perfusión: 0,1-0,4 mg/h si recidiva sedación. Dilución: 1 mg en 100 mL SSF",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FUROSEMIDA",
-    "marcas": [
-      "Seguril"
-    ],
+    "marcas": ["Seguril"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2309,14 +2219,13 @@
     "dosis": [
       "bolo: EAP: 20 - 80 mg HTA: 40 - 80 mg Dilución: sin diluir en 30 - 60 segundos",
       "perfusión: Dilución: 100 mg en 100 mL de suero (1mg/mL). Según respuesta",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "GLUCAGÓN",
-    "marcas": [
-      "GlucaGen HypoKit"
-    ],
+    "marcas": ["GlucaGen HypoKit"],
     "presentaciones": [
       {
         "forma": "vial (polvo + disolvente)",
@@ -2325,10 +2234,7 @@
         "concentracion": "1 mg/ml"
       }
     ],
-    "indicaciones": [
-      "Hipoglucemias graves",
-      "Sobredosis por betabloqueantes"
-    ],
+    "indicaciones": ["Hipoglucemias graves", "Sobredosis por betabloqueantes"],
     "contraindicaciones": [
       "Hipersensibilidad al principio activo",
       "Feocromocitoma"
@@ -2337,9 +2243,7 @@
       "Administrar hidratos de carbono por vía oral tan pronto como sea posible",
       "Ineficaz en pacientes con inanición o insuficiencia adrenal"
     ],
-    "interacciones": [
-      "Anticoagulantes orales (puede potenciar su efecto)"
-    ],
+    "interacciones": ["Anticoagulantes orales (puede potenciar su efecto)"],
     "efectos_secundarios": [
       "Náuseas",
       "Vómitos",
@@ -2350,14 +2254,13 @@
     "dosis": [
       "bolo: Intoxicación hipoglucemiantes: 1 mg SC/IM Intoxicación betabloqueantes: 0,05 - 0,15 mg/kg (3 - 10 mg)* en bolus intravenoso Dilución: diluir en una jeringa hasta 10 mL y pasar en 2 minutos",
       "perfusión: Intoxicación beta-bloqueantes: 0,05 - 0,1 mg/kg/hora (3 - 5 mg)* valorando respuesta hemodinámica Dilución: diluir 10 mg en 500 mL de suero and administrar a 150 - 450 mL/h*",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "GLUCONATO CÁLCICO",
-    "marcas": [
-      "Gluconato Cálcico 10% B. Braun"
-    ],
+    "marcas": ["Gluconato Cálcico 10% B. Braun"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2401,15 +2304,13 @@
     "dosis": [
       "bolo: Bolus inicial: 1 - 2 ampollas Dilución: 50 - 100 mL suero (10 - 15 min)",
       "perfusión: Dilución: 6 ampollas en 500 mL suero . Administrar en 10 horas (50 mL/h)",
-      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "GLUCOSMÓN",
-    "marcas": [
-      "Glucosmon R-50",
-      "Glucosmon R-33"
-    ],
+    "marcas": ["Glucosmon R-50", "Glucosmon R-33"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2418,9 +2319,7 @@
         "concentracion": "500 mg/mL (50%)"
       }
     ],
-    "indicaciones": [
-      "Hipoglucemia"
-    ],
+    "indicaciones": ["Hipoglucemia"],
     "contraindicaciones": [
       "Hemorragia intracraneal o intratecal activa",
       "Delirium tremens en pacientes deshidratados",
@@ -2443,15 +2342,13 @@
     "dosis": [
       "bolo: Hipoglucemia: 25-50 mL de SG50% (o 40-80 mL de SG33%) IV lento en vena gruesa",
       "perfusión: No está indicada la perfusión continua con SG50%. Continuar con SG5-10% de mantenimiento",
-      "sueros compatibles: Sin diluir (solución hipertónica lista para usar)"
+      "sueros compatibles: Sin diluir (solución hipertónica lista para usar)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HALOPERIDOL",
-    "marcas": [
-      "Haloperidol Prodes",
-      "Haldol"
-    ],
+    "marcas": ["Haloperidol Prodes", "Haldol"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2497,15 +2394,13 @@
     "dosis": [
       "bolo: Neuroléptico: 5 - 10 mg Agitación psicomotriz: 5 - 10 mg Antiemético: 2,5 - 5 mg Dilución: en 50 mL suero en 5 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HEPARINA SÓDICA",
-    "marcas": [
-      "Heparina Sódica Rovi",
-      "Heparina Sódica Hospira"
-    ],
+    "marcas": ["Heparina Sódica Rovi", "Heparina Sódica Hospira"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2554,14 +2449,13 @@
     "dosis": [
       "bolo: Bolus inicial: 5.000 UI en 50 mL suero en 15 minutos Preparación heparinización catéter: 1 mL (1.000 UI) en 50 mL suero (administrar 3 cc)",
       "perfusión: Dosis: 18 UI/kg/h. Ajustar según TTPa Dilución: 25.000 UI en 500 mL de suero (50 UI/mL) (21 mL /h)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HIDROCORTISONA",
-    "marcas": [
-      "Actocortina"
-    ],
+    "marcas": ["Actocortina"],
     "presentaciones": [
       {
         "forma": "vial (polvo + disolvente)",
@@ -2624,15 +2518,13 @@
     "dosis": [
       "bolo: Dosis: 100 - 200 mg/ dia en varias tomas Dilución: 50 mL en 10 minutos (evitar bolo directo)",
       "perfusión: Dilución: 200 mg en 100 mL de suero (2 - 4 mL/hora) sin sobrepasar los 6 gramos/dıá",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HIDROXICOBALAMINA",
-    "marcas": [
-      "Megamil",
-      "Cyanokit"
-    ],
+    "marcas": ["Megamil", "Cyanokit"],
     "presentaciones": [
       {
         "forma": "vial (polvo)",
@@ -2644,12 +2536,8 @@
     "indicaciones": [
       "Intoxicación por cianuro (incluida intoxicación por humo con sospecha de cianuro)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
-    "precauciones": [
-      "No mezclar con otros fármacos durante la infusión"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
+    "precauciones": ["No mezclar con otros fármacos durante la infusión"],
     "interacciones": [
       "Incompatible con tiosulfato sódico y nitrito sódico en la misma vía"
     ],
@@ -2663,15 +2551,13 @@
     "dosis": [
       "bolo: Dosis: 5 gramos que puede repetirse en pacientes comprometidos Dilución: diluir en 200 mL de suero y administrar durante 15 minutos. La segunda dosis debe administrarse en un tiempo de entre 15 minutos y 2 horas (según estado del paciente)",
       "perfusión: No se recomienda infusión continua",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ISOPROTERENOL",
-    "marcas": [
-      "Aleudrina",
-      "Isuprel"
-    ],
+    "marcas": ["Aleudrina", "Isuprel"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2715,15 +2601,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: 2-10 µg/min. Dilución: 0,4 mg en 100 mL SSF o SG5% (4 µg/mL). Velocidad: 2 µg/min=30 mL/h, 4 µg/min=60 mL/h, 6 µg/min=90 mL/h",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "KETOROLACO",
-    "marcas": [
-      "Droal",
-      "Toradol"
-    ],
+    "marcas": ["Droal", "Toradol"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2767,14 +2651,13 @@
     "dosis": [
       "bolo: Dosis: 10 mg (30 si el dolor es muy intenso) c/4 - 6 h. (Máx: 90 mg/dıá ) Dilución: añ adir 2 mL de suero al mL de la ampolla (30 mg/ 3 mL). Diluir en 50 - 100 mL de suero. Administrar en 5 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LABETALOL",
-    "marcas": [
-      "Trandate"
-    ],
+    "marcas": ["Trandate"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2821,14 +2704,13 @@
     "dosis": [
       "bolo: Crisis HTA: 50 mg c/ 5 min (Máx: 200 mg) HTA tras IAM: 15 mg Disección Aórtica: 10 - 50 mg c/ 5 min Dilución: sin diluir en 1 - 2 minutos",
       "perfusión: HTA tras IAM: 15 mg/h (Máx: 160 mg/ h) (1 - 160 mL/h) Disección Aórtica: 10 mg/h aumentado 10 mg/hc/5 min un máximo de 200 mg/h Dilución: 250 mg en 250 mL de suero (1mg/mL)",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LEVETIRACETAM",
-    "marcas": [
-      "Keppra"
-    ],
+    "marcas": ["Keppra"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -2843,9 +2725,7 @@
       "Crisis mioclónicas en adultos y adolescentes mayores de 12 años",
       "Crisis tónico-clónicas generalizadas primarias en adultos y niños mayores de 6 años con epilepsia idiopática generalizada"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad o alergia"
-    ],
+    "contraindicaciones": ["Hipersensibilidad o alergia"],
     "precauciones": [
       "Ajustar dosis en insuficiencia renal",
       "Cuidado en pacientes con hipernatremia"
@@ -2863,15 +2743,13 @@
     "dosis": [
       "bolo: Dosis Máxima: 1000 - 1500 mg c/ 12 horas Dilución: en 50 mL suero en 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LIDOCAÍNA",
-    "marcas": [
-      "Lidocaína Braun 2%",
-      "Lidocaína Braun 5%"
-    ],
+    "marcas": ["Lidocaína Braun 2%", "Lidocaína Braun 5%"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -2893,9 +2771,7 @@
       "Anticonvulsivante en crisis refractarias",
       "Premedicación en IOT en TCE severo (uso no claro actualmente)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad o alergia"
-    ],
+    "contraindicaciones": ["Hipersensibilidad o alergia"],
     "precauciones": [
       "Monitorizar signos de hipotensión, bradicardia y posible paro cardíaco",
       "Precaución en pacientes con epilepsia, hipovolemia, bradicardia o función respiratoria deteriorada"
@@ -2914,14 +2790,13 @@
     "dosis": [
       "bolo: TV monomórfica: 1 - 1,5 mg/kg FV o TVSP: 1,5 mg/kg Dilución: sin diluir en 10 segundos",
       "perfusión: Dosis: 0,5 - 4 mg/kg/h Dilución: 1000 mg en 250 mL de suero (4 mg/mL) (8 - 70 mL/h)*",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MANITOL",
-    "marcas": [
-      "Manitol 20% B. Braun"
-    ],
+    "marcas": ["Manitol 20% B. Braun"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -2967,9 +2842,7 @@
       "Puede cristalizar a bajas temperaturas",
       "Incompatible con sangre (seudoaglutinación)"
     ],
-    "interacciones": [
-      "Aumenta la excreción urinaria de litio"
-    ],
+    "interacciones": ["Aumenta la excreción urinaria de litio"],
     "efectos_secundarios": [
       "Desequilibrio electrolítico",
       "Cefalea",
@@ -2980,15 +2853,13 @@
     "dosis": [
       "bolo: Dosis presión intraocular: 200 mg/kg lento, seguido de 0,5 - 1 g/kg al 20% en 20 - 40 min. Dosis oliguria o IRA: 100 mL al 20% en 5 minutos, si no hay respuesta, repetir dosis Dilución: frasco preparado para administrar",
       "perfusión: Dosis PIC elevada: 0,25 - 1,50 g/kg (87 - 525 mL/h al 20%)*",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "METIL-PREDNISOLONA",
-    "marcas": [
-      "Solu-Moderin",
-      "Urbason"
-    ],
+    "marcas": ["Solu-Moderin", "Urbason"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3002,7 +2873,7 @@
         "volumen": "4 ml (reconstituido)",
         "concentracion": "62,5 mg/ml"
       },
-       {
+      {
         "forma": "vial",
         "cantidad": "500 mg",
         "volumen": "8 ml (reconstituido)",
@@ -3041,14 +2912,13 @@
     "dosis": [
       "bolo: Dosis estándar: 40-125 mg IV. Lesión medular: 30 mg/kg IV en 15 min",
       "perfusión: Lesión medular mantenimiento: 5,4 mg/kg/h durante 23 horas",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "METOCLOPRAMIDA",
-    "marcas": [
-      "Primperan"
-    ],
+    "marcas": ["Primperan"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3088,14 +2958,13 @@
     "dosis": [
       "bolo: Dosis: 10 mg c/ 8 horas Dilución: sin diluir o 10 mg (2 mL) + 8 mL suero en 3 minutos",
       "perfusión: Vómitos por antineoplásicos: 0,5 mg/kg/hora durante 6 - 8 horas Dilución: 35 mg (7 mL) en 250 mL suero (31 - 41 mL/h)*",
-      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MIDAZOLAM",
-    "marcas": [
-      "Dormicum"
-    ],
+    "marcas": ["Dormicum"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3136,9 +3005,7 @@
       "Efectos prolongados en ancianos, pacientes debilitados o con insuficiencia hepática (reducir dosis un 25%)",
       "Monitorización hemodinámica estricta"
     ],
-    "interacciones": [
-      "No mezclar con otros fármacos"
-    ],
+    "interacciones": ["No mezclar con otros fármacos"],
     "efectos_secundarios": [
       "Depresión respiratoria",
       "Hipotensión",
@@ -3149,15 +3016,13 @@
     "dosis": [
       "bolo: Sedación: 0,02 - 0,04 mg/Kg IOT: 0,1 - 0,3 mg/kg Anticonvulsivante: 2 - 5 mg Dilución: 2 mL (10 mg) + 8 mL de suero = 1mg/mL en 60 - 90 segundos",
       "perfusión: Ventilación Mecánica: 0,05 - 0,1 mg/kg/h (17 - 35 mL/h)* Anticonvulsivo: 0,001 - 0,015 mg/kg/min (21 - 315 mL/h)* Dilución: 50 mg / 250 mL de suero (0,2 mg/mL)",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica: 0,1-0,5 mg/kg intranasal (máx 10 mg)"
     ]
   },
   {
     "nombre": "NALOXONA",
-    "marcas": [
-      "Naloxona Kern Pharma",
-      "Naloxone"
-    ],
+    "marcas": ["Naloxona Kern Pharma", "Naloxone"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3172,9 +3037,7 @@
       "Fines diagnósticos en sospecha de intoxicación aguda por opioides",
       "Coadyuvante en tratamiento de shock séptico"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad o alergia"
-    ],
+    "contraindicaciones": ["Hipersensibilidad o alergia"],
     "precauciones": [
       "Pacientes con historial de cardiopatía o fármacos cardiotóxicos",
       "Riesgo de síndrome de abstinencia agudo en pacientes con abuso de opiáceos",
@@ -3196,15 +3059,13 @@
     "dosis": [
       "bolo: Dosis: 0,4 - 2 mg c/2 min Máx: 10mg. En pacientes con toma de opioides cró nica, reducir la dosis a la mitad para evitar deprivació n/convulsiones Dilución: Sin diluir en 10 segundos",
       "perfusión: Dilución: 2 mg en 250 mL de suero Titular según respuesta",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NITROGLICERINA",
-    "marcas": [
-      "Solinitrina",
-      "Vernies"
-    ],
+    "marcas": ["Solinitrina", "Vernies"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3257,14 +3118,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: IAM/Angina: 50 mg EAP: 50 mg HTA: 50 mg Dilución: 50 mg en 250 mL de suero Titular según respuesta al dolor y presión arterial",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NITROPRUSIATO SÓDICO",
-    "marcas": [
-      "Nitroprussiat Hospira"
-    ],
+    "marcas": ["Nitroprussiat Hospira"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3308,14 +3168,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 0,2 µg/kg/min ajustando según necesidad Dilución: 50 mg en 250 mL de suero (8 - 38 mL/h)*",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NORADRENALINA",
-    "marcas": [
-      "Noradrenalina Braun"
-    ],
+    "marcas": ["Noradrenalina Braun"],
     "presentaciones": [
       {
         "forma": "ampolla bitartrato",
@@ -3360,15 +3219,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 0,01-2 µg/kg/min Dilución simple: 8 mg en 250 mL suero (32 µg/mL) (1,3 - 260 mL/h)* Dilución doble: 16 mg en 250 mL suero (64 µg/mL) (0,6 - 131 mL/h)*",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica: Perfusión 10 mcg/kg (0,1 mcg/kg/min)"
     ]
   },
   {
     "nombre": "OMEPRAZOL",
-    "marcas": [
-      "Losec",
-      "Mopral"
-    ],
+    "marcas": ["Losec", "Mopral"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3383,9 +3240,7 @@
       "Úlcera gastroduodenal",
       "Reflujo gastroesofágico"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al omeprazol o benzimidazoles"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al omeprazol o benzimidazoles"],
     "precauciones": [
       "Descartar neoplasia gástrica antes de tratamiento prolongado",
       "Ajuste en insuficiencia hepática"
@@ -3405,14 +3260,13 @@
     "dosis": [
       "bolo: 40 mg IV lento en 5 minutos. HDA severa: bolo inicial de 80 mg en 5 min",
       "perfusión: HDA severa: 8 mg/h durante 72 horas. Dilución: 80 mg en 100 mL SSF",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ONDANSETRÓN",
-    "marcas": [
-      "Zofran"
-    ],
+    "marcas": ["Zofran"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3445,24 +3299,18 @@
       "Carbamazepina",
       "Rifampicina"
     ],
-    "efectos_secundarios": [
-      "Cefalea",
-      "Sensación de calor",
-      "Estreñimiento"
-    ],
+    "efectos_secundarios": ["Cefalea", "Sensación de calor", "Estreñimiento"],
     "embarazo": "B",
     "dosis": [
       "bolo: 4-8 mg IV lento en 30 segundos a 5 minutos. Dilución: 4-8 mg + 50 mL SSF",
       "perfusión: No está indicada la perfusión continua de rutina",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PARACETAMOL",
-    "marcas": [
-      "Perfalgan",
-      "Termalgin"
-    ],
+    "marcas": ["Perfalgan", "Termalgin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3503,10 +3351,7 @@
       "Insuficiencia renal",
       "Malnutrición crónica"
     ],
-    "interacciones": [
-      "Anticoagulantes orales",
-      "Antiepilépticos"
-    ],
+    "interacciones": ["Anticoagulantes orales", "Antiepilépticos"],
     "efectos_secundarios": [
       "Malestar",
       "Hipotensión",
@@ -3517,14 +3362,13 @@
     "dosis": [
       "bolo: Dosis: 1 gramo c/6 - 8 horas Dilución: frasco preparado para administrar en 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PRASUGREL",
-    "marcas": [
-      "Efient"
-    ],
+    "marcas": ["Efient"],
     "presentaciones": [
       {
         "forma": "comprimido",
@@ -3554,10 +3398,7 @@
       "Edad > 75 años",
       "Cirugía programada"
     ],
-    "interacciones": [
-      "Anticoagulantes",
-      "AINEs"
-    ],
+    "interacciones": ["Anticoagulantes", "AINEs"],
     "efectos_secundarios": [
       "Anemia",
       "Hematoma",
@@ -3568,14 +3409,13 @@
     "dosis": [
       "bolo: No existe formulación IV. Administración exclusivamente oral",
       "perfusión: No está indicada la perfusión IV",
-      "sueros compatibles: No aplica (uso oral)"
+      "sueros compatibles: No aplica (uso oral)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROCAINAMIDA",
-    "marcas": [
-      "Biocoryl"
-    ],
+    "marcas": ["Biocoryl"],
     "presentaciones": [
       {
         "forma": "solución inyectable",
@@ -3597,10 +3437,7 @@
       "Monitorizar ECG y TA (riesgo de hipotensión)",
       "Ajuste en insuficiencia renal"
     ],
-    "interacciones": [
-      "Antiarrítmicos (efecto aditivo)",
-      "Anticolinérgicos"
-    ],
+    "interacciones": ["Antiarrítmicos (efecto aditivo)", "Anticolinérgicos"],
     "efectos_secundarios": [
       "Hipotensión",
       "Bloqueo cardíaco",
@@ -3611,14 +3448,13 @@
     "dosis": [
       "bolo: Bolus inicial: 50 - 100 mg c/5 min Dilución: diluir 1000 mg en 10 mL de suero (100 mg/mL). Dosis máx: 1 gramo",
       "perfusión: Dosis mantenimiento: 2 - 6 mg / min Dilución: 2 gr en 500 mL de suero (4 mg /mL) (120 - 360 mL / hora)",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROPAFENONA",
-    "marcas": [
-      "Rytmonorm"
-    ],
+    "marcas": ["Rytmonorm"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3652,12 +3488,7 @@
       "Cardiopatía estructural",
       "Enfermedad hepática"
     ],
-    "interacciones": [
-      "Digoxina",
-      "Warfarina",
-      "Betabloqueantes",
-      "Cimetidina"
-    ],
+    "interacciones": ["Digoxina", "Warfarina", "Betabloqueantes", "Cimetidina"],
     "efectos_secundarios": [
       "Mareos",
       "Trastornos de conducción",
@@ -3668,14 +3499,13 @@
     "dosis": [
       "bolo: Bolus directo: 1 - 2 mg /kg Dilución: sin diluir o en 50 mL (3 - 5 min)",
       "perfusión: Dosis mantenimiento: 0,5 - 1 mg /min (1 - 2 horas) Dilución: 210 mg en 150 mL de suero (1 mg /mL) (125 - 250 mL /h)",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROPOFOL",
-    "marcas": [
-      "Diprivan"
-    ],
+    "marcas": ["Diprivan"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3704,11 +3534,7 @@
       "Hipotensión y depresión respiratoria",
       "Riesgo de síndrome por infusión de propofol (uso prolongado)"
     ],
-    "interacciones": [
-      "Opioides",
-      "Benzodiazepinas",
-      "Alcohol"
-    ],
+    "interacciones": ["Opioides", "Benzodiazepinas", "Alcohol"],
     "efectos_secundarios": [
       "Hipotensión",
       "Apnea transitoria",
@@ -3719,14 +3545,13 @@
     "dosis": [
       "bolo: Sedación superficial: 0,5 - 1 mg/kg durante 1 minuto (ancianos reducir dosis) Anestesia general: bolos 40 mg c/10 seg hasta signos de anestesia. Dilución: sin diluir. Vial 1% (1 mL = 10 mg) Vial 2% (1 mL = 20 mg)",
       "perfusión: Dosis: 1-8 mg/kg/h Dilución Vial 1%: ( 7 - 56 mL/h)* Dilución Vial 2%: (3,5 - 28 mL/h)* Sin diluir",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROTAMINA",
-    "marcas": [
-      "Protamina Leo"
-    ],
+    "marcas": ["Protamina Leo"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3735,9 +3560,7 @@
         "concentracion": "10 mg/ml"
       }
     ],
-    "indicaciones": [
-      "Neutralización del efecto anticoagulante de la heparina"
-    ],
+    "indicaciones": ["Neutralización del efecto anticoagulante de la heparina"],
     "contraindicaciones": [
       "Alergia a la protamina (riesgo aumentado en diabéticos con insulina-protamina)",
       "Pacientes con anticuerpos antiprotamina"
@@ -3746,27 +3569,19 @@
       "Administración muy lenta (no exceder 50 mg en 10 min)",
       "Riesgo de hipotensión súbita"
     ],
-    "interacciones": [
-      "Incompatible con cefalosporinas y penicilinas"
-    ],
-    "efectos_secundarios": [
-      "Hipotensión",
-      "Bradicardia",
-      "Disnea",
-      "Sofocos"
-    ],
+    "interacciones": ["Incompatible con cefalosporinas y penicilinas"],
+    "efectos_secundarios": ["Hipotensión", "Bradicardia", "Disnea", "Sofocos"],
     "embarazo": "C",
     "dosis": [
       "bolo: Dosis por cada 100 UI Heparina: administrar 1 mg (0,1 mL) si el tiempo desde la administración de la heparina es < 15 min. Administrar 5 mg (0,5 mL) si el tiempo desde la administración de heparina es > 30 minutos. Dilución: diluir en 100 mL de suero. Administrar durante 10 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "RANITIDINA",
-    "marcas": [
-      "Zantac"
-    ],
+    "marcas": ["Zantac"],
     "presentaciones": [
       {
         "forma": "comprimido",
@@ -3786,19 +3601,12 @@
       "Úlcera gástrica y duodenal",
       "Profilaxis del síndrome de Mendelson"
     ],
-    "contraindicaciones": [
-      "Alergia al fármaco",
-      "Porfiria aguda"
-    ],
+    "contraindicaciones": ["Alergia al fármaco", "Porfiria aguda"],
     "precauciones": [
       "Ajuste de dosis en insuficiencia renal severa",
       "Monitorizar en ancianos"
     ],
-    "interacciones": [
-      "Anticoagulantes",
-      "Fenitoína",
-      "Ketoconazol"
-    ],
+    "interacciones": ["Anticoagulantes", "Fenitoína", "Ketoconazol"],
     "efectos_secundarios": [
       "Cefalea",
       "Vértigo",
@@ -3809,14 +3617,13 @@
     "dosis": [
       "bolo: 50 mg IV lento diluido en 20 mL SSF en 5 min. Profilaxis Mendelson: 50 mg IV antes de anestesia",
       "perfusión: 6,25-12,5 mg/h. Dilución: 150 mg en 250 mL SSF a 21 mL/h",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ROCURONIO",
-    "marcas": [
-      "Esmeron"
-    ],
+    "marcas": ["Esmeron"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3825,12 +3632,8 @@
         "concentracion": "10 mg/ml"
       }
     ],
-    "indicaciones": [
-      "Inducción y mantenimiento de parálisis neuromuscular"
-    ],
-    "contraindicaciones": [
-      "Alergia al fármaco o excipientes"
-    ],
+    "indicaciones": ["Inducción y mantenimiento de parálisis neuromuscular"],
+    "contraindicaciones": ["Alergia al fármaco o excipientes"],
     "precauciones": [
       "Requiere ventilación asistida",
       "Precaución en enfermedades neuromusculares"
@@ -3849,14 +3652,13 @@
     "dosis": [
       "bolo: Dosis: 0,6 - 1,2 mg/kg Inducción IOT: Sin diluir en 60 segundos ISR: Sin diluir en 10 segundos",
       "perfusión: Dosis: 0,3-0,6 mg/kg/h Dilución: 100 mg en 100 mL de suero (1mg/mL) (21 - 63 mL/h)*",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica: 1 mg/kg"
     ]
   },
   {
     "nombre": "SALBUTAMOL",
-    "marcas": [
-      "Ventolin"
-    ],
+    "marcas": ["Ventolin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3877,14 +3679,8 @@
         "concentracion": ""
       }
     ],
-    "indicaciones": [
-      "Asma",
-      "Crisis de broncoespasmo",
-      "EPOC"
-    ],
-    "contraindicaciones": [
-      "Alergia al fármaco"
-    ],
+    "indicaciones": ["Asma", "Crisis de broncoespasmo", "EPOC"],
+    "contraindicaciones": ["Alergia al fármaco"],
     "precauciones": [
       "Hipertiroidismo",
       "Insuficiencia coronaria",
@@ -3904,14 +3700,13 @@
     "dosis": [
       "bolo: Dosis: 4 µg/kg (250 µg)* Dilución IV: 250 µg en 50 mL suero a pasar en 10 - 20 minutos c/4 h Bolus SC: 500 µg c/4 horas",
       "perfusión: Dosis: 4 - 8 µg/kg/h Dilución: 12,5 mg en 225 mL de suero (50 µg/mL) (6 - 12 mL/h)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "SOMATOSTATINA",
-    "marcas": [
-      "Somastin"
-    ],
+    "marcas": ["Somastin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -3924,36 +3719,21 @@
       "Hemorragias digestivas por varices esofágicas",
       "Fístulas pancreáticas"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad",
-      "Embarazo y puerperio"
-    ],
-    "precauciones": [
-      "Control de glucemia",
-      "Monitorización de función renal"
-    ],
-    "interacciones": [
-      "Barbitúricos",
-      "Insulina"
-    ],
-    "efectos_secundarios": [
-      "Náuseas",
-      "Vómitos",
-      "Sofocos",
-      "Dolor abdominal"
-    ],
+    "contraindicaciones": ["Hipersensibilidad", "Embarazo y puerperio"],
+    "precauciones": ["Control de glucemia", "Monitorización de función renal"],
+    "interacciones": ["Barbitúricos", "Insulina"],
+    "efectos_secundarios": ["Náuseas", "Vómitos", "Sofocos", "Dolor abdominal"],
     "embarazo": "No recomendado",
     "dosis": [
       "bolo: Bolus inicial: 250 µg sin diluir en 3 minutos",
       "perfusión: Perfusión: 6 mg / 24 horas (250 µ g/hora ) (durante 5 dias) Dilución: 6 mg en 500 mL (21 mL/h)",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "SUCCINILCOLINA",
-    "marcas": [
-      "Anectine"
-    ],
+    "marcas": ["Anectine"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -3968,10 +3748,7 @@
         "concentracion": "30 mg/mL (3%)"
       }
     ],
-    "indicaciones": [
-      "Parálisis rápida para intubación",
-      "Tétanos"
-    ],
+    "indicaciones": ["Parálisis rápida para intubación", "Tétanos"],
     "contraindicaciones": [
       "Hipersensibilidad",
       "Hipertermia maligna",
@@ -3982,10 +3759,7 @@
       "Aumento de presión intraocular",
       "Bradicardia (especialmente en niños)"
     ],
-    "interacciones": [
-      "Inhibidores de colinesterasa",
-      "Aminoglucósidos"
-    ],
+    "interacciones": ["Inhibidores de colinesterasa", "Aminoglucósidos"],
     "efectos_secundarios": [
       "Fasciculaciones musculares",
       "Mialgias",
@@ -3996,14 +3770,13 @@
     "dosis": [
       "bolo: Inducción anestésica: 1 - 2 mg/kg Dilución: diluir 100 mg + 8 mL suero (10 mg/mL) ( 10 - 30 segundos)",
       "perfusión: No se recomienda infusión continua",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica: 1 mg/kg (máx 150 mg)"
     ]
   },
   {
     "nombre": "SULFATO DE MAGNESIO",
-    "marcas": [
-      "Sulmetin"
-    ],
+    "marcas": ["Sulmetin"],
     "presentaciones": [
       {
         "forma": "solución inyectable",
@@ -4017,18 +3790,12 @@
       "Eclampsia",
       "Torsade de Pointes"
     ],
-    "contraindicaciones": [
-      "Insuficiencia renal",
-      "Embarazo cerca del parto"
-    ],
+    "contraindicaciones": ["Insuficiencia renal", "Embarazo cerca del parto"],
     "precauciones": [
       "Monitorizar reflejos osteotendinosos",
       "Vigilar frecuencia respiratoria"
     ],
-    "interacciones": [
-      "Bloqueantes neuromusculares",
-      "Digitálicos"
-    ],
+    "interacciones": ["Bloqueantes neuromusculares", "Digitálicos"],
     "efectos_secundarios": [
       "Hipotensión",
       "Rubor",
@@ -4039,14 +3806,13 @@
     "dosis": [
       "bolo: Eclampsia/preeclampsia: 4-6 g IV en 15-20 min diluido en 100 mL SSF. Arritmia (TdP): 1-2 g IV en 1-2 min sin diluir o en 10 mL SSF",
       "perfusión: Mantenimiento eclampsia: 1-2 g/h. Hipomagnesemia: 1 g en 50 mL SSF en 15 min. Dilución: 10 g en 250 mL SSF",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIAMINA",
-    "marcas": [
-      "Benerva"
-    ],
+    "marcas": ["Benerva"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4061,20 +3827,13 @@
         "concentracion": ""
       }
     ],
-    "indicaciones": [
-      "Déficit de tiamina",
-      "Encefalopatía de Wernicke"
-    ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "indicaciones": ["Déficit de tiamina", "Encefalopatía de Wernicke"],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "Riesgo de shock anafiláctico (administración IV lenta)",
       "Administrar antes de glucosa en alcohólicos"
     ],
-    "interacciones": [
-      "No se han descrito interacciones graves relevantes"
-    ],
+    "interacciones": ["No se han descrito interacciones graves relevantes"],
     "efectos_secundarios": [
       "Reacciones de hipersensibilidad",
       "Prurito",
@@ -4084,14 +3843,13 @@
     "dosis": [
       "bolo: Deprivación alcohólica: 100 mg/dia Sd. Wernicke: 500 mg c/ 8 horas DéJicit vit. B1: 5 - 30 mg c/8 horas Suplemento nutrición parenteral: 6 mg/dıá Dilución: 100 mL suero 30 minutos Nota: el fármaco no tiene indicado su uso IV",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIAPRIZAL",
-    "marcas": [
-      "Tiaprizal"
-    ],
+    "marcas": ["Tiaprizal"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4106,39 +3864,25 @@
         "concentracion": ""
       }
     ],
-    "indicaciones": [
-      "Deprivación alcohólica",
-      "Discinesias"
-    ],
-    "contraindicaciones": [
-      "Feocromocitoma",
-      "Tumores prolactino-dependientes"
-    ],
+    "indicaciones": ["Deprivación alcohólica", "Discinesias"],
+    "contraindicaciones": ["Feocromocitoma", "Tumores prolactino-dependientes"],
     "precauciones": [
       "Insuficiencia renal (ajustar dosis)",
       "Enfermedad de Parkinson"
     ],
-    "interacciones": [
-      "Levodopa",
-      "Alcohol"
-    ],
-    "efectos_secundarios": [
-      "Somnolencia",
-      "Aumento de prolactina",
-      "Mareos"
-    ],
+    "interacciones": ["Levodopa", "Alcohol"],
+    "efectos_secundarios": ["Somnolencia", "Aumento de prolactina", "Mareos"],
     "embarazo": "C",
     "dosis": [
       "bolo: Desintoxicación etílica: 100 mg c/ 8 h Corea Huntington grave: 400 mg c/ 8 h Delirium Tremens: 300 mg c/6 h Dosis: 50 - 100 mL en 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TICAGRELOL",
-    "marcas": [
-      "Brilique"
-    ],
+    "marcas": ["Brilique"],
     "presentaciones": [
       {
         "forma": "comprimido",
@@ -4147,9 +3891,7 @@
         "concentracion": ""
       }
     ],
-    "indicaciones": [
-      "Antiagregante para SCA e IAM previo"
-    ],
+    "indicaciones": ["Antiagregante para SCA e IAM previo"],
     "contraindicaciones": [
       "Hemorragia activa",
       "Antecedentes de hemorragia intracraneal",
@@ -4176,14 +3918,13 @@
     "dosis": [
       "bolo: No existe formulación IV. Administración exclusivamente oral",
       "perfusión: No está indicada la perfusión IV",
-      "sueros compatibles: No aplica (uso oral)"
+      "sueros compatibles: No aplica (uso oral)",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIROFIBAN",
-    "marcas": [
-      "Agrastat"
-    ],
+    "marcas": ["Agrastat"],
     "presentaciones": [
       {
         "forma": "bolsa",
@@ -4192,9 +3933,7 @@
         "concentracion": "0,05 mg/mL (0,005%)"
       }
     ],
-    "indicaciones": [
-      "Prevención de IAM precoz en SCASEST"
-    ],
+    "indicaciones": ["Prevención de IAM precoz en SCASEST"],
     "contraindicaciones": [
       "Trombocitopenia",
       "Hemorragia activa",
@@ -4205,31 +3944,19 @@
       "Monitorizar recuento plaquetario y hemoglobina",
       "Ajustar dosis en insuficiencia renal"
     ],
-    "interacciones": [
-      "Heparina",
-      "Warfarina",
-      "Antiagregantes"
-    ],
-    "efectos_secundarios": [
-      "Hemorragia",
-      "Náuseas",
-      "Cefalea",
-      "Fiebre"
-    ],
+    "interacciones": ["Heparina", "Warfarina", "Antiagregantes"],
+    "efectos_secundarios": ["Hemorragia", "Náuseas", "Cefalea", "Fiebre"],
     "embarazo": "B",
     "dosis": [
       "bolo: No administrar en bolo de alta dosis. Dosis de carga: 0,4 µg/kg/min durante 30 min",
       "perfusión: Mantenimiento: 0,1 µg/kg/min durante 12-24 h. Dilución: 12,5 mg en 250 mL SSF (50 µg/mL)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TRAMADOL",
-    "marcas": [
-      "Adolonta",
-      "Zytram",
-      "Tradonal"
-    ],
+    "marcas": ["Adolonta", "Zytram", "Tradonal"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4238,9 +3965,7 @@
         "concentracion": "50 mg/mL (5%)"
       }
     ],
-    "indicaciones": [
-      "Dolor moderado a severo"
-    ],
+    "indicaciones": ["Dolor moderado a severo"],
     "contraindicaciones": [
       "Hipersensibilidad",
       "Intoxicación aguda por alcohol o hipnóticos",
@@ -4267,14 +3992,13 @@
     "dosis": [
       "bolo: Dosis: 50 - 100 mg c/ 8 horas Dilución: 50 mL suero en 5 - 10 minutos",
       "perfusión: Dosis: 100 - 400 mg en 24 horas Dilución: 1 - 4 ampollas en 500 mL suero a 21 mL/h",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "URAPIDILO",
-    "marcas": [
-      "Elgadil"
-    ],
+    "marcas": ["Elgadil"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4283,9 +4007,7 @@
         "concentracion": "5 mg/mL (0,5%)"
       }
     ],
-    "indicaciones": [
-      "Urgencias hipertensivas"
-    ],
+    "indicaciones": ["Urgencias hipertensivas"],
     "contraindicaciones": [
       "Hipersensibilidad",
       "Estenosis aórtica",
@@ -4300,24 +4022,18 @@
       "Alcohol",
       "Antihipertensivos"
     ],
-    "efectos_secundarios": [
-      "Cefalea",
-      "Mareos",
-      "Náuseas",
-      "Palpitaciones"
-    ],
+    "efectos_secundarios": ["Cefalea", "Mareos", "Náuseas", "Palpitaciones"],
     "embarazo": "C",
     "dosis": [
       "bolo: Bolus: 25 mg pudiendo repetirse a los 5 min. Incrementar a 50 mg si no hay respuesta Sin diluir en 20 segundos",
       "perfusión: Dosis: 60 - 180 mg/h durante un máximo de 7 dias Dilución: 250 mg en 240 mL (1 mg/mL) 60 - 180 mL/h",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "UROKINASA",
-    "marcas": [
-      "Urokinase Kedrion"
-    ],
+    "marcas": ["Urokinase Kedrion"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4332,24 +4048,15 @@
         "concentracion": "50.000 UI/ml"
       }
     ],
-    "indicaciones": [
-      "TEP/TVP",
-      "Derrames pleurales metaneumónicos"
-    ],
+    "indicaciones": ["TEP/TVP", "Derrames pleurales metaneumónicos"],
     "contraindicaciones": [
       "Hemorragia activa",
       "Diátesis hemorrágica",
       "Cirugía reciente (menos de 2 meses)",
       "Traumatismo craneal"
     ],
-    "precauciones": [
-      "Vigilar sitios de punción",
-      "Riesgo de hemorragia grave"
-    ],
-    "interacciones": [
-      "Anticoagulantes",
-      "Antiagregantes plaquetarios"
-    ],
+    "precauciones": ["Vigilar sitios de punción", "Riesgo de hemorragia grave"],
+    "interacciones": ["Anticoagulantes", "Antiagregantes plaquetarios"],
     "efectos_secundarios": [
       "Hemorragia",
       "Embolia de cristales de colesterol",
@@ -4359,14 +4066,13 @@
     "dosis": [
       "bolo: TEP masivo: 4400 UI/kg IV en 10 minutos. Dilución: diluir en 15 mL SSF",
       "perfusión: TEP/TVP: 4400 UI/kg/h durante 12-24 horas. Dilución: diluir en 90 mL SSF",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "VERAPAMILO",
-    "marcas": [
-      "Manidon"
-    ],
+    "marcas": ["Manidon"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4375,10 +4081,7 @@
         "concentracion": "2,5 mg/mL (0,25%)"
       }
     ],
-    "indicaciones": [
-      "TSPV",
-      "Frenar frecuencia cardiaca en FA"
-    ],
+    "indicaciones": ["TSPV", "Frenar frecuencia cardiaca en FA"],
     "contraindicaciones": [
       "Shock cardiogénico",
       "Bloqueo AV de 2º o 3er grado",
@@ -4389,12 +4092,7 @@
       "Monitorizar ECG y TA",
       "No administrar junto a betabloqueantes IV"
     ],
-    "interacciones": [
-      "Digoxina",
-      "Betabloqueantes",
-      "Litio",
-      "Amiodarona"
-    ],
+    "interacciones": ["Digoxina", "Betabloqueantes", "Litio", "Amiodarona"],
     "efectos_secundarios": [
       "Hipotensión",
       "Bradicardia",
@@ -4405,14 +4103,13 @@
     "dosis": [
       "bolo: Dosis: 2,5 - 5 mg pudiendo repetir 5 - 10 mg (dosis máx: 20 mg) Dilución: 5 mg + 3 mL suero (1mg/mL) en 2 - 3 minutos",
       "perfusión: Dosis: 0,5 - 1 mg/kg/dı́a pudiéndose incrementar a 1,5 mg /kg/dıá Dilución: 7 ampollas en 500 mL de suero (11 mL/ h)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LACOSAMIDA",
-    "marcas": [
-      "Vimpat"
-    ],
+    "marcas": ["Vimpat"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4421,38 +4118,22 @@
         "concentracion": "10 mg/ml"
       }
     ],
-    "indicaciones": [
-      "Terapia de crisis epilépticas"
-    ],
-    "contraindicaciones": [
-      "Hipersensibilidad",
-      "Bloqueo AV de 2º o 3er grado"
-    ],
-    "precauciones": [
-      "Monitorizar ECG",
-      "Riesgo de mareos y ataxia"
-    ],
-    "interacciones": [
-      "Fármacos que prolongan el intervalo PR"
-    ],
-    "efectos_secundarios": [
-      "Mareo",
-      "Cefalea",
-      "Náuseas",
-      "Diplopía"
-    ],
+    "indicaciones": ["Terapia de crisis epilépticas"],
+    "contraindicaciones": ["Hipersensibilidad", "Bloqueo AV de 2º o 3er grado"],
+    "precauciones": ["Monitorizar ECG", "Riesgo de mareos y ataxia"],
+    "interacciones": ["Fármacos que prolongan el intervalo PR"],
+    "efectos_secundarios": ["Mareo", "Cefalea", "Náuseas", "Diplopía"],
     "embarazo": "C",
     "dosis": [
       "bolo: Dosis: 200 - 300 mg c/ 12 horas Dilución: en 50 mL de suero en 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "VITAMINA B6",
-    "marcas": [
-      "Benadon"
-    ],
+    "marcas": ["Benadon"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4472,16 +4153,11 @@
       "Déficit de B6",
       "Intoxicación por isoniacida"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
     "precauciones": [
       "Uso prolongado de dosis altas puede causar neuropatía sensorial"
     ],
-    "interacciones": [
-      "Levodopa (disminuye su efecto)",
-      "Altretamina"
-    ],
+    "interacciones": ["Levodopa (disminuye su efecto)", "Altretamina"],
     "efectos_secundarios": [
       "Neuropatía periférica (crónico)",
       "Náuseas",
@@ -4491,14 +4167,13 @@
     "dosis": [
       "bolo: Dosis: Ver indicación deseada Dilución: en 50 mL suero en 10 - 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "VITAMINA K",
-    "marcas": [
-      "Konakion"
-    ],
+    "marcas": ["Konakion"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4511,16 +4186,12 @@
       "Déficit de vitamina K",
       "Reversión de anticoagulantes (Warfarina/Sintrom)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
     "precauciones": [
       "Riesgo de anafilaxia con administración IV rápida",
       "No inyectar IM si hay anticoagulación (hematomas)"
     ],
-    "interacciones": [
-      "Antagoniza anticoagulantes orales"
-    ],
+    "interacciones": ["Antagoniza anticoagulantes orales"],
     "efectos_secundarios": [
       "Reacción en el sitio de inyección",
       "Sofocos",
@@ -4530,14 +4201,13 @@
     "dosis": [
       "bolo: Dosis: 5 - 10 mg Dilución: en 50 mL suero (15 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ACICLOVIR",
-    "marcas": [
-      "Zovirax"
-    ],
+    "marcas": ["Zovirax"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4545,7 +4215,7 @@
         "volumen": "10 ml (reconstituido)",
         "concentracion": "25 mg/ml"
       },
-       {
+      {
         "forma": "vial",
         "cantidad": "500 mg",
         "volumen": "20 ml (reconstituido)",
@@ -4556,18 +4226,12 @@
       "Infecciones por virus Herpes simplex y Varicela-zoster",
       "Encefalitis herpética"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad"
-    ],
+    "contraindicaciones": ["Hipersensibilidad"],
     "precauciones": [
       "Ajustar dosis en insuficiencia renal",
       "Asegurar hidratación adecuada para prevenir toxicidad renal"
     ],
-    "interacciones": [
-      "Probenecid",
-      "Cimetidina",
-      "Micofenolato de mofetilo"
-    ],
+    "interacciones": ["Probenecid", "Cimetidina", "Micofenolato de mofetilo"],
     "efectos_secundarios": [
       "Fallo renal agudo",
       "Alteraciones neurológicas",
@@ -4578,15 +4242,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Herpes genital, varicela-zóster y profilaxis o herpes simple en inmunodeprimidos: 5 mg/kg c/8 horas Varicela-zóster en inmunodeprimidos y encefalitis por herpes simple: 10 mg/kg c/8 horas Dilución: reconstituir vial con 10 mL de API y diluir hastaalcanzaruna concentración máxima del 0,5% (50 mL para 250 mg y 100 mL para 500 mg), infundir en, al menos, 1 hora",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ATP",
-    "marcas": [
-      "Atepodene",
-      "Striadyne"
-    ],
+    "marcas": ["Atepodene", "Striadyne"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4622,14 +4284,13 @@
     "dosis": [
       "bolo: Primera dosis: 10 mg Segunda dosis: 20 mg Tercera dosis: 30 mg Cuarta dosis: 40 mg Nota: todas las administraciones deben ir seguidas de 20 mL de suero rápido Dilución: diluir los 100 mg de polvo con 10 mL de suero (concentración 10 mg/mL)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AMIKACINA",
-    "marcas": [
-      "Biclin"
-    ],
+    "marcas": ["Biclin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4649,10 +4310,7 @@
       "Sepsis",
       "Infecciones respiratorias graves"
     ],
-    "contraindicaciones": [
-      "Alergia a aminoglucósidos",
-      "Miastenia gravis"
-    ],
+    "contraindicaciones": ["Alergia a aminoglucósidos", "Miastenia gravis"],
     "precauciones": [
       "Nefrotoxicidad y ototoxicidad",
       "Monitorizar niveles plasmáticos y función renal"
@@ -4671,14 +4329,13 @@
     "dosis": [
       "bolo: Bacteriemia, septicemia, ITU, inf. resp., neutropenia febril: 15 mg/kg dosis ú nica. Pauta continuada (5 - 7,5 mg/kg) ajustando niveles de pico y valle. Dilución: 100 - 200 mL de suero en 30 - 60 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino, Suero Ringer"
+      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AMOXICILINA / ÁCIDO CLAVULÁNICO",
-    "marcas": [
-      "Augmentine"
-    ],
+    "marcas": ["Augmentine"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4700,15 +4357,8 @@
       "Alergia a penicilinas",
       "Antecedentes de ictericia por amoxicilina/clavulánico"
     ],
-    "precauciones": [
-      "Riesgo de anafilaxia",
-      "Ajustar en insuficiencia renal"
-    ],
-    "interacciones": [
-      "Anticoagulantes",
-      "Metotrexato",
-      "Alopurinol"
-    ],
+    "precauciones": ["Riesgo de anafilaxia", "Ajustar en insuficiencia renal"],
+    "interacciones": ["Anticoagulantes", "Metotrexato", "Alopurinol"],
     "efectos_secundarios": [
       "Diarrea",
       "Náuseas",
@@ -4719,14 +4369,13 @@
     "dosis": [
       "bolo: Dosis: 1 g / 200 mg c/ 8 - 12 ho 2 g / 200 mg c/12 h Dilución: 1 gramo en 20 mL suero (5 min) o 2 gramos en 50 mL suero (10 - 15 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AMPICILINA",
-    "marcas": [
-      "Gobemicina"
-    ],
+    "marcas": ["Gobemicina"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4746,9 +4395,7 @@
       "Meningitis",
       "Septicemia"
     ],
-    "contraindicaciones": [
-      "Alergia a penicilinas"
-    ],
+    "contraindicaciones": ["Alergia a penicilinas"],
     "precauciones": [
       "Hipersensibilidad cruzada con cefalosporinas",
       "Ajustar en insuficiencia renal"
@@ -4757,24 +4404,18 @@
       "Alopurinol (aumenta riesgo de exantema)",
       "Anticonceptivos orales"
     ],
-    "efectos_secundarios": [
-      "Diarrea",
-      "Exantema",
-      "Urticaria",
-      "Náuseas"
-    ],
+    "efectos_secundarios": ["Diarrea", "Exantema", "Urticaria", "Náuseas"],
     "embarazo": "B",
     "dosis": [
       "bolo: Dosis: 0,5 - 2 g cada 4 - 6 horas Dilución: 250 mg con 2 mL de API o 500 mg y 1 g con 4 mL de API. Luego diluir en 50 mL suero en 20 - 30 min",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AZITROMICINA",
-    "marcas": [
-      "Zitromax"
-    ],
+    "marcas": ["Zitromax"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4787,17 +4428,12 @@
       "Neumonía adquirida en la comunidad",
       "Enfermedad inflamatoria pélvica grave"
     ],
-    "contraindicaciones": [
-      "Alergia a macrólidos"
-    ],
+    "contraindicaciones": ["Alergia a macrólidos"],
     "precauciones": [
       "Prolongación del intervalo QT",
       "Insuficiencia hepática grave"
     ],
-    "interacciones": [
-      "Digoxina",
-      "Derivados ergóticos"
-    ],
+    "interacciones": ["Digoxina", "Derivados ergóticos"],
     "efectos_secundarios": [
       "Diarrea",
       "Dolor abdominal",
@@ -4808,14 +4444,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 500 mg/dıá durante al menos 1 o 2 dias consecutivos seguido de pauta oral durante 5 dıá s. Dilución: reconstituir con 4,8 mL de API e diluir hasta conseguir una concentración de 1 mg/mL o 2 mg/mL (500 mL o 250 mL). Infundir en 2 horas.",
-      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "AZTREONAM",
-    "marcas": [
-      "Azactam"
-    ],
+    "marcas": ["Azactam"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4833,16 +4468,12 @@
     "indicaciones": [
       "Infecciones graves por gramnegativos aeróbicos en alérgicos a penicilinas"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "Ajustar en insuficiencia renal",
       "Monitorizar función hepática"
     ],
-    "interacciones": [
-      "Antibióticos nefrotóxicos"
-    ],
+    "interacciones": ["Antibióticos nefrotóxicos"],
     "efectos_secundarios": [
       "Erupción cutánea",
       "Náuseas",
@@ -4853,14 +4484,13 @@
     "dosis": [
       "bolo: Dosis estándar: 1 - 2 gramos c/8 horas Meningitis y otras inf. por P. Aeruginosa: 2 gramos c/ 6 horas Dilución: 1 gramo con 6 - 10 mL API y disolver en 50 mL suero por cada gramo (20 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "BUTILESCOPOLAMINA",
-    "marcas": [
-      "Buscapina"
-    ],
+    "marcas": ["Buscapina"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4882,10 +4512,7 @@
       "Megacolon",
       "Miastenia gravis"
     ],
-    "precauciones": [
-      "Pacientes propensos a glaucoma",
-      "Cuidado en ancianos"
-    ],
+    "precauciones": ["Pacientes propensos a glaucoma", "Cuidado en ancianos"],
     "interacciones": [
       "Antidepresivos tricíclicos",
       "Antihistamínicos",
@@ -4902,14 +4529,13 @@
     "dosis": [
       "bolo: Dolor espasmódico: 20 mg C/ 4 - 6 h Manejo secreciones respiratorias: 20 mg SC seguido de perfusión continua Impact. esofágo por cuerpo extraño: 20 mg Dilución: 20 mg en 50 mL suero (10- 15 min)",
       "perfusión: Manejo secreciones: 40 - 60 mg c/24 h Dilución: 250 mL suero (11 mL / h)",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CALCIO GLUCONATO 10 ML AL 10% (940 MG)",
-    "marcas": [
-      "Gluconato Cálcico 10%"
-    ],
+    "marcas": ["Gluconato Cálcico 10%"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -4932,10 +4558,7 @@
       "Monitorizar frecuencia cardíaca",
       "Evitar extravasación (necrosis)"
     ],
-    "interacciones": [
-      "Digoxina (aumenta toxicidad)",
-      "Ceftriaxona"
-    ],
+    "interacciones": ["Digoxina (aumenta toxicidad)", "Ceftriaxona"],
     "efectos_secundarios": [
       "Bradicardia",
       "Hipotensión",
@@ -4946,14 +4569,13 @@
     "dosis": [
       "bolo: Bolus inicial: 1 - 2 ampollas Dilución: 50 - 100 mL suero (10 - 15 min)",
       "perfusión: Dilución: 6 ampollas en 500 mL suero . Administrar en 10 horas (50 mL/h)",
-      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero glucosalino, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CEFAZOLINA",
-    "marcas": [
-      "Kefol"
-    ],
+    "marcas": ["Kefol"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -4972,35 +4594,24 @@
       "Profilaxis quirúrgica",
       "Infecciones por cocos grampositivos sensibles"
     ],
-    "contraindicaciones": [
-      "Alergia a cefalosporinas"
-    ],
+    "contraindicaciones": ["Alergia a cefalosporinas"],
     "precauciones": [
       "Ajustar en insuficiencia renal",
       "Hipersensibilidad cruzada con penicilinas"
     ],
-    "interacciones": [
-      "Probenecid",
-      "Antibióticos bacteriostáticos"
-    ],
-    "efectos_secundarios": [
-      "Exantema",
-      "Náuseas",
-      "Vómitos",
-      "Flebitis"
-    ],
+    "interacciones": ["Probenecid", "Antibióticos bacteriostáticos"],
+    "efectos_secundarios": ["Exantema", "Náuseas", "Vómitos", "Flebitis"],
     "embarazo": "B",
     "dosis": [
       "bolo: Dosis estándar: 1 - 2 gc/6 - 8 h Dilución: Reconstituir 500 mg y 1 gramo con API y diluir en 50 mL suero (3-5 min) Dilución: Reconstituir 2 g con 10 mL API e diluir en 100 mL suero (5-10 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CEFEPIME",
-    "marcas": [
-      "Maxipime"
-    ],
+    "marcas": ["Maxipime"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5018,17 +4629,12 @@
     "indicaciones": [
       "Infecciones graves (neumonía, sepsis, neutropenia febril)"
     ],
-    "contraindicaciones": [
-      "Alergia a cefalosporinas"
-    ],
+    "contraindicaciones": ["Alergia a cefalosporinas"],
     "precauciones": [
       "Riesgo de encefalopatía en insuficiencia renal si no se ajusta la dosis",
       "Hipersensibilidad cruzada"
     ],
-    "interacciones": [
-      "Aminoglucósidos",
-      "Diuréticos potentes"
-    ],
+    "interacciones": ["Aminoglucósidos", "Diuréticos potentes"],
     "efectos_secundarios": [
       "Diarrea",
       "Erupción cutánea",
@@ -5039,14 +4645,13 @@
     "dosis": [
       "bolo: Dosis estándar: 1 - 2 gc/8 - 12 horas Dilución: Reconstituir 500 mg y 1 gramo con API y diluir en 50 mL suero (3-5 min) Dilución: Reconstituir 2 g con 10 mL API e diluir en 100 mL suero (5-10 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CEFTAZIDIMA / AVIBACTAM",
-    "marcas": [
-      "Zavicefta"
-    ],
+    "marcas": ["Zavicefta"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5069,10 +4674,7 @@
       "Riesgo de convulsiones (especialmente en insuficiencia renal)",
       "Monitorizar función renal"
     ],
-    "interacciones": [
-      "Probenecid",
-      "Cloranfenicol"
-    ],
+    "interacciones": ["Probenecid", "Cloranfenicol"],
     "efectos_secundarios": [
       "Prueba de Coombs directa positiva",
       "Náuseas",
@@ -5084,14 +4686,13 @@
     "dosis": [
       "bolo: Multirresistenciasospechadao confirmada: 2 g/0,5 g cada 8 horas Dilución: reconstituir con API y diluir en 100 mL de suero (10 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CEFTRIAXONA",
-    "marcas": [
-      "Rocephin"
-    ],
+    "marcas": ["Rocephin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5125,25 +4726,18 @@
       "Anticoagulantes orales (potenciación)",
       "Soluciones con calcio (incompatibilidad física)"
     ],
-    "efectos_secundarios": [
-      "Diarrea",
-      "Eosinofilia",
-      "Leucopenia",
-      "Exantema"
-    ],
+    "efectos_secundarios": ["Diarrea", "Eosinofilia", "Leucopenia", "Exantema"],
     "embarazo": "B",
     "dosis": [
       "bolo: Dosis estándar: 1 - 2 gc/ 24 horas Dilución: Reconstituir 1 gramo con 10 mL API y diluir con 50 mL suero (5 - 10 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CEFUROXIMA",
-    "marcas": [
-      "Zinnat",
-      "Civic"
-    ],
+    "marcas": ["Zinnat", "Civic"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5163,17 +4757,12 @@
       "Infecciones urinarias",
       "Profilaxis quirúrgica"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad a cefalosporinas"
-    ],
+    "contraindicaciones": ["Hipersensibilidad a cefalosporinas"],
     "precauciones": [
       "Ajustar dosis en insuficiencia renal",
       "Riesgo de reacción de Jarisch-Herxheimer en tratamiento de enfermedad de Lyme"
     ],
-    "interacciones": [
-      "Probenecid",
-      "Diuréticos potentes (furosemida)"
-    ],
+    "interacciones": ["Probenecid", "Diuréticos potentes (furosemida)"],
     "efectos_secundarios": [
       "Neutropenia",
       "Eosinofilia",
@@ -5184,15 +4773,13 @@
     "dosis": [
       "bolo: Dosis estándar: 750 - 1500 mg c/8 horas Dilución: Reconstituir 250/2 mL , 750/6 mL, 1500/15 mL API y diluir 50 mL suero (5 - 10 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CIPROFLOXACINO",
-    "marcas": [
-      "Cipro",
-      "Rigoran"
-    ],
+    "marcas": ["Cipro", "Rigoran"],
     "presentaciones": [
       {
         "forma": "bolsa",
@@ -5222,25 +4809,18 @@
       "Anticoagulantes orales",
       "Fenitoína"
     ],
-    "efectos_secundarios": [
-      "Náuseas",
-      "Diarrea",
-      "Mareos",
-      "Fotosensibilidad"
-    ],
+    "efectos_secundarios": ["Náuseas", "Diarrea", "Mareos", "Fotosensibilidad"],
     "embarazo": "C",
     "dosis": [
       "bolo: Dosis estándar: 400 mg c/12 h. (Ver resto de dosis e indicaciones) Dilución: Formato ya preparado (60 min)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLARITROMICINA",
-    "marcas": [
-      "Klacid",
-      "Bremon"
-    ],
+    "marcas": ["Klacid", "Bremon"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5264,12 +4844,7 @@
       "Riesgo de miastenia gravis",
       "Ajustar en insuficiencia renal severa"
     ],
-    "interacciones": [
-      "Digoxina",
-      "Warfarina",
-      "Colquicina",
-      "Midazolam"
-    ],
+    "interacciones": ["Digoxina", "Warfarina", "Colquicina", "Midazolam"],
     "efectos_secundarios": [
       "Disgeusia (alteración del gusto)",
       "Cefalea",
@@ -5281,14 +4856,13 @@
     "dosis": [
       "bolo: Dosis: 500 mg c/ 12 horas Dilución: Reconstituir con 10 mL API e diluir en 250 mL suero. Administrar en 60 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "CLONAZEPAM",
-    "marcas": [
-      "Rivotril"
-    ],
+    "marcas": ["Rivotril"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5330,15 +4904,13 @@
     "dosis": [
       "bolo: Dosis: 1 mg en adultos. Repetir si precisa Reconstituir 1 mg con 1 mL API. Dilución: 1 mg + 9 mL suero (0,1 mg/mL) No superar los 0,50 mg/min (2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "COLISTINA",
-    "marcas": [
-      "Colistimetato de Sodio",
-      "Promixin"
-    ],
+    "marcas": ["Colistimetato de Sodio", "Promixin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5379,14 +4951,13 @@
     "dosis": [
       "bolo: Estricto ajuste de dosis según peso y función renal: >60 kg (1-2 MUI c/8h) Inhalada: 2 MUI c/8h o 3 MUI c/12 h Dilución: 2 viales máximo por infusión en 50 mL (30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DANTROLENO",
-    "marcas": [
-      "Dantrium"
-    ],
+    "marcas": ["Dantrium"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5422,14 +4993,13 @@
     "dosis": [
       "bolo: Dosis: 2,5 mg/kg. Se puede repetir dosis c/15 min hasta controlar sıń tomas o llegar a dosis máxima (10 mg/kg) Dilución: disolver con 60 mL de agua destilada y seguidamente diluir en suero. Administrar en 15 minutos",
       "perfusión: Dosis mantenimiento: 1 mg/kg cada 6 horas durante 24 horas Dilución: se diluye 3 viales con 60 mL (20mg) de agua destilada cada uno y un 4º vial con 30 mL (10 mg). Total 210 mL (70 mg) de agua destilada + 40 mL suero (250 mL) a pasar en 6 horas (42 mL/h)*",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "DAPTOMICINA",
-    "marcas": [
-      "Cubicin"
-    ],
+    "marcas": ["Cubicin"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5449,9 +5019,7 @@
       "Endocarditis infecciosa derecha por S. aureus",
       "Bacteriemia por S. aureus"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "Monitorizar niveles de CPK semanalmente (riesgo de miopatía)",
       "Neumonía eosinofílica",
@@ -5461,24 +5029,18 @@
       "Estatinas (aumentan riesgo de elevación de CPK)",
       "Warfarina"
     ],
-    "efectos_secundarios": [
-      "Mialgia",
-      "Elevación de CPK",
-      "Diarrea",
-      "Mareos"
-    ],
+    "efectos_secundarios": ["Mialgia", "Elevación de CPK", "Diarrea", "Mareos"],
     "embarazo": "B",
     "dosis": [
       "bolo: Inf. piel y partes blandas: 6 mg/kg/dıá Endocarditis infecciosa: 8 -10 mg/kg/dıá Dilución: reconstituir con 7 mL API, girar lentamente el vial y reposar 10 min e diluir en 50 mL suero (30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ERITROMICINA",
-    "marcas": [
-      "Pantomicina"
-    ],
+    "marcas": ["Pantomicina"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5518,14 +5080,13 @@
     "dosis": [
       "bolo: Dosis: 500 - 1000 mg c/ 6 horas Dosis previa a gastroscopia: 250 mg para favorecer el vaciamiento gástrico Dilución: reconstituir con 20 mL de API y diluir en 250 mL de suero. Administrar en 30 - 60 minutos Nota: en caso de usar SG5% debe añ adirse 0,5 mL de Bicarbonato 1 Molar por cada 100 mL de suero para evitar dolor en el recorrido de la vena",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ERTAPENEM",
-    "marcas": [
-      "Invanz"
-    ],
+    "marcas": ["Invanz"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5562,14 +5123,13 @@
     "dosis": [
       "bolo: Dosis: 1 gramo c/ 12 - 24 horas Dilución: reconstituir con 10 mL API e diluir en 50 mL. Administrar en 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ESMOLOL",
-    "marcas": [
-      "Brevibloc"
-    ],
+    "marcas": ["Brevibloc"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5611,15 +5171,13 @@
     "dosis": [
       "bolo: Arritmias: 0,5 mg/Kg HTA: 1 mg / Kg Dilución: sin diluir en 30 - 60 segundos",
       "perfusión: Arritmias: 0,05 - 0,20 mg/kg/min HTA: 0,15 - 0,3 mg/kg/min Dilución: 100 mg en 240 mL de suero (0,4 mg / mL)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FACTOR II, VII, IX, X COAGULACIÓN HUMANA",
-    "marcas": [
-      "Beriplex",
-      "Octaplex"
-    ],
+    "marcas": ["Beriplex", "Octaplex"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5640,10 +5198,7 @@
       "Riesgo de trombosis",
       "No administrar junto con antifibrinolíticos"
     ],
-    "interacciones": [
-      "Anticoagulantes orales",
-      "Heparina"
-    ],
+    "interacciones": ["Anticoagulantes orales", "Heparina"],
     "efectos_secundarios": [
       "Eventos tromboembólicos",
       "Cefalea",
@@ -5653,15 +5208,13 @@
     "dosis": [
       "bolo: INR 2.0 - 3.9: 25 UI/kg (1 mL/kg) INR 4.0 - 6.0: 35 UI/kg (1,4 mL/kg) INR > 6.0: 50 UI/kg (2 mL/kg)",
       "perfusión: Dilución: colocar vial disolvente en superficie plana y conectar con el terminal azul hacia abajo, ajustándolo al tapón del disolvente. Seguidamente colocar el vial de polvo sobre superficie plana e invertir el disolvente hasta ajustar ambos viales a través del conector. Una vez disuelto, cargar con una jeringa y administrar en 2-3 minutos",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FENITOÍNA",
-    "marcas": [
-      "Sinergina",
-      "Fenitoína Kern"
-    ],
+    "marcas": ["Sinergina", "Fenitoína Kern"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5701,14 +5254,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Estado epiléptico: 15 mg/kg Dosis Má xima de inicio 1,5 gramos (monitorizació n) Dilución: 1 gramo en 500 mL de suero a pasar en 30 minutos *",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FITOMENADIONA",
-    "marcas": [
-      "Konakion"
-    ],
+    "marcas": ["Konakion"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5721,9 +5273,7 @@
       "Hemorragias o riesgo de hemorragia por hipoprotrombinemia",
       "Sobredosificación de anticoagulantes cumarínicos (Sintrom)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "Riesgo de anafilaxia en administración IV (inyectar muy lentamente)",
       "No inyectar IM en pacientes anticoagulados"
@@ -5742,14 +5292,13 @@
     "dosis": [
       "bolo: Dosis: 5 - 10 mg Dilución: en 50 mL suero (15 - 30 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FLUCONAZOL FRASCOS 100, 200 Y 400 MG",
-    "marcas": [
-      "Diflucan"
-    ],
+    "marcas": ["Diflucan"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -5787,14 +5336,13 @@
     "dosis": [
       "bolo: Dosis: según causa a tratar Dilución: fármaco ya diluido. Administrar entre 30-60 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "FOSFOMICINA",
-    "marcas": [
-      "Fosfocina"
-    ],
+    "marcas": ["Fosfocina"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5821,9 +5369,7 @@
       "Alto contenido de sodio (precaución en ICC, edema)",
       "Monitorizar niveles de potasio (riesgo de hipopotasemia)"
     ],
-    "interacciones": [
-      "No se han descrito interacciones medicamentosas graves"
-    ],
+    "interacciones": ["No se han descrito interacciones medicamentosas graves"],
     "efectos_secundarios": [
       "Náuseas",
       "Vómitos",
@@ -5834,15 +5380,13 @@
     "dosis": [
       "bolo: Dosis: 200 - 400 mg/kg/dıá repartida en 2 -3 administraciones diarias Dilución: reconstituir vial con disolvente e diluir con suero. Administrar durante 1 hora",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "GENTAMICINA",
-    "marcas": [
-      "Gentamina",
-      "Gevramicina"
-    ],
+    "marcas": ["Gentamina", "Gevramicina"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5886,15 +5430,13 @@
     "dosis": [
       "bolo: Dosis estándar: 1 mg/kg c/8 horas Dilución: en 100 - 250 mL (30 - 60 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HEPARINA NO FRACCIONADA",
-    "marcas": [
-      "Heparina Sódica",
-      "Heparina Rovi"
-    ],
+    "marcas": ["Heparina Sódica", "Heparina Rovi"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -5939,15 +5481,13 @@
     "dosis": [
       "bolo: Bolus inicial: 5.000 UI en 50 mL suero en 15 minutos Preparación heparinización catéter: 1 mL (1.000 UI) en 50 mL suero (administrar 3 cc)",
       "perfusión: Dosis: 18 UI/kg/h. Ajustar según TTPa Dilución: 25.000 UI en 500 mL de suero (50 UI/mL) (21 mL /h)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "HIERRO",
-    "marcas": [
-      "Venofer",
-      "Feriv"
-    ],
+    "marcas": ["Venofer", "Feriv"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -5982,15 +5522,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 1000 mg Dilución: en 500 mL suero. Los primeros 25 mg en 15’, si no hay reacción, administrar el resto sin superar los 50 mL en 15 minutos",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "IMIPENEM/CILASTATINA",
-    "marcas": [
-      "Primaxin",
-      "Imipenem/Cilastatina Normon"
-    ],
+    "marcas": ["Primaxin", "Imipenem/Cilastatina Normon"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6030,15 +5568,13 @@
     "dosis": [
       "bolo: Dosis: 0,5 - 1 gramo cada 6 - 8 horas Dilució n: reconstituir con 10 mL de API y disolver en 100 mL de suero. Administrar entre 20-30 minutos (hasta 500 mg) y 40-60 minutos (> 500 mg)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "INSULINA RÁPIDA",
-    "marcas": [
-      "Actrapid",
-      "Humulina Regular"
-    ],
+    "marcas": ["Actrapid", "Humulina Regular"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6075,14 +5611,13 @@
     "dosis": [
       "bolo: Bolo intravenoso/subcutáneo: 0,15 UI/kg",
       "perfusión: Dosis: 0,15 UI/Kg/h (1 mL/ kg/ h) Dilución: 50 UI / 500 mL (0,1 UI/mL) (1 mL/ kg/h )",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LEVOFLOXACINO",
-    "marcas": [
-      "Tavanic"
-    ],
+    "marcas": ["Tavanic"],
     "presentaciones": [
       {
         "forma": "bolsa",
@@ -6125,14 +5660,13 @@
     "dosis": [
       "bolo: Dosis estándar: 500 mg (ver indicaciones) Dilución: bolsa prepara para administra en 60 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LEVOMEPROMAZINA",
-    "marcas": [
-      "Sinogan"
-    ],
+    "marcas": ["Sinogan"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6175,14 +5709,13 @@
     "dosis": [
       "bolo: Psicosis: 25 - 30 mg c/8 intramuscular Anestesia: 10 - 25 mg intravenoso Dilución: 25 mg en 100 mL (0,25 mg / mL) (60 mL /h)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LEVOSIMENDÁN",
-    "marcas": [
-      "Simdax"
-    ],
+    "marcas": ["Simdax"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6219,15 +5752,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 0,05/0,2 µg/kg/min (2- 8 mL/h)* Dilución: 12,5 mg en 250 mL de suero",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LEVOTIROXINA",
-    "marcas": [
-      "Eutirox",
-      "Dexnon"
-    ],
+    "marcas": ["Eutirox", "Dexnon"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6268,14 +5799,13 @@
     "dosis": [
       "bolo: Coma mixedematoso: 1º dıá : 500 mcg (250 mcg en ancianos y/o ICC). 2º dıá : 100 - 200 mcg. Resto dıá s: 100 mcg Hipotiroidismo severo sin coma: 100 mcg IV + 100 mcg oral Dilución en bolo: diluir dosis en 5 mL API y administrar en 2 - 3 minutos",
       "perfusión: Dilución perfusión intermitente: diluir dosis en 250 mL de suero y administrar en 30 - 60 minutos (máximo 2 horas)",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "LINEZOLID",
-    "marcas": [
-      "Zyvoxid"
-    ],
+    "marcas": ["Zyvoxid"],
     "presentaciones": [
       {
         "forma": "bolsa",
@@ -6315,14 +5845,13 @@
     "dosis": [
       "bolo: Dosis: 600 mg c/12 horas Dilución: bolsa prepara para administrar entre 60 - 120 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MANITOL FRASCOS 10% Y 20% (100, 200 Y 500 ML)",
-    "marcas": [
-      "Manitol Braun"
-    ],
+    "marcas": ["Manitol Braun"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -6363,14 +5892,13 @@
     "dosis": [
       "bolo: Dosis presión intraocular: 200 mg/kg lento, seguido de 0,5 - 1 g/kg al 20% en 20 - 40 min. Dosis oliguria o IRA: 100 mL al 20% en 5 minutos, si no hay respuesta, repetir dosis Dilución: frasco preparado para administrar",
       "perfusión: Dosis PIC elevada: 0,25 - 1,50 g/kg (87 - 525 mL/h al 20%)*",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MEPERIDINA",
-    "marcas": [
-      "Dolantina"
-    ],
+    "marcas": ["Dolantina"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6413,14 +5941,13 @@
     "dosis": [
       "bolo: Dosis: 0,5 - 1,5 mg/kg c/ 3 - 4 horas Dilución: en 50 mL suero en 5 - 10 minutos",
       "perfusión: Dosis: 0,3 mg/kg/hora Dilución: 200 mg en 250 mL (0,8 mg/mL) (26 mL/hora)*",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MEROPENEM",
-    "marcas": [
-      "Meronem"
-    ],
+    "marcas": ["Meronem"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6466,14 +5993,13 @@
     "dosis": [
       "bolo: Dosis: 0,5 - 1 gramo c/ 6 - 8 horas Dilución: en 50 mL suero en 15 - 30 minutos",
       "perfusión: Perfusión extendida: 2 gramos a pasar en 3 horas",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "METRONIDAZOL",
-    "marcas": [
-      "Flagyl"
-    ],
+    "marcas": ["Flagyl"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -6513,14 +6039,13 @@
     "dosis": [
       "bolo: Dosis: 500 mg c/ 6 - 8 horas Dilución: frasco preparado para administració n directa (20 - 60 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MICOFENOLATO DE MOFETILO",
-    "marcas": [
-      "Cellcept"
-    ],
+    "marcas": ["Cellcept"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6558,15 +6083,13 @@
     "dosis": [
       "bolo: Trasplante renal/hepático: 1 gc/12 horas Trasplante cardiaco: 1,5 gc/12 horas Dilución: cada vial debe diluirse con 14 mL de solució n. Agitar suavemente y diluir el contenido con 250 mL de suero en un tiempo superior a 120 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa"
+      "sueros compatibles: Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "MOXIFLOXACINO",
-    "marcas": [
-      "Actira",
-      "Proflox"
-    ],
+    "marcas": ["Actira", "Proflox"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -6608,14 +6131,13 @@
     "dosis": [
       "bolo: Dosis: 400 mg / dıá Dilución: frasco preparado para la administració n directa ( 60 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "N - ACETIL CISTEÍNA",
-    "marcas": [
-      "Flumil antídoto"
-    ],
+    "marcas": ["Flumil antídoto"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6637,10 +6159,7 @@
       "Monitorizar balance hídrico (riesgo de hiponatremia en niños)",
       "Vigilar aparición de broncoespasmo"
     ],
-    "interacciones": [
-      "Nitroglicerina (hipotensión)",
-      "Antitusígenos"
-    ],
+    "interacciones": ["Nitroglicerina (hipotensión)", "Antitusígenos"],
     "efectos_secundarios": [
       "Reacciones anafilactoides",
       "Broncoespasmo",
@@ -6652,14 +6171,13 @@
     "dosis": [
       "bolo: Intox. paracetamol: 150 mg/kg en 200 mL de suero (1 hora) Prevención nefropatía contrastes yodados: 600 mg c/12 h junto hidratació n",
       "perfusión: Dosismantenimientointox . paracetamol: 2ª perfusión: 50 mg/kg en 500 mL de suero (4 horas) 3ª perfusión: de 100 mg/kg en 500 mL suero (16 horas)",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NEOSTIGMINA",
-    "marcas": [
-      "Prostigmina"
-    ],
+    "marcas": ["Prostigmina"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6702,14 +6220,13 @@
     "dosis": [
       "bolo: Reversión BNM: 1 - 2 mg Dilución: sin diluir. Administrar en 2 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NICARDIPINO",
-    "marcas": [
-      "Loxen"
-    ],
+    "marcas": ["Loxen"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6733,11 +6250,7 @@
       "Precaución en insuficiencia cardiaca y hepática",
       "Cambiar el sitio de inyección cada 12 horas para evitar flebitis"
     ],
-    "interacciones": [
-      "Digoxina",
-      "Ciclosporina",
-      "Betabloqueantes"
-    ],
+    "interacciones": ["Digoxina", "Ciclosporina", "Betabloqueantes"],
     "efectos_secundarios": [
       "Cefalea",
       "Sofocos",
@@ -6749,14 +6262,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 1 - 15 mg/hora Dilución: 10 mg en 100 mL de suero (0,1 mg / mL) (10 - 150 mL/hora)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "NIMODIPINO",
-    "marcas": [
-      "Nimotop"
-    ],
+    "marcas": ["Nimotop"],
     "presentaciones": [
       {
         "forma": "frasco",
@@ -6794,14 +6306,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Dosis: 1 - 2 mg/hora Dilución: no diluir (0,2 mg/mL) (5 - 10 mL/h)",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "OCTREOTIDA",
-    "marcas": [
-      "Sandostatin"
-    ],
+    "marcas": ["Sandostatin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6822,9 +6333,7 @@
       "Acromegalia",
       "Prevención de complicaciones tras cirugía pancreática"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad a la octreotida"
-    ],
+    "contraindicaciones": ["Hipersensibilidad a la octreotida"],
     "precauciones": [
       "Riesgo de formación de cálculos biliares",
       "Monitorizar función tiroidea y glucemia",
@@ -6847,15 +6356,13 @@
     "dosis": [
       "bolo: HD varices esofágicas: bolo inicial de 50 µg Dilución: en 50 mL suero en 10 minutos (se puede repetir a la hora si no se ha conseguido control de sangrado)",
       "perfusión: HD varices esofágicas: perfusión 25 µg / hora (durante 5 dias) Dilución: 500 µg en 500 mL de suero (25 mL/h)",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PANTOPRAZOL",
-    "marcas": [
-      "Pantecta",
-      "Controloc"
-    ],
+    "marcas": ["Pantecta", "Controloc"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6894,14 +6401,13 @@
     "dosis": [
       "bolo: Bolus inicial: 40 mg en 10-50 mL suero en 60 - 90 segundos. Bolus HDA: 80 mg en 50 mL suero en 5 minutos",
       "perfusión: Dosis: 200 mg en 24 horas Dilución: 120 mg en 250 mL de suero a 21 mL/hy posteriormente 80 mg /250 mL suero a 21 mL/h",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PIPERACILINA / TAZOBACTAM",
-    "marcas": [
-      "Tazocel"
-    ],
+    "marcas": ["Tazocel"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -6949,14 +6455,13 @@
     "dosis": [
       "bolo: Dosis: 2 - 4 gramos c / 6 - 8 horas Dilución: reconstituir con API o suero y diluir en al menos 50 mL de suero en 10 - 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PIRIDOXINA",
-    "marcas": [
-      "Benadon"
-    ],
+    "marcas": ["Benadon"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -6971,9 +6476,7 @@
       "Intoxicación aguda por isoniazida",
       "Vómitos del embarazo (en combinación)"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "La administración prolongada de dosis altas puede causar neuropatía sensorial periférica",
       "Evitar dosis elevadas durante el embarazo"
@@ -6993,14 +6496,13 @@
     "dosis": [
       "bolo: Dosis: Ver indicació n deseada Dilución: en 50 mL suero en 10 - 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer"
+      "sueros compatibles: Suero Salino, Suero glucosalino, Suero glucosa, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "POTASIO, CLORURO",
-    "marcas": [
-      "Cloruro de Potasio 2M"
-    ],
+    "marcas": ["Cloruro de Potasio 2M"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7042,14 +6544,13 @@
     "dosis": [
       "bolo: Dilución: dilució n máxima por vıá periférica 20 mEq/h en 500 mL. Por vıá central 40 mEq/h en 500 mL. Administrar en 1 hora.",
       "perfusión: Dosis: 40 - 80 mEq repartido en la cantidad de suero en 24 horas en aquellos pacientes que se encuentren en dieta absoluta o segú n precise",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROPRANOLOL",
-    "marcas": [
-      "Sumial"
-    ],
+    "marcas": ["Sumial"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7092,14 +6593,13 @@
     "dosis": [
       "bolo: Dosis: 1 mg directo. Repetir hasta lograr control o dosis máxima de 0,1 mg/kg Dilución: sin diluir ( 2 - 3 minutos)",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "PROTAMINA, SULFATO",
-    "marcas": [
-      "Protamina Leo"
-    ],
+    "marcas": ["Protamina Leo"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7112,9 +6612,7 @@
       "Neutralización de la acción anticoagulante de la heparina no fraccionada",
       "Hemorragias graves por heparina o en cirugía cardíaca tras bypass"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "La administración debe ser muy lenta (máximo 50 mg en 10 minutos)",
       "Riesgo de reacciones de hipersensibilidad graves (anafilaxia), especialmente en diabéticos tratados con insulina-protamina o varones vasectomizados",
@@ -7134,14 +6632,13 @@
     "dosis": [
       "bolo: Dosis por cada 100 UI Heparina: administrar 1 mg (0,1 mL) si el tiempo desde la administració n de la heparina es < 15 min. Administrar 5 mg (0,5 mL) si el tiempo desde la administració n de heparina es > 30 minutos. Dilución: diluir en 100 mL de suero. Administrar durante 10 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "SODIO, CLORURO",
-    "marcas": [
-      "Hipertónico 3%"
-    ],
+    "marcas": ["Hipertónico 3%"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7165,9 +6662,7 @@
       "Monitorización estricta de electrolitos plasmáticos y balance hídrico",
       "No corregir más de 8-10 mEq/L en 24 horas"
     ],
-    "interacciones": [
-      "Ninguna relevante en el contexto de urgencia"
-    ],
+    "interacciones": ["Ninguna relevante en el contexto de urgencia"],
     "efectos_secundarios": [
       "Hipernatremia",
       "Acidosis hiperclorémica",
@@ -7178,14 +6673,13 @@
     "dosis": [
       "bolo: Dosis: segú n cálculo de natremia deseada. No se debe reponer más de 10 mEq en 24 horas Dilución: 3% a 250 mL suero (3 - 5 minutos)",
       "perfusión: Dosis: 1 - 2 mL/kg en una hora. Parar perfusióny control Dilución: 6 ampollas 20% en 500 mL suero (14 - 28 mL/h)",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "SUGAMMADEX",
-    "marcas": [
-      "Bridion"
-    ],
+    "marcas": ["Bridion"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -7203,9 +6697,7 @@
     "indicaciones": [
       "Reversión del bloqueo neuromuscular inducido por rocuronio o vecuronio"
     ],
-    "contraindicaciones": [
-      "Hipersensibilidad al principio activo"
-    ],
+    "contraindicaciones": ["Hipersensibilidad al principio activo"],
     "precauciones": [
       "No recomendado en insuficiencia renal grave",
       "Monitorizar la función respiratoria y neuromuscular hasta la recuperación total",
@@ -7226,15 +6718,13 @@
     "dosis": [
       "bolo: Bloqueo profundo: 16 mg / kg Bloqueo intenso: 4 mg /kg Bloqueo moderado: 2 mg / kg Dilución: diluir vial hasta 10 mL total dependiendo de la dosis deseada",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TACROLIMUS",
-    "marcas": [
-      "Prograf",
-      "Advagraf"
-    ],
+    "marcas": ["Prograf", "Advagraf"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7275,14 +6765,13 @@
     "dosis": [
       "bolo: No administrar en bolo",
       "perfusión: Trasplante hepático: 0,01 -0,5 mg/kg/dıá Trasplante renal: 0,05 - 0,10 mg/kg/dıá Trasplante cardio: 0,01-0,02 mg/kg/dıá Dilución: diluir en 250 - 500 mL en perfusión continua durante 24 horas solo hasta que el paciente tolere la vıá oral",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TENECTEPLASA",
-    "marcas": [
-      "Metalyse"
-    ],
+    "marcas": ["Metalyse"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -7322,15 +6811,13 @@
     "dosis": [
       "bolo: Dosis: bolo ú nico segú n peso < 60 kg: 6 mL (30 mg) 60 - 70 kg: 7 mL (35 mg) 71 - 80 kg: 8 mL (40 mg) 81 - 90 kg: 9 mL (45 mg) > 90 kg: 10 mL )(50 mg) Dilución: vial con jeringa precargada",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Sin diluir"
+      "sueros compatibles: Sin diluir",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TERLIPRESINA",
-    "marcas": [
-      "Glypressin",
-      "Terlipresina Kern Pharma"
-    ],
+    "marcas": ["Glypressin", "Terlipresina Kern Pharma"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7370,14 +6857,13 @@
     "dosis": [
       "bolo: Peso > 70 kg ( 2 mg) Peso 50 - 70 kg (1,5 mg) Peso < 70 kg (1 mg) Dilución: Sin diluir en 2 minutos",
       "perfusión: Dilución: 1 mg en 250 mL suero (4 µg/mL) Segú n respuesta. Unidad: mL/h.",
-      "sueros compatibles: Suero glucosa, Suero Salino, Suero Ringer"
+      "sueros compatibles: Suero glucosa, Suero Salino, Suero Ringer",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIAPRIDA",
-    "marcas": [
-      "Tiaprizal"
-    ],
+    "marcas": ["Tiaprizal"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7418,14 +6904,13 @@
     "dosis": [
       "bolo: Desintoxicación etílica: 100 mg c/ 8 h Corea Huntington grave: 400 mg c/ 8 h Delirium Tremens: 300 mg c/6 h Dosis: 50 - 100 mL en 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino"
+      "sueros compatibles: Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIGECICLINA",
-    "marcas": [
-      "Tygacil"
-    ],
+    "marcas": ["Tygacil"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -7447,10 +6932,7 @@
       "Riesgo de colitis pseudomembranosa",
       "Puede causar decoloración permanente de los dientes en niños"
     ],
-    "interacciones": [
-      "Warfarina (monitorizar INR)",
-      "Anticonceptivos orales"
-    ],
+    "interacciones": ["Warfarina (monitorizar INR)", "Anticonceptivos orales"],
     "efectos_secundarios": [
       "Náuseas",
       "Vómitos",
@@ -7462,15 +6944,13 @@
     "dosis": [
       "bolo: Dosis: 100 mg seguido de 50 mg c/12 horas Dilución: 100 mL suero en 30 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero Ringer, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TIOPENTAL SÓDICO",
-    "marcas": [
-      "Tiobarbital Braun",
-      "Tiopental Abbott"
-    ],
+    "marcas": ["Tiobarbital Braun", "Tiopental Abbott"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -7517,16 +6997,13 @@
     "dosis": [
       "bolo: Inducción: 50 - 70 mg (30 seg) a intervalos de 5 - 15 minutos Status epiléptico: 75 - 125 mg (Máx: 250mg) Presión intracraneal: 1,5 - 3 mg/kg segú n necesidades Dilución: diluir 500 mg con 10 mL suero (50 mg/mL) durante mıń imo 30 segundos",
       "perfusión: No se recomienda infusió n continua",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TRAMADOL",
-    "marcas": [
-      "Adolonta",
-      "Zytram",
-      "Tradonal"
-    ],
+    "marcas": ["Adolonta", "Zytram", "Tradonal"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7535,9 +7012,7 @@
         "concentracion": "50 mg/mL (5%)"
       }
     ],
-    "indicaciones": [
-      "Dolor moderado a severo"
-    ],
+    "indicaciones": ["Dolor moderado a severo"],
     "contraindicaciones": [
       "Hipersensibilidad al tramadol",
       "Intoxicación aguda por alcohol, hipnóticos o analgésicos centrales",
@@ -7568,15 +7043,13 @@
     "dosis": [
       "bolo: Dosis: 50 - 100 mg c/ 8 horas Dilución: 50 mL suero en 5 - 10 minutos",
       "perfusión: Dosis: 100 - 400 mg en 24 horas Dilución: 1 - 4 ampollas en 500 mL suero a 21 mL/h",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "TRIMETROPIN / SULFATOMETOXAZOL",
-    "marcas": [
-      "Soltrim",
-      "Septrin"
-    ],
+    "marcas": ["Soltrim", "Septrin"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7602,12 +7075,7 @@
       "Monitorizar niveles de potasio y hemograma",
       "Asegurar hidratación adecuada"
     ],
-    "interacciones": [
-      "Warfarina",
-      "Fenitoína",
-      "Digoxina",
-      "Metotrexato"
-    ],
+    "interacciones": ["Warfarina", "Fenitoína", "Digoxina", "Metotrexato"],
     "efectos_secundarios": [
       "Náuseas",
       "Vómitos",
@@ -7619,14 +7087,13 @@
     "dosis": [
       "bolo: Dosis estándar: 160 / 800 mg c/ 12 horas Neumonía Pneumocystis Carinii: 2 viales cada 6 - 8 horas Dilución: 250 mL suero (1 ampolla) y 500 mL ( 2 ampollas) en 60 - 90 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero glucosa, Suero Salino"
+      "sueros compatibles: Suero glucosa, Suero Salino",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "VERNAKALANT",
-    "marcas": [
-      "Brinavess"
-    ],
+    "marcas": ["Brinavess"],
     "presentaciones": [
       {
         "forma": "ampolla",
@@ -7664,15 +7131,13 @@
     "dosis": [
       "bolo: Dosis: 3 mg/kg, si no resulta efectivo, 2ª dosis de 2 mg/kg Dilución: diluir 200 mg en 100 - 250 mL suero en 10 minutos *",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   },
   {
     "nombre": "ZOLEDRÓNICO, ÁCIDO",
-    "marcas": [
-      "Zometa",
-      "Reclast"
-    ],
+    "marcas": ["Zometa", "Reclast"],
     "presentaciones": [
       {
         "forma": "vial",
@@ -7720,7 +7185,8 @@
     "dosis": [
       "bolo: Enfermedad de Paget: 5 mg Hipercalcemia tumoral: 4 mg (hidratar antes y después de administració n) Insuficiencia renal (ClCr 60 mL/min): 4 mg Dilución: en 100 mL suero en 15 minutos",
       "perfusión: No está indicada la perfusión",
-      "sueros compatibles: Suero Salino, Suero glucosa"
+      "sueros compatibles: Suero Salino, Suero glucosa",
+      "dosis pediátrica:----"
     ]
   }
 ]

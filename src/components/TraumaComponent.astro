@@ -12,6 +12,7 @@ const activacion = traumaData.codigo_trauma.criterios_activacion;
 const hospitales = traumaData.codigo_trauma.hospitales_activacion;
 const valoracion = traumaData.valoracion_primaria;
 const ped = pedData.trauma_pediatrico;
+const chuleta = ped.chuleta_farmacos;
 ---
 
 <div class="container">
@@ -80,6 +81,13 @@ const ped = pedData.trauma_pediatrico;
         <button class="btn" onclick="modal_ped_constantes.showModal()">Constantes Vitales</button>
         <button class="btn" onclick="modal_ped_sri.showModal()">SRI · Intubación</button>
         <CriteriosGravedadQuemadurasComponent client:load label="Gravedad Quemaduras" />
+      </div>
+    </div>
+
+    <div class="ped-block">
+      <h3 class="ped-block-title">Fármacos &amp; dosis</h3>
+      <div class="btn-grid">
+        <button class="btn btn-chuleta" onclick="modal_ped_chuleta.showModal()">💉 Chuleta de Fármacos</button>
       </div>
     </div>
 
@@ -154,6 +162,42 @@ const ped = pedData.trauma_pediatrico;
     </table>
   </div>
   <form method="dialog"><button class="btn">Cerrar</button></form>
+</dialog>
+
+<dialog id="modal_ped_chuleta" class="chuleta-modal">
+  <h2>{chuleta.titulo}</h2>
+  <p class="nota">{chuleta.nota}</p>
+
+  {chuleta.grupos.map((g) => (
+    <div class="chuleta-grupo">
+      <div class="chuleta-grupo-head">
+        <h3>{g.titulo}</h3>
+        {g.extra && <span class="chuleta-extra">{g.extra}</span>}
+      </div>
+      <div class="chuleta-cards">
+        {g.farmacos.map((f) => (
+          <div class="chuleta-card">
+            <div class="cc-top">
+              <span class="cc-name">{f.nombre}</span>
+              <span class="cc-pres">{f.presentacion}</span>
+            </div>
+            <div class="cc-dose">{f.dosis}</div>
+            {f.dilucion && (
+              <div class="cc-row"><span class="cc-key">Dilución</span><span>{f.dilucion}</span></div>
+            )}
+            {f.uso && (
+              <div class="cc-row"><span class="cc-key">Uso</span><span>{f.uso}</span></div>
+            )}
+            {f.truco && (
+              <div class="cc-truco"><span class="cc-truco-tag">Truco</span>{f.truco}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+
+  <form method="dialog" class="chuleta-foot"><button class="btn">Cerrar</button></form>
 </dialog>
 
 <style>
@@ -251,6 +295,140 @@ const ped = pedData.trauma_pediatrico;
     font-style: italic;
     margin: 0.5rem 0 1rem;
   }
+
+  /* ── Botón chuleta ── */
+  .btn-chuleta {
+    border-color: rgba(245, 158, 11, 0.5);
+    color: var(--neon-glow);
+  }
+  .btn-chuleta:hover {
+    background: rgba(245, 158, 11, 0.16);
+    border-color: var(--neon-orange);
+    color: #fff;
+  }
+
+  /* ── Chuleta de fármacos (modal) ── */
+  .chuleta-modal { max-width: min(95vw, 880px); }
+
+  .chuleta-grupo { margin-bottom: 1.4rem; }
+  .chuleta-grupo:last-of-type { margin-bottom: 0.5rem; }
+
+  .chuleta-grupo-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.45rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.18);
+  }
+  .chuleta-grupo-head h3 {
+    margin: 0;
+    color: var(--neon-glow);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .chuleta-extra {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.28);
+    border-radius: 5px;
+    padding: 0.14rem 0.5rem;
+  }
+
+  .chuleta-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .chuleta-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(45, 156, 219, 0.16);
+    border-radius: 10px;
+    padding: 0.75rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .cc-top { display: flex; flex-direction: column; gap: 0.1rem; }
+  .cc-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.02rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    line-height: 1.1;
+  }
+  .cc-pres {
+    font-family: var(--font-mono);
+    font-size: 0.71rem;
+    color: rgba(228, 239, 248, 0.45);
+  }
+
+  .cc-dose {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--neon-glow);
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.22);
+    border-radius: 6px;
+    padding: 0.35rem 0.55rem;
+    line-height: 1.4;
+  }
+
+  .cc-row {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.79rem;
+    line-height: 1.45;
+    color: rgba(228, 239, 248, 0.78);
+  }
+  .cc-key {
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(125, 180, 210, 0.55);
+    min-width: 3.8rem;
+    padding-top: 0.12rem;
+  }
+
+  .cc-truco {
+    font-size: 0.79rem;
+    line-height: 1.5;
+    color: #fcd34d;
+    background: rgba(245, 158, 11, 0.06);
+    border-left: 2px solid var(--neon-orange);
+    border-radius: 0 6px 6px 0;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+  }
+  .cc-truco-tag {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a1206;
+    background: var(--neon-orange);
+    border-radius: 3px;
+    padding: 0.08rem 0.4rem;
+  }
+
+  .chuleta-foot { margin-top: 1.5rem; display: flex; justify-content: center; }
 </style>
 
 <!-- Modales -->
