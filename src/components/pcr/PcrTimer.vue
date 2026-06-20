@@ -35,7 +35,25 @@ const cycleRunning = ref(false)
 const rosc = ref(false) // ROSC: única situación que pausa el tiempo total
 const pediatric = ref(false)
 const weightKg = ref<number | null>(null)
+const weightMode = ref<'manual' | 'age'>('manual') // peso real o estimado por edad
+const ageYears = ref<number | null>(null)
+const ageMonths = ref<number | null>(null)
 let eventSeq = 0
+
+// Peso estimado por edad (fórmulas APLS):
+//   <1 año:   (0,5 × meses) + 4
+//   1–5 años: (2 × años) + 8
+//   ≥6 años:  (3 × años) + 7
+const estimatedWeight = computed(() => {
+  const totalMonths = (ageYears.value ?? 0) * 12 + (ageMonths.value ?? 0)
+  if (totalMonths <= 0) return null
+  const y = totalMonths / 12
+  let kg: number
+  if (totalMonths < 12) kg = 0.5 * totalMonths + 4
+  else if (y <= 5) kg = 2 * y + 8
+  else kg = 3 * y + 7
+  return Math.round(kg * 10) / 10
+})
 
 // ── Ticker reactivo ───────────────────────────────────────────────
 const now = ref(Date.now())
@@ -138,7 +156,7 @@ function beep(times = 3, freq = 880, dur = 0.18, gap = 0.1) {
 function vibrate(pattern: number[]) { try { (navigator as any).vibrate?.(pattern) } catch { /* noop */ } }
 
 // ── Alertas (pila: varias visibles a la vez, sin pisarse) ─────────
-interface AlertItem { id: number; title: string; detail?: string; tone: 'reassess' | 'adrenalina' | 'shock' | 'rosc' }
+interface AlertItem { id: number; title: string; detail?: string; tone: 'reassess' | 'adrenalina' | 'shock' | 'rosc' | 'breaths' | 'vector' }
 const alerts = ref<AlertItem[]>([])
 let alertSeq = 0
 function pushAlert(a: Omit<AlertItem, 'id'>, sound: () => void, vib: number[]) {
@@ -230,6 +248,10 @@ function resumeArrest() {
 // ── Acciones ──────────────────────────────────────────────────────
 function startPcr() {
   ensureAudio()
+  // Si el peso se estima por edad, fijarlo como peso de trabajo para las dosis
+  if (pediatric.value && weightMode.value === 'age' && estimatedWeight.value) {
+    weightKg.value = estimatedWeight.value
+  }
   startedAtClock.value = Date.now()
   accumulatedMs.value = 0
   runStartTs.value = Date.now()
@@ -245,6 +267,14 @@ function startPcr() {
   eventSeq = 0
   logEvent('nota', 'PCR iniciada', pediatric.value ? `Pediátrico${w.value ? ' · ' + weightKg.value + ' kg' : ''}` : 'Adulto')
   startTicker()
+  // RCP pediátrica: arranca con 5 ventilaciones de rescate
+  if (pediatric.value) {
+    logEvent('nota', '5 ventilaciones de rescate', 'Inicio de la reanimación pediátrica')
+    pushAlert(
+      { title: 'INICIAR 5 VENTILACIONES DE RESCATE', detail: 'Antes de las compresiones (RCP pediátrica)', tone: 'breaths' },
+      () => beep(3, 720, 0.18, 0.1), [200, 100, 200, 100, 200]
+    )
+  }
   persist()
 }
 function resetPcr() {
@@ -286,11 +316,19 @@ function shock() {
   const n = counts.value.descarga
   logEvent('descarga', `Descarga #${n}`, descargaHint.value ?? undefined)
   beep(1, 440, 0.12)
+  // Tras la descarga se reanuda RCP: el ciclo vuelve a empezar en 2:00
+  cycleAccumMs.value = 0
+  cycleStartTs.value = Date.now()
+  cycleRunning.value = true
   // Recordatorios por nº de descarga
   if (n === 3) {
     pushAlert(
       { title: '3ª DESCARGA', detail: `1ª Amiodarona ${amiodaronaDose(1)} + Adrenalina ${adrenalinaDose()}`, tone: 'shock' },
       () => beep(3, 760, 0.2, 0.1), [300, 120, 300, 120, 300]
+    )
+    pushAlert(
+      { title: 'PRUEBA A CAMBIAR EL VECTOR DE LOS PARCHES', detail: 'FV/TVSP refractaria: valora posición antero-posterior', tone: 'vector' },
+      () => setTimeout(() => beep(2, 600, 0.22, 0.12), 1300), [250, 120, 250]
     )
   } else if (n === 5) {
     pushAlert(
@@ -327,7 +365,8 @@ function persist() {
     counts: counts.value,
     completedCycles: completedCycles.value, cycleAccumMs: cycleAccumMs.value,
     cycleStartTs: cycleStartTs.value, cycleRunning: cycleRunning.value, rosc: rosc.value,
-    pediatric: pediatric.value, weightKg: weightKg.value, eventSeq,
+    pediatric: pediatric.value, weightKg: weightKg.value,
+    weightMode: weightMode.value, ageYears: ageYears.value, ageMonths: ageMonths.value, eventSeq,
   }
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)) } catch { /* lleno */ }
 }
@@ -351,6 +390,9 @@ function restore() {
     rosc.value = !!d.rosc
     pediatric.value = !!d.pediatric
     weightKg.value = d.weightKg ?? null
+    weightMode.value = d.weightMode === 'age' ? 'age' : 'manual'
+    ageYears.value = d.ageYears ?? null
+    ageMonths.value = d.ageMonths ?? null
     eventSeq = d.eventSeq ?? events.value.length
     startTicker() // el ticker corre mientras haya PCR activa (total y/o ciclo)
   } catch { /* corrupto */ }
@@ -376,9 +418,29 @@ onBeforeUnmount(stopTicker)
         <button class="pop-btn" :class="{ 'is-active': !pediatric }" @click="pediatric = false">Adulto</button>
         <button class="pop-btn" :class="{ 'is-active': pediatric }" @click="pediatric = true">Pediátrico</button>
       </div>
-      <div v-if="pediatric" class="start-weight">
-        <label for="pcr-w">Peso (kg)</label>
-        <input id="pcr-w" v-model.number="weightKg" type="number" min="1" max="150" placeholder="kg" />
+      <div v-if="pediatric" class="start-weight-block">
+        <div class="weight-mode">
+          <button class="wm-btn" :class="{ 'is-active': weightMode === 'manual' }" @click="weightMode = 'manual'">Peso real</button>
+          <button class="wm-btn" :class="{ 'is-active': weightMode === 'age' }" @click="weightMode = 'age'">Estimar por edad</button>
+        </div>
+        <div v-if="weightMode === 'manual'" class="start-weight">
+          <label for="pcr-w">Peso (kg)</label>
+          <input id="pcr-w" v-model.number="weightKg" type="number" min="1" max="150" placeholder="kg" />
+        </div>
+        <div v-else class="start-age">
+          <div class="age-fields">
+            <div class="age-field">
+              <label for="pcr-y">Años</label>
+              <input id="pcr-y" v-model.number="ageYears" type="number" min="0" max="14" placeholder="0" />
+            </div>
+            <div class="age-field">
+              <label for="pcr-m">Meses</label>
+              <input id="pcr-m" v-model.number="ageMonths" type="number" min="0" max="11" placeholder="0" />
+            </div>
+          </div>
+          <p v-if="estimatedWeight" class="age-estimate">Peso estimado: <strong>{{ estimatedWeight }} kg</strong></p>
+          <p v-else class="age-estimate age-estimate--hint">Introduce la edad para estimar el peso</p>
+        </div>
       </div>
 
       <button class="start-go" @click="startPcr">
@@ -544,12 +606,36 @@ onBeforeUnmount(stopTicker)
   border-radius: 7px; cursor: pointer; transition: all 0.15s;
 }
 .pop-btn.is-active { background: rgba(45,156,219,0.22); color: #bae6fd; }
+.start-weight-block { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; }
+.weight-mode {
+  display: flex; gap: 4px;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 9px; padding: 3px;
+}
+.wm-btn {
+  border: none; background: transparent; color: rgba(228,239,248,0.55);
+  font-family: var(--font-display); font-weight: 600; font-size: 0.8rem;
+  letter-spacing: 0.04em; text-transform: uppercase; padding: 0.4rem 1rem;
+  border-radius: 6px; cursor: pointer; transition: all 0.15s;
+}
+.wm-btn.is-active { background: rgba(245,158,11,0.2); color: var(--neon-glow); }
 .start-weight { display: flex; align-items: center; gap: 0.6rem; }
 .start-weight label {
   font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.05em;
   text-transform: uppercase; color: var(--color-subtitle);
 }
 .start-weight input { width: 120px; text-align: center; }
+.start-age { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.age-fields { display: flex; gap: 0.9rem; }
+.age-field { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.age-field label {
+  font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--color-subtitle);
+}
+.age-field input { width: 84px; text-align: center; }
+.age-estimate { margin: 0; font-size: 0.9rem; color: rgba(228,239,248,0.7); }
+.age-estimate strong { font-family: var(--font-mono); color: var(--neon-glow); font-size: 1.05rem; }
+.age-estimate--hint { font-size: 0.78rem; color: rgba(228,239,248,0.4); }
 
 .start-go {
   margin-top: 0.75rem;
@@ -781,6 +867,8 @@ onBeforeUnmount(stopTicker)
 .pcr-alert--adrenalina { background: rgba(40, 26, 6, 0.96); border-color: var(--neon-orange); --flash: rgba(245,158,11,0.3); }
 .pcr-alert--shock      { background: rgba(30, 20, 40, 0.96); border-color: #a78bfa; --flash: rgba(167,139,250,0.3); }
 .pcr-alert--rosc       { background: rgba(8, 32, 24, 0.96); border-color: #10b981; --flash: rgba(16,185,129,0.3); }
+.pcr-alert--breaths    { background: rgba(6, 28, 38, 0.96); border-color: #38bdf8; --flash: rgba(56,189,248,0.3); }
+.pcr-alert--vector     { background: rgba(34, 20, 40, 0.96); border-color: #c084fc; --flash: rgba(192,132,252,0.32); }
 .alert-text { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
 .alert-title {
   font-family: var(--font-display); font-weight: 700; font-size: 1.15rem;
