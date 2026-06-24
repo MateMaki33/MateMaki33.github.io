@@ -12,12 +12,41 @@ const CYCLE_MS = 120_000 // 2 min
 
 interface PcrEvent {
   id: number
-  type: 'adrenalina' | 'amiodarona' | 'atropina' | 'descarga' | 'nota'
+  type: 'adrenalina' | 'amiodarona' | 'atropina' | 'descarga' | 'farmaco' | 'nota'
   label: string
   detail?: string
   clock: number // epoch ms (hora real)
   pcrMs: number // ms desde activación
 }
+
+// Fármacos secundarios: se registran en el acta sin recordatorios de tiempo.
+// Solo dejan constancia de la hora de administración.
+const OTHER_MEDS = [
+  'Lidocaína',
+  'Bicarbonato sódico',
+  'Sulfato de magnesio',
+  'Gluconato cálcico',
+  'Insulina',
+  'Glucosa',
+  'Fibrinólisis',
+  'Naloxona',
+  'Glucagón',
+  'Sueroterapia',
+] as const
+
+// Causas reversibles de la PCR (4 H · 4 T) — recordatorio.
+const CAUSES_H = [
+  { k: 'Hipoxia', d: 'Asegurar vía aérea y oxigenación · comprobar capnografía' },
+  { k: 'Hipovolemia', d: 'Reposición de volumen · control de hemorragia' },
+  { k: 'Hidrogeniones / metabólico', d: 'Acidosis · hiper/hipopotasemia · hipoglucemia · hipocalcemia' },
+  { k: 'Hipotermia', d: 'Temperatura central · recalentamiento si procede' },
+]
+const CAUSES_T = [
+  { k: 'Neumotórax a tensión', d: 'Descompresión con aguja / toracostomía' },
+  { k: 'Taponamiento cardíaco', d: 'Eco · pericardiocentesis' },
+  { k: 'Tóxicos', d: 'Antídotos · naloxona · glucagón · bicarbonato' },
+  { k: 'Trombosis', d: 'Coronaria (IAM) o pulmonar (TEP) · valorar fibrinólisis' },
+]
 
 // ── Estado persistente ────────────────────────────────────────────
 const startedAtClock = ref<number | null>(null) // hora de activación (epoch)
@@ -25,7 +54,9 @@ const accumulatedMs = ref(0)                     // ms acumulados en pausas prev
 const runStartTs = ref<number | null>(null)      // epoch del tramo en marcha (null = pausado)
 const running = ref(false)
 const events = ref<PcrEvent[]>([])
-const counts = ref<Record<string, number>>({ adrenalina: 0, amiodarona: 0, atropina: 0, descarga: 0 })
+const counts = ref<Record<string, number>>({ adrenalina: 0, amiodarona: 0, descarga: 0 })
+const otherCounts = ref<Record<string, number>>({}) // fármacos secundarios (sin recordatorio)
+const showCauses = ref(false) // modal 4 H · 4 T
 // Ciclo de RCP: cronómetro INDEPENDIENTE del tiempo total (pausable por
 // reevaluación o ROSC sin detener el tiempo de parada).
 const completedCycles = ref(0)
@@ -117,10 +148,6 @@ function adrenalinaDose() {
 function amiodaronaDose(order: 1 | 2) {
   if (pediatric.value) return w.value ? `${round(5 * w.value, 0)} mg (5 mg/kg)` : '5 mg/kg'
   return order === 1 ? '300 mg' : '150 mg'
-}
-function atropinaDose() {
-  if (pediatric.value) return w.value ? `${round(0.02 * w.value, 2)} mg (20 mcg/kg)` : '20 mcg/kg'
-  return '1 mg'
 }
 const descargaHint = computed(() => {
   if (!pediatric.value) return null
@@ -263,7 +290,8 @@ function startPcr() {
   rosc.value = false
   alerts.value = []
   events.value = []
-  counts.value = { adrenalina: 0, amiodarona: 0, atropina: 0, descarga: 0 }
+  counts.value = { adrenalina: 0, amiodarona: 0, descarga: 0 }
+  otherCounts.value = {}
   eventSeq = 0
   logEvent('nota', 'PCR iniciada', pediatric.value ? `Pediátrico${w.value ? ' · ' + weightKg.value + ' kg' : ''}` : 'Adulto')
   startTicker()
@@ -285,7 +313,8 @@ function resetPcr() {
   runStartTs.value = null
   running.value = false
   events.value = []
-  counts.value = { adrenalina: 0, amiodarona: 0, atropina: 0, descarga: 0 }
+  counts.value = { adrenalina: 0, amiodarona: 0, descarga: 0 }
+  otherCounts.value = {}
   completedCycles.value = 0
   cycleAccumMs.value = 0
   cycleStartTs.value = null
@@ -299,14 +328,21 @@ function logEvent(type: PcrEvent['type'], label: string, detail?: string) {
   events.value.unshift({ id: ++eventSeq, type, label, detail, clock: Date.now(), pcrMs: elapsedMs.value })
 }
 
-function giveMed(type: 'adrenalina' | 'amiodarona' | 'atropina') {
+function giveMed(type: 'adrenalina' | 'amiodarona') {
   counts.value[type]++
   const n = counts.value[type]
-  const dose = type === 'adrenalina' ? adrenalinaDose()
-    : type === 'amiodarona' ? amiodaronaDose(n === 1 ? 1 : 2)
-    : atropinaDose()
-  const labelMap = { adrenalina: 'Adrenalina', amiodarona: 'Amiodarona', atropina: 'Atropina' }
+  const dose = type === 'adrenalina' ? adrenalinaDose() : amiodaronaDose(n === 1 ? 1 : 2)
+  const labelMap = { adrenalina: 'Adrenalina', amiodarona: 'Amiodarona' }
   logEvent(type, `${labelMap[type]} #${n}`, dose)
+  beep(1, 520, 0.09)
+  persist()
+}
+
+// Fármacos secundarios: solo registran la hora de administración (sin recordatorios).
+function giveOtherMed(name: string) {
+  otherCounts.value[name] = (otherCounts.value[name] ?? 0) + 1
+  const n = otherCounts.value[name]
+  logEvent('farmaco', `${name} #${n}`)
   beep(1, 520, 0.09)
   persist()
 }
@@ -344,7 +380,7 @@ const copied = ref(false)
 async function copyLog() {
   const head = `ACTA PCR · activación ${startedLabel.value} · duración ${totalLabel.value}\n` +
     `Población: ${pediatric.value ? 'Pediátrico' + (weightKg.value ? ' (' + weightKg.value + ' kg)' : '') : 'Adulto'}\n` +
-    `Descargas: ${counts.value.descarga} · Adrenalina: ${counts.value.adrenalina} · Amiodarona: ${counts.value.amiodarona} · Atropina: ${counts.value.atropina}\n` +
+    `Descargas: ${counts.value.descarga} · Adrenalina: ${counts.value.adrenalina} · Amiodarona: ${counts.value.amiodarona}\n` +
     '─────────────────────────────\n'
   const lines = [...events.value].reverse()
     .map(e => `${fmtClock(e.clock)} (${fmtDur(e.pcrMs)})  ${e.label}${e.detail ? ' · ' + e.detail : ''}`)
@@ -362,7 +398,7 @@ function persist() {
   const data = {
     startedAtClock: startedAtClock.value, accumulatedMs: accumulatedMs.value,
     runStartTs: runStartTs.value, running: running.value, events: events.value,
-    counts: counts.value,
+    counts: counts.value, otherCounts: otherCounts.value,
     completedCycles: completedCycles.value, cycleAccumMs: cycleAccumMs.value,
     cycleStartTs: cycleStartTs.value, cycleRunning: cycleRunning.value, rosc: rosc.value,
     pediatric: pediatric.value, weightKg: weightKg.value,
@@ -382,7 +418,8 @@ function restore() {
     runStartTs.value = d.runStartTs ?? null
     running.value = !!d.running
     events.value = d.events ?? []
-    counts.value = d.counts ?? { adrenalina: 0, amiodarona: 0, atropina: 0, descarga: 0 }
+    counts.value = d.counts ?? { adrenalina: 0, amiodarona: 0, descarga: 0 }
+    otherCounts.value = d.otherCounts ?? {}
     completedCycles.value = d.completedCycles ?? 0
     cycleAccumMs.value = d.cycleAccumMs ?? 0
     cycleStartTs.value = d.cycleStartTs ?? null
@@ -458,6 +495,7 @@ onBeforeUnmount(stopTicker)
           <span v-if="pediatric && weightKg" class="bar-weight">{{ weightKg }} kg</span>
         </div>
         <div class="bar-actions">
+          <button class="bar-btn bar-btn--causes" @click="showCauses = true">4 H · 4 T</button>
           <button class="bar-btn" @click="copyLog">{{ copied ? '✓ Copiado' : 'Copiar acta' }}</button>
           <button class="bar-btn bar-btn--danger" @click="resetPcr">Nueva PCR</button>
         </div>
@@ -513,16 +551,25 @@ onBeforeUnmount(stopTicker)
               <span class="med-dose">{{ amiodaronaDose(counts.amiodarona === 0 ? 1 : 2) }}</span>
               <span v-if="counts.amiodarona" class="med-count">{{ counts.amiodarona }}</span>
             </button>
-            <button class="med med--atr" @click="giveMed('atropina')">
-              <span class="med-name">Atropina</span>
-              <span class="med-dose">{{ atropinaDose() }}</span>
-              <span v-if="counts.atropina" class="med-count">{{ counts.atropina }}</span>
-            </button>
             <button class="med med--des" @click="shock">
               <span class="med-name">⚡ Descarga</span>
               <span class="med-dose">{{ descargaHint ?? 'Desfibrilación' }}</span>
               <span v-if="counts.descarga" class="med-count">{{ counts.descarga }}</span>
             </button>
+          </div>
+
+          <!-- Fármacos secundarios: solo registran la hora (sin recordatorios) -->
+          <div class="meds-other">
+            <div class="meds-other-head">
+              <span class="meds-other-title">Otros fármacos</span>
+              <span class="meds-other-note">registro de hora de administración</span>
+            </div>
+            <div class="meds-other-grid">
+              <button v-for="m in OTHER_MEDS" :key="m" class="med-chip" @click="giveOtherMed(m)">
+                <span class="chip-name">{{ m }}</span>
+                <span v-if="otherCounts[m]" class="chip-count">{{ otherCounts[m] }}</span>
+              </button>
+            </div>
           </div>
         </section>
 
@@ -556,6 +603,34 @@ onBeforeUnmount(stopTicker)
         </transition-group>
       </div>
     </template>
+
+    <!-- ═══ Modal causas reversibles (4 H · 4 T) ═══ -->
+    <transition name="modal">
+      <div v-if="showCauses" class="causes-overlay" @click.self="showCauses = false">
+        <div class="causes-modal" role="dialog" aria-modal="true" aria-label="Causas reversibles 4 H y 4 T">
+          <header class="causes-head">
+            <h2>Causas reversibles · 4 H · 4 T</h2>
+            <button class="causes-close" aria-label="Cerrar" @click="showCauses = false">✕</button>
+          </header>
+          <div class="causes-body">
+            <div class="causes-col causes-col--h">
+              <span class="causes-col-title">4 H</span>
+              <div v-for="c in CAUSES_H" :key="c.k" class="cause">
+                <span class="cause-k">{{ c.k }}</span>
+                <span class="cause-d">{{ c.d }}</span>
+              </div>
+            </div>
+            <div class="causes-col causes-col--t">
+              <span class="causes-col-title">4 T</span>
+              <div v-for="c in CAUSES_T" :key="c.k" class="cause">
+                <span class="cause-k">{{ c.k }}</span>
+                <span class="cause-d">{{ c.d }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -682,6 +757,8 @@ onBeforeUnmount(stopTicker)
 .bar-btn:hover { border-color: var(--color-primary); color: var(--color-text); }
 .bar-btn--danger { border-color: rgba(239,68,68,0.4); color: #fca5a5; }
 .bar-btn--danger:hover { background: rgba(239,68,68,0.12); border-color: #ef4444; color: #fff; }
+.bar-btn--causes { border-color: rgba(245,158,11,0.45); color: var(--neon-glow); }
+.bar-btn--causes:hover { background: rgba(245,158,11,0.14); border-color: var(--neon-orange); color: #fff; }
 
 /* ── Cuerpo ── */
 .pcr-body { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 1.1rem; align-items: start; }
@@ -809,8 +886,78 @@ onBeforeUnmount(stopTicker)
 }
 .med--adr { --mb: rgba(245,158,11,0.1); --mbd: rgba(245,158,11,0.45); --mc: var(--neon-glow); }
 .med--ami { --mb: rgba(129,140,248,0.1); --mbd: rgba(129,140,248,0.45); --mc: #a5b4fc; }
-.med--atr { --mb: rgba(52,211,153,0.1); --mbd: rgba(52,211,153,0.45); --mc: #6ee7b7; }
 .med--des { --mb: rgba(239,68,68,0.12); --mbd: rgba(239,68,68,0.5); --mc: #fca5a5; }
+
+/* Fármacos secundarios (registro sin recordatorio) */
+.meds-other {
+  background: var(--color-card-bg); border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-card); padding: 0.9rem 1rem 1rem;
+}
+.meds-other-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
+.meds-other-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.82rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-subtitle);
+}
+.meds-other-note { font-size: 0.72rem; color: rgba(228,239,248,0.4); }
+.meds-other-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; }
+.med-chip {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0.55rem 0.7rem; cursor: pointer;
+  background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.28);
+  border-radius: 9px; transition: transform 0.12s, background 0.15s, border-color 0.15s;
+}
+.med-chip:hover { background: rgba(56,189,248,0.14); border-color: rgba(56,189,248,0.55); transform: translateY(-1px); }
+.med-chip:active { transform: translateY(0) scale(0.98); }
+.chip-name {
+  font-family: var(--font-display); font-weight: 600; font-size: 0.84rem;
+  letter-spacing: 0.02em; color: rgba(228,239,248,0.9); text-align: center; line-height: 1.1;
+}
+.chip-count {
+  position: absolute; top: -7px; right: -7px; min-width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: #0a0a0a;
+  background: #38bdf8; border-radius: 10px; padding: 0 0.3rem;
+}
+
+/* ── Modal causas reversibles (4 H · 4 T) ── */
+.causes-overlay {
+  position: fixed; inset: 0; z-index: 600;
+  display: flex; align-items: center; justify-content: center; padding: 1rem;
+  background: rgba(3, 8, 16, 0.72); backdrop-filter: blur(4px);
+}
+.causes-modal {
+  width: min(94vw, 720px); max-height: 88dvh; overflow-y: auto;
+  background: var(--color-card-bg); border: 1px solid rgba(245,158,11,0.3);
+  border-radius: var(--radius-card); box-shadow: 0 24px 70px rgba(0,0,0,0.6);
+}
+.causes-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.25rem; border-bottom: 1px solid rgba(245,158,11,0.18);
+  position: sticky; top: 0; background: var(--color-card-bg); border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+.causes-head h2 {
+  margin: 0; font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--neon-glow);
+}
+.causes-close {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 8px; cursor: pointer;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(228,239,248,0.7); font-size: 1rem; transition: all 0.15s;
+}
+.causes-close:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.causes-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; padding: 1.25rem; }
+.causes-col { display: flex; flex-direction: column; gap: 0.6rem; }
+.causes-col-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.4rem;
+  letter-spacing: 0.06em; padding-bottom: 0.3rem; border-bottom: 2px solid;
+}
+.causes-col--h .causes-col-title { color: #56ccf2; border-color: rgba(86,204,242,0.4); }
+.causes-col--t .causes-col-title { color: var(--neon-glow); border-color: rgba(245,158,11,0.4); }
+.cause { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.5rem 0.65rem; border-radius: 8px; background: rgba(255,255,255,0.025); }
+.cause-k { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; color: var(--color-text); }
+.cause-d { font-size: 0.8rem; color: rgba(228,239,248,0.6); line-height: 1.3; }
+.modal-enter-active, .modal-leave-active { transition: opacity 0.2s; }
+.modal-enter-from, .modal-leave-to { opacity: 0; }
 
 /* Registro */
 .pcr-log {
@@ -844,6 +991,7 @@ onBeforeUnmount(stopTicker)
 .log-item--adrenalina { border-left-color: var(--neon-orange); }
 .log-item--amiodarona { border-left-color: #818cf8; }
 .log-item--atropina { border-left-color: #34d399; }
+.log-item--farmaco { border-left-color: #38bdf8; }
 .log-item--descarga { border-left-color: #ef4444; }
 .log-item--nota { border-left-color: rgba(45,156,219,0.5); }
 .log-empty { padding: 1rem; text-align: center; color: rgba(228,239,248,0.4); font-size: 0.85rem; }
@@ -892,6 +1040,9 @@ onBeforeUnmount(stopTicker)
   .timers { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 1.25rem; }
   .total { align-items: center; }
   .pcr-log { max-height: none; }
+}
+@media (max-width: 560px) {
+  .causes-body { grid-template-columns: 1fr; gap: 1rem; }
 }
 @media (max-width: 480px) {
   .total-value { font-size: 3rem; }
