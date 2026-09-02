@@ -1,77 +1,61 @@
 <template>
   <div class="grid">
-    <button class="btn-glow" @click="openModal">Calcular Madrid Direct</button>
+    <button class="btn-glow" @click="openModal">Escala Madrid Direct</button>
 
     <dialog ref="modal">
       <h2>Escala Madrid Direct</h2>
-      <form method="dialog" @submit.prevent>
-        <div v-for="(item, index) in escalaItems.slice(0, 5)" :key="index" class="form-group">
-          <label>{{ item.nombre }}</label>
-          <select v-model.number="seleccion[index]">
-            <option v-for="p in item.puntos" :key="p.valor" :value="p.valor">{{ p.descripcion }}</option>
-          </select>
-        </div>
+      <p class="calc-hint">Referencia — el clínico calcula la puntuación total.</p>
 
-        <div class="form-group">
-          <label>Presión Arterial Sistólica</label>
-          <input type="number" v-model.number="pas" min="0" />
-        </div>
+      <div v-for="(item, index) in escalaItems.slice(0, 5)" :key="index" class="md-item">
+        <span class="md-label">{{ item.nombre }}</span>
+        <ul>
+          <li v-for="p in item.puntos" :key="p.valor">{{ p.descripcion }} — {{ p.valor }}</li>
+        </ul>
+      </div>
 
-        <div class="form-group">
-          <label>Edad</label>
-          <input type="number" v-model.number="edad" min="0" />
-        </div>
+      <div class="md-item">
+        <span class="md-label">Penalizaciones</span>
+        <ul>
+          <li>TAS 180-189 mmHg — −1</li>
+          <li>TAS 190-199 mmHg — −2</li>
+          <li>TAS 200-209 mmHg — −3</li>
+          <li>TAS &gt;209 mmHg — −4</li>
+          <li>Edad &gt;85 años — −1 por cada año por encima de 85</li>
+        </ul>
+      </div>
 
-        <div class="score">
-          <p>Puntuación Total: <strong>{{ puntuacionTotal }}</strong></p>
-          <p>Interpretación: <strong>{{ interpretacion }}</strong></p>
-        </div>
+      <div class="md-item">
+        <span class="md-label">Interpretación</span>
+        <ul>
+          <li v-for="i in interpretacionPuntos" :key="i.rango">{{ i.rango }} → {{ i.accion }}</li>
+        </ul>
+      </div>
 
-        <button class="btn-glow" @click="closeModal">Cerrar</button>
-      </form>
+      <button class="btn-glow" @click="closeModal">Cerrar</button>
     </dialog>
   </div>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import ictusData from '../../collections/ictus.json'
 
 const modal = ref(null)
 const escalaItems = ictusData.codigo_ictus.evaluacion_inicial.escala_madrid_direct.items
 const interpretacionPuntos = ictusData.codigo_ictus.evaluacion_inicial.escala_madrid_direct.interpretacion_puntuacion
 
-const seleccion = ref([0, 0, 0, 0, 0])
-const pas = ref(120)
-const edad = ref(65)
-
-const puntuacionBase = computed(() => seleccion.value.reduce((a, b) => a + b, 0))
-
-const penalizacionPAS = computed(() => {
-  if (pas.value >= 180 && pas.value <= 189) return 1
-  if (pas.value >= 190 && pas.value <= 199) return 2
-  if (pas.value >= 200 && pas.value <= 209) return 3
-  if (pas.value > 209) return 4
-  return 0
-})
-
-const penalizacionEdad = computed(() => {
-  return edad.value > 85 ? edad.value - 85 : 0
-})
-
-const puntuacionTotal = computed(() => {
-  return puntuacionBase.value - penalizacionPAS.value - penalizacionEdad.value
-})
-
-const interpretacion = computed(() => {
-  const score = puntuacionTotal.value
-  for (const i of interpretacionPuntos) {
-    const [min, max] = i.rango.split('-').map(Number)
-    if (score >= min && score <= max) return i.accion
-  }
-  return 'Fuera de rango'
-})
-
 const openModal = () => modal.value?.showModal()
 const closeModal = () => modal.value?.close()
 </script>
+
+<style scoped>
+.md-item { margin-bottom: 0.8rem; }
+.md-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-subtitle);
+}
+</style>

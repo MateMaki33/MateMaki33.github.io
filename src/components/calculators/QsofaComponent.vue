@@ -1,52 +1,28 @@
 <template>
   <div class="grid">
-    <button class="btn-glow" @click="openModal">Calcular qSOFA</button>
+    <button class="btn-glow" @click="openModal">qSOFA</button>
 
     <dialog ref="modal">
       <h2>qSOFA</h2>
-      <form method="dialog" @submit.prevent>
-        <div class="form-group">
-          <label>Frecuencia Respiratoria (≥22):</label>
-          <input type="number" v-model.number="fr" min="0" />
-        </div>
+      <p class="calc-hint">Referencia — suma 1 punto por cada criterio presente. El cálculo lo realiza el clínico.</p>
 
-        <div class="form-group">
-          <label>Tensión Sistólica (≤100 mmHg):</label>
-          <input type="number" v-model.number="tas" min="0" />
-        </div>
+      <ul>
+        <li>Frecuencia respiratoria ≥ 22 rpm — 1 punto</li>
+        <li>Tensión arterial sistólica ≤ 100 mmHg — 1 punto</li>
+        <li>Glasgow &lt; 15 — 1 punto</li>
+      </ul>
 
-        <div class="form-group">
-          <label>Escala de Glasgow (&lt;15):</label>
-          <input type="number" v-model.number="glasgow" min="3" max="15" />
-        </div>
+      <p class="calc-hint">Puntuación ≥ 2 → mayor riesgo de mal pronóstico; valorar sepsis según criterio clínico.</p>
 
-        <div class="score">
-          <p>Puntuación qSOFA: <strong>{{ qsofaScore }}</strong></p>
-        </div>
-
-        <button class="btn-glow" @click="closeModal">Cerrar</button>
-      </form>
+      <button class="btn-glow" @click="closeModal">Cerrar</button>
     </dialog>
   </div>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 const modal = ref(null)
-
-const fr = ref(0)
-const tas = ref(0)
-const glasgow = ref(15)
-
-const qsofaScore = computed(() => {
-  let score = 0
-  if (fr.value >= 22) score++
-  if (tas.value <= 100) score++
-  if (glasgow.value < 15) score++
-  return score
-})
-
 const openModal = () => modal.value?.showModal()
 const closeModal = () => modal.value?.close()
 </script>

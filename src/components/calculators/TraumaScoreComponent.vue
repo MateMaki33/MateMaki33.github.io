@@ -3,86 +3,69 @@
     <button class="btn-glow" @click="openModal">Trauma SCORE</button>
 
     <dialog ref="modal">
-      <h2>Trauma SCORE Revisado ponderado</h2>
-      <form method="dialog" @submit.prevent>
-        <div class="form-group">
-          <label>Frecuencia Respiratoria:</label>
-          <input type="number" v-model.number="fr" min="0" />
-        </div>
+      <h2>Trauma SCORE Revisado (RTS)</h2>
+      <p class="calc-hint">
+        RTS = 0,9368 × puntos Glasgow + 0,7326 × puntos TAS + 0,2908 × puntos FR. Referencia — el
+        clínico aplica la fórmula.
+      </p>
 
-        <div class="form-group">
-          <label>Tensión Sistólica:</label>
-          <input type="number" v-model.number="tas" min="0" />
-        </div>
+      <div class="rts-block">
+        <h3>Glasgow</h3>
+        <ul>
+          <li>13-15 — 4 puntos</li>
+          <li>9-12 — 3 puntos</li>
+          <li>6-8 — 2 puntos</li>
+          <li>4-5 — 1 punto</li>
+          <li>3 — 0 puntos</li>
+        </ul>
+      </div>
 
-        <div class="form-group">
-          <label>Escala de Glasgow:</label>
-          <input type="number" v-model.number="glasgow" min="3" max="15" />
-        </div>
+      <div class="rts-block">
+        <h3>Tensión sistólica (mmHg)</h3>
+        <ul>
+          <li>&gt;89 — 4 puntos</li>
+          <li>76-89 — 3 puntos</li>
+          <li>50-75 — 2 puntos</li>
+          <li>1-49 — 1 punto</li>
+          <li>0 — 0 puntos</li>
+        </ul>
+      </div>
 
-        <div class="score">
-          <p>RTS: <strong>{{ tsr.rts }}</strong></p>
-          <p>Interpretación: <strong>{{ rtsInterpretacion }}</strong></p>
-        </div>
+      <div class="rts-block">
+        <h3>Frecuencia respiratoria (rpm)</h3>
+        <ul>
+          <li>10-29 — 4 puntos</li>
+          <li>&gt;29 — 3 puntos</li>
+          <li>6-9 — 2 puntos</li>
+          <li>1-5 — 1 punto</li>
+          <li>0 — 0 puntos</li>
+        </ul>
+      </div>
 
-        <button class="btn-glow" @click="closeModal">Cerrar</button>
-      </form>
+      <p class="calc-hint">Referencia: ≥7,84 leve · 6-7,84 moderado · 4-6 grave · &lt;4 muy grave.</p>
+
+      <button class="btn-glow" @click="closeModal">Cerrar</button>
     </dialog>
   </div>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 const modal = ref(null)
-
-const fr = ref(0)
-const tas = ref(0)
-const glasgow = ref(15)
-
-const tsr = computed(() => {
-  const frScore = (() => {
-    if (fr.value > 29) return 4;
-    if (fr.value >= 10) return 4;
-    if (fr.value >= 6) return 3;
-    if (fr.value >= 1) return 2;
-    return 0;
-  })();
-
-  const tasScore = (() => {
-    if (tas.value > 89) return 4;
-    if (tas.value >= 76) return 3;
-    if (tas.value >= 50) return 2;
-    if (tas.value >= 1) return 1;
-    return 0;
-  })();
-
-  const glasgowScore = (() => {
-    if (glasgow.value === 15) return 4;
-    if (glasgow.value >= 13) return 3;
-    if (glasgow.value >= 9) return 2;
-    if (glasgow.value >= 6) return 1;
-    return 0;
-  })();
-
-  const rts =
-    0.9368 * glasgowScore +
-    0.7326 * tasScore +
-    0.2908 * frScore;
-
-  return {
-    rts: rts.toFixed(4),
-  };
-});
-
-const rtsInterpretacion = computed(() => {
-  const score = parseFloat(tsr.value.rts);
-  if (score >= 7.84) return "Trauma leve. Alta probabilidad de supervivencia.";
-  if (score >= 6) return "Trauma moderado. Pronóstico favorable.";
-  if (score >= 4) return "Trauma grave. Riesgo elevado.";
-  return "Trauma muy grave. Pronóstico reservado.";
-});
-
-const openModal = () => modal.value?.showModal();
-const closeModal = () => modal.value?.close();
+const openModal = () => modal.value?.showModal()
+const closeModal = () => modal.value?.close()
 </script>
+
+<style scoped>
+.rts-block { margin-bottom: 0.85rem; }
+.rts-block h3 {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-subtitle);
+  margin: 0 0 0.3rem;
+}
+</style>

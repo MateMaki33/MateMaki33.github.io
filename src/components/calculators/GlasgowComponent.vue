@@ -1,82 +1,68 @@
 <template>
   <div class="calc-wrapper">
-    <button class="btn-glow" @click="openModal">Calcular Glasgow</button>
+    <button class="btn-glow" @click="openModal">Escala de Glasgow</button>
 
     <dialog ref="modal">
       <h2>Escala de Glasgow</h2>
-      <form method="dialog" @submit.prevent>
+      <p class="calc-hint">Referencia — suma los tres componentes (rango 3-15). El cálculo lo realiza el clínico.</p>
 
-        <div class="form-group">
-          <label>Apertura ocular</label>
-          <select v-model.number="ocular">
-            <option :value="4">Espontánea (4)</option>
-            <option :value="3">Al habla (3)</option>
-            <option :value="2">Al dolor (2)</option>
-            <option :value="1">Ninguna (1)</option>
-          </select>
-        </div>
+      <div class="gcs-block">
+        <h3>Apertura ocular</h3>
+        <ul>
+          <li>Espontánea — 4</li>
+          <li>Al habla — 3</li>
+          <li>Al dolor — 2</li>
+          <li>Ninguna — 1</li>
+        </ul>
+      </div>
 
-        <div class="form-group">
-          <label>Respuesta verbal</label>
-          <select v-model.number="verbal">
-            <option :value="5">Orientado (5)</option>
-            <option :value="4">Confuso (4)</option>
-            <option :value="3">Inapropiado (3)</option>
-            <option :value="2">Incomprensible (2)</option>
-            <option :value="1">Ninguna (1)</option>
-          </select>
-        </div>
+      <div class="gcs-block">
+        <h3>Respuesta verbal</h3>
+        <ul>
+          <li>Orientado — 5</li>
+          <li>Confuso — 4</li>
+          <li>Inapropiado — 3</li>
+          <li>Incomprensible — 2</li>
+          <li>Ninguna — 1</li>
+        </ul>
+      </div>
 
-        <div class="form-group">
-          <label>Respuesta motora</label>
-          <select v-model.number="motora">
-            <option :value="6">Obedece órdenes (6)</option>
-            <option :value="5">Localiza dolor (5)</option>
-            <option :value="4">Retira al dolor (4)</option>
-            <option :value="3">Flexión anormal (3)</option>
-            <option :value="2">Extensión (2)</option>
-            <option :value="1">Ninguna (1)</option>
-          </select>
-        </div>
+      <div class="gcs-block">
+        <h3>Respuesta motora</h3>
+        <ul>
+          <li>Obedece órdenes — 6</li>
+          <li>Localiza dolor — 5</li>
+          <li>Retira al dolor — 4</li>
+          <li>Flexión anormal — 3</li>
+          <li>Extensión — 2</li>
+          <li>Ninguna — 1</li>
+        </ul>
+      </div>
 
-        <div class="score-panel" :class="scoreClass">
-          <div class="score-value">{{ total }}</div>
-          <div class="score-details">
-            <div class="score-label">Glasgow</div>
-            <div class="score-interpretation">{{ interpretacion }}</div>
-          </div>
-        </div>
+      <p class="calc-hint">Referencia: 13-15 leve · 9-12 moderado · 3-8 grave.</p>
 
-        <button class="btn" type="button" @click="closeModal">Cerrar</button>
-      </form>
+      <button class="btn" type="button" @click="closeModal">Cerrar</button>
     </dialog>
   </div>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 
 const modal = ref(null);
-const ocular = ref(4);
-const verbal = ref(5);
-const motora = ref(6);
-
-const total = computed(() => ocular.value + verbal.value + motora.value);
-
-const interpretacion = computed(() => {
-  const t = total.value;
-  if (t >= 13) return 'Traumatismo leve';
-  if (t >= 9)  return 'Traumatismo moderado';
-  return 'Traumatismo grave';
-});
-
-const scoreClass = computed(() => {
-  const t = total.value;
-  if (t >= 13) return 'score-mild';
-  if (t >= 9)  return 'score-moderate';
-  return 'score-severe';
-});
-
-const openModal  = () => modal.value?.showModal();
+const openModal = () => modal.value?.showModal();
 const closeModal = () => modal.value?.close();
 </script>
+
+<style scoped>
+.gcs-block { margin-bottom: 0.85rem; }
+.gcs-block h3 {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-subtitle);
+  margin: 0 0 0.3rem;
+}
+</style>
