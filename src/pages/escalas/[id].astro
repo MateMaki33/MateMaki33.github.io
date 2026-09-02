@@ -18,13 +18,13 @@ const { id } = Astro.params;
 
 <Layout>
   <div class="container">
-    {id === 'glasgow'       && <GlasgowComponent client:load />}
-    {id === 'qsofa'         && <QsofaComponent client:load />}
-    {id === 'trauma-score'  && <TraumaScoreComponent client:load />}
-    {id === 'indice-shock'  && <IndiceShocKComponent client:load />}
-    {id === 'parkland'      && <ParcklandComponent client:load />}
-    {id === 'madrid-direct' && <MadridDirectComponent client:load />}
-    {id === 'itp'             && <IndiceTraumaPediatricoComponent client:load />}
-    {id === 'scq-pediatrica'  && <SuperficieQuemadaPediatricaComponent client:load />}
+    {id === 'glasgow'       && <GlasgowComponent client:load standalone />}
+    {id === 'qsofa'         && <QsofaComponent client:load standalone />}
+    {id === 'trauma-score'  && <TraumaScoreComponent client:load standalone />}
+    {id === 'indice-shock'  && <IndiceShocKComponent client:load standalone />}
+    {id === 'parkland'      && <ParcklandComponent client:load standalone />}
+    {id === 'madrid-direct' && <MadridDirectComponent client:load standalone />}
+    {id === 'itp'             && <IndiceTraumaPediatricoComponent client:load standalone />}
+    {id === 'scq-pediatrica'  && <SuperficieQuemadaPediatricaComponent client:load standalone />}
   </div>
 </Layout>

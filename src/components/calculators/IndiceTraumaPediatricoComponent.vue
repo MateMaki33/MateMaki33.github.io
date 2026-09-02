@@ -1,5 +1,24 @@
 <template>
-  <div class="calc-wrapper">
+  <div v-if="standalone" class="calc-page">
+    <h1>Índice de Trauma Pediátrico (ITP)</h1>
+    <p class="calc-hint">
+      Referencia — suma las puntuaciones de las 6 categorías (rango −6 a +12). El cálculo lo
+      realiza el clínico.
+    </p>
+
+    <div v-for="item in parametros" :key="item.key" class="param-ref">
+      <span class="param-label">{{ item.label }}</span>
+      <ul>
+        <li v-for="opt in item.opciones" :key="opt.valor">
+          {{ opt.texto }} — {{ opt.valor > 0 ? '+' + opt.valor : opt.valor }}
+        </li>
+      </ul>
+    </div>
+
+    <p class="calc-hint">ITP ≤ 8 → elevada mortalidad; valorar traslado a centro de trauma pediátrico.</p>
+  </div>
+
+  <div v-else class="calc-wrapper">
     <button class="btn-glow" @click="openModal">Índice Trauma Pediátrico</button>
 
     <dialog ref="modal">
@@ -27,6 +46,10 @@
 
 <script setup>
 import { ref } from 'vue';
+
+defineProps({
+  standalone: { type: Boolean, default: false },
+});
 
 const modal = ref(null);
 
@@ -95,4 +118,5 @@ const closeModal = () => modal.value?.close();
   text-transform: uppercase;
   color: var(--color-subtitle);
 }
+.calc-page { max-width: 640px; margin: 0 auto; }
 </style>

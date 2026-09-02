@@ -1,5 +1,35 @@
 <template>
-  <div class="grid">
+  <div v-if="standalone" class="calc-page">
+    <h1>Escala Madrid Direct</h1>
+    <p class="calc-hint">Referencia — el clínico calcula la puntuación total.</p>
+
+    <div v-for="(item, index) in escalaItems.slice(0, 5)" :key="index" class="md-item">
+      <span class="md-label">{{ item.nombre }}</span>
+      <ul>
+        <li v-for="p in item.puntos" :key="p.valor">{{ p.descripcion }} — {{ p.valor }}</li>
+      </ul>
+    </div>
+
+    <div class="md-item">
+      <span class="md-label">Penalizaciones</span>
+      <ul>
+        <li>TAS 180-189 mmHg — −1</li>
+        <li>TAS 190-199 mmHg — −2</li>
+        <li>TAS 200-209 mmHg — −3</li>
+        <li>TAS &gt;209 mmHg — −4</li>
+        <li>Edad &gt;85 años — −1 por cada año por encima de 85</li>
+      </ul>
+    </div>
+
+    <div class="md-item">
+      <span class="md-label">Interpretación</span>
+      <ul>
+        <li v-for="i in interpretacionPuntos" :key="i.rango">{{ i.rango }} → {{ i.accion }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div v-else class="grid">
     <button class="btn-glow" @click="openModal">Escala Madrid Direct</button>
 
     <dialog ref="modal">
@@ -40,6 +70,10 @@
 import { ref } from 'vue'
 import ictusData from '../../collections/ictus.json'
 
+defineProps({
+  standalone: { type: Boolean, default: false },
+})
+
 const modal = ref(null)
 const escalaItems = ictusData.codigo_ictus.evaluacion_inicial.escala_madrid_direct.items
 const interpretacionPuntos = ictusData.codigo_ictus.evaluacion_inicial.escala_madrid_direct.interpretacion_puntuacion
@@ -58,4 +92,5 @@ const closeModal = () => modal.value?.close()
   text-transform: uppercase;
   color: var(--color-subtitle);
 }
+.calc-page { max-width: 640px; margin: 0 auto; }
 </style>

@@ -1,5 +1,12 @@
 <template>
-  <div class="grid">
+  <div v-if="standalone" class="calc-page">
+    <h1>Fórmula de Parkland</h1>
+    <p class="calc-hint">Volumen total (ml) = 4 × peso (kg) × % SCQ, en las primeras 24h desde la quemadura. Referencia — el clínico realiza el cálculo y ajusta el ritmo.</p>
+    <p class="calc-hint">Mitad del volumen en las primeras 8h · el resto en las siguientes 16h.</p>
+    <p class="text-muted">Ringer lactato, desde el momento de la quemadura.</p>
+  </div>
+
+  <div v-else class="grid">
     <button class="btn-glow" @click="openModal">Fórmula de Parkland</button>
 
     <dialog ref="modal">
@@ -16,6 +23,10 @@
 <script setup>
 import { ref } from 'vue'
 
+defineProps({
+  standalone: { type: Boolean, default: false },
+})
+
 const modal = ref(null)
 const openModal = () => modal.value?.showModal()
 const closeModal = () => modal.value?.close()
@@ -27,4 +38,5 @@ const closeModal = () => modal.value?.close()
   color: rgba(228, 239, 248, 0.45);
   margin-top: 0.35rem;
 }
+.calc-page { max-width: 640px; margin: 0 auto; }
 </style>

@@ -1,5 +1,35 @@
 <template>
-  <div class="calc-wrapper">
+  <div v-if="standalone" class="calc-page">
+    <h1>Superficie Corporal Quemada (Lund-Browder)</h1>
+    <p class="calc-hint">
+      Referencia — % de superficie corporal por región y franja de edad. La suma y el cálculo de
+      reposición hídrica los realiza el clínico.
+    </p>
+
+    <div class="scq-table-wrap">
+      <table class="scq-table">
+        <thead>
+          <tr>
+            <th>Región</th>
+            <th v-for="b in brackets" :key="b">{{ b }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="r in regiones" :key="r.nombre">
+            <td>{{ r.nombre }}</td>
+            <td v-for="(v, i) in r.vals" :key="i">{{ v }}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="calc-hint">
+      Parkland: 4 × peso (kg) × % SCQ = ml en 24h (mitad en las primeras 8h). Ringer lactato +
+      necesidades basales de mantenimiento en el niño.
+    </p>
+  </div>
+
+  <div v-else class="calc-wrapper">
     <button class="btn-glow" @click="openModal">SCQ Pediátrica · Lund-Browder</button>
 
     <dialog ref="modal">
@@ -38,6 +68,10 @@
 
 <script setup>
 import { ref } from 'vue';
+
+defineProps({
+  standalone: { type: Boolean, default: false },
+});
 
 const modal = ref(null);
 
@@ -79,4 +113,5 @@ const closeModal = () => modal.value?.close();
   text-transform: uppercase;
 }
 .scq-table td:first-child, .scq-table th:first-child { text-align: left; }
+.calc-page { max-width: 640px; margin: 0 auto; }
 </style>
